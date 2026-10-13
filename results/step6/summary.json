@@ -1,0 +1,68 @@
+{
+  "tokens_per_tool": 107.0,
+  "base_tokens": 65,
+  "cached_tokens_reported": false,
+  "rows": [
+    {
+      "tools": 5,
+      "runs": 24,
+      "prompt_tokens": 586,
+      "context_used_pct": 1.8,
+      "latency_p50_ms": 267,
+      "latency_p95_ms": 322,
+      "correct": 24,
+      "accuracy_pct": 100,
+      "cost_per_1000_calls_inr": 141,
+      "cost_per_1000_calls_if_cached_inr": 47
+    },
+    {
+      "tools": 10,
+      "runs": 24,
+      "prompt_tokens": 1141,
+      "context_used_pct": 3.6,
+      "latency_p50_ms": 242,
+      "latency_p95_ms": 328,
+      "correct": 24,
+      "accuracy_pct": 100,
+      "cost_per_1000_calls_inr": 274,
+      "cost_per_1000_calls_if_cached_inr": 91
+    },
+    {
+      "tools": 25,
+      "runs": 24,
+      "prompt_tokens": 2790,
+      "context_used_pct": 8.7,
+      "latency_p50_ms": 288,
+      "latency_p95_ms": 368,
+      "correct": 24,
+      "accuracy_pct": 100,
+      "cost_per_1000_calls_inr": 670,
+      "cost_per_1000_calls_if_cached_inr": 223
+    },
+    {
+      "tools": 50,
+      "runs": 24,
+      "prompt_tokens": 5366,
+      "context_used_pct": 16.8,
+      "latency_p50_ms": 350,
+      "latency_p95_ms": 541,
+      "correct": 24,
+      "accuracy_pct": 100,
+      "cost_per_1000_calls_inr": 1288,
+      "cost_per_1000_calls_if_cached_inr": 429
+    },
+    {
+      "tools": 111,
+      "runs": 24,
+      "prompt_tokens": 11960,
+      "context_used_pct": 37.4,
+      "latency_p50_ms": 336,
+      "latency_p95_ms": 397,
+      "correct": 24,
+      "accuracy_pct": 100,
+      "cost_per_1000_calls_inr": 2870,
+      "cost_per_1000_calls_if_cached_inr": 957
+    }
+  ],
+  "wrong_picks": []
+}
