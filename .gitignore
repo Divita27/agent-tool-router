@@ -1,0 +1,14 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local data
+*.db
+eval/data/audio/
+
+# macOS
+.DS_Store
