@@ -33,6 +33,12 @@ The test set is **real people speaking**, run through Sarvam speech-to-text, so 
    It reports missing clips per speaker, so you know who to chase.
 7. **Spot-check 20 transcripts by listening.** If a label is wrong for what someone actually said (e.g. they asked a different question), fix it in `scenarios.py` or drop the clip, and note it.
 
+## Conversations
+
+Recorders can't talk to a live agent, so each conversation card shows a **fixed agent reply** between turns (written from the real backend data). The speaker reads it, then records their next turn.
+
+The benchmark uses those same replies as the conversation history: turn 2 is tested with *turn 1 transcript + scripted reply* before it. So every recorded turn is judged in exactly the context the speaker was answering. The live agent's own replies are only used in the end-to-end demo.
+
 ## Rules that keep the results honest
 
 - **Speakers s05 and s10 are the final test set.** Don't read their transcripts while building the router. Run them once, in Step 11.

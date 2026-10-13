@@ -32,6 +32,7 @@ def record(rid, speaker, scenario, turn_no, text, split, source, language=None, 
         "id": rid, "conversation": f"{speaker}_{scenario.id}", "speaker": speaker, "scenario": scenario.id,
         "turn": turn_no, "turns_in_conversation": len(scenario.turns), "customer": scenario.customer,
         "text": text, "language": language, "audio": audio, "source": source, "split": split,
+        "agent_reply": turn.agent_reply or None,  # fixed reply after this turn, used as history for the next
         "tools": turn.tools, "outcome": turn.outcome, "args": turn.args,
         "tags": sorted(set(scenario.tags + turn.tags)),
     }

@@ -11,6 +11,11 @@ Labels per turn:
              "either"   calling or asking first are both fine
     args     key arguments the main tool call should have (checked in Step 11)
 
+Conversations: recorders can't talk to a live agent, so each turn (except the last) has a
+fixed `agent_reply` printed on their card. They read it, then record their next turn. The
+benchmark uses the same replies as the conversation history, so every recorded turn is tested
+in exactly the context the speaker was responding to.
+
 `dev_text` is ONE phrasing written by Claude, for developing the router before recordings
 exist. It is NOT test data and must never be reported as a result.
 
@@ -41,6 +46,7 @@ class Turn:
     args: dict = field(default_factory=dict)
     dev_text: str = ""      # Claude's phrasing, dev only
     tags: list = field(default_factory=list)
+    agent_reply: str = ""   # multi-turn: the agent's reply shown on the card before the next turn
 
 
 @dataclass
@@ -226,83 +232,107 @@ SCENARIOS = [
     # =================================================================
     S("M01", "C001", [
         T("Ask when your next EMI is. Don't say which loan.", ["get_next_emi"], outcome="clarify",
-          dev_text="Agli EMI kab hai?"),
-        T("The agent asks which loan. Say the personal loan.", ["get_next_emi"], args={"loan_id": "L1001"},
-          dev_text="Personal wala", tags=["reference"]),
+          dev_text="Agli EMI kab hai?",
+          agent_reply="Aapke do loan hain, personal loan aur home loan. Aap kis loan ki EMI ke baare mein "
+                      "poochh rahe hain?"),
+        T("Answer: the personal loan.", ["get_next_emi"], args={"loan_id": "L1001"},
+          dev_text="Personal wala", tags=["reference"],
+          agent_reply="Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai. Pichhli do EMIs bhi "
+                      "abhi pending hain."),
         T("Say you want to pay it right now.", ["pay_emi", "pay_overdue", "send_payment_link"],
           args={"loan_id": "L1001"}, dev_text="Theek hai, abhi bhar deta hoon", tags=["reference", "payment"]),
     ]),
     S("M02", "C001", [
         T("Ask how much your credit card bill is.", ["get_card_bill"], args={"card_id": "CC2001"},
-          dev_text="Card ka bill kitna aaya hai?"),
+          dev_text="Card ka bill kitna aaya hai?",
+          agent_reply="Aapka credit card bill 42,300 rupees hai. Minimum due 2,115 rupees hai, aur last date "
+                      "20 October hai."),
         T("Say you'll pay only the minimum amount now.", ["pay_card_bill"],
           args={"card_id": "CC2001", "amount": 2115}, dev_text="Abhi sirf minimum bhar deta hoon",
           tags=["reference", "payment"]),
     ]),
     S("M03", "C001", [
         T("Ask how much it would cost to close your home loan now.", ["get_home_loan_foreclosure_quote"],
-          args={"loan_id": "L1002"}, dev_text="Home loan band karne mein kitna lagega?"),
+          args={"loan_id": "L1002"}, dev_text="Home loan band karne mein kitna lagega?",
+          agent_reply="Home loan abhi band karne ke liye lagbhag 43 lakh 70 hazaar rupees lagenge. Home loan "
+                      "par koi foreclosure charge nahi hai."),
         T("Now ask the same thing for your personal loan, in very few words.",
           ["get_personal_loan_foreclosure_quote"], args={"loan_id": "L1001"},
           dev_text="Aur personal wale ka?", tags=["reference", "lookalike"]),
     ]),
     S("M04", "C002", [
         T("Your old personal loan is closed. Ask if the NOC has been sent.", ["get_noc_status", "request_noc"],
-          args={"loan_id": "L1004"}, dev_text="Purana loan band ho gaya tha, NOC bheja kya?"),
+          args={"loan_id": "L1004"}, dev_text="Purana loan band ho gaya tha, NOC bheja kya?",
+          agent_reply="Aapke purane personal loan ke liye abhi tak NOC ki request nahi daali gayi hai."),
         T("Ask them to request it now.", ["request_noc"], args={"loan_id": "L1004"},
           dev_text="To abhi request daal do", tags=["reference"]),
     ]),
     S("M05", "C002", [
         T("Ask what interest rates they give on fixed deposits.", ["get_fd_rates"],
-          dev_text="FD pe kitna interest dete ho?"),
+          dev_text="FD pe kitna interest dete ho?",
+          agent_reply="1 saal ki FD par 7.1 percent, 2 saal par 7.25, 3 saal par 7.5, aur 5 saal par 7.75 "
+                      "percent interest hai."),
         T("Say you want to open one for 1 lakh rupees for 2 years.", ["open_fixed_deposit"],
           args={"amount": 100000, "tenure_months": 24}, dev_text="1 lakh ki 2 saal wali bana do",
           tags=["reference", "payment"]),
     ]),
     S("M06", "C003", [
         T("Ask how many EMIs are overdue on your loan.", ["get_overdue_emis", "get_outstanding_amount"],
-          args={"loan_id": "L1007"}, dev_text="Kitni EMI overdue hain?"),
+          args={"loan_id": "L1007"}, dev_text="Kitni EMI overdue hain?",
+          agent_reply="Aapki 4 EMIs overdue hain, June se September tak. Total 35,156 rupees baaki hai."),
         T("Say you can't pay now but will pay by the 25th.", ["record_promise_to_pay"], outcome="either",
           args={"loan_id": "L1007", "promise_date": "2026-10-25"},
           dev_text="Abhi nahi de sakta, 25 tareekh tak de dunga", tags=["reference"]),
     ]),
     S("M07", "C003", [
         T("Ask if you can settle your loan.", ["get_settlement_offer"], args={"loan_id": "L1007"},
-          dev_text="Settlement ho sakta hai kya?"),
+          dev_text="Settlement ho sakta hai kya?",
+          agent_reply="Haan, aap 1 lakh 30 hazaar rupees ek baar mein dekar loan settle kar sakte hain. Lekin "
+                      "credit report mein 'settled' dikhega, jisse aapka score kam ho sakta hai."),
         T("Say yes, you accept the offer.", ["accept_settlement_offer"],
           args={"loan_id": "L1007", "offer_id": "SO-L1007"}, dev_text="Haan theek hai, accept karta hoon",
           tags=["reference", "irreversible"]),
     ]),
     S("M08", "C001", [
         T("Ask to hear your recent credit card transactions.", ["get_card_transactions"],
-          args={"card_id": "CC2001"}, dev_text="Card ke last transactions batao"),
-        T("Say the first one they read out isn't yours.", ["dispute_card_transaction"], outcome="either",
-          args={"card_id": "CC2001"}, dev_text="Pehla wala maine nahi kiya", tags=["reference"]),
+          args={"card_id": "CC2001"}, dev_text="Card ke last transactions batao",
+          agent_reply="Aapke last teen transactions: 6 October ko Electronics Hub par 26,050 rupees, 6 October "
+                      "ko Mobile Recharge par 21,650 rupees, aur 5 October ko Rail Booking par 14,400 rupees."),
+        T("Say the Electronics Hub one isn't yours.", ["dispute_card_transaction"],
+          args={"card_id": "CC2001", "transaction_id": "T600001"},
+          dev_text="Electronics Hub wala maine nahi kiya", tags=["reference"]),
     ]),
     S("M09", "C002", [
         T("Ask when your car insurance expires, according to their records.", ["get_vehicle_insurance_status"],
-          args={"loan_id": "L1005"}, dev_text="Mere car insurance ki expiry kab ki hai aapke record mein?"),
-        T("Say you've renewed it: new policy number VI778899, valid till 30 September 2027.",
+          args={"loan_id": "L1005"}, dev_text="Mere car insurance ki expiry kab ki hai aapke record mein?",
+          agent_reply="Hamare record mein aapki car insurance 6 February 2027 tak valid hai."),
+        T("Say you've already renewed it early: new policy number VI778899, valid till 30 September 2027.",
           ["update_vehicle_insurance"],
           args={"loan_id": "L1005", "policy_number": "VI778899", "expiry_date": "2027-09-30"},
-          dev_text="Renew ho gaya hai, naya number VI778899, 30 September 2027 tak", tags=["reference", "args"]),
+          dev_text="Maine pehle hi renew kar liya, naya number VI778899, 30 September 2027 tak",
+          tags=["reference", "args"]),
     ]),
     S("M10", "C003", [
         T("Ask about your loan application. The number is A4001.", ["get_application_status"],
-          args={"application_id": "A4001"}, dev_text="Application number A4001 ka kya status hai?"),
+          args={"application_id": "A4001"}, dev_text="Application number A4001 ka kya status hai?",
+          agent_reply="Aapki application A4001 mein documents pending hain. Documents milte hi hum aage "
+                      "process karenge."),
         T("Ask how to send them the documents.", ["send_document_upload_link", "get_document_list"],
           args={"application_id": "A4001"}, dev_text="Documents kaise bhejun?", tags=["reference"]),
     ]),
     S("M11", "C001", [
         T("Ask when your next personal loan EMI is.", ["get_next_emi"], args={"loan_id": "L1001"},
-          dev_text="Personal loan ki agli EMI kab hai?"),
+          dev_text="Personal loan ki agli EMI kab hai?",
+          agent_reply="Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai."),
         T("Change topic: say you've moved house and want to update your address. Don't give the address yet.",
           ["update_address"], outcome="clarify", dev_text="Aur haan, maine ghar badal liya hai, address update karna hai",
           tags=["topic_switch"]),
     ]),
     S("M12", "C002", [
         T("Ask how much it would cost to close your car loan.", ["get_vehicle_loan_foreclosure_quote"],
-          args={"loan_id": "L1005"}, dev_text="Car loan band karne mein kitna lagega?"),
+          args={"loan_id": "L1005"}, dev_text="Car loan band karne mein kitna lagega?",
+          agent_reply="Car loan abhi band karne ke liye lagbhag 7 lakh 27 hazaar rupees lagenge, jismein 3 "
+                      "percent foreclosure charge shamil hai."),
         T("Say forget it, instead just move that loan's EMI date to the 10th.", ["change_emi_date"],
           args={"loan_id": "L1005", "new_day": 10}, dev_text="Rehne do, bas uski EMI date 10 kar do",
           tags=["reference", "topic_switch"]),

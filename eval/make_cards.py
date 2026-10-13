@@ -44,6 +44,9 @@ h2 { font-size: 18px; margin: 32px 0 6px; }
 .persona { background: #f6f5f1; border-left: 4px solid #2a78d6; padding: 10px 14px; border-radius: 6px; }
 .turn { margin: 10px 0 0; padding-left: 12px; border-left: 3px solid #d9d8d2; }
 .situation { font-size: 17px; }
+.reply { margin: 8px 0 8px 12px; padding: 8px 12px; background: #f1f0ec; border-radius: 8px; color: #3b3a37;
+         font-style: italic; }
+.reply span { font-style: normal; font-weight: 600; color: #52514e; }
 code { font-family: ui-monospace, Menlo, monospace; }
 @media print { .card { page-break-inside: avoid; } }
 """
@@ -58,7 +61,8 @@ Each card describes a situation. For each one, record yourself saying what you'd
 <li>Use your phone's voice recorder. One clip per card (or per turn). <strong>Keep each clip under 25 seconds.</strong></li>
 <li>Record somewhere normal: a quiet room is good, a bit of background noise is fine too.</li>
 <li><strong>Name each file</strong> exactly as shown in blue, e.g. <code>{example}</code>. Keep the phone's file type (.m4a is fine).</li>
-<li>For conversations, record each turn as a separate clip. Imagine the agent replied sensibly in between.</li>
+<li><strong>Conversations:</strong> record each turn as a separate clip. Between turns, read the agent's reply
+on the card (in grey), then record what you'd say back to it.</li>
 <li>The names, loans and numbers are made up. <strong>Never say your real details.</strong></li>
 <li>{today}</li>
 </ul>
@@ -80,6 +84,8 @@ def card_html(speaker, s):
         for i, t in enumerate(s.turns, 1):
             parts.append(f'<div class="turn"><span class="file">{speaker}_{s.id}_t{i}</span>'
                          f'<div class="situation">{html.escape(t.situation)}</div></div>')
+            if t.agent_reply:
+                parts.append(f'<div class="reply"><span>Agent replies:</span> “{html.escape(t.agent_reply)}”</div>')
     else:
         parts.append(f'<span class="file">{speaker}_{s.id}</span>'
                      f'<div class="situation">{html.escape(s.turns[0].situation)}</div>')

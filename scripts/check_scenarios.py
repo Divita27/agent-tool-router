@@ -32,6 +32,11 @@ for s in SCENARIOS:
             continue
         if not t.dev_text:
             problems.append(f"{where}: missing dev_text")
+        last = i == len(s.turns)
+        if s.multi_turn and not last and not t.agent_reply:
+            problems.append(f"{where}: conversation turn needs an agent_reply for the recorder to respond to")
+        if last and t.agent_reply:
+            problems.append(f"{where}: last turn shouldn't have an agent_reply")
         if not t.args:
             continue
 
