@@ -1,0 +1,3658 @@
+[
+  {
+    "name": "find_customer_by_phone",
+    "area": "identity",
+    "risk": "read",
+    "examples": [
+      "mera number 9876500001 hai",
+      "मेरा रजिस्टर्ड नंबर यही है",
+      "look me up by my phone number"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "find_customer_by_phone",
+        "description": "Find the customer ID from a registered mobile number. Use at the start of a call.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "phone": {
+              "type": "string",
+              "description": "10-digit mobile number"
+            }
+          },
+          "required": [
+            "phone"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "verify_customer",
+    "area": "identity",
+    "risk": "pii",
+    "examples": [
+      "meri date of birth 12 April 1988 hai",
+      "मेरी जन्मतिथि 12 अप्रैल 1988 है",
+      "my DOB is 12th April 1988"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "verify_customer",
+        "description": "Verify the caller's identity using their date of birth before sharing account details or making changes.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "dob": {
+              "type": "string",
+              "description": "Date of birth as YYYY-MM-DD"
+            }
+          },
+          "required": [
+            "customer_id",
+            "dob"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_customer_profile",
+    "area": "identity",
+    "risk": "read",
+    "examples": [
+      "mera account kiske naam pe hai",
+      "मेरे खाते की जानकारी बताइए",
+      "what details do you have on my account"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_customer_profile",
+        "description": "Get the customer's name, city, preferred language and KYC status.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            }
+          },
+          "required": [
+            "customer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "list_customer_products",
+    "area": "identity",
+    "risk": "read",
+    "examples": [
+      "mere paas aapke kaun kaun se products hain",
+      "मेरे सारे लोन और कार्ड बताइए",
+      "what all do I have with you"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "list_customer_products",
+        "description": "List everything the customer holds: loans, credit cards and fixed deposits.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            }
+          },
+          "required": [
+            "customer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "list_loans",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "mere kitne loan chal rahe hain",
+      "मेरे कौन कौन से लोन हैं",
+      "which loans do I have"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "list_loans",
+        "description": "List all of the customer's loans with product, amount, EMI and status.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            }
+          },
+          "required": [
+            "customer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_loan_details",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "mere loan ki details batao",
+      "मेरे लोन की पूरी जानकारी दीजिए",
+      "how many EMIs are left on my loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_loan_details",
+        "description": "Get a loan's details: amount, rate, tenure, EMI, start date and EMIs paid or remaining.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_outstanding_amount",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "abhi kitna paisa baaki hai loan pe",
+      "मेरे लोन पर कितना बकाया है",
+      "what's my outstanding balance"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_outstanding_amount",
+        "description": "Get how much is still owed on a loan: principal outstanding plus any overdue amount.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_next_emi",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "meri agli EMI kab hai",
+      "अगली किस्त कितनी है और कब है",
+      "when is my next EMI due"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_next_emi",
+        "description": "Get the next EMI's due date and amount for a loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_emi_schedule",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "agle 6 mahine ki EMI dikhao",
+      "आने वाली किस्तों की सूची बताइए",
+      "show me my repayment schedule"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_emi_schedule",
+        "description": "Get the upcoming EMI schedule for a loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "count": {
+              "type": "integer",
+              "description": "How many to return. Default 6"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_overdue_emis",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "kitni EMI miss hui hai",
+      "मेरी कौन सी किस्तें बाकी रह गई हैं",
+      "how many EMIs have I missed"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_overdue_emis",
+        "description": "List the missed (overdue) EMIs on a loan and the total overdue.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_interest_rate",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "mere loan ka interest rate kya hai",
+      "मेरे लोन पर ब्याज दर कितनी है",
+      "is my rate fixed or floating"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_interest_rate",
+        "description": "Get the interest rate on an existing loan and whether it is fixed or floating.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_interest_certificate",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "pichhle saal ka interest certificate chahiye",
+      "ब्याज प्रमाणपत्र भेज दीजिए",
+      "I need the interest certificate for last year"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_interest_certificate",
+        "description": "Email the interest and principal paid on a loan for a financial year.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "financial_year": {
+              "type": "string",
+              "description": "Financial year, e.g. 2025-26"
+            }
+          },
+          "required": [
+            "loan_id",
+            "financial_year"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_loan_statement",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "loan ka statement bhej do",
+      "जनवरी से अब तक का स्टेटमेंट चाहिए",
+      "send me my loan statement"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_loan_statement",
+        "description": "Email a loan account statement for a date range.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "start_date": {
+              "type": "string",
+              "description": "Start date, YYYY-MM-DD"
+            },
+            "end_date": {
+              "type": "string",
+              "description": "End date, YYYY-MM-DD"
+            }
+          },
+          "required": [
+            "loan_id",
+            "start_date",
+            "end_date"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_loan_agreement",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "loan agreement ki copy chahiye",
+      "लोन एग्रीमेंट की कॉपी भेजिए",
+      "can I get my loan agreement"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_loan_agreement",
+        "description": "Email a copy of the loan agreement.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "change_emi_date",
+    "area": "loans",
+    "risk": "write",
+    "examples": [
+      "EMI ki date 10 tareekh kar do",
+      "किस्त की तारीख बदलनी है",
+      "can I move my EMI to the 15th"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "change_emi_date",
+        "description": "Request a change of the monthly EMI date to the 1st, 5th, 10th or 15th.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "new_day": {
+              "type": "integer",
+              "description": "New EMI day of the month",
+              "enum": [
+                1,
+                5,
+                10,
+                15
+              ]
+            }
+          },
+          "required": [
+            "loan_id",
+            "new_day"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_noc",
+    "area": "loans",
+    "risk": "write",
+    "examples": [
+      "loan band ho gaya, NOC chahiye",
+      "मुझे एनओसी चाहिए",
+      "I need the NOC for my closed loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_noc",
+        "description": "Request the No Objection Certificate (NOC) for a fully closed loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_noc_status",
+    "area": "loans",
+    "risk": "read",
+    "examples": [
+      "NOC kab tak aayega",
+      "मेरा एनओसी अभी तक नहीं आया",
+      "what's the status of my NOC"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_noc_status",
+        "description": "Check whether the NOC for a closed loan has been requested or issued.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_personal_loan_foreclosure_quote",
+    "area": "personal_loan",
+    "risk": "read",
+    "examples": [
+      "personal loan band karne mein kitna lagega",
+      "पर्सनल लोन पूरा चुकाने में कितना लगेगा",
+      "how much to foreclose my personal loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_personal_loan_foreclosure_quote",
+        "description": "Get the total amount needed to close a personal loan early, including charges.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "foreclose_personal_loan",
+    "area": "personal_loan",
+    "risk": "irreversible",
+    "examples": [
+      "personal loan abhi band kar do",
+      "मेरा पर्सनल लोन बंद कर दीजिए",
+      "close my personal loan now"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "foreclose_personal_loan",
+        "description": "Close a personal loan early by paying the full foreclosure amount.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_personal_loan_top_up",
+    "area": "personal_loan",
+    "risk": "write",
+    "examples": [
+      "personal loan pe 1 lakh aur mil sakta hai",
+      "टॉप अप लोन चाहिए",
+      "can I get a top-up on my loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_personal_loan_top_up",
+        "description": "Request extra money (top-up) on an existing personal loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            }
+          },
+          "required": [
+            "loan_id",
+            "amount"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_personal_loan_part_payment_quote",
+    "area": "personal_loan",
+    "risk": "read",
+    "examples": [
+      "50 hazaar part payment karun to kya hoga",
+      "आंशिक भुगतान करने पर कितना चार्ज लगेगा",
+      "what if I prepay 50,000"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_personal_loan_part_payment_quote",
+        "description": "Get the charges and effect of paying part of a personal loan early.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            }
+          },
+          "required": [
+            "loan_id",
+            "amount"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "make_personal_loan_part_payment",
+    "area": "personal_loan",
+    "risk": "payment",
+    "examples": [
+      "50 hazaar part payment kar do",
+      "मैं 50,000 का आंशिक भुगतान करना चाहता हूँ",
+      "prepay 50,000 on my loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "make_personal_loan_part_payment",
+        "description": "Pay part of a personal loan early to reduce the tenure.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            },
+            "method": {
+              "type": "string",
+              "description": "Payment method. Default netbanking",
+              "enum": [
+                "upi",
+                "netbanking",
+                "debit_card"
+              ]
+            }
+          },
+          "required": [
+            "loan_id",
+            "amount"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_home_loan_disbursement_status",
+    "area": "home_loan",
+    "risk": "read",
+    "examples": [
+      "home loan ka kitna paisa release hua hai",
+      "होम लोन का कितना पैसा मिल चुका है",
+      "how much of my home loan is disbursed"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_home_loan_disbursement_status",
+        "description": "Get how much of a home loan has been disbursed and how much is left.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_home_loan_disbursement",
+    "area": "home_loan",
+    "risk": "write",
+    "examples": [
+      "builder ko agla payment release karo",
+      "अगली किस्त बिल्डर को जारी कीजिए",
+      "please release the next tranche to my builder"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_home_loan_disbursement",
+        "description": "Request the next home loan disbursement for an under-construction property.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            },
+            "construction_stage": {
+              "type": "string",
+              "description": "Current construction stage, e.g. slab, plaster, finishing"
+            }
+          },
+          "required": [
+            "loan_id",
+            "amount",
+            "construction_stage"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_property_documents_status",
+    "area": "home_loan",
+    "risk": "read",
+    "examples": [
+      "mere ghar ke original papers kahan hain",
+      "प्रॉपर्टी के कागज़ कब मिलेंगे",
+      "where are my property documents"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_property_documents_status",
+        "description": "Check where the original property documents for a home loan are.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_property_documents_return",
+    "area": "home_loan",
+    "risk": "write",
+    "examples": [
+      "loan khatam ho gaya, papers wapas chahiye",
+      "मेरे घर के कागज़ात वापस चाहिए",
+      "I want my property papers back"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_property_documents_return",
+        "description": "Request return of original property documents after a home loan is closed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "collection_branch_id": {
+              "type": "string",
+              "description": "Branch ID to collect from, e.g. B105"
+            }
+          },
+          "required": [
+            "loan_id",
+            "collection_branch_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_home_loan_foreclosure_quote",
+    "area": "home_loan",
+    "risk": "read",
+    "examples": [
+      "home loan poora chukane mein kitna lagega",
+      "होम लोन बंद करने का कितना पैसा लगेगा",
+      "foreclosure amount for my home loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_home_loan_foreclosure_quote",
+        "description": "Get the total amount needed to close a home loan early.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "foreclose_home_loan",
+    "area": "home_loan",
+    "risk": "irreversible",
+    "examples": [
+      "home loan band kar do",
+      "होम लोन अभी बंद कर दीजिए",
+      "close my home loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "foreclose_home_loan",
+        "description": "Close a home loan early by paying the full foreclosure amount.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_home_loan_tax_certificate",
+    "area": "home_loan",
+    "risk": "read",
+    "examples": [
+      "income tax ke liye home loan certificate chahiye",
+      "टैक्स के लिए होम लोन सर्टिफिकेट भेजिए",
+      "I need the home loan tax certificate"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_home_loan_tax_certificate",
+        "description": "Email the home loan certificate for income tax deduction for a financial year.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "financial_year": {
+              "type": "string",
+              "description": "Financial year, e.g. 2025-26"
+            }
+          },
+          "required": [
+            "loan_id",
+            "financial_year"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_home_loan_balance_transfer_letter",
+    "area": "home_loan",
+    "risk": "write",
+    "examples": [
+      "home loan dusre bank mein shift karna hai",
+      "बैलेंस ट्रांसफर के लिए लेटर चाहिए",
+      "I want to transfer my home loan to another bank"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_home_loan_balance_transfer_letter",
+        "description": "Request the outstanding letter needed to transfer a home loan to another bank.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_home_loan_insurance_details",
+    "area": "home_loan",
+    "risk": "read",
+    "examples": [
+      "home loan ke saath insurance kaunsa hai",
+      "होम लोन का बीमा कब तक है",
+      "what insurance is on my home loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_home_loan_insurance_details",
+        "description": "Get the insurance policy linked to a home loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_vehicle_loan_foreclosure_quote",
+    "area": "vehicle_loan",
+    "risk": "read",
+    "examples": [
+      "car loan band karne mein kitna lagega",
+      "गाड़ी का लोन बंद करने में कितना लगेगा",
+      "how much to close my car loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_vehicle_loan_foreclosure_quote",
+        "description": "Get the total amount needed to close a vehicle loan early, including charges.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "foreclose_vehicle_loan",
+    "area": "vehicle_loan",
+    "risk": "irreversible",
+    "examples": [
+      "bike loan abhi khatam kar do",
+      "गाड़ी का लोन बंद कर दीजिए",
+      "close my vehicle loan now"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "foreclose_vehicle_loan",
+        "description": "Close a vehicle loan early by paying the full foreclosure amount.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_hypothecation_status",
+    "area": "vehicle_loan",
+    "risk": "read",
+    "examples": [
+      "RC pe abhi bhi bank ka naam hai kya",
+      "आरसी से हाइपोथिकेशन हटा या नहीं",
+      "is the hypothecation removed"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_hypothecation_status",
+        "description": "Check whether the lender's hypothecation is still on the vehicle's RC.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_hypothecation_removal",
+    "area": "vehicle_loan",
+    "risk": "write",
+    "examples": [
+      "RC se bank ka naam hatwana hai",
+      "आरसी से लोन हटवाना है",
+      "I need Form 35 for my car"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_hypothecation_removal",
+        "description": "Request NOC and Form 35 to remove hypothecation from the RC after a vehicle loan is closed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_vehicle_insurance_status",
+    "area": "vehicle_loan",
+    "risk": "read",
+    "examples": [
+      "gaadi ka insurance kab expire hoga",
+      "गाड़ी का बीमा कब खत्म होगा",
+      "when does my car insurance expire"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_vehicle_insurance_status",
+        "description": "Check the insurance policy and expiry date on file for a financed vehicle.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "update_vehicle_insurance",
+    "area": "vehicle_loan",
+    "risk": "write",
+    "examples": [
+      "maine insurance renew kar liya hai",
+      "नया बीमा अपडेट कर दीजिए",
+      "I've renewed my car insurance"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "update_vehicle_insurance",
+        "description": "Update the renewed insurance policy for a financed vehicle.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "policy_number": {
+              "type": "string",
+              "description": "New policy number"
+            },
+            "expiry_date": {
+              "type": "string",
+              "description": "New expiry date, YYYY-MM-DD"
+            }
+          },
+          "required": [
+            "loan_id",
+            "policy_number",
+            "expiry_date"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "send_payment_link",
+    "area": "payments",
+    "risk": "payment",
+    "examples": [
+      "payment ka link bhej do",
+      "भुगतान का लिंक भेज दीजिए",
+      "send me a link to pay"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "send_payment_link",
+        "description": "Send a payment link by SMS for a loan payment.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            }
+          },
+          "required": [
+            "loan_id",
+            "amount"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "pay_emi",
+    "area": "payments",
+    "risk": "payment",
+    "examples": [
+      "is mahine ki EMI abhi bhar deta hoon",
+      "मैं अपनी किस्त अभी भरना चाहता हूँ",
+      "I want to pay my EMI now"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "pay_emi",
+        "description": "Pay one EMI on a loan. Pays the oldest unpaid EMI. The amount must match that EMI.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            },
+            "method": {
+              "type": "string",
+              "description": "Payment method. Default upi",
+              "enum": [
+                "upi",
+                "netbanking",
+                "debit_card"
+              ]
+            }
+          },
+          "required": [
+            "loan_id",
+            "amount"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "pay_overdue",
+    "area": "payments",
+    "risk": "payment",
+    "examples": [
+      "saari pending EMI ek saath bhar do",
+      "बकाया सारी किस्तें चुका दीजिए",
+      "clear all my overdue EMIs"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "pay_overdue",
+        "description": "Pay all overdue EMIs on a loan plus late fees in one payment.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "method": {
+              "type": "string",
+              "description": "Payment method. Default upi",
+              "enum": [
+                "upi",
+                "netbanking",
+                "debit_card"
+              ]
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_payment_history",
+    "area": "payments",
+    "risk": "read",
+    "examples": [
+      "pichhle payments dikhao",
+      "मेरे पिछले भुगतान बताइए",
+      "show my payment history"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_payment_history",
+        "description": "List recent payments made on a loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "count": {
+              "type": "integer",
+              "description": "How many to return. Default 5"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "check_payment_status",
+    "area": "payments",
+    "risk": "read",
+    "examples": [
+      "payment P31 ka status kya hai",
+      "मेरे भुगतान की स्थिति बताइए",
+      "did payment P000031 go through"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "check_payment_status",
+        "description": "Check the status of a specific payment by its payment ID.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "payment_id": {
+              "type": "string",
+              "description": "Payment ID, e.g. P000031"
+            }
+          },
+          "required": [
+            "payment_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_last_payment",
+    "area": "payments",
+    "risk": "read",
+    "examples": [
+      "last payment kab kiya tha",
+      "आखिरी भुगतान कब हुआ था",
+      "when was my last payment"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_last_payment",
+        "description": "Get the most recent payment made on a loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "report_payment_not_reflected",
+    "area": "payments",
+    "risk": "write",
+    "examples": [
+      "paise bhej diye the par dikh nahi raha",
+      "मैंने भुगतान किया था पर अपडेट नहीं हुआ",
+      "I paid but it's not showing"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "report_payment_not_reflected",
+        "description": "Report a payment the customer made that is not showing on the loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            },
+            "paid_on": {
+              "type": "string",
+              "description": "Date paid, YYYY-MM-DD"
+            },
+            "payment_reference": {
+              "type": "string",
+              "description": "UPI or bank reference number, if the caller has it"
+            }
+          },
+          "required": [
+            "loan_id",
+            "amount",
+            "paid_on"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_late_fee",
+    "area": "payments",
+    "risk": "read",
+    "examples": [
+      "late fee kitni lagi hai",
+      "लेट फीस कितनी है",
+      "how much is the late fee"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_late_fee",
+        "description": "Get the late payment fee charged on a loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_late_fee_waiver",
+    "area": "payments",
+    "risk": "write",
+    "examples": [
+      "late fee maaf kar do please",
+      "लेट फीस माफ़ करवानी है",
+      "can you waive the late fee"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_late_fee_waiver",
+        "description": "Request that late fees on a loan be waived.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "reason": {
+              "type": "string",
+              "description": "Reason in the caller's words"
+            }
+          },
+          "required": [
+            "loan_id",
+            "reason"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_bounce_charges",
+    "area": "payments",
+    "risk": "read",
+    "examples": [
+      "bounce charge kyun laga",
+      "ऑटो डेबिट फेल होने का चार्ज कितना है",
+      "why was I charged a bounce fee"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_bounce_charges",
+        "description": "Get charges for failed (bounced) autopay attempts on a loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_autopay_mandate",
+    "area": "payments",
+    "risk": "read",
+    "examples": [
+      "auto debit kis account se hota hai",
+      "ऑटो डेबिट चालू है क्या",
+      "which account is my autopay on"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_autopay_mandate",
+        "description": "Get the autopay (auto-debit) mandate status and bank account for a loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "update_autopay_bank_account",
+    "area": "payments",
+    "risk": "pii",
+    "examples": [
+      "auto debit ka bank account badalna hai",
+      "ऑटो डेबिट का खाता बदलना है",
+      "change my autopay bank account"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "update_autopay_bank_account",
+        "description": "Change the bank account used for loan autopay (auto-debit).",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "account_number": {
+              "type": "string",
+              "description": "New bank account number"
+            },
+            "ifsc": {
+              "type": "string",
+              "description": "IFSC code of the new bank branch"
+            }
+          },
+          "required": [
+            "loan_id",
+            "account_number",
+            "ifsc"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "cancel_autopay",
+    "area": "payments",
+    "risk": "irreversible",
+    "examples": [
+      "auto debit band kar do",
+      "ऑटो डेबिट बंद कीजिए",
+      "stop the auto debit"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "cancel_autopay",
+        "description": "Cancel autopay (auto-debit) on a loan. EMIs must then be paid manually.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_refund_status",
+    "area": "payments",
+    "risk": "read",
+    "examples": [
+      "refund kab aayega",
+      "मेरा रिफंड कहाँ तक पहुँचा",
+      "where is my refund"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_refund_status",
+        "description": "Check refund requests on a loan and their status.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_refund",
+    "area": "payments",
+    "risk": "write",
+    "examples": [
+      "do baar paisa kat gaya, refund chahiye",
+      "ज़्यादा पैसा कटा है, वापस कीजिए",
+      "I was charged twice, refund it"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_refund",
+        "description": "Request a refund of an excess or wrong charge on a loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            },
+            "reason": {
+              "type": "string",
+              "description": "Reason in the caller's words"
+            }
+          },
+          "required": [
+            "loan_id",
+            "amount",
+            "reason"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "record_promise_to_pay",
+    "area": "collections",
+    "risk": "write",
+    "examples": [
+      "15 tareekh tak pakka bhar dunga",
+      "मैं 20 तारीख तक भुगतान कर दूँगा",
+      "I'll pay by the 15th"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "record_promise_to_pay",
+        "description": "Record the date and amount the customer promises to pay their overdue EMIs.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            },
+            "promise_date": {
+              "type": "string",
+              "description": "Promised date, YYYY-MM-DD"
+            }
+          },
+          "required": [
+            "loan_id",
+            "amount",
+            "promise_date"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_promise_to_pay",
+    "area": "collections",
+    "risk": "read",
+    "examples": [
+      "maine kaunsi date boli thi",
+      "मैंने किस तारीख का वादा किया था",
+      "what date did I promise to pay"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_promise_to_pay",
+        "description": "Get the payment promise the customer made earlier on a loan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_emi_holiday",
+    "area": "collections",
+    "risk": "write",
+    "examples": [
+      "do mahine EMI rok sakte ho kya",
+      "कुछ महीने किस्त रोक दीजिए",
+      "can I skip EMIs for two months"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_emi_holiday",
+        "description": "Request a 1 to 3 month pause on EMIs because of temporary difficulty.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "months": {
+              "type": "integer",
+              "description": "Number of months, 1 to 3"
+            },
+            "reason": {
+              "type": "string",
+              "description": "Reason in the caller's words"
+            }
+          },
+          "required": [
+            "loan_id",
+            "months",
+            "reason"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_loan_restructuring",
+    "area": "collections",
+    "risk": "write",
+    "examples": [
+      "EMI kam karwa sakte hain kya",
+      "मेरी किस्त कम कर दीजिए, आमदनी घट गई है",
+      "can you reduce my EMI by extending the loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_loan_restructuring",
+        "description": "Request a change to the loan terms (lower EMI, longer tenure) because of lasting difficulty.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "reason": {
+              "type": "string",
+              "description": "Reason in the caller's words"
+            }
+          },
+          "required": [
+            "loan_id",
+            "reason"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_settlement_offer",
+    "area": "collections",
+    "risk": "read",
+    "examples": [
+      "settlement ho sakta hai kya",
+      "एक बार में निपटारा कर सकते हैं",
+      "can I settle this loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_settlement_offer",
+        "description": "Get a one-time settlement offer for a loan with 3 or more overdue EMIs.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            }
+          },
+          "required": [
+            "loan_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "accept_settlement_offer",
+    "area": "collections",
+    "risk": "irreversible",
+    "examples": [
+      "theek hai settlement accept karta hoon",
+      "मैं सेटलमेंट स्वीकार करता हूँ",
+      "I accept the settlement"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "accept_settlement_offer",
+        "description": "Accept and pay a settlement offer. The loan is reported to credit bureaus as settled.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_id": {
+              "type": "string",
+              "description": "Loan ID, e.g. L1001"
+            },
+            "offer_id": {
+              "type": "string",
+              "description": "Settlement offer ID, e.g. SO-L1007"
+            },
+            "method": {
+              "type": "string",
+              "description": "Payment method. Default netbanking",
+              "enum": [
+                "upi",
+                "netbanking",
+                "debit_card"
+              ]
+            }
+          },
+          "required": [
+            "loan_id",
+            "offer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "report_financial_hardship",
+    "area": "collections",
+    "risk": "write",
+    "examples": [
+      "meri naukri chali gayi hai",
+      "घर में मेडिकल इमरजेंसी है, पैसे नहीं हैं",
+      "I lost my job"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "report_financial_hardship",
+        "description": "Record that the customer is facing financial hardship (job loss, illness, etc.).",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "reason": {
+              "type": "string",
+              "description": "Reason in the caller's words"
+            }
+          },
+          "required": [
+            "customer_id",
+            "reason"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_collection_call_preferences",
+    "area": "collections",
+    "risk": "read",
+    "examples": [
+      "aap log mujhe kab call karte ho",
+      "मुझे किस समय कॉल आती है",
+      "when do you call me for reminders"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_collection_call_preferences",
+        "description": "Get the time window and language the customer prefers for reminder calls.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            }
+          },
+          "required": [
+            "customer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "update_collection_call_preferences",
+    "area": "collections",
+    "risk": "write",
+    "examples": [
+      "mujhe sirf shaam ko call karna",
+      "मुझे सुबह दस बजे के बाद ही कॉल करें",
+      "only call me in the afternoon"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "update_collection_call_preferences",
+        "description": "Change the time window (between 08:00 and 19:00) and language for reminder calls.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "preferred_time": {
+              "type": "string",
+              "description": "Time window, e.g. 10:00-13:00"
+            },
+            "language": {
+              "type": "string",
+              "description": "Preferred language"
+            }
+          },
+          "required": [
+            "customer_id",
+            "preferred_time"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "check_personal_loan_eligibility",
+    "area": "new_loans",
+    "risk": "read",
+    "examples": [
+      "mujhe kitna personal loan mil sakta hai",
+      "मुझे कितना पर्सनल लोन मिलेगा",
+      "how much personal loan can I get"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "check_personal_loan_eligibility",
+        "description": "Estimate how much personal loan the customer may be eligible for. Indicative only, not an approval.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "monthly_income": {
+              "type": "number",
+              "description": "Monthly income in rupees"
+            }
+          },
+          "required": [
+            "customer_id",
+            "monthly_income"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "check_home_loan_eligibility",
+    "area": "new_loans",
+    "risk": "read",
+    "examples": [
+      "80 lakh ka flat lena hai, kitna loan milega",
+      "घर खरीदने के लिए कितना लोन मिलेगा",
+      "am I eligible for a home loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "check_home_loan_eligibility",
+        "description": "Estimate how much home loan the customer may be eligible for. Indicative only, not an approval.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "monthly_income": {
+              "type": "number",
+              "description": "Monthly income in rupees"
+            },
+            "property_value": {
+              "type": "number",
+              "description": "Property value in rupees"
+            }
+          },
+          "required": [
+            "customer_id",
+            "monthly_income",
+            "property_value"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "check_vehicle_loan_eligibility",
+    "area": "new_loans",
+    "risk": "read",
+    "examples": [
+      "nayi car ke liye loan milega kya",
+      "बाइक के लिए कितना लोन मिल सकता है",
+      "can I get a loan for a new car"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "check_vehicle_loan_eligibility",
+        "description": "Estimate how much vehicle loan the customer may be eligible for. Indicative only, not an approval.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "monthly_income": {
+              "type": "number",
+              "description": "Monthly income in rupees"
+            },
+            "vehicle_price": {
+              "type": "number",
+              "description": "On-road price of the vehicle in rupees"
+            }
+          },
+          "required": [
+            "customer_id",
+            "monthly_income",
+            "vehicle_price"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_loan_products",
+    "area": "new_loans",
+    "risk": "read",
+    "examples": [
+      "aapke paas kaun kaun se loan hain",
+      "आप कौन कौन से लोन देते हैं",
+      "what loans do you offer"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_loan_products",
+        "description": "List the loan products offered with amount, tenure and rate ranges.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    }
+  },
+  {
+    "name": "get_current_interest_rates",
+    "area": "new_loans",
+    "risk": "read",
+    "examples": [
+      "abhi home loan ka rate kya chal raha hai",
+      "अभी पर्सनल लोन की ब्याज दर क्या है",
+      "what's your current car loan rate"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_current_interest_rates",
+        "description": "Get current interest rates offered for a new loan product.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "product": {
+              "type": "string",
+              "description": "Loan product",
+              "enum": [
+                "personal",
+                "home",
+                "vehicle"
+              ]
+            }
+          },
+          "required": [
+            "product"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "calculate_emi",
+    "area": "new_loans",
+    "risk": "read",
+    "examples": [
+      "5 lakh 3 saal ke liye to EMI kitni banegi",
+      "दस लाख पर किस्त कितनी होगी",
+      "what's the EMI on 5 lakh for 3 years"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "calculate_emi",
+        "description": "Calculate the EMI for a loan amount, interest rate and tenure.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Loan amount in rupees"
+            },
+            "annual_rate": {
+              "type": "number",
+              "description": "Annual interest rate in percent"
+            },
+            "tenure_months": {
+              "type": "integer",
+              "description": "Tenure in months"
+            }
+          },
+          "required": [
+            "principal",
+            "annual_rate",
+            "tenure_months"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "create_loan_lead",
+    "area": "new_loans",
+    "risk": "write",
+    "examples": [
+      "mujhe naya loan chahiye, apply kar do",
+      "नया लोन लेना है, आवेदन कर दीजिए",
+      "I want to apply for a loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "create_loan_lead",
+        "description": "Register the customer's interest in a new loan so a loan officer calls back.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "product": {
+              "type": "string",
+              "description": "Loan product",
+              "enum": [
+                "personal",
+                "home",
+                "vehicle"
+              ]
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            }
+          },
+          "required": [
+            "customer_id",
+            "product",
+            "amount"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_application_status",
+    "area": "new_loans",
+    "risk": "read",
+    "examples": [
+      "mera loan application kahan tak pahuncha",
+      "मेरे लोन आवेदन का क्या हुआ",
+      "what's happening with my application"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_application_status",
+        "description": "Check the status of a loan application.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "application_id": {
+              "type": "string",
+              "description": "Loan application ID, e.g. A4001"
+            }
+          },
+          "required": [
+            "application_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "send_document_upload_link",
+    "area": "new_loans",
+    "risk": "write",
+    "examples": [
+      "documents kaise upload karun",
+      "कागज़ अपलोड करने का लिंक भेजिए",
+      "send me the document upload link"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "send_document_upload_link",
+        "description": "Send an SMS link to upload documents for a loan application.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "application_id": {
+              "type": "string",
+              "description": "Loan application ID, e.g. A4001"
+            }
+          },
+          "required": [
+            "application_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "cancel_loan_application",
+    "area": "new_loans",
+    "risk": "irreversible",
+    "examples": [
+      "mujhe ab loan nahi chahiye, application cancel karo",
+      "मेरा आवेदन रद्द कर दीजिए",
+      "cancel my loan application"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "cancel_loan_application",
+        "description": "Cancel a loan application that is still in progress.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "application_id": {
+              "type": "string",
+              "description": "Loan application ID, e.g. A4001"
+            }
+          },
+          "required": [
+            "application_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_preapproved_offers",
+    "area": "new_loans",
+    "risk": "read",
+    "examples": [
+      "mere liye koi offer hai kya",
+      "मेरे लिए कोई प्री-अप्रूव्ड लोन है",
+      "do I have any pre-approved offers"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_preapproved_offers",
+        "description": "Get pre-approved loan offers for the customer.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            }
+          },
+          "required": [
+            "customer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_kyc_status",
+    "area": "kyc_profile",
+    "risk": "read",
+    "examples": [
+      "mera KYC complete hai kya",
+      "मेरा केवाईसी हुआ या नहीं",
+      "is my KYC done"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_kyc_status",
+        "description": "Check whether the customer's KYC is verified, pending or expired.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            }
+          },
+          "required": [
+            "customer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "start_video_kyc",
+    "area": "kyc_profile",
+    "risk": "write",
+    "examples": [
+      "KYC update karna hai",
+      "वीडियो केवाईसी करवाना है",
+      "I want to complete my KYC"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "start_video_kyc",
+        "description": "Send a video KYC link to complete or renew KYC.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            }
+          },
+          "required": [
+            "customer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_registered_contact_details",
+    "area": "kyc_profile",
+    "risk": "pii",
+    "examples": [
+      "mera registered email kya hai",
+      "मेरा कौन सा पता दर्ज है",
+      "which phone number is registered"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_registered_contact_details",
+        "description": "Get the customer's registered phone number, email and address.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            }
+          },
+          "required": [
+            "customer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "update_address",
+    "area": "kyc_profile",
+    "risk": "pii",
+    "examples": [
+      "naye ghar mein shift ho gaya hoon, address badlo",
+      "मेरा पता बदलना है",
+      "update my address"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "update_address",
+        "description": "Change the customer's registered address. Needs address proof.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "new_address": {
+              "type": "string",
+              "description": "Full new address with pincode"
+            }
+          },
+          "required": [
+            "customer_id",
+            "new_address"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "update_phone",
+    "area": "kyc_profile",
+    "risk": "pii",
+    "examples": [
+      "mera mobile number badal gaya hai",
+      "नया मोबाइल नंबर अपडेट करना है",
+      "change my phone number"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "update_phone",
+        "description": "Change the customer's registered mobile number. Needs OTP on the new number.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "new_phone": {
+              "type": "string",
+              "description": "New 10-digit mobile number"
+            }
+          },
+          "required": [
+            "customer_id",
+            "new_phone"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "update_email",
+    "area": "kyc_profile",
+    "risk": "pii",
+    "examples": [
+      "email id change karni hai",
+      "मेरी ईमेल आईडी बदल दीजिए",
+      "update my email"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "update_email",
+        "description": "Change the customer's registered email address.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "new_email": {
+              "type": "string",
+              "description": "New email address"
+            }
+          },
+          "required": [
+            "customer_id",
+            "new_email"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "update_preferred_language",
+    "area": "kyc_profile",
+    "risk": "write",
+    "examples": [
+      "mujhse Hindi mein baat karo",
+      "मुझे हिंदी में मैसेज भेजिए",
+      "switch my language to English"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "update_preferred_language",
+        "description": "Change the language used for calls and messages.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "language": {
+              "type": "string",
+              "description": "Language, e.g. hindi, english, kannada"
+            }
+          },
+          "required": [
+            "customer_id",
+            "language"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "update_nominee",
+    "area": "kyc_profile",
+    "risk": "pii",
+    "examples": [
+      "nominee mein meri wife ka naam daalo",
+      "नॉमिनी बदलना है",
+      "add my father as nominee"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "update_nominee",
+        "description": "Add or change the nominee on the customer's account.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "nominee_name": {
+              "type": "string",
+              "description": "Nominee's full name"
+            },
+            "relation": {
+              "type": "string",
+              "description": "Relation to the customer, e.g. spouse, father"
+            }
+          },
+          "required": [
+            "customer_id",
+            "nominee_name",
+            "relation"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "link_pan",
+    "area": "kyc_profile",
+    "risk": "pii",
+    "examples": [
+      "PAN card link karna hai",
+      "मेरा पैन नंबर जोड़ दीजिए",
+      "add my PAN to my account"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "link_pan",
+        "description": "Link or update the customer's PAN.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "pan": {
+              "type": "string",
+              "description": "PAN, e.g. ABCDE1234F"
+            }
+          },
+          "required": [
+            "customer_id",
+            "pan"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_document_list",
+    "area": "kyc_profile",
+    "risk": "read",
+    "examples": [
+      "home loan ke liye kya documents chahiye",
+      "लोन के लिए कौन से कागज़ लगेंगे",
+      "what documents do I need for a car loan"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_document_list",
+        "description": "List the documents needed to apply for a loan product.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "product": {
+              "type": "string",
+              "description": "Loan product",
+              "enum": [
+                "personal",
+                "home",
+                "vehicle"
+              ]
+            }
+          },
+          "required": [
+            "product"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_card_details",
+    "area": "cards",
+    "risk": "read",
+    "examples": [
+      "mera kaunsa card hai",
+      "मेरे क्रेडिट कार्ड की जानकारी",
+      "which credit card do I have"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_card_details",
+        "description": "Get a credit card's type, last 4 digits and status.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            }
+          },
+          "required": [
+            "card_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_card_bill",
+    "area": "cards",
+    "risk": "read",
+    "examples": [
+      "card ka bill kitna aaya hai",
+      "क्रेडिट कार्ड का बिल कितना है",
+      "how much is my card bill"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_card_bill",
+        "description": "Get the credit card bill: total due, minimum due and due date.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            }
+          },
+          "required": [
+            "card_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "pay_card_bill",
+    "area": "cards",
+    "risk": "payment",
+    "examples": [
+      "card ka bill bhar do",
+      "क्रेडिट कार्ड का बिल चुका दीजिए",
+      "pay my credit card bill"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "pay_card_bill",
+        "description": "Pay the credit card bill, in full or part.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            },
+            "method": {
+              "type": "string",
+              "description": "Payment method. Default upi",
+              "enum": [
+                "upi",
+                "netbanking",
+                "debit_card"
+              ]
+            }
+          },
+          "required": [
+            "card_id",
+            "amount"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_card_limit",
+    "area": "cards",
+    "risk": "read",
+    "examples": [
+      "card ki limit kitni bachi hai",
+      "मेरे कार्ड की लिमिट कितनी है",
+      "what's my available limit"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_card_limit",
+        "description": "Get the credit limit and available limit on a card.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            }
+          },
+          "required": [
+            "card_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "request_card_limit_increase",
+    "area": "cards",
+    "risk": "write",
+    "examples": [
+      "card ki limit badha do",
+      "कार्ड की लिमिट बढ़ानी है",
+      "increase my credit limit"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "request_card_limit_increase",
+        "description": "Request a higher credit limit on a card.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            },
+            "new_limit": {
+              "type": "number",
+              "description": "Requested new limit in rupees"
+            }
+          },
+          "required": [
+            "card_id",
+            "new_limit"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "block_card",
+    "area": "cards",
+    "risk": "irreversible",
+    "examples": [
+      "mera card kho gaya, block karo",
+      "मेरा कार्ड चोरी हो गया है",
+      "block my card, it's stolen"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "block_card",
+        "description": "Permanently block a credit card that is lost, stolen, damaged or misused. A new card is sent.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            },
+            "reason": {
+              "type": "string",
+              "description": "Why the card is being blocked",
+              "enum": [
+                "lost",
+                "stolen",
+                "fraud",
+                "damaged"
+              ]
+            }
+          },
+          "required": [
+            "card_id",
+            "reason"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_card_transactions",
+    "area": "cards",
+    "risk": "read",
+    "examples": [
+      "card pe last kya kharcha hua",
+      "कार्ड के पिछले लेन-देन दिखाइए",
+      "show my recent card transactions"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_card_transactions",
+        "description": "List recent credit card transactions.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            },
+            "count": {
+              "type": "integer",
+              "description": "How many to return. Default 5"
+            }
+          },
+          "required": [
+            "card_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "dispute_card_transaction",
+    "area": "cards",
+    "risk": "write",
+    "examples": [
+      "ye transaction maine nahi kiya",
+      "यह खर्चा मेरा नहीं है",
+      "I don't recognise this charge"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "dispute_card_transaction",
+        "description": "Raise a dispute on a credit card transaction the customer doesn't recognise.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            },
+            "transaction_id": {
+              "type": "string",
+              "description": "Transaction ID, e.g. T600001"
+            },
+            "reason": {
+              "type": "string",
+              "description": "Reason in the caller's words"
+            }
+          },
+          "required": [
+            "card_id",
+            "transaction_id",
+            "reason"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_reward_points",
+    "area": "cards",
+    "risk": "read",
+    "examples": [
+      "kitne reward points hain",
+      "मेरे रिवॉर्ड पॉइंट कितने हैं",
+      "how many reward points do I have"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_reward_points",
+        "description": "Get the reward points balance on a credit card and its rupee value.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            }
+          },
+          "required": [
+            "card_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "redeem_reward_points",
+    "area": "cards",
+    "risk": "write",
+    "examples": [
+      "points redeem kar do",
+      "रिवॉर्ड पॉइंट भुना दीजिए",
+      "use my points against the bill"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "redeem_reward_points",
+        "description": "Redeem reward points as a credit on the card bill.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            },
+            "points": {
+              "type": "integer",
+              "description": "Number of points to redeem"
+            }
+          },
+          "required": [
+            "card_id",
+            "points"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "convert_transaction_to_emi",
+    "area": "cards",
+    "risk": "irreversible",
+    "examples": [
+      "phone wali kharidari ko EMI mein badal do",
+      "इस खरीदारी की किस्तें बना दीजिए",
+      "convert this purchase to EMI"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "convert_transaction_to_emi",
+        "description": "Convert a large credit card purchase into monthly EMIs.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            },
+            "transaction_id": {
+              "type": "string",
+              "description": "Transaction ID, e.g. T600001"
+            },
+            "tenure_months": {
+              "type": "integer",
+              "description": "EMI tenure in months",
+              "enum": [
+                3,
+                6,
+                9,
+                12
+              ]
+            }
+          },
+          "required": [
+            "card_id",
+            "transaction_id",
+            "tenure_months"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "send_card_pin_reset_link",
+    "area": "cards",
+    "risk": "write",
+    "examples": [
+      "card ka PIN bhool gaya",
+      "कार्ड का पिन बदलना है",
+      "I forgot my card PIN"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "send_card_pin_reset_link",
+        "description": "Send an SMS link to set or reset the credit card PIN.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "card_id": {
+              "type": "string",
+              "description": "Credit card ID, e.g. CC2001"
+            }
+          },
+          "required": [
+            "card_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "list_deposits",
+    "area": "deposits",
+    "risk": "read",
+    "examples": [
+      "meri kitni FD hain",
+      "मेरी सारी एफडी बताइए",
+      "list my fixed deposits"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "list_deposits",
+        "description": "List the customer's fixed deposits.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            }
+          },
+          "required": [
+            "customer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_deposit_details",
+    "area": "deposits",
+    "risk": "read",
+    "examples": [
+      "FD kab mature hogi",
+      "मेरी एफडी कब पूरी होगी",
+      "when does my FD mature"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_deposit_details",
+        "description": "Get a fixed deposit's amount, rate, maturity date and maturity instruction.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "deposit_id": {
+              "type": "string",
+              "description": "Fixed deposit ID, e.g. FD3001"
+            }
+          },
+          "required": [
+            "deposit_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_fd_rates",
+    "area": "deposits",
+    "risk": "read",
+    "examples": [
+      "FD pe kitna interest milta hai",
+      "एफडी की ब्याज दरें क्या हैं",
+      "what are your FD rates"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_fd_rates",
+        "description": "Get current fixed deposit interest rates by tenure.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    }
+  },
+  {
+    "name": "open_fixed_deposit",
+    "area": "deposits",
+    "risk": "payment",
+    "examples": [
+      "1 lakh ki FD banani hai",
+      "नई एफडी खुलवानी है",
+      "I want to open an FD"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "open_fixed_deposit",
+        "description": "Open a new fixed deposit. Minimum ₹10,000.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "amount": {
+              "type": "number",
+              "description": "Amount in rupees"
+            },
+            "tenure_months": {
+              "type": "integer",
+              "description": "Tenure in months",
+              "enum": [
+                12,
+                24,
+                36,
+                60
+              ]
+            },
+            "method": {
+              "type": "string",
+              "description": "Payment method. Default netbanking",
+              "enum": [
+                "upi",
+                "netbanking",
+                "debit_card"
+              ]
+            }
+          },
+          "required": [
+            "customer_id",
+            "amount",
+            "tenure_months"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "break_fixed_deposit",
+    "area": "deposits",
+    "risk": "irreversible",
+    "examples": [
+      "FD tod do, paise chahiye",
+      "एफडी समय से पहले तोड़नी है",
+      "break my FD"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "break_fixed_deposit",
+        "description": "Close a fixed deposit before maturity. Interest is reduced as a penalty.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "deposit_id": {
+              "type": "string",
+              "description": "Fixed deposit ID, e.g. FD3001"
+            }
+          },
+          "required": [
+            "deposit_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "update_fd_maturity_instruction",
+    "area": "deposits",
+    "risk": "write",
+    "examples": [
+      "FD mature hone pe auto renew kar do",
+      "मैच्योरिटी पर पैसा खाते में डाल दीजिए",
+      "don't renew my FD, pay it out"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "update_fd_maturity_instruction",
+        "description": "Change what happens when a fixed deposit matures: renew or pay out.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "deposit_id": {
+              "type": "string",
+              "description": "Fixed deposit ID, e.g. FD3001"
+            },
+            "instruction": {
+              "type": "string",
+              "description": "What to do at maturity",
+              "enum": [
+                "renew_principal_and_interest",
+                "renew_principal",
+                "payout"
+              ]
+            }
+          },
+          "required": [
+            "deposit_id",
+            "instruction"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_deposit_interest_certificate",
+    "area": "deposits",
+    "risk": "read",
+    "examples": [
+      "FD ka interest certificate chahiye",
+      "एफडी ब्याज प्रमाणपत्र भेजिए",
+      "send my FD interest certificate"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_deposit_interest_certificate",
+        "description": "Email the interest earned on a fixed deposit for a financial year.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "deposit_id": {
+              "type": "string",
+              "description": "Fixed deposit ID, e.g. FD3001"
+            },
+            "financial_year": {
+              "type": "string",
+              "description": "Financial year, e.g. 2025-26"
+            }
+          },
+          "required": [
+            "deposit_id",
+            "financial_year"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "faq_search",
+    "area": "support",
+    "risk": "read",
+    "examples": [
+      "EMI miss ho jaye to kya hota hai",
+      "ग्राहक सेवा का समय क्या है",
+      "how is interest calculated"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "faq_search",
+        "description": "Search answers to common questions about policies, charges and processes.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "question": {
+              "type": "string",
+              "description": "The caller's question"
+            }
+          },
+          "required": [
+            "question"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "raise_complaint",
+    "area": "support",
+    "risk": "write",
+    "examples": [
+      "mujhe complaint karni hai",
+      "मुझे शिकायत दर्ज करनी है",
+      "I want to file a complaint"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "raise_complaint",
+        "description": "Register a complaint.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "category": {
+              "type": "string",
+              "description": "Complaint type",
+              "enum": [
+                "payment_not_updated",
+                "wrong_charges",
+                "rude_agent",
+                "noc_delay",
+                "card_issue",
+                "other"
+              ]
+            },
+            "description": {
+              "type": "string",
+              "description": "What happened, in the caller's words"
+            }
+          },
+          "required": [
+            "customer_id",
+            "category",
+            "description"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_complaint_status",
+    "area": "support",
+    "risk": "read",
+    "examples": [
+      "meri complaint ka kya hua",
+      "मेरी शिकायत पर क्या कार्रवाई हुई",
+      "what's the status of my complaint"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_complaint_status",
+        "description": "Check the status of a complaint by its complaint ID.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "complaint_id": {
+              "type": "string",
+              "description": "Complaint ID, e.g. CMP5001"
+            }
+          },
+          "required": [
+            "complaint_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "list_complaints",
+    "area": "support",
+    "risk": "read",
+    "examples": [
+      "maine kitni complaints ki hain",
+      "मेरी सारी शिकायतें दिखाइए",
+      "list my complaints"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "list_complaints",
+        "description": "List the customer's complaints.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            }
+          },
+          "required": [
+            "customer_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "escalate_complaint",
+    "area": "support",
+    "risk": "write",
+    "examples": [
+      "complaint ka koi jawab nahi aaya, upar bhejo",
+      "शिकायत ऊपर भेजिए",
+      "escalate my complaint"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "escalate_complaint",
+        "description": "Escalate an unresolved complaint to the Grievance Redressal Officer.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "complaint_id": {
+              "type": "string",
+              "description": "Complaint ID, e.g. CMP5001"
+            },
+            "reason": {
+              "type": "string",
+              "description": "Reason in the caller's words"
+            }
+          },
+          "required": [
+            "complaint_id",
+            "reason"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "book_callback",
+    "area": "support",
+    "risk": "write",
+    "examples": [
+      "mujhe kal subah call karna",
+      "मुझे बाद में कॉल कीजिए",
+      "call me back tomorrow"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "book_callback",
+        "description": "Book a callback from a support agent at a preferred time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "preferred_time": {
+              "type": "string",
+              "description": "When to call back, in the caller's words"
+            },
+            "topic": {
+              "type": "string",
+              "description": "What the callback is about"
+            }
+          },
+          "required": [
+            "customer_id",
+            "preferred_time",
+            "topic"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "find_nearest_branch",
+    "area": "support",
+    "risk": "read",
+    "examples": [
+      "sabse paas wali branch kahan hai",
+      "नज़दीकी शाखा कहाँ है",
+      "where's the nearest branch"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "find_nearest_branch",
+        "description": "Find branches near a pincode.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "pincode": {
+              "type": "string",
+              "description": "6-digit pincode"
+            }
+          },
+          "required": [
+            "pincode"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_branch_timings",
+    "area": "support",
+    "risk": "read",
+    "examples": [
+      "branch kab khulti hai",
+      "शाखा का समय क्या है",
+      "what time does the branch open"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "get_branch_timings",
+        "description": "Get a branch's address and opening hours.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "branch_id": {
+              "type": "string",
+              "description": "Branch ID, e.g. B101"
+            }
+          },
+          "required": [
+            "branch_id"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "transfer_to_human",
+    "area": "support",
+    "risk": "read",
+    "examples": [
+      "kisi insaan se baat karao",
+      "मुझे किसी अधिकारी से बात करनी है",
+      "let me talk to a real person"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "transfer_to_human",
+        "description": "Transfer the call to a human agent. Use when the caller asks for a person or the agent can't help.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "type": "string",
+              "description": "Reason in the caller's words"
+            }
+          },
+          "required": [
+            "reason"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "send_sms_summary",
+    "area": "support",
+    "risk": "write",
+    "examples": [
+      "ye sab SMS pe bhej do",
+      "मुझे यह सब मैसेज में भेज दीजिए",
+      "text me a summary"
+    ],
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "send_sms_summary",
+        "description": "Send the customer an SMS summarising what was done on the call.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_id": {
+              "type": "string",
+              "description": "Customer ID, e.g. C001"
+            },
+            "summary": {
+              "type": "string",
+              "description": "Short summary to send"
+            }
+          },
+          "required": [
+            "customer_id",
+            "summary"
+          ]
+        }
+      }
+    }
+  }
+]
