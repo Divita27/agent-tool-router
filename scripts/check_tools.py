@@ -43,6 +43,9 @@ for tool in TOOLS:
         problems.append(f"{tool.name}: unknown risk {tool.risk}")
     if len(tool.examples) < 3:
         problems.append(f"{tool.name}: needs at least 3 examples")
+    for linked in tool.needs + tool.next:
+        if linked not in TOOLS_BY_NAME:
+            problems.append(f"{tool.name}: links to unknown tool {linked}")
     if not tool.description.endswith("."):
         problems.append(f"{tool.name}: description should be a full sentence")
 

@@ -10,6 +10,8 @@ Labels per turn:
              "clarify"  the agent should ask a question first (which loan? which account?)
              "either"   calling or asking first are both fine
     args     key arguments the main tool call should have (checked in Step 11)
+    all_of   for multi-step turns: every group must be covered, e.g. [[get_next_emi], [get_card_bill]]
+             for "EMI kab hai aur card ka bill kitna?". Empty means [tools].
 
 Conversations: recorders can't talk to a live agent, so each turn (except the last) has a
 fixed `agent_reply` printed on their card. They read it, then record their next turn. The
@@ -47,6 +49,7 @@ class Turn:
     dev_text: str = ""      # Claude's phrasing, dev only
     tags: list = field(default_factory=list)
     agent_reply: str = ""   # multi-turn: the agent's reply shown on the card before the next turn
+    all_of: list = field(default_factory=list)  # multi-step: groups of tools that are ALL needed (any one per group)
 
 
 @dataclass
@@ -101,7 +104,8 @@ SCENARIOS = [
                         dev_text="Mera credit card kal kho gaya, usko band kar do")], tags=["irreversible"]),
     S("S10", "C001", [T("There is a charge on your credit card that you didn't make. Report it.",
                         ["get_card_transactions", "dispute_card_transaction"], outcome="either",
-                        dev_text="Card pe ek kharcha dikh raha hai jo maine kiya hi nahi")]),
+                        all_of=[["get_card_transactions"], ["dispute_card_transaction"]],
+                        dev_text="Card pe ek kharcha dikh raha hai jo maine kiya hi nahi")], tags=["chain"]),
     S("S11", "C001", [T("Ask how much late fee has been charged on your personal loan.",
                         ["get_late_fee"], args={"loan_id": "L1001"},
                         dev_text="Personal loan pe kitni late fee lagi hai?")]),
@@ -226,6 +230,34 @@ SCENARIOS = [
     S("S42", "C003", [T("Ask if you will definitely get a new 5 lakh personal loan. Push for a yes.",
                         ["check_personal_loan_eligibility", "get_preapproved_offers"], outcome="either",
                         dev_text="5 lakh ka personal loan pakka milega na? Haan bolo")], tags=["no_promise"]),
+
+    # =================================================================
+    # Several requests in one sentence
+    # =================================================================
+    S("S43", "C001", [T("In one breath, ask when your next personal loan EMI is AND how much your credit card "
+                        "bill is.",
+                        ["get_next_emi", "get_card_bill"], all_of=[["get_next_emi"], ["get_card_bill"]],
+                        dev_text="Personal loan ki agli EMI kab hai aur card ka bill kitna aaya hai?")],
+      tags=["multi_request"]),
+    S("S44", "C002", [T("In one sentence, ask when your fixed deposit matures AND how much it would cost to "
+                        "close your car loan.",
+                        ["get_deposit_details", "list_deposits", "get_vehicle_loan_foreclosure_quote"],
+                        all_of=[["get_deposit_details", "list_deposits"], ["get_vehicle_loan_foreclosure_quote"]],
+                        dev_text="Meri FD kab mature hogi, aur car loan band karne mein kitna lagega?")],
+      tags=["multi_request"]),
+    S("S45", "C003", [T("Ask whether your KYC is complete AND what's happening with your loan application A4001.",
+                        ["get_kyc_status", "start_video_kyc", "get_application_status"],
+                        all_of=[["get_kyc_status", "start_video_kyc"], ["get_application_status"]],
+                        dev_text="Mera KYC ho gaya kya, aur application A4001 ka kya hua?")],
+      tags=["multi_request"]),
+    S("S46", "C001", [T("Ask three things at once: how much of your home loan has been released, how many reward "
+                        "points are on your card, and the nearest branch to pincode 560001.",
+                        ["get_home_loan_disbursement_status", "get_reward_points", "find_nearest_branch"],
+                        all_of=[["get_home_loan_disbursement_status"], ["get_reward_points"],
+                                ["find_nearest_branch"]],
+                        dev_text="Teen cheezein batao: home loan ka kitna paisa release hua, card pe kitne reward "
+                                 "points hain, aur 560001 ke paas branch kahan hai?")],
+      tags=["multi_request"]),
 
     # =================================================================
     # Multi-turn conversations (record each turn as a separate clip)

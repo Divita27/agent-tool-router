@@ -30,6 +30,9 @@ for s in SCENARIOS:
         if unknown or not t.tools:
             problems.append(f"{where}: unknown or missing tools {unknown}")
             continue
+        for group in t.all_of:
+            if not group or any(n not in TOOLS_BY_NAME for n in group):
+                problems.append(f"{where}: bad all_of group {group}")
         if not t.dev_text:
             problems.append(f"{where}: missing dev_text")
         last = i == len(s.turns)

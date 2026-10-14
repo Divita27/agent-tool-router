@@ -15,6 +15,7 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from eval.dev_variants import VARIANTS
 from eval.scenarios import SCENARIOS, SCENARIOS_BY_ID
 
 DATA = Path(__file__).parent / "data"
@@ -33,7 +34,7 @@ def record(rid, speaker, scenario, turn_no, text, split, source, language=None, 
         "turn": turn_no, "turns_in_conversation": len(scenario.turns), "customer": scenario.customer,
         "text": text, "language": language, "audio": audio, "source": source, "split": split,
         "agent_reply": turn.agent_reply or None,  # fixed reply after this turn, used as history for the next
-        "tools": turn.tools, "outcome": turn.outcome, "args": turn.args,
+        "tools": turn.tools, "all_of": turn.all_of or [turn.tools], "outcome": turn.outcome, "args": turn.args,
         "tags": sorted(set(scenario.tags + turn.tags)),
     }
 
@@ -43,10 +44,23 @@ def write(path, records):
 
 
 def build_dev():
-    records = [record(f"claude_{s.id}_t{i}", "claude", s, i, t.dev_text, "dev_typed", "typed_by_claude")
-               for s in SCENARIOS for i, t in enumerate(s.turns, 1)]
+    """Three typed styles per turn. Each style is its own 'speaker', so conversations stay consistent."""
+    missing = [f"{s.id}_t{i}" for s in SCENARIOS for i in range(1, len(s.turns) + 1)
+               if f"{s.id}_t{i}" not in VARIANTS]
+    if missing:
+        raise SystemExit(f"dev_variants.py is missing: {missing}")
+    records = []
+    for style in ("hinglish", "codemix", "english"):
+        for s in SCENARIOS:
+            for i, t in enumerate(s.turns, 1):
+                codemix, english = VARIANTS[f"{s.id}_t{i}"]
+                text = {"hinglish": t.dev_text, "codemix": codemix, "english": english}[style]
+                r = record(f"claude-{style}_{s.id}_t{i}", f"claude-{style}", s, i, text, "dev_typed",
+                           "typed_by_claude", language=style)
+                r["conversation_complete"] = True
+                records.append(r)
     write(DATA / "dev_typed.jsonl", records)
-    print(f"dev_typed.jsonl: {len(records)} typed turns (router development only)")
+    print(f"dev_typed.jsonl: {len(records)} typed turns in 3 styles (router development only)")
 
 
 def build_test(mode):

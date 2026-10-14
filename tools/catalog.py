@@ -12,6 +12,9 @@ Risk levels (the safety layer in Step 10 decides what each one requires):
 
 Examples are short phrases a caller might say, in Hinglish, Hindi and English.
 The router may learn from them, so they must NEVER be reused as test data.
+
+needs / next are links for the router: when a tool is selected, the tools it needs (and the
+ones that usually follow it) are added too, so a multi-step request has every tool it needs.
 """
 from dataclasses import dataclass, field
 
@@ -32,6 +35,8 @@ class Tool:
     description: str
     params: dict = field(default_factory=dict)
     examples: list = field(default_factory=list)
+    needs: list = field(default_factory=list)   # tools usually called BEFORE this one (to get IDs, amounts, quotes)
+    next: list = field(default_factory=list)    # tools often called right AFTER this one, in the same turn
 
 
 # ---------- shared parameters ----------
@@ -596,3 +601,44 @@ TOOLS = [
          {"customer_id": CUSTOMER, "summary": Param("string", "Short summary to send")},
          ["ye sab SMS pe bhej do", "मुझे यह सब मैसेज में भेज दीजिए", "text me a summary"]),
 ]
+
+
+# ---------- links between tools (used by the router's expansion step) ----------
+
+LINKS = {
+    # needs: the caller doesn't say IDs, amounts or offers, so something must look them up first
+    "dispute_card_transaction": {"needs": ["get_card_transactions"]},
+    "convert_transaction_to_emi": {"needs": ["get_card_transactions"]},
+    "foreclose_personal_loan": {"needs": ["get_personal_loan_foreclosure_quote"]},
+    "foreclose_home_loan": {"needs": ["get_home_loan_foreclosure_quote"]},
+    "foreclose_vehicle_loan": {"needs": ["get_vehicle_loan_foreclosure_quote"]},
+    "make_personal_loan_part_payment": {"needs": ["get_personal_loan_part_payment_quote"]},
+    "accept_settlement_offer": {"needs": ["get_settlement_offer"]},
+    "pay_emi": {"needs": ["get_next_emi", "get_overdue_emis"]},
+    "pay_overdue": {"needs": ["get_overdue_emis"]},
+    "pay_card_bill": {"needs": ["get_card_bill"]},
+    "redeem_reward_points": {"needs": ["get_reward_points"]},
+    "request_late_fee_waiver": {"needs": ["get_late_fee"]},
+    "escalate_complaint": {"needs": ["list_complaints"]},
+    "request_property_documents_return": {"needs": ["find_nearest_branch"]},
+    "send_document_upload_link": {"needs": ["get_application_status"]},
+    "break_fixed_deposit": {"needs": ["get_deposit_details"]},
+    "update_fd_maturity_instruction": {"needs": ["list_deposits"]},
+    "get_deposit_details": {"needs": ["list_deposits"]},
+    # next: what usually follows a lookup within the same turn
+    "get_next_emi": {"next": ["get_overdue_emis", "pay_emi"]},
+    "get_overdue_emis": {"next": ["pay_overdue", "get_late_fee"]},
+    "get_card_transactions": {"next": ["dispute_card_transaction"]},
+    "get_card_bill": {"next": ["pay_card_bill"]},
+    "get_settlement_offer": {"next": ["accept_settlement_offer"]},
+    "get_noc_status": {"next": ["request_noc"]},
+    "get_application_status": {"next": ["send_document_upload_link"]},
+    "get_kyc_status": {"next": ["start_video_kyc"]},
+    "get_hypothecation_status": {"next": ["request_hypothecation_removal"]},
+    "get_payment_history": {"next": ["report_payment_not_reflected"]},
+}
+
+_by_name = {t.name: t for t in TOOLS}
+for _name, _links in LINKS.items():
+    _by_name[_name].needs = _links.get("needs", [])
+    _by_name[_name].next = _links.get("next", [])
