@@ -1,0 +1,352 @@
+{
+ "S01_t1": {
+  "hinglish": "mera agla personal loan ka due kab aur kitna hai?",
+  "codemix": "अगला personal loan कब due है और कितना है",
+  "english": "When is my next personal loan payment due and how much is it?"
+ },
+ "S02_t1": {
+  "hinglish": "mera agla payment kab due hai bata do",
+  "codemix": "मेरा next due कब है बता दो",
+  "english": "When is my next payment due?"
+ },
+ "S03_t1": {
+  "hinglish": "mera personal loan ka kitna EMI miss hua hai batao",
+  "codemix": "मेरे personal loan का कितना EMI miss हुआ है",
+  "english": "How many EMIs have I missed on my personal loan?"
+ },
+ "S04_t1": {
+  "hinglish": "maine 2 din pehle UPI se payment ki thi par status abhi bhi unpaid dikha raha hai",
+  "codemix": "मैंने 2 दिन पहले UPI से payment की थी पर status अबhi भी unpaid दिख रहा है",
+  "english": "I paid by UPI two days ago but it still shows as unpaid."
+ },
+ "S05_t1": {
+  "hinglish": "abhi tak builder ko kitna home loan release hua hai bata do",
+  "codemix": "अभी तक builder को कितना home loan release हुआ है बता दो",
+  "english": "Please tell me how much home loan has been disbursed to the builder till now"
+ },
+ "S06_t1": {
+  "hinglish": "builder ne slab complete kar diya hai, 5 lakh release kar do.",
+  "codemix": "builder ने slab complete कर दिया है, 5 lakh release कर दो.",
+  "english": "Builder finished the slab, please release 5 lakh."
+ },
+ "S07_t1": {
+  "hinglish": "mera home loan abhi close karne ka kitna charge lagega",
+  "codemix": "मेरा home loan अभी close करने का कितना charge लगेगा",
+  "english": "How much will it cost to close my home loan completely right now?"
+ },
+ "S08_t1": {
+  "hinglish": "mera credit card bill kitna hai aur due date kya hai?",
+  "codemix": "मेरा credit card bill कितना है और due date क्या है?",
+  "english": "Can you tell me my credit card bill amount and due date?"
+ },
+ "S09_t1": {
+  "hinglish": "mera credit card kal kho gaya, please block kar dijiye",
+  "codemix": "मेरा credit card कल खो गया, please block कर दीजिए",
+  "english": "I lost my credit card yesterday, please block it right now"
+ },
+ "S10_t1": {
+  "hinglish": "mere card pe ek galat charge laga hai, check karke batao",
+  "codemix": "मेरे card पे एक wrong charge लगा है please check करो",
+  "english": "There is an unauthorized charge on my card, please look into it."
+ },
+ "S11_t1": {
+  "hinglish": "mera personal loan ka late fee kitna laga hai?",
+  "codemix": "मेरे personal loan पे late fee कितना charge हुआ है",
+  "english": "How much late fee is charged on my personal loan?"
+ },
+ "S12_t1": {
+  "hinglish": "main hospital mein tha isliye late fee hata do",
+  "codemix": "मैं hospital में था इसलिए late fee हटा दो",
+  "english": "I was in the hospital, please waive the late fee."
+ },
+ "S13_t1": {
+  "hinglish": "mujhe pichle saal ka home loan certificate chahiye tax return ke liye",
+  "codemix": "mujhe पिछले साल का home loan certificate चाहिए tax return के लिए",
+  "english": "I need my home loan certificate for last year's income tax return"
+ },
+ "S14_t1": {
+  "hinglish": "mera personal loan ka pending amount abhi clear karna hai",
+  "codemix": "मेरा personal loan का pending amount अभी clear करना है",
+  "english": "I want to clear my pending personal loan dues right now"
+ },
+ "S15_t1": {
+  "hinglish": "personal loan ka payment aaj nahi ho payega, main 20 ko de dunga",
+  "codemix": "personal loan का payment आज नहीं हो पाएगा, मैं 20 को दे दूंगा",
+  "english": "I cannot pay the personal loan today, I will pay on the 20th"
+ },
+ "S16_t1": {
+  "hinglish": "yeh machine baat nahi kar rahi, mujhe real agent se baat karni hai",
+  "codemix": "yeh auto agent kaam nahi kar raha, मुझे real person से बात करनी है",
+  "english": "This automated agent is useless, I want to talk to a real person"
+ },
+ "S17_t1": {
+  "hinglish": "maine bank change kiya hai, nayi account se auto debit kar do",
+  "codemix": "मैंने bank change किया है, नई account से auto debit कर दो",
+  "english": "I changed my bank, please set auto debit from my new account"
+ },
+ "S19_t1": {
+  "hinglish": "Maine car insurance renew kar liya hai, naya policy number VI778899 hai.",
+  "codemix": "मेरी car insurance renew हो गई है, नया policy number VI778899 है.",
+  "english": "I have renewed my car insurance, the new policy number is VI778899."
+ },
+ "S20_t1": {
+  "hinglish": "meri car loan early close karni hai, kitna bharna padega?",
+  "codemix": "मेरी car loan early close करनी है, कितना भरना पड़ेगा?",
+  "english": "I want to close my car loan early, how much do I need to pay?"
+ },
+ "S21_t1": {
+  "hinglish": "mera loan close karne ka kitna charge lagega?",
+  "codemix": "मेरा loan close करने का कितना charge लगेगा?",
+  "english": "How much will it cost to close my loan?"
+ },
+ "S22_t1": {
+  "hinglish": "mera 2 lakh ka FD kab mature hoga?",
+  "codemix": "मेरा 2 lakh का FD कब mature होगा?",
+  "english": "When will my 2 lakh FD mature?"
+ },
+ "S23_t1": {
+  "hinglish": "mera FD mature ho gaya hai, paise payout kar do renewal mat karna",
+  "codemix": "मेरा FD mature हो गया है, पैसे payout कर दो renewal मत करना",
+  "english": "My FD has matured, please payout the amount and do not renew it"
+ },
+ "S24_t1": {
+  "hinglish": "mera nominee update karna hai, mere papa Anil Sharma ko add kar do.",
+  "codemix": "मेरा nominee update करना है, मेरे पापा अनिल शर्मा को add कर दो.",
+  "english": "Please add my father Anil Sharma as the nominee on my account."
+ },
+ "S25_t1": {
+  "hinglish": "mera bonus aaya hai, agar main 50,000 extra de doon toh kya hoga?",
+  "codemix": "मेरा bonus आया है, अगर मैं 50,000 extra दे दूँ तो क्या होगा?",
+  "english": "I got a bonus, what happens if I pay 50,000 extra towards my loan?"
+ },
+ "S26_t1": {
+  "hinglish": "mera personal loan upar 1 lakh aur mil sakta hai kya",
+  "codemix": "मेरे personal loan में 1 lakh और add हो सकता है क्या",
+  "english": "Can I get 1 lakh more on my current personal loan?"
+ },
+ "S27_t1": {
+  "hinglish": "mera monthly salary 1.4 lakh hai, 80 lakh ka flat lena hai, kitna home loan milega?",
+  "codemix": "मेरा monthly salary 1.4 lakh है, 80 lakh का flat लेना है, कितना home loan मिलेगा?",
+  "english": "My monthly salary is 1.4 lakh, I want to buy an 80 lakh flat, how much home loan can I get?"
+ },
+ "S28_t1": {
+  "hinglish": "mera personal loan EMI date 10th ko kar do please",
+  "codemix": "mera personal loan का EMI date 10th कर दो please",
+  "english": "Please change my personal loan EMI date to the 10th."
+ },
+ "S29_t1": {
+  "hinglish": "second car lene ka soch rahi hoon, aaj kal car loan par kya interest rate chal raha hai?",
+  "codemix": "second car लेने का सोच रही हूँ, आज कल car loan पर क्या interest rate चल रहा है?",
+  "english": "I am thinking of buying a second car, what interest rate do you charge on car loans these days?"
+ },
+ "S30_t1": {
+  "hinglish": "5 lakh loan 3 saal ke liye 12 percent par EMI kitni hogi?",
+  "codemix": "5 lakh loan 3 साल के लिए 12 percent पर EMI क्या होगी?",
+  "english": "What will be the EMI for a 5 lakh loan over 3 years at 12 percent?"
+ },
+ "S31_t1": {
+  "hinglish": "job chali gayi hai, abhi payment nahi kar paunga, kya kar sakte hain?",
+  "codemix": "job chali gayi hai, abhi payment nahi kar paunga, क्या कर सकते हैं?",
+  "english": "I lost my job sir, I cannot pay right now, what can we do?"
+ },
+ "S32_t1": {
+  "hinglish": "mera personal loan ek baar mein settle ho sakta hai kya",
+  "codemix": "मेरा personal loan एक बार में settle हो सकता है क्या",
+  "english": "Can I settle my personal loan with a one-time payment?"
+ },
+ "S33_t1": {
+  "hinglish": "meri bike ka loan clear ho gaya hai, RC se bank ka naam hata do",
+  "codemix": "मेरी bike का loan clear हो गया है, RC से bank का नाम हटा दो",
+  "english": "My bike loan is fully paid, please remove the bank name from the RC"
+ },
+ "S34_t1": {
+  "hinglish": "mera KYC incomplete aaya hai, kaise complete karu?",
+  "codemix": "मेरा KYC incomplete है, कैसे complete करूँ?",
+  "english": "I got a message that my KYC is incomplete, how do I complete it?"
+ },
+ "S35_t1": {
+  "hinglish": "Mera naya application A4001 ka status kya hai?",
+  "codemix": "मेरा नया application A4001 का status क्या है?",
+  "english": "Can you tell me the status of my application A4001?"
+ },
+ "S36_t1": {
+  "hinglish": "mera application A4001 ka document kaise bhejun?",
+  "codemix": "application A4001 के documents कैसे भेजने हैं",
+  "english": "How do I send the documents for application A4001?"
+ },
+ "S37_t1": {
+  "hinglish": "subah baar baar call aata hai, shaam 5 se 7 ke beech hi call karo",
+  "codemix": "सुबह बार बार call आता है शाम 5 से 7 के बीच ही call करो",
+  "english": "I am getting calls in the morning, please call me only between 5 to 7 in the evening"
+ },
+ "S38_t1": {
+  "hinglish": "mujhe raat 8 se 10 baje ke beech hi call karna",
+  "codemix": "reminder calls सिर्फ रात 8 से 10 के बीच करना",
+  "english": "please call me only between 8 and 10 at night"
+ },
+ "S39_t1": {
+  "hinglish": "mera a4001 ka status kya hai aur 500034 ke paas kaunsa branch hai",
+  "codemix": "मेरा application number A4001 का status क्या है और 500034 के पास कौन सा branch है",
+  "english": "Can you tell me where the nearest branch is for pincode 500034?"
+ },
+ "S40_t1": {
+  "hinglish": "kal recovery agent bahut rude tha, uski shikayat karni hai.",
+  "codemix": "कल recovery agent बहुत rude था, उसकी शिकायत करनी है.",
+  "english": "The recovery agent was very rude yesterday, I want to file a complaint."
+ },
+ "S41_t1": {
+  "hinglish": "mera personal loan ka total amount kitna baki hai?",
+  "codemix": "मेरे personal loan का total amount कितना बचा है?",
+  "english": "Can you tell me my total pending amount?"
+ },
+ "S42_t1": {
+  "hinglish": "mujhe confirm karo, mujhe definitely 5 lakh ka personal loan mil jayega",
+  "codemix": "आप confirm करो मुझे 5 lakh का personal loan definitely मिल जाएगा",
+  "english": "Just confirm, I will definitely get the 5 lakh personal loan, right?"
+ },
+ "S43_t1": {
+  "hinglish": "mera next EMI kab hai aur card ka bill kitna hai",
+  "codemix": "mera next EMI kab hai aur card का bill कितना है",
+  "english": "When is my next EMI and what is my credit card bill?"
+ },
+ "S44_t1": {
+  "hinglish": "mera FD kab mature hoga aur car loan close karne ka kitna charge lagega?",
+  "codemix": "मेरा FD कब mature होगा और car loan close करने का कितना charge लगेगा?",
+  "english": "When does my fixed deposit mature and what is the charge to close my car loan?"
+ },
+ "S45_t1": {
+  "hinglish": "mera KYC complete hua kya aur A4001 ka kya update hai",
+  "codemix": "मेरा KYC complete हुआ क्या और A4001 का क्या update है",
+  "english": "Has my KYC been completed and what is the status of application A4001"
+ },
+ "S46_t1": {
+  "hinglish": "home loan ka kitna amount release hua, card pe kitne reward points hain aur 560001 ke paas ka branch kahan hai",
+  "codemix": "home loan का कितना amount release हुआ, card पे कितने reward points हैं और 560001 के पास का branch कहाँ है",
+  "english": "How much home loan is released, how many reward points are on my card, and the nearest branch to 560001?"
+ },
+ "M01_t1": {
+  "hinglish": "mera agla payment kab due hai",
+  "codemix": "मेरा next payment कब due है",
+  "english": "When is my next payment due?"
+ },
+ "M01_t2": {
+  "hinglish": "personal loan ki baat kar rahe hain.",
+  "codemix": "personal loan के बारे में पूछ रहा हूँ.",
+  "english": "I am asking about the personal loan."
+ },
+ "M01_t3": {
+  "hinglish": "Main abhi isko pay karna chahta hoon",
+  "codemix": "मैं अभी इसको pay करना चाहता हूँ",
+  "english": "I want to pay it right this moment"
+ },
+ "M02_t1": {
+  "hinglish": "mera credit card ka bill kitna bacha hai",
+  "codemix": "मेरा credit card bill कितना बचा है",
+  "english": "Can you tell me my current credit card bill amount?"
+ },
+ "M02_t2": {
+  "hinglish": "abhi sirf minimum due hi pay karunga",
+  "codemix": "abhi sirf minimum due ही pay करूंगा",
+  "english": "I will pay only the minimum amount right now"
+ },
+ "M03_t1": {
+  "hinglish": "mera home loan abhi close karne ka total cost kitna aayega?",
+  "codemix": "मेरा home loan अभी close करने का total cost कितना आएगा?",
+  "english": "How much will it cost to close my home loan right now?"
+ },
+ "M03_t2": {
+  "hinglish": "mera personal loan close karne ka kitna charge lagega?",
+  "codemix": "मेरा personal loan बंद करने का कितना charge लगेगा",
+  "english": "How much will it cost to close my personal loan?"
+ },
+ "M04_t1": {
+  "hinglish": "Mera purana personal loan last year close ho gaya tha, kya NOC bhej diya hai?",
+  "codemix": "मेरा पुराना personal loan last year close हो गया था, क्या NOC भेज दिया है?",
+  "english": "My old personal loan got closed last year, has the NOC been sent?"
+ },
+ "M04_t2": {
+  "hinglish": "toh please abhi NOC ki request daal do",
+  "codemix": "तो please अभी NOC की request डाल दो",
+  "english": "Please request the NOC right now"
+ },
+ "M05_t1": {
+  "hinglish": "Mujhe fixed deposit pe kya interest rate mil raha hai?",
+  "codemix": "मेरे fixed deposit पर क्या interest rate मिलेगा?",
+  "english": "Can you tell me the interest rates for fixed deposits?"
+ },
+ "M05_t2": {
+  "hinglish": "Theek hai, mujhe 1 lakh ki 2 saal ki FD kholni hai.",
+  "codemix": "theek hai, मुझे 1 lakh की 2 साल की FD खुलवानी है.",
+  "english": "Okay, I want to open a 1 lakh rupee FD for 2 years."
+ },
+ "M06_t1": {
+  "hinglish": "mera kitna payment pending hai batao",
+  "codemix": "मेरे कितने payments pending हैं बताइए",
+  "english": "How many payments are overdue on my account?"
+ },
+ "M06_t2": {
+  "hinglish": "abhi payment nahi kar sakta, 25 tak kar dunga",
+  "codemix": "अभी payment नहीं कर सकता, 25 तक कर दूँगा",
+  "english": "I cannot pay right now, I will pay by the 25th"
+ },
+ "M07_t1": {
+  "hinglish": "mera loan ek saath settle kar sakte hain kya",
+  "codemix": "मेरा loan एक साथ settle कर सकते हैं क्या",
+  "english": "Can I settle my loan in one go?"
+ },
+ "M07_t2": {
+  "hinglish": "haan, main offer accept karta hoon.",
+  "codemix": "हाँ, मैं offer accept करता हूँ.",
+  "english": "Yes, I accept the offer."
+ },
+ "M08_t1": {
+  "hinglish": "mera recent credit card ka transaction bata do",
+  "codemix": "मेरे credit card के recent transactions सुना दो",
+  "english": "Please tell me my recent credit card transactions"
+ },
+ "M08_t2": {
+  "hinglish": "wo electronics hub wala transaction mera nahi hai",
+  "codemix": "वो electronics hub वाला transaction मेरा नहीं है",
+  "english": "That electronics hub transaction is not mine"
+ },
+ "M09_t1": {
+  "hinglish": "mere car insurance ki expiry kab hai records ke hisaab se?",
+  "codemix": "मेरे car insurance की expiry कब है आपके records के हिसाब से",
+  "english": "When does my car insurance expire according to your records?"
+ },
+ "M09_t2": {
+  "hinglish": "maine pehle hi renew kar liya hai, naya policy number VI778899 hai jo 30 Sept 2027 tak valid hai.",
+  "codemix": "maine pehle hi renew kar liya hai, naya policy number VI778899 hai jo 30 Sept 2027 तक valid है.",
+  "english": "I have already renewed it, the new policy number is VI778899 and it is valid till 30 September 2027."
+ },
+ "M10_t1": {
+  "hinglish": "mera naya application A4001 ka status bata do",
+  "codemix": "मेरा नया application A4001 का status बताओ",
+  "english": "Can you check the status of my application A4001?"
+ },
+ "M10_t2": {
+  "hinglish": "documents kaise bhejun is application ke liye?",
+  "codemix": "documents kaise भेजूँ A4001 के लिए?",
+  "english": "How do I send the documents for this application?"
+ },
+ "M11_t1": {
+  "hinglish": "mera agla personal loan ka EMI kab due hai?",
+  "codemix": "mera agla personal loan का EMI कब due है",
+  "english": "When is my next personal loan EMI due?"
+ },
+ "M11_t2": {
+  "hinglish": "maine ghar shift kar liya hai, apna address update karna hai",
+  "codemix": "मैंने घर shift कर लिया है, अपना address update करना है",
+  "english": "I have moved to a new house, I need to update my address"
+ },
+ "M12_t1": {
+  "hinglish": "mera car loan close karne ka kitna charge lagega",
+  "codemix": "मेरा car loan close करने का कितना charge लगेगा",
+  "english": "How much will it cost to close my car loan?"
+ },
+ "M12_t2": {
+  "hinglish": "theek hai, chhod do, bas car loan ki EMI date 10th kar do",
+  "codemix": "theek hai chhod do, bas car loan की EMI date 10th कर दो",
+  "english": "Forget it then, just change my car loan EMI date to the 10th."
+ }
+}

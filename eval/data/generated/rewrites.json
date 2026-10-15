@@ -1,0 +1,3183 @@
+{
+ "a75b21b478a572d09cb7": {
+  "text": "Home loan ka kitna paisa builder ko mil chuka hai?",
+  "context": "",
+  "intents": [
+   "check disbursed amount of home loan"
+  ],
+  "latency_ms": 213
+ },
+ "47c9524b61584d945284": {
+  "text": "Card pe ek kharcha dikh raha hai jo maine kiya hi nahi",
+  "context": "",
+  "intents": [
+   "check unauthorized transaction on credit card"
+  ],
+  "latency_ms": 369
+ },
+ "8ff2c57518489f7d30e8": {
+  "text": "Loan band karne mein kitna paisa lagega?",
+  "context": "",
+  "intents": [
+   "close loan"
+  ],
+  "latency_ms": 206
+ },
+ "5ba134dad9f11bc11ef6": {
+  "text": "Personal loan pe total kitna baaki hai?",
+  "context": "",
+  "intents": [
+   "check outstanding balance of personal loan"
+  ],
+  "latency_ms": 2096
+ },
+ "159504e94b25768dafac": {
+  "text": "Home loan band karne mein kitna lagega?",
+  "context": "",
+  "intents": [
+   "close home loan"
+  ],
+  "latency_ms": 179
+ },
+ "889e8bba8639483a3bf9": {
+  "text": "Mere car insurance ki expiry kab ki hai aapke record mein?",
+  "context": "",
+  "intents": [
+   "check car insurance expiry"
+  ],
+  "latency_ms": 207
+ },
+ "c70e29dc87eba03508aa": {
+  "text": "home loan अभी पूरा बंद करना हो तो कितना देना पड़ेगा",
+  "context": "",
+  "intents": [
+   "close home loan",
+   "check prepayment charges for home loan"
+  ],
+  "latency_ms": 209
+ },
+ "3428b9215fe46fc2cfab": {
+  "text": "personal loan की अगली EMI कब है और card का bill कितना आया है",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan",
+   "check credit card bill"
+  ],
+  "latency_ms": 204
+ },
+ "91c07860e5c044aa96f2": {
+  "text": "ठीक है अभी भर देता हूँ",
+  "context": "personal वाला Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai. Pichhli do EMIs bhi abhi pending hain.",
+  "intents": [
+   "pay pending EMI of personal loan"
+  ],
+  "latency_ms": 199
+ },
+ "be25099797e976370f5f": {
+  "text": "पुराना loan बंद हो गया था NOC भेजा क्या",
+  "context": "",
+  "intents": [
+   "check status of NOC for closed loan",
+   "check status of NOC for closed credit card",
+   "check status of NOC for closed fixed deposit"
+  ],
+  "latency_ms": 236
+ },
+ "10a8a16d841e505348cc": {
+  "text": "settlement हो सकता है क्या",
+  "context": "",
+  "intents": [
+   "settle outstanding of personal loan"
+  ],
+  "latency_ms": 217
+ },
+ "724d91efd93006452369": {
+  "text": "मेरे car insurance की expiry कब की है आपके record में",
+  "context": "",
+  "intents": [
+   "check expiry date of car insurance"
+  ],
+  "latency_ms": 861
+ },
+ "422b667a8303c1a76888": {
+  "text": "My bike loan is finished, I want the bank's name removed from the RC.",
+  "context": "",
+  "intents": [
+   "remove lender name from RC of bike loan"
+  ],
+  "latency_ms": 798
+ },
+ "76acadec526e89a7be84": {
+  "text": "Your recovery agent was really rude to me on the phone.",
+  "context": "",
+  "intents": [
+   "investigate rude behavior by recovery agent for loan"
+  ],
+  "latency_ms": 231
+ },
+ "303f0bfe8661507cc9a1": {
+  "text": "When's my next personal loan EMI, and how much is my card bill?",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan",
+   "check credit card bill"
+  ],
+  "latency_ms": 202
+ },
+ "4e5ba2776056c822005e": {
+  "text": "When does my FD mature, and how much to close my car loan?",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit",
+   "check car loan closure amount"
+  ],
+  "latency_ms": 210
+ },
+ "c1ba876db9a5368454bb": {
+  "text": "I'll just pay the minimum for now.",
+  "context": "How much is my card bill? Aapka credit card bill 42,300 rupees hai. Minimum due 2,115 rupees hai, aur last date 20 October hai.",
+  "intents": [
+   "pay minimum due of credit card"
+  ],
+  "latency_ms": 237
+ },
+ "c984b24b5dbcaf69ed72": {
+  "text": "The Electronics Hub one wasn't me.",
+  "context": "Tell me my recent card transactions. Aapke last teen transactions: 6 October ko Electronics Hub par 26,050 rupees, 6 October ko Mobile Recharge par 21,650 rupees, aur 5 October ko Rail Booking par 14,400 rupees.",
+  "intents": [
+   "dispute Electronics Hub credit card transaction"
+  ],
+  "latency_ms": 236
+ },
+ "1dec196e9c6c9e7f3261": {
+  "text": "mera personal loan ka kitna EMI miss hua hai batao",
+  "context": "",
+  "intents": [
+   "check missed EMI of personal loan"
+  ],
+  "latency_ms": 185
+ },
+ "ec9132837d5d35825ff0": {
+  "text": "abhi tak builder ko kitna home loan release hua hai bata do",
+  "context": "",
+  "intents": [
+   "check released amount of home loan"
+  ],
+  "latency_ms": 200
+ },
+ "cfaa3924f4c8d5337fb0": {
+  "text": "mera personal loan ka pending amount abhi clear karna hai",
+  "context": "",
+  "intents": [
+   "pay pending amount of personal loan"
+  ],
+  "latency_ms": 668
+ },
+ "92718b263de17ef4a971": {
+  "text": "mera personal loan ek baar mein settle ho sakta hai kya",
+  "context": "",
+  "intents": [
+   "check if personal loan can be settled in one go"
+  ],
+  "latency_ms": 224
+ },
+ "56d3a21fe464503dd60d": {
+  "text": "mera KYC incomplete aaya hai, kaise complete karu?",
+  "context": "",
+  "intents": [
+   "complete KYC of loan",
+   "complete KYC of credit card",
+   "complete KYC of fixed deposit"
+  ],
+  "latency_ms": 912
+ },
+ "eb4b327208367fa8d0c8": {
+  "text": "subah baar baar call aata hai, shaam 5 se 7 ke beech hi call karo",
+  "context": "",
+  "intents": [
+   "reduce morning call frequency",
+   "call back between 5 PM and 7 PM"
+  ],
+  "latency_ms": 220
+ },
+ "9dd5dc3f06a48571dc62": {
+  "text": "mera next EMI kab hai aur card ka bill kitna hai",
+  "context": "",
+  "intents": [
+   "check next EMI of loan",
+   "check credit card bill"
+  ],
+  "latency_ms": 205
+ },
+ "6bec9f27244d740441de": {
+  "text": "mera agla payment kab due hai",
+  "context": "",
+  "intents": [
+   "check next due date of personal loan"
+  ],
+  "latency_ms": 204
+ },
+ "22830104e2981f375a9d": {
+  "text": "personal loan ki baat kar rahe hain.",
+  "context": "mera agla payment kab due hai Aapke do loan hain, personal loan aur home loan. Aap kis loan ki EMI ke baare mein poochh rahe hain?",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 189
+ },
+ "ddb0f8af2a0d99a2949b": {
+  "text": "Mujhe fixed deposit pe kya interest rate mil raha hai?",
+  "context": "",
+  "intents": [
+   "check interest rate of fixed deposit"
+  ],
+  "latency_ms": 197
+ },
+ "c5808b8c9733bb4cd690": {
+  "text": "mere car insurance ki expiry kab hai records ke hisaab se?",
+  "context": "",
+  "intents": [
+   "check car insurance expiry"
+  ],
+  "latency_ms": 195
+ },
+ "66a5fdc9a28087ca1589": {
+  "text": "मेरे card पे एक wrong charge लगा है please check करो",
+  "context": "",
+  "intents": [
+   "check wrong charge on credit card"
+  ],
+  "latency_ms": 200
+ },
+ "2d3e716faf6365619b5c": {
+  "text": "mera next EMI kab hai aur card का bill कितना है",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan",
+   "check credit card bill amount"
+  ],
+  "latency_ms": 268
+ },
+ "b7ed8c715f33ff26b53f": {
+  "text": "मेरा KYC complete हुआ क्या और A4001 का क्या update है",
+  "context": "",
+  "intents": [
+   "check KYC status of personal loan",
+   "check status of fixed deposit A4001"
+  ],
+  "latency_ms": 211
+ },
+ "53cbcd1cc5be0999798e": {
+  "text": "मेरे car insurance की expiry कब है आपके records के हिसाब से",
+  "context": "",
+  "intents": [
+   "check expiry of car insurance"
+  ],
+  "latency_ms": 381
+ },
+ "56b9961426886742bf65": {
+  "text": "There is an unauthorized charge on my card, please look into it.",
+  "context": "",
+  "intents": [
+   "check unauthorized charge on credit card"
+  ],
+  "latency_ms": 192
+ },
+ "dbb2c67c8d2775f8ebb1": {
+  "text": "I cannot pay the personal loan today, I will pay on the 20th",
+  "context": "",
+  "intents": [
+   "request payment deferral of personal loan",
+   "confirm due date of personal loan"
+  ],
+  "latency_ms": 233
+ },
+ "44441e02704ccb6adca3": {
+  "text": "I got a bonus, what happens if I pay 50,000 extra towards my loan?",
+  "context": "",
+  "intents": [
+   "calculate impact of 50000 prepayment on loan"
+  ],
+  "latency_ms": 214
+ },
+ "08e90aedea2abd7a2fed": {
+  "text": "Can you tell me my total pending amount?",
+  "context": "",
+  "intents": [
+   "check total pending amount of loan"
+  ],
+  "latency_ms": 190
+ },
+ "18acfd0fbffa590c39aa": {
+  "text": "I am asking about the personal loan.",
+  "context": "When is my next payment due? Aapke do loan hain, personal loan aur home loan. Aap kis loan ki EMI ke baare mein poochh rahe hain?",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 1407
+ },
+ "a54b4ea2aa3a3d28d2e0": {
+  "text": "I will pay only the minimum amount right now",
+  "context": "Can you tell me my current credit card bill amount? Aapka credit card bill 42,300 rupees hai. Minimum due 2,115 rupees hai, aur last date 20 October hai.",
+  "intents": [
+   "pay minimum amount of credit card"
+  ],
+  "latency_ms": 476
+ },
+ "59d73f55a7b8e85487c5": {
+  "text": "How many payments are overdue on my account?",
+  "context": "",
+  "intents": [
+   "check overdue payments of account"
+  ],
+  "latency_ms": 621
+ },
+ "5d96d70316e092baf1d4": {
+  "text": "Personal loan ki kitni EMI miss ho gayi hain?",
+  "context": "",
+  "intents": [
+   "check missed EMIs of personal loan"
+  ],
+  "latency_ms": 210
+ },
+ "9ce0845801f0c86a253d": {
+  "text": "Credit card ka bill kitna hai aur kab tak bharna hai?",
+  "context": "",
+  "intents": [
+   "check credit card bill amount",
+   "check credit card bill due date"
+  ],
+  "latency_ms": 437
+ },
+ "29010ad9e3d622c6c2ad": {
+  "text": "ITR ke liye pichhle saal ka home loan certificate chahiye",
+  "context": "",
+  "intents": [
+   "get home loan certificate for ITR of personal loan"
+  ],
+  "latency_ms": 202
+ },
+ "38a3c66e1c567b9c17c3": {
+  "text": "Bonus mila hai, personal loan mein 50 hazaar extra daalun to kya hoga?",
+  "context": "",
+  "intents": [
+   "check effect of extra 50000 payment on personal loan",
+   "open fixed deposit"
+  ],
+  "latency_ms": 235
+ },
+ "12d0ad7443d1b01e7691": {
+  "text": "Personal loan ka ek baar mein settlement ho sakta hai kya?",
+  "context": "",
+  "intents": [
+   "settle personal loan in one go"
+  ],
+  "latency_ms": 938
+ },
+ "4dc37ba94a5620d01db4": {
+  "text": "KYC incomplete ka message aaya hai, kaise complete karun?",
+  "context": "",
+  "intents": [
+   "complete KYC of all accounts"
+  ],
+  "latency_ms": 239
+ },
+ "7ff757397b4e98740631": {
+  "text": "Aapke recovery agent ne mujhse bahut badtameezi se baat ki",
+  "context": "",
+  "intents": [
+   "complain about recovery agent's behavior for loan"
+  ],
+  "latency_ms": 938
+ },
+ "1cb0570b70d2058978e0": {
+  "text": "Personal wala",
+  "context": "Agli EMI kab hai? Aapke do loan hain, personal loan aur home loan. Aap kis loan ki EMI ke baare mein poochh rahe hain?",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 489
+ },
+ "39d7896a480fdd169f17": {
+  "text": "मैंने परसों UPI से EMI भरी थी अभी तक दिख नहीं रही",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan",
+   "check EMI status of personal loan"
+  ],
+  "latency_ms": 201
+ },
+ "1ce01d53afd713ead8c9": {
+  "text": "मेरा पुराना personal loan बंद हो गया है उसका NOC चाहिए",
+  "context": "",
+  "intents": [
+   "close old personal loan",
+   "get NOC of personal loan"
+  ],
+  "latency_ms": 228
+ },
+ "70eb0ef249e0c765de54": {
+  "text": "मेरे चालू personal loan पे एक लाख और मिल सकता है क्या",
+  "context": "",
+  "intents": [
+   "add 100000 to active personal loan"
+  ],
+  "latency_ms": 216
+ },
+ "8a4a0bf7b96df69b8b81": {
+  "text": "मेरी नौकरी चली गई है अभी EMI नहीं भर सकता क्या कर सकते हैं",
+  "context": "",
+  "intents": [
+   "request EMI relief for personal loan",
+   "request EMI relief for credit card",
+   "request EMI relief for fixed deposit"
+  ],
+  "latency_ms": 257
+ },
+ "73b0166e9f09d3774e39": {
+  "text": "KYC incomplete का message आया है कैसे complete करूँ",
+  "context": "",
+  "intents": [
+   "complete KYC of loan"
+  ],
+  "latency_ms": 205
+ },
+ "a7ca1e53fd88d14f9fa4": {
+  "text": "मेरा loan application A4001 कहाँ तक पहुँचा",
+  "context": "",
+  "intents": [
+   "check status of loan application"
+  ],
+  "latency_ms": 208
+ },
+ "7ff206262efb8823bd9a": {
+  "text": "personal loan पे total कितना बाकी है",
+  "context": "",
+  "intents": [
+   "check total outstanding of personal loan"
+  ],
+  "latency_ms": 225
+ },
+ "907581f9abdb3989fd5f": {
+  "text": "personal वाला",
+  "context": "अगली EMI कब है Aapke do loan hain, personal loan aur home loan. Aap kis loan ki EMI ke baare mein poochh rahe hain?",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 299
+ },
+ "d64cedbce0d22ebaa9e1": {
+  "text": "card का bill कितना आया है",
+  "context": "",
+  "intents": [
+   "check credit card bill"
+  ],
+  "latency_ms": 318
+ },
+ "449fbe74f2fea20b9a88": {
+  "text": "FD पे कितना interest देते हो",
+  "context": "",
+  "intents": [
+   "check interest rate of fixed deposit"
+  ],
+  "latency_ms": 579
+ },
+ "b9b812546e77f7f6d936": {
+  "text": "रहने दो बस उसकी EMI date दस कर दो",
+  "context": "car loan बंद करने में कितना लगेगा Car loan abhi band karne ke liye lagbhag 7 lakh 27 hazaar rupees lagenge, jismein 3 percent foreclosure charge shamil hai.",
+  "intents": [
+   "change EMI date of car loan"
+  ],
+  "latency_ms": 1260
+ },
+ "09b6ede72a0750ea44c8": {
+  "text": "What would it cost to pay off my home loan completely right now?",
+  "context": "",
+  "intents": [
+   "calculate home loan foreclosure amount"
+  ],
+  "latency_ms": 197
+ },
+ "73826238b2ce5270505e": {
+  "text": "I was in hospital, that's why I missed the EMIs. Can you remove the late fee?",
+  "context": "",
+  "intents": [
+   "waive late fee of loan"
+  ],
+  "latency_ms": 263
+ },
+ "5a9a35091288661cba2b": {
+  "text": "I've switched banks, the EMI should be debited from my new account now.",
+  "context": "",
+  "intents": [
+   "update EMI account for loan"
+  ],
+  "latency_ms": 259
+ },
+ "fd4bce432e134d20a94a": {
+  "text": "How much do I still owe in total on my personal loan?",
+  "context": "",
+  "intents": [
+   "check outstanding balance of personal loan"
+  ],
+  "latency_ms": 192
+ },
+ "7ec4c58f54e0566997d2": {
+  "text": "The personal one.",
+  "context": "When is my next EMI? Aapke do loan hain, personal loan aur home loan. Aap kis loan ki EMI ke baare mein poochh rahe hain?",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 186
+ },
+ "e42b43a4e780f32bbd95": {
+  "text": "Okay, I'll pay it right now.",
+  "context": "The personal one. Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai. Pichhli do EMIs bhi abhi pending hain.",
+  "intents": [
+   "pay pending personal loan EMIs"
+  ],
+  "latency_ms": 277
+ },
+ "792c2079a41b63a6787a": {
+  "text": "How much to close my home loan?",
+  "context": "",
+  "intents": [
+   "close home loan"
+  ],
+  "latency_ms": 184
+ },
+ "95a83b5c01478b1a1124": {
+  "text": "My old loan was closed. Did you send the NOC?",
+  "context": "",
+  "intents": [
+   "check status of old loan closure and NOC",
+   "send NOC for closed loan"
+  ],
+  "latency_ms": 312
+ },
+ "4a00ea04ece16e219e1e": {
+  "text": "mera agla personal loan ka due kab aur kitna hai?",
+  "context": "",
+  "intents": [
+   "check next due of personal loan"
+  ],
+  "latency_ms": 202
+ },
+ "98b294e5ce4f893c6078": {
+  "text": "mera agla payment kab due hai bata do",
+  "context": "",
+  "intents": [
+   "check next due date of loan",
+   "check next due date of credit card",
+   "check next due date of fixed deposit"
+  ],
+  "latency_ms": 319
+ },
+ "118153409602a60fd7d3": {
+  "text": "mere card pe ek galat charge laga hai, check karke batao",
+  "context": "",
+  "intents": [
+   "check incorrect charge on credit card"
+  ],
+  "latency_ms": 207
+ },
+ "d3b65b6e28b3d3db16fd": {
+  "text": "mera personal loan ka late fee kitna laga hai?",
+  "context": "",
+  "intents": [
+   "check late fee of personal loan"
+  ],
+  "latency_ms": 226
+ },
+ "7cebcf36515217246661": {
+  "text": "main hospital mein tha isliye late fee hata do",
+  "context": "",
+  "intents": [
+   "waive late fee on loan"
+  ],
+  "latency_ms": 322
+ },
+ "2d3f5cf92eef87923ae5": {
+  "text": "mera loan close karne ka kitna charge lagega?",
+  "context": "",
+  "intents": [
+   "check foreclosure charge of loan"
+  ],
+  "latency_ms": 277
+ },
+ "c0e4b65c86da70b7136a": {
+  "text": "meri bike ka loan clear ho gaya hai, RC se bank ka naam hata do",
+  "context": "",
+  "intents": [
+   "remove bank name from RC of bike loan"
+  ],
+  "latency_ms": 4001
+ },
+ "c5a213292a7c4b4bf881": {
+  "text": "mera credit card ka bill kitna bacha hai",
+  "context": "",
+  "intents": [
+   "check remaining credit card bill"
+  ],
+  "latency_ms": 357
+ },
+ "01b8d41254858c1f456d": {
+  "text": "mera home loan abhi close karne ka total cost kitna aayega?",
+  "context": "",
+  "intents": [
+   "calculate total cost to close home loan"
+  ],
+  "latency_ms": 264
+ },
+ "dad31cf68a055b20896a": {
+  "text": "Mera purana personal loan last year close ho gaya tha, kya NOC bhej diya hai?",
+  "context": "",
+  "intents": [
+   "check issued NOC of personal loan"
+  ],
+  "latency_ms": 237
+ },
+ "e954670ebb9e2f159a78": {
+  "text": "mera recent credit card ka transaction bata do",
+  "context": "",
+  "intents": [
+   "show recent transactions of credit card"
+  ],
+  "latency_ms": 267
+ },
+ "ea5ff92b2635714680d6": {
+  "text": "मैं hospital में था इसलिए late fee हटा दो",
+  "context": "",
+  "intents": [
+   "remove late fee on loan"
+  ],
+  "latency_ms": 204
+ },
+ "bfff46d78d729fa4a378": {
+  "text": "मेरा loan close करने का कितना charge लगेगा?",
+  "context": "",
+  "intents": [
+   "check closing charges of loan"
+  ],
+  "latency_ms": 208
+ },
+ "fd90827a99017c225854": {
+  "text": "मेरा FD mature हो गया है, पैसे payout कर दो renewal मत करना",
+  "context": "",
+  "intents": [
+   "pay out matured fixed deposit"
+  ],
+  "latency_ms": 205
+ },
+ "8597ddefe826c106c771": {
+  "text": "second car लेने का सोच रही हूँ, आज कल car loan पर क्या interest rate चल रहा है?",
+  "context": "",
+  "intents": [
+   "check interest rate of car loan"
+  ],
+  "latency_ms": 199
+ },
+ "65619ccc7941197d172d": {
+  "text": "मेरा KYC incomplete है, कैसे complete करूँ?",
+  "context": "",
+  "intents": [
+   "complete KYC of loan"
+  ],
+  "latency_ms": 230
+ },
+ "0ebf434ec0f298691124": {
+  "text": "कल recovery agent बहुत rude था, उसकी शिकायत करनी है.",
+  "context": "",
+  "intents": [
+   "file complaint for recovery agent for loans"
+  ],
+  "latency_ms": 213
+ },
+ "451e3972da76fc0dbfdf": {
+  "text": "मैं अभी इसको pay करना चाहता हूँ",
+  "context": "personal loan के बारे में पूछ रहा हूँ. Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai. Pichhli do EMIs bhi abhi pending hain.",
+  "intents": [
+   "pay personal loan"
+  ],
+  "latency_ms": 212
+ },
+ "c4423c0f2fa3e3f4a3e9": {
+  "text": "मेरा credit card bill कितना बचा है",
+  "context": "",
+  "intents": [
+   "check outstanding credit card bill"
+  ],
+  "latency_ms": 198
+ },
+ "156e3136972058e1014f": {
+  "text": "मेरा personal loan बंद करने का कितना charge लगेगा",
+  "context": "मेरा home loan अभी close करने का total cost कितना आएगा? Home loan abhi band karne ke liye lagbhag 43 lakh 70 hazaar rupees lagenge. Home loan par koi foreclosure charge nahi hai.",
+  "intents": [
+   "check foreclosure charge of personal loan"
+  ],
+  "latency_ms": 398
+ },
+ "3b3c6708009bd2eaf07e": {
+  "text": "मेरे fixed deposit पर क्या interest rate मिलेगा?",
+  "context": "",
+  "intents": [
+   "check interest rate on fixed deposit"
+  ],
+  "latency_ms": 275
+ },
+ "a98bf948f318e728277b": {
+  "text": "When is my next EMI and what is my credit card bill?",
+  "context": "",
+  "intents": [
+   "check next EMI of loan",
+   "check credit card bill"
+  ],
+  "latency_ms": 205
+ },
+ "66b30ce76263da9419ee": {
+  "text": "Can you tell me my current credit card bill amount?",
+  "context": "",
+  "intents": [
+   "check current bill of credit card"
+  ],
+  "latency_ms": 400
+ },
+ "ecd3381195d26d246c83": {
+  "text": "I have moved to a new house, I need to update my address",
+  "context": "When is my next personal loan EMI due? Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai.",
+  "intents": [
+   "update address of loan"
+  ],
+  "latency_ms": 216
+ },
+ "2c620912c50789981296": {
+  "text": "Personal loan ki agli EMI kab hai aur kitni hai?",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 360
+ },
+ "99de99bc4e39bb105778": {
+  "text": "Home loan abhi poora band karna ho to kitna dena padega?",
+  "context": "",
+  "intents": [
+   "calculate prepayment of home loan"
+  ],
+  "latency_ms": 477
+ },
+ "1028aafe2f48fb645480": {
+  "text": "Bike loan khatam ho gaya, RC se bank ka naam hatwana hai",
+  "context": "",
+  "intents": [
+   "remove bank name from RC of bike loan"
+  ],
+  "latency_ms": 231
+ },
+ "3d27340b2cafa9a8a3bd": {
+  "text": "Mujhe subah call mat karo, sirf shaam 5 se 7 ke beech karna",
+  "context": "",
+  "intents": [
+   "call personal loan helpline only between 5 PM and 7 PM"
+  ],
+  "latency_ms": 239
+ },
+ "6b9471228e231dc1e07c": {
+  "text": "5 lakh ka personal loan pakka milega na? Haan bolo",
+  "context": "",
+  "intents": [
+   "check eligibility of personal loan"
+  ],
+  "latency_ms": 233
+ },
+ "6d7db145d21f2f623846": {
+  "text": "Meri FD kab mature hogi, aur car loan band karne mein kitna lagega?",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit",
+   "check foreclosure charges for car loan"
+  ],
+  "latency_ms": 214
+ },
+ "7dc08bb73a1bda76cd41": {
+  "text": "Teen cheezein batao: home loan ka kitna paisa release hua, card pe kitne reward points hain, aur 560001 ke paas branch kahan hai?",
+  "context": "",
+  "intents": [
+   "check released amount of home loan",
+   "check reward points of credit card",
+   "find branch near 560001"
+  ],
+  "latency_ms": 589
+ },
+ "906b619fb40855c887d5": {
+  "text": "To abhi request daal do",
+  "context": "Purana loan band ho gaya tha, NOC bheja kya? Aapke purane personal loan ke liye abhi tak NOC ki request nahi daali gayi hai.",
+  "intents": [
+   "submit NOC request for personal loan"
+  ],
+  "latency_ms": 395
+ },
+ "0f06d3c462546d1128cd": {
+  "text": "Kitni EMI overdue hain?",
+  "context": "",
+  "intents": [
+   "check overdue EMIs of loan"
+  ],
+  "latency_ms": 199
+ },
+ "db2b55fd9c3ed16c5911": {
+  "text": "Electronics Hub wala maine nahi kiya",
+  "context": "Card ke last transactions batao Aapke last teen transactions: 6 October ko Electronics Hub par 26,050 rupees, 6 October ko Mobile Recharge par 21,650 rupees, aur 5 October ko Rail Booking par 14,400 rupees.",
+  "intents": [
+   "check Electronics Hub credit card transaction"
+  ],
+  "latency_ms": 223
+ },
+ "6a1fd6763e6b4e360ac4": {
+  "text": "Application number A4001 ka kya status hai?",
+  "context": "",
+  "intents": [
+   "check status of fixed deposit"
+  ],
+  "latency_ms": 273
+ },
+ "0e5bf817b3795015ad21": {
+  "text": "Aur haan, maine ghar badal liya hai, address update karna hai",
+  "context": "Personal loan ki agli EMI kab hai? Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai.",
+  "intents": [
+   "update address of personal loan"
+  ],
+  "latency_ms": 189
+ },
+ "423d0f6e8aae126f0fb4": {
+  "text": "Car loan band karne mein kitna lagega?",
+  "context": "",
+  "intents": [
+   "close car loan"
+  ],
+  "latency_ms": 262
+ },
+ "38edb447cbe9e442b980": {
+  "text": "credit card का bill कितना है और last date क्या है",
+  "context": "",
+  "intents": [
+   "check credit card bill",
+   "check credit card due date"
+  ],
+  "latency_ms": 253
+ },
+ "2c0eaf20ea1b04e1cbfd": {
+  "text": "card पे एक खर्चा दिख रहा है जो मैंने किया ही नहीं",
+  "context": "",
+  "intents": [
+   "check unrecognized transaction on credit card"
+  ],
+  "latency_ms": 198
+ },
+ "d5f57183c658563ea6c7": {
+  "text": "personal loan पे कितनी late fee लगी है",
+  "context": "",
+  "intents": [
+   "check late fee on personal loan"
+  ],
+  "latency_ms": 200
+ },
+ "45cce65cb66f9a9d481f": {
+  "text": "मैं hospital में था इसलिए EMI miss हुई late fee माफ़ कर दो please",
+  "context": "",
+  "intents": [
+   "waive late fee on personal loan EMI"
+  ],
+  "latency_ms": 207
+ },
+ "5eabb2862d051d9d9e2e": {
+  "text": "ITR के लिए पिछले साल का home loan certificate चाहिए",
+  "context": "",
+  "intents": [
+   "request previous year home loan certificate for ITR"
+  ],
+  "latency_ms": 271
+ },
+ "7650f69562ea995ea042": {
+  "text": "मेरा bank account बदल गया है EMI अब नए account से कटनी चाहिए",
+  "context": "",
+  "intents": [
+   "change bank account for personal loan EMI"
+  ],
+  "latency_ms": 262
+ },
+ "18142ea20950a25e28dc": {
+  "text": "loan बंद करने में कितना पैसा लगेगा",
+  "context": "",
+  "intents": [
+   "close personal loan",
+   "close credit card",
+   "close fixed deposit"
+  ],
+  "latency_ms": 205
+ },
+ "9b1146af07fc3ae88819": {
+  "text": "आजकल car loan पे कितना interest चल रहा है",
+  "context": "",
+  "intents": [
+   "check interest rate on car loan"
+  ],
+  "latency_ms": 298
+ },
+ "2d84648b9e27ebe38d25": {
+  "text": "bike loan ख़त्म हो गया RC से bank का नाम हटवाना है",
+  "context": "",
+  "intents": [
+   "remove bank name from RC for bike loan"
+  ],
+  "latency_ms": 261
+ },
+ "989372f34919c5827ae0": {
+  "text": "मैं late तक काम करता हूँ reminder call रात आठ से दस के बीच करना",
+  "context": "",
+  "intents": [
+   "schedule reminder calls between 8 PM and 10 PM for late working hours"
+  ],
+  "latency_ms": 324
+ },
+ "4a315b18aaf9f192273d": {
+  "text": "मेरी FD कब mature होगी और car loan बंद करने में कितना लगेगा",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit",
+   "check foreclosure amount for car loan"
+  ],
+  "latency_ms": 333
+ },
+ "b7b95ce737b5ba06f9a7": {
+  "text": "मेरा KYC हो गया क्या और application A4001 का क्या हुआ",
+  "context": "",
+  "intents": [
+   "check KYC status of loans",
+   "check status of application A4001"
+  ],
+  "latency_ms": 221
+ },
+ "a85f02125f8f77d682db": {
+  "text": "तीन चीज़ें बताओ home loan का कितना पैसा release हुआ card पे कितने reward points हैं और 560001 के पास branch कहाँ है",
+  "context": "",
+  "intents": [
+   "check released amount of home loan",
+   "check reward points of credit card",
+   "find nearest branch of fixed deposit"
+  ],
+  "latency_ms": 348
+ },
+ "87461d1c4fc738532f20": {
+  "text": "और personal वाले का",
+  "context": "home loan बंद करने में कितना लगेगा Home loan abhi band karne ke liye lagbhag 43 lakh 70 hazaar rupees lagenge. Home loan par koi foreclosure charge nahi hai.",
+  "intents": [
+   "check foreclosure charges of personal loan"
+  ],
+  "latency_ms": 208
+ },
+ "01725175e3a64505af28": {
+  "text": "तो अभी request डाल दो",
+  "context": "पुराना loan बंद हो गया था NOC भेजा क्या Aapke purane personal loan ke liye abhi tak NOC ki request nahi daali gayi hai.",
+  "intents": [
+   "submit NOC request for personal loan"
+  ],
+  "latency_ms": 197
+ },
+ "2ac67d2bb39ae52bf54a": {
+  "text": "electronics hub वाला मैंने नहीं किया",
+  "context": "card के last transactions बताओ Aapke last teen transactions: 6 October ko Electronics Hub par 26,050 rupees, 6 October ko Mobile Recharge par 21,650 rupees, aur 5 October ko Rail Booking par 14,400 rupees.",
+  "intents": [
+   "dispute transaction at electronics hub"
+  ],
+  "latency_ms": 410
+ },
+ "a11e3b59d6227c591f18": {
+  "text": "application number A4001 का क्या status है",
+  "context": "",
+  "intents": [
+   "check status of loan application"
+  ],
+  "latency_ms": 223
+ },
+ "49667b23b59c297b09e2": {
+  "text": "और हाँ मैंने घर बदल लिया है address update करना है",
+  "context": "personal loan की अगली EMI कब है Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai.",
+  "intents": [
+   "update address of home"
+  ],
+  "latency_ms": 192
+ },
+ "66f0ea02e8e21c6d9cb0": {
+  "text": "When is my next personal loan EMI and how much is it?",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 189
+ },
+ "5bc02eae2670827a134d": {
+  "text": "I lost my credit card yesterday, please stop it.",
+  "context": "",
+  "intents": [
+   "block lost credit card"
+  ],
+  "latency_ms": 248
+ },
+ "aabe27e83657d64dcf57": {
+  "text": "I need last year's home loan certificate for my tax return.",
+  "context": "",
+  "intents": [
+   "download last year's home loan certificate"
+  ],
+  "latency_ms": 274
+ },
+ "262989afd59ea1ba9c5a": {
+  "text": "How much would it cost to close my loan?",
+  "context": "",
+  "intents": [
+   "close personal loan"
+  ],
+  "latency_ms": 174
+ },
+ "dec663ef9ad080cd3990": {
+  "text": "I got a bonus. What happens if I put an extra 50,000 into my personal loan?",
+  "context": "",
+  "intents": [
+   "check effect of extra 50000 payment on personal loan"
+  ],
+  "latency_ms": 1174
+ },
+ "7417c5f633fcb7eb2010": {
+  "text": "Can I get another one lakh on my current personal loan?",
+  "context": "",
+  "intents": [
+   "apply for additional one lakh on personal loan"
+  ],
+  "latency_ms": 241
+ },
+ "d52cc45f21b81e362e09": {
+  "text": "What interest rate are you charging on car loans these days?",
+  "context": "",
+  "intents": [
+   "check interest rate of car loan"
+  ],
+  "latency_ms": 263
+ },
+ "bc9b6202474bfcfcd0ef": {
+  "text": "I got a message saying my KYC is incomplete. How do I complete it?",
+  "context": "",
+  "intents": [
+   "complete KYC of account"
+  ],
+  "latency_ms": 226
+ },
+ "8ad432077b5f185932a6": {
+  "text": "I'll definitely get a 5 lakh personal loan, right? Just say yes.",
+  "context": "",
+  "intents": [
+   "confirm approval of personal loan"
+  ],
+  "latency_ms": 215
+ },
+ "2d0198012ebc9ba30a71": {
+  "text": "Then please raise the request now.",
+  "context": "My old loan was closed. Did you send the NOC? Aapke purane personal loan ke liye abhi tak NOC ki request nahi daali gayi hai.",
+  "intents": [
+   "raise NOC request for personal loan"
+  ],
+  "latency_ms": 187
+ },
+ "34edc3454b74c512d7cd": {
+  "text": "What interest do you give on FDs?",
+  "context": "",
+  "intents": [
+   "check interest rate on fixed deposit"
+  ],
+  "latency_ms": 206
+ },
+ "cde0e5ff320005f009ff": {
+  "text": "maine 2 din pehle UPI se payment ki thi par status abhi bhi unpaid dikha raha hai",
+  "context": "",
+  "intents": [
+   "check payment status of UPI payment"
+  ],
+  "latency_ms": 377
+ },
+ "32dda90e54a5ccc5f1cd": {
+  "text": "maine bank change kiya hai, nayi account se auto debit kar do",
+  "context": "",
+  "intents": [
+   "update auto debit mandate for loan",
+   "update auto debit mandate for credit card",
+   "update auto debit mandate for fixed deposit"
+  ],
+  "latency_ms": 445
+ },
+ "b641fa11e9f19e353018": {
+  "text": "mera 2 lakh ka FD kab mature hoga?",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit"
+  ],
+  "latency_ms": 313
+ },
+ "7d42b2bb22cf0a08b17c": {
+  "text": "mera FD mature ho gaya hai, paise payout kar do renewal mat karna",
+  "context": "",
+  "intents": [
+   "pay out matured fixed deposit"
+  ],
+  "latency_ms": 203
+ },
+ "d9c747f5da44f4e6c779": {
+  "text": "mera bonus aaya hai, agar main 50,000 extra de doon toh kya hoga?",
+  "context": "",
+  "intents": [
+   "apply extra payment to personal loan",
+   "check impact of extra payment on fixed deposit"
+  ],
+  "latency_ms": 337
+ },
+ "583b303aee9714c15fed": {
+  "text": "mera personal loan upar 1 lakh aur mil sakta hai kya",
+  "context": "",
+  "intents": [
+   "check additional eligibility of personal loan"
+  ],
+  "latency_ms": 980
+ },
+ "4895815177bd4d23b20d": {
+  "text": "Mera naya application A4001 ka status kya hai?",
+  "context": "",
+  "intents": [
+   "check status of new application A4001"
+  ],
+  "latency_ms": 621
+ },
+ "df335f404dc8ba069b53": {
+  "text": "mujhe raat 8 se 10 baje ke beech hi call karna",
+  "context": "",
+  "intents": [
+   "call between 8 PM and 10 PM"
+  ],
+  "latency_ms": 277
+ },
+ "393dbc0b5c7fef807571": {
+  "text": "kal recovery agent bahut rude tha, uski shikayat karni hai.",
+  "context": "",
+  "intents": [
+   "complain about rude recovery agent for loan"
+  ],
+  "latency_ms": 221
+ },
+ "2196d4ff6e5362b55d54": {
+  "text": "mera personal loan ka total amount kitna baki hai?",
+  "context": "",
+  "intents": [
+   "check outstanding amount of personal loan"
+  ],
+  "latency_ms": 262
+ },
+ "c4a92ed877430bc41071": {
+  "text": "mujhe confirm karo, mujhe definitely 5 lakh ka personal loan mil jayega",
+  "context": "",
+  "intents": [
+   "confirm eligibility for personal loan"
+  ],
+  "latency_ms": 284
+ },
+ "aa979c899a60fd8b1e7a": {
+  "text": "mera KYC complete hua kya aur A4001 ka kya update hai",
+  "context": "",
+  "intents": [
+   "check KYC status of savings account",
+   "check update of fixed deposit A4001"
+  ],
+  "latency_ms": 228
+ },
+ "91160eb5d933f7acf1c8": {
+  "text": "mera personal loan close karne ka kitna charge lagega?",
+  "context": "mera home loan abhi close karne ka total cost kitna aayega? Home loan abhi band karne ke liye lagbhag 43 lakh 70 hazaar rupees lagenge. Home loan par koi foreclosure charge nahi hai.",
+  "intents": [
+   "check foreclosure cost of personal loan"
+  ],
+  "latency_ms": 736
+ },
+ "3d372f5b88775b3289cd": {
+  "text": "mera kitna payment pending hai batao",
+  "context": "",
+  "intents": [
+   "check pending payment of loan",
+   "check pending payment of credit card",
+   "check pending payment of fixed deposit"
+  ],
+  "latency_ms": 269
+ },
+ "e6a6a577a331f52bf62b": {
+  "text": "mera loan ek saath settle kar sakte hain kya",
+  "context": "",
+  "intents": [
+   "settle outstanding personal loan"
+  ],
+  "latency_ms": 289
+ },
+ "7f09a53ee7949f814d95": {
+  "text": "wo electronics hub wala transaction mera nahi hai",
+  "context": "mera recent credit card ka transaction bata do Aapke last teen transactions: 6 October ko Electronics Hub par 26,050 rupees, 6 October ko Mobile Recharge par 21,650 rupees, aur 5 October ko Rail Booking par 14,400 rupees.",
+  "intents": [
+   "dispute credit card transaction"
+  ],
+  "latency_ms": 288
+ },
+ "89ef6b77217ec8c03404": {
+  "text": "mera naya application A4001 ka status bata do",
+  "context": "",
+  "intents": [
+   "check status of fixed deposit application A4001"
+  ],
+  "latency_ms": 218
+ },
+ "b7bc4fb04605c65db885": {
+  "text": "theek hai, chhod do, bas car loan ki EMI date 10th kar do",
+  "context": "mera car loan close karne ka kitna charge lagega Car loan abhi band karne ke liye lagbhag 7 lakh 27 hazaar rupees lagenge, jismein 3 percent foreclosure charge shamil hai.",
+  "intents": [
+   "change EMI date of car loan"
+  ],
+  "latency_ms": 203
+ },
+ "61f45e9cb1664905a9f6": {
+  "text": "अगला personal loan कब due है और कितना है",
+  "context": "",
+  "intents": [
+   "check next due date of personal loan",
+   "check next due amount of personal loan"
+  ],
+  "latency_ms": 259
+ },
+ "d60a169d5ac87d5860b4": {
+  "text": "मेरे personal loan का कितना EMI miss हुआ है",
+  "context": "",
+  "intents": [
+   "check missed EMI of personal loan"
+  ],
+  "latency_ms": 208
+ },
+ "5b8a9d8e936182bf19d9": {
+  "text": "मैंने 2 दिन पहले UPI से payment की थी पर status अबhi भी unpaid दिख रहा है",
+  "context": "",
+  "intents": [
+   "check status of UPI payment",
+   "resolve unpaid status of fixed deposit"
+  ],
+  "latency_ms": 273
+ },
+ "a22b5d971091ff39b5b8": {
+  "text": "अभी तक builder को कितना home loan release हुआ है बता दो",
+  "context": "",
+  "intents": [
+   "check home loan disbursement to builder"
+  ],
+  "latency_ms": 212
+ },
+ "25fce9239c0f2b7ca883": {
+  "text": "मेरा home loan अभी close करने का कितना charge लगेगा",
+  "context": "",
+  "intents": [
+   "calculate home loan foreclosure charge"
+  ],
+  "latency_ms": 196
+ },
+ "35357d90fd1157ffac58": {
+  "text": "मेरे personal loan पे late fee कितना charge हुआ है",
+  "context": "",
+  "intents": [
+   "check late fee charged on personal loan"
+  ],
+  "latency_ms": 271
+ },
+ "2659814a03f1f6212a8a": {
+  "text": "मेरा personal loan का pending amount अभी clear करना है",
+  "context": "",
+  "intents": [
+   "pay pending personal loan"
+  ],
+  "latency_ms": 189
+ },
+ "2ca01ee53bb2538f49c5": {
+  "text": "personal loan का payment आज नहीं हो पाएगा, मैं 20 को दे दूंगा",
+  "context": "",
+  "intents": [
+   "pay personal loan"
+  ],
+  "latency_ms": 278
+ },
+ "96b8608ef35a028f9b93": {
+  "text": "मैंने bank change किया है, नई account से auto debit कर दो",
+  "context": "",
+  "intents": [
+   "update auto debit mandate for loan",
+   "update auto debit mandate for credit card",
+   "update auto debit mandate for fixed deposit"
+  ],
+  "latency_ms": 244
+ },
+ "8ac403847a49468d3e41": {
+  "text": "मेरा 2 lakh का FD कब mature होगा?",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit"
+  ],
+  "latency_ms": 237
+ },
+ "c96a17243ab7c957cc2f": {
+  "text": "मेरा नया application A4001 का status क्या है?",
+  "context": "",
+  "intents": [
+   "check status of personal loan application A4001"
+  ],
+  "latency_ms": 221
+ },
+ "42586535f18955bc62a3": {
+  "text": "reminder calls सिर्फ रात 8 से 10 के बीच करना",
+  "context": "",
+  "intents": [
+   "schedule reminder calls for loans between 8 PM and 10 PM"
+  ],
+  "latency_ms": 221
+ },
+ "63ff870a0f9830a37a78": {
+  "text": "मेरा application number A4001 का status क्या है और 500034 के पास कौन सा branch है",
+  "context": "",
+  "intents": [
+   "check status of application A4001",
+   "find nearest branch for fixed deposit"
+  ],
+  "latency_ms": 283
+ },
+ "d8bbcc718f44048a5968": {
+  "text": "मेरे personal loan का total amount कितना बचा है?",
+  "context": "",
+  "intents": [
+   "check outstanding amount of personal loan"
+  ],
+  "latency_ms": 295
+ },
+ "c84dd4c61793926ead55": {
+  "text": "आप confirm करो मुझे 5 lakh का personal loan definitely मिल जाएगा",
+  "context": "",
+  "intents": [
+   "confirm eligibility of personal loan"
+  ],
+  "latency_ms": 231
+ },
+ "7ed4d757185ecbc42fca": {
+  "text": "home loan का कितना amount release हुआ, card पे कितने reward points हैं और 560001 के पास का branch कहाँ है",
+  "context": "",
+  "intents": [
+   "check released amount of home loan",
+   "check reward points of credit card",
+   "find nearby branch of fixed deposit"
+  ],
+  "latency_ms": 220
+ },
+ "bf9b5842c4fce1c2dd5c": {
+  "text": "personal loan के बारे में पूछ रहा हूँ.",
+  "context": "मेरा next payment कब due है Aapke do loan hain, personal loan aur home loan. Aap kis loan ki EMI ke baare mein poochh rahe hain?",
+  "intents": [
+   "inquire about personal loan"
+  ],
+  "latency_ms": 318
+ },
+ "4d97efd62ef6e09d69bf": {
+  "text": "मेरा home loan अभी close करने का total cost कितना आएगा?",
+  "context": "",
+  "intents": [
+   "calculate total foreclosure cost of home loan"
+  ],
+  "latency_ms": 604
+ },
+ "8701c14610c56ed1865b": {
+  "text": "मेरा पुराना personal loan last year close हो गया था, क्या NOC भेज दिया है?",
+  "context": "",
+  "intents": [
+   "send NOC of personal loan"
+  ],
+  "latency_ms": 760
+ },
+ "f479c50af811f641ac4a": {
+  "text": "तो please अभी NOC की request डाल दो",
+  "context": "मेरा पुराना personal loan last year close हो गया था, क्या NOC भेज दिया है? Aapke purane personal loan ke liye abhi tak NOC ki request nahi daali gayi hai.",
+  "intents": [
+   "send NOC of personal loan"
+  ],
+  "latency_ms": 239
+ },
+ "0c8243fe5ea4ee20fee1": {
+  "text": "वो electronics hub वाला transaction मेरा नहीं है",
+  "context": "मेरे credit card के recent transactions सुना दो Aapke last teen transactions: 6 October ko Electronics Hub par 26,050 rupees, 6 October ko Mobile Recharge par 21,650 rupees, aur 5 October ko Rail Booking par 14,400 rupees.",
+  "intents": [
+   "dispute credit card transaction",
+   "block fraudulent credit card transaction"
+  ],
+  "latency_ms": 459
+ },
+ "39a640d1d27af3c4698a": {
+  "text": "मेरा नया application A4001 का status बताओ",
+  "context": "",
+  "intents": [
+   "check status of new application"
+  ],
+  "latency_ms": 341
+ },
+ "1da6957e54764ad4485e": {
+  "text": "theek hai chhod do, bas car loan की EMI date 10th कर दो",
+  "context": "मेरा car loan close करने का कितना charge लगेगा Car loan abhi band karne ke liye lagbhag 7 lakh 27 hazaar rupees lagenge, jismein 3 percent foreclosure charge shamil hai.",
+  "intents": [
+   "change EMI date of car loan"
+  ],
+  "latency_ms": 264
+ },
+ "c9f9a71eb3a620b8bb09": {
+  "text": "How much will it cost to close my home loan completely right now?",
+  "context": "",
+  "intents": [
+   "calculate full prepayment of home loan"
+  ],
+  "latency_ms": 313
+ },
+ "ec8c354dcb9783657c6f": {
+  "text": "I was in the hospital, please waive the late fee.",
+  "context": "",
+  "intents": [
+   "waive late fee of loan"
+  ],
+  "latency_ms": 186
+ },
+ "880603a58ddd7c020b9f": {
+  "text": "I want to clear my pending personal loan dues right now",
+  "context": "",
+  "intents": [
+   "pay pending personal loan"
+  ],
+  "latency_ms": 273
+ },
+ "c2286b7869d97aa3665e": {
+  "text": "I changed my bank, please set auto debit from my new account",
+  "context": "",
+  "intents": [
+   "update auto debit for loan",
+   "update auto debit for credit card",
+   "update auto debit for fixed deposit"
+  ],
+  "latency_ms": 1648
+ },
+ "8a418d14788c3a7b185d": {
+  "text": "How much will it cost to close my loan?",
+  "context": "",
+  "intents": [
+   "calculate foreclosure charges of personal loan"
+  ],
+  "latency_ms": 260
+ },
+ "d66dd78b5e77b77a62e3": {
+  "text": "My FD has matured, please payout the amount and do not renew it",
+  "context": "",
+  "intents": [
+   "pay matured fixed deposit",
+   "do not renew fixed deposit"
+  ],
+  "latency_ms": 325
+ },
+ "6bce8c58b42fa44d2fc3": {
+  "text": "Can I get 1 lakh more on my current personal loan?",
+  "context": "",
+  "intents": [
+   "increase limit of personal loan"
+  ],
+  "latency_ms": 275
+ },
+ "32f7e90d54dba320a162": {
+  "text": "I got a message that my KYC is incomplete, how do I complete it?",
+  "context": "",
+  "intents": [
+   "complete KYC of loan",
+   "complete KYC of credit card",
+   "complete KYC of fixed deposit"
+  ],
+  "latency_ms": 234
+ },
+ "77ab5fceb2a3949e3f79": {
+  "text": "Can you tell me the status of my application A4001?",
+  "context": "",
+  "intents": [
+   "check status of application A4001"
+  ],
+  "latency_ms": 211
+ },
+ "b2258593066813db4185": {
+  "text": "Just confirm, I will definitely get the 5 lakh personal loan, right?",
+  "context": "",
+  "intents": [
+   "confirm eligibility for personal loan",
+   "confirm loan amount of 5 lakh"
+  ],
+  "latency_ms": 460
+ },
+ "5dfc9c2d51e9030274aa": {
+  "text": "When does my fixed deposit mature and what is the charge to close my car loan?",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit",
+   "check car loan closure charges"
+  ],
+  "latency_ms": 207
+ },
+ "1edfa189f61fbcf0b611": {
+  "text": "How much will it cost to close my home loan right now?",
+  "context": "",
+  "intents": [
+   "check foreclosure charges of home loan"
+  ],
+  "latency_ms": 440
+ },
+ "d8378838c2d184f69b53": {
+  "text": "How much will it cost to close my personal loan?",
+  "context": "How much will it cost to close my home loan right now? Home loan abhi band karne ke liye lagbhag 43 lakh 70 hazaar rupees lagenge. Home loan par koi foreclosure charge nahi hai.",
+  "intents": [
+   "close personal loan"
+  ],
+  "latency_ms": 185
+ },
+ "1b3fc1906be1909edb9a": {
+  "text": "Please request the NOC right now",
+  "context": "My old personal loan got closed last year, has the NOC been sent? Aapke purane personal loan ke liye abhi tak NOC ki request nahi daali gayi hai.",
+  "intents": [
+   "request NOC of personal loan"
+  ],
+  "latency_ms": 204
+ },
+ "dd03c49467da00a97495": {
+  "text": "Can you tell me the interest rates for fixed deposits?",
+  "context": "",
+  "intents": [
+   "check interest rates of fixed deposits"
+  ],
+  "latency_ms": 190
+ },
+ "7c0ee2f88436c2435944": {
+  "text": "Okay, I want to open a 1 lakh rupee FD for 2 years.",
+  "context": "Can you tell me the interest rates for fixed deposits? 1 saal ki FD par 7.1 percent, 2 saal par 7.25, 3 saal par 7.5, aur 5 saal par 7.75 percent interest hai.",
+  "intents": [
+   "open 1 lakh rupee fixed deposit for 2 years"
+  ],
+  "latency_ms": 211
+ },
+ "c0a3ef8524511d67a7bb": {
+  "text": "I cannot pay right now, I will pay by the 25th",
+  "context": "How many payments are overdue on my account? Aapki 4 EMIs overdue hain, June se September tak. Total 35,156 rupees baaki hai.",
+  "intents": [
+   "pay overdue personal loan"
+  ],
+  "latency_ms": 342
+ },
+ "29fe581e101411ab722e": {
+  "text": "Meri agli EMI kab due hai?",
+  "context": "",
+  "intents": [
+   "check next EMI of loan"
+  ],
+  "latency_ms": 366
+ },
+ "aebeb21f5a4bc2c89089": {
+  "text": "Mera credit card kal kho gaya, usko band kar do",
+  "context": "",
+  "intents": [
+   "block lost credit card"
+  ],
+  "latency_ms": 262
+ },
+ "04783dca9e6e8643317a": {
+  "text": "Personal loan pe kitni late fee lagi hai?",
+  "context": "",
+  "intents": [
+   "check late fee of personal loan"
+  ],
+  "latency_ms": 199
+ },
+ "25d3943403590db4a073": {
+  "text": "Personal loan ki saari pending EMI abhi clear karni hai",
+  "context": "",
+  "intents": [
+   "clear pending EMI of personal loan"
+  ],
+  "latency_ms": 279
+ },
+ "7c06f62be667aa518ce0": {
+  "text": "Mujhe kisi insaan se baat karni hai, robot se nahi",
+  "context": "",
+  "intents": [
+   "speak to a human"
+  ],
+  "latency_ms": 275
+ },
+ "bc16b865669bf916db30": {
+  "text": "Mera purana personal loan band ho gaya hai, uska NOC chahiye",
+  "context": "",
+  "intents": [
+   "obtain NOC of closed personal loan"
+  ],
+  "latency_ms": 277
+ },
+ "40cb8efa2d2073c22e47": {
+  "text": "Car insurance renew kar liya hai, naya policy number VI778899 hai, 30 September 2027 tak valid",
+  "context": "",
+  "intents": [
+   "update car insurance details",
+   "check car insurance renewal status"
+  ],
+  "latency_ms": 300
+ },
+ "1e721deda6df5a5fd8ab": {
+  "text": "Car loan jaldi band karna hai, kitna lagega?",
+  "context": "",
+  "intents": [
+   "close car loan",
+   "calculate car loan foreclosure charges"
+  ],
+  "latency_ms": 294
+ },
+ "47699d694429f3da2d63": {
+  "text": "Meri FD kab mature hogi?",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit"
+  ],
+  "latency_ms": 285
+ },
+ "9c74281682f4616048f9": {
+  "text": "Mere chalu personal loan pe 1 lakh aur mil sakta hai kya?",
+  "context": "",
+  "intents": [
+   "check eligibility for additional personal loan"
+  ],
+  "latency_ms": 775
+ },
+ "b660a690d406fe5e6136": {
+  "text": "Meri salary 1.4 lakh hai, 80 lakh ka flat lena hai, kitna home loan milega?",
+  "context": "",
+  "intents": [
+   "check home loan eligibility",
+   "check fixed deposit interest rate"
+  ],
+  "latency_ms": 455
+ },
+ "3b43b62504399510435b": {
+  "text": "Personal loan ki EMI date 10 tareekh kar do",
+  "context": "",
+  "intents": [
+   "change EMI date of personal loan"
+  ],
+  "latency_ms": 233
+ },
+ "695faeea9a9e1ae579f5": {
+  "text": "Aajkal car loan pe kitna interest chal raha hai?",
+  "context": "",
+  "intents": [
+   "check current interest rate of car loan"
+  ],
+  "latency_ms": 371
+ },
+ "a3beb0aa0e97468d1ab9": {
+  "text": "Mera loan application A4001 kahan tak pahuncha?",
+  "context": "",
+  "intents": [
+   "check status of personal loan"
+  ],
+  "latency_ms": 204
+ },
+ "2186dad49f28b7e00dfc": {
+  "text": "Application A4001 ke documents kaise bhejun?",
+  "context": "",
+  "intents": [
+   "submit documents for loan application A4001"
+  ],
+  "latency_ms": 222
+ },
+ "a96214036268be5016c2": {
+  "text": "Main late tak kaam karta hoon, reminder call raat 8 se 10 ke beech karna",
+  "context": "",
+  "intents": [
+   "schedule reminder calls for fixed deposits between 8 PM and 10 PM"
+  ],
+  "latency_ms": 631
+ },
+ "5b8c87a0ed8a8ce6a152": {
+  "text": "Personal loan ki agli EMI kab hai aur card ka bill kitna aaya hai?",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan",
+   "check credit card bill amount"
+  ],
+  "latency_ms": 255
+ },
+ "e17a9bc8cc89b3148ee1": {
+  "text": "Mera KYC ho gaya kya, aur application A4001 ka kya hua?",
+  "context": "",
+  "intents": [
+   "check KYC status of fixed deposit",
+   "check status of application A4001"
+  ],
+  "latency_ms": 216
+ },
+ "8871f3b285084b50a114": {
+  "text": "Theek hai, abhi bhar deta hoon",
+  "context": "Personal wala Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai. Pichhli do EMIs bhi abhi pending hain.",
+  "intents": [
+   "pay pending EMIs of personal loan"
+  ],
+  "latency_ms": 249
+ },
+ "e58080f4465eb6e0e886": {
+  "text": "Card ka bill kitna aaya hai?",
+  "context": "",
+  "intents": [
+   "check credit card bill"
+  ],
+  "latency_ms": 184
+ },
+ "bfd07f4a421d428436c7": {
+  "text": "Abhi sirf minimum bhar deta hoon",
+  "context": "Card ka bill kitna aaya hai? Aapka credit card bill 42,300 rupees hai. Minimum due 2,115 rupees hai, aur last date 20 October hai.",
+  "intents": [
+   "pay minimum due of credit card"
+  ],
+  "latency_ms": 248
+ },
+ "dc4ffa320d75c1606416": {
+  "text": "Aur personal wale ka?",
+  "context": "Home loan band karne mein kitna lagega? Home loan abhi band karne ke liye lagbhag 43 lakh 70 hazaar rupees lagenge. Home loan par koi foreclosure charge nahi hai.",
+  "intents": [
+   "check foreclosure charges of personal loan"
+  ],
+  "latency_ms": 233
+ },
+ "85acfa3998b80f647078": {
+  "text": "Purana loan band ho gaya tha, NOC bheja kya?",
+  "context": "",
+  "intents": [
+   "send NOC of closed personal loan"
+  ],
+  "latency_ms": 220
+ },
+ "f88e0321c990984acc24": {
+  "text": "FD pe kitna interest dete ho?",
+  "context": "",
+  "intents": [
+   "check interest rate on fixed deposit"
+  ],
+  "latency_ms": 188
+ },
+ "74cbf5c1597b192a6fb4": {
+  "text": "Abhi nahi de sakta, 25 tareekh tak de dunga",
+  "context": "Kitni EMI overdue hain? Aapki 4 EMIs overdue hain, June se September tak. Total 35,156 rupees baaki hai.",
+  "intents": [
+   "pay 4 overdue EMIs of personal loan"
+  ],
+  "latency_ms": 224
+ },
+ "592a116cef5fea630511": {
+  "text": "Settlement ho sakta hai kya?",
+  "context": "",
+  "intents": [
+   "settle personal loan",
+   "settle credit card",
+   "settle fixed deposit"
+  ],
+  "latency_ms": 218
+ },
+ "f4b58dc3d0ad377d3928": {
+  "text": "Haan theek hai, accept karta hoon",
+  "context": "Settlement ho sakta hai kya? Haan, aap 1 lakh 30 hazaar rupees ek baar mein dekar loan settle kar sakte hain. Lekin credit report mein 'settled' dikhega, jisse aapka score kam ho sakta hai.",
+  "intents": [
+   "accept personal loan settlement"
+  ],
+  "latency_ms": 266
+ },
+ "bf76726de91184e77ea4": {
+  "text": "Card ke last transactions batao",
+  "context": "",
+  "intents": [
+   "show last transactions of credit card"
+  ],
+  "latency_ms": 223
+ },
+ "1467ac3a7520ec395f4b": {
+  "text": "Maine pehle hi renew kar liya, naya number VI778899, 30 September 2027 tak",
+  "context": "Mere car insurance ki expiry kab ki hai aapke record mein? Hamare record mein aapki car insurance 6 February 2027 tak valid hai.",
+  "intents": [
+   "renew car insurance"
+  ],
+  "latency_ms": 207
+ },
+ "cddf338c323c5b47818e": {
+  "text": "Documents kaise bhejun?",
+  "context": "Application number A4001 ka kya status hai? Aapki application A4001 mein documents pending hain. Documents milte hi hum aage process karenge.",
+  "intents": [
+   "submit pending documents for loan application"
+  ],
+  "latency_ms": 240
+ },
+ "b21e8216c3ef58844661": {
+  "text": "Personal loan ki agli EMI kab hai?",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 193
+ },
+ "23114da7a88c9418888b": {
+  "text": "Rehne do, bas uski EMI date 10 kar do",
+  "context": "Car loan band karne mein kitna lagega? Car loan abhi band karne ke liye lagbhag 7 lakh 27 hazaar rupees lagenge, jismein 3 percent foreclosure charge shamil hai.",
+  "intents": [
+   "change EMI date of car loan"
+  ],
+  "latency_ms": 206
+ },
+ "9b9f3dd08a67d81b93cb": {
+  "text": "personal loan की अगली EMI कब है और कितने की है",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan",
+   "check amount of personal loan"
+  ],
+  "latency_ms": 227
+ },
+ "4f01264e62177608ad82": {
+  "text": "personal loan की कितनी EMI miss हो गई हैं",
+  "context": "",
+  "intents": [
+   "check missed EMIs of personal loan"
+  ],
+  "latency_ms": 226
+ },
+ "4c00c9d13e07b59be0b1": {
+  "text": "slab हो गया है builder को पाँच लाख release कर दो",
+  "context": "",
+  "intents": [
+   "release 5 lakh to builder for slab of home loan"
+  ],
+  "latency_ms": 223
+ },
+ "2b72524cbdd0ba339fef": {
+  "text": "मेरा credit card कल खो गया उसको बंद करवा दो",
+  "context": "",
+  "intents": [
+   "block lost credit card"
+  ],
+  "latency_ms": 201
+ },
+ "dce82ae4d1b0c3bf5431": {
+  "text": "personal loan की सारी pending EMI अभी clear करनी है",
+  "context": "",
+  "intents": [
+   "clear all pending EMIs of personal loan"
+  ],
+  "latency_ms": 205
+ },
+ "eb061d915ca6b770ca26": {
+  "text": "अभी पैसे नहीं हैं बीस तारीख तक पक्का भर दूँगा",
+  "context": "",
+  "intents": [
+   "pay pending amount of personal loan"
+  ],
+  "latency_ms": 238
+ },
+ "a9facc5243e773f724c3": {
+  "text": "मुझे किसी इंसान से बात करनी है robot से नहीं",
+  "context": "",
+  "intents": [
+   "speak to a human for loans"
+  ],
+  "latency_ms": 216
+ },
+ "556e791ae669fbcb347f": {
+  "text": "car insurance renew कर लिया है नया policy number VI778899 है 30 September 2027 तक valid",
+  "context": "",
+  "intents": [
+   "verify car insurance policy",
+   "check car insurance expiry date"
+  ],
+  "latency_ms": 340
+ },
+ "26054e9051f9bb43e47b": {
+  "text": "car loan जल्दी बंद करना है कितना लगेगा",
+  "context": "",
+  "intents": [
+   "close car loan",
+   "check foreclosure charges"
+  ],
+  "latency_ms": 207
+ },
+ "bf6ef1308701f887a5e9": {
+  "text": "FD mature हो तो renew मत करना पैसा account में डाल देना",
+  "context": "",
+  "intents": [
+   "renew matured fixed deposit",
+   "credit money to account"
+  ],
+  "latency_ms": 216
+ },
+ "fd0993ee0d5b1301b571": {
+  "text": "nominee में मेरे पापा अनिल शर्मा का नाम डाल दो",
+  "context": "",
+  "intents": [
+   "add nominee to loan",
+   "add nominee to credit card",
+   "add nominee to fixed deposit"
+  ],
+  "latency_ms": 255
+ },
+ "0ccfa67da5668d3a4a96": {
+  "text": "bonus मिला है personal loan में पचास हज़ार extra डालूँ तो क्या होगा",
+  "context": "",
+  "intents": [
+   "add extra fifty thousand to personal loan"
+  ],
+  "latency_ms": 465
+ },
+ "076982c010a42c91fe53": {
+  "text": "personal loan की EMI date दस तारीख कर दो",
+  "context": "",
+  "intents": [
+   "change EMI date of personal loan"
+  ],
+  "latency_ms": 235
+ },
+ "063a29955024987c3cc3": {
+  "text": "पाँच लाख का loan तीन साल के लिए 12 percent पे EMI कितनी बनेगी",
+  "context": "",
+  "intents": [
+   "calculate EMI of personal loan",
+   "check interest rate of personal loan"
+  ],
+  "latency_ms": 215
+ },
+ "81d5df00680bae6e9b41": {
+  "text": "personal loan का एक बार में settlement हो सकता है क्या",
+  "context": "",
+  "intents": [
+   "settle personal loan"
+  ],
+  "latency_ms": 342
+ },
+ "f689ef3f92a6b04b5570": {
+  "text": "application A4001 के documents कैसे भेजूँ",
+  "context": "",
+  "intents": [
+   "submit documents of application A4001"
+  ],
+  "latency_ms": 281
+ },
+ "4d998f2d0cb287f02d8b": {
+  "text": "मुझे सुबह call मत करो सिर्फ़ शाम पाँच से सात के बीच करना",
+  "context": "",
+  "intents": [
+   "schedule future calls for fixed deposit between 5 PM and 7 PM"
+  ],
+  "latency_ms": 207
+ },
+ "7f08430d7c1fc5dab1ea": {
+  "text": "500034 pincode के पास branch कहाँ है",
+  "context": "",
+  "intents": [
+   "find nearest branch near pincode 500034"
+  ],
+  "latency_ms": 239
+ },
+ "a0b390c9cd35a887520a": {
+  "text": "आपके recovery agent ने मुझसे बहुत बदतमीज़ी से बात की",
+  "context": "",
+  "intents": [
+   "complain about recovery agent behavior of loan"
+  ],
+  "latency_ms": 212
+ },
+ "1c27ab9d9cdc455c863d": {
+  "text": "पाँच लाख का personal loan पक्का मिलेगा ना हाँ बोलो",
+  "context": "",
+  "intents": [
+   "check eligibility for personal loan of 5 lakhs"
+  ],
+  "latency_ms": 248
+ },
+ "d6d8d5576a9a99fe39ef": {
+  "text": "अगली EMI कब है",
+  "context": "",
+  "intents": [
+   "check next EMI of loan"
+  ],
+  "latency_ms": 248
+ },
+ "0011ed4724b1698f55a4": {
+  "text": "अभी सिर्फ़ minimum भर देता हूँ",
+  "context": "card का bill कितना आया है Aapka credit card bill 42,300 rupees hai. Minimum due 2,115 rupees hai, aur last date 20 October hai.",
+  "intents": [
+   "pay minimum due of credit card"
+  ],
+  "latency_ms": 192
+ },
+ "77f169318cf5cc3afda3": {
+  "text": "home loan बंद करने में कितना लगेगा",
+  "context": "",
+  "intents": [
+   "check foreclosure charges of home loan"
+  ],
+  "latency_ms": 279
+ },
+ "b429cb17f8d0b328fafe": {
+  "text": "एक लाख की दो साल वाली बना दो",
+  "context": "FD पे कितना interest देते हो 1 saal ki FD par 7.1 percent, 2 saal par 7.25, 3 saal par 7.5, aur 5 saal par 7.75 percent interest hai.",
+  "intents": [
+   "open 2 year fixed deposit of 1 lakh"
+  ],
+  "latency_ms": 298
+ },
+ "c5ae7141200a4d78707f": {
+  "text": "अभी नहीं दे सकता पच्चीस तारीख तक दे दूँगा",
+  "context": "कितनी EMI overdue हैं Aapki 4 EMIs overdue hain, June se September tak. Total 35,156 rupees baaki hai.",
+  "intents": [
+   "pay 4 overdue EMIs of loan"
+  ],
+  "latency_ms": 282
+ },
+ "a570bf0ef2151dfa2ede": {
+  "text": "हाँ ठीक है accept करता हूँ",
+  "context": "settlement हो सकता है क्या Haan, aap 1 lakh 30 hazaar rupees ek baar mein dekar loan settle kar sakte hain. Lekin credit report mein 'settled' dikhega, jisse aapka score kam ho sakta hai.",
+  "intents": [
+   "accept settlement of loan"
+  ],
+  "latency_ms": 269
+ },
+ "14086678143b7ec5bf49": {
+  "text": "card के last transactions बताओ",
+  "context": "",
+  "intents": [
+   "show last transactions of credit card"
+  ],
+  "latency_ms": 284
+ },
+ "e84cfa2e202ed6dd051e": {
+  "text": "मैंने पहले ही renew कर लिया नया number VI778899 30 September 2027 तक",
+  "context": "मेरे car insurance की expiry कब की है आपके record में Hamare record mein aapki car insurance 6 February 2027 tak valid hai.",
+  "intents": [
+   "renew car insurance"
+  ],
+  "latency_ms": 248
+ },
+ "928e7551cd73dc3a3fee": {
+  "text": "documents कैसे भेजूँ",
+  "context": "application number A4001 का क्या status है Aapki application A4001 mein documents pending hain. Documents milte hi hum aage process karenge.",
+  "intents": [
+   "submit documents for loan application A4001"
+  ],
+  "latency_ms": 202
+ },
+ "b906808accdd83aae4f5": {
+  "text": "personal loan की अगली EMI कब है",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 224
+ },
+ "721178d9f9ea94ed1d61": {
+  "text": "car loan बंद करने में कितना लगेगा",
+  "context": "",
+  "intents": [
+   "close car loan"
+  ],
+  "latency_ms": 173
+ },
+ "2481d87cc8df17df2148": {
+  "text": "When's my next EMI due?",
+  "context": "",
+  "intents": [
+   "check next EMI of loan"
+  ],
+  "latency_ms": 194
+ },
+ "52839dc52a3484f1c3e9": {
+  "text": "How many EMIs have I missed on the personal loan?",
+  "context": "",
+  "intents": [
+   "check missed EMIs of personal loan"
+  ],
+  "latency_ms": 192
+ },
+ "e7bee9f59d358cda11fb": {
+  "text": "I paid my EMI through UPI two days ago but it's still showing unpaid.",
+  "context": "",
+  "intents": [
+   "check paid EMI of personal loan",
+   "verify UPI payment status of personal loan"
+  ],
+  "latency_ms": 264
+ },
+ "16e3bebbdfec64e745d9": {
+  "text": "How much of my home loan has been paid to the builder so far?",
+  "context": "",
+  "intents": [
+   "check home loan disbursement to builder"
+  ],
+  "latency_ms": 243
+ },
+ "6eac9d9e0928c85a7bdf": {
+  "text": "How much is my credit card bill and when is it due?",
+  "context": "",
+  "intents": [
+   "check credit card bill amount",
+   "check credit card bill due date"
+  ],
+  "latency_ms": 231
+ },
+ "8e44c452617290e3fb60": {
+  "text": "There's a charge on my card that I never made.",
+  "context": "",
+  "intents": [
+   "check unauthorized credit card charge",
+   "dispute credit card transaction"
+  ],
+  "latency_ms": 229
+ },
+ "b279d03f549370255120": {
+  "text": "How much late fee has been charged on my personal loan?",
+  "context": "",
+  "intents": [
+   "check late fee charged on personal loan"
+  ],
+  "latency_ms": 204
+ },
+ "aa0e09adef53250eb975": {
+  "text": "I want to clear all the pending EMIs on my personal loan right now.",
+  "context": "",
+  "intents": [
+   "pay pending EMIs of personal loan"
+  ],
+  "latency_ms": 210
+ },
+ "f83142e97fc1b35abf20": {
+  "text": "I don't have the money today, I'll definitely pay by the 20th.",
+  "context": "",
+  "intents": [
+   "request personal loan payment extension"
+  ],
+  "latency_ms": 290
+ },
+ "e196b28e962388fa4711": {
+  "text": "I want to talk to a real person, not a bot.",
+  "context": "",
+  "intents": [
+   "speak to a human representative for loans"
+  ],
+  "latency_ms": 229
+ },
+ "c4199460005629995bc4": {
+  "text": "My old personal loan is fully paid, I need the NOC for it.",
+  "context": "",
+  "intents": [
+   "get NOC for personal loan"
+  ],
+  "latency_ms": 206
+ },
+ "c4120b671ea8ffd1944a": {
+  "text": "I renewed my car insurance. New policy number VI778899, valid till 30 September 2027.",
+  "context": "",
+  "intents": [
+   "check car insurance policy VI778899"
+  ],
+  "latency_ms": 290
+ },
+ "96e3d31b4bb3d5d6ef49": {
+  "text": "How much would it take to close my car loan early?",
+  "context": "",
+  "intents": [
+   "calculate prepayment amount of car loan"
+  ],
+  "latency_ms": 221
+ },
+ "eef7d1297ba71734fd28": {
+  "text": "When does my fixed deposit mature?",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit"
+  ],
+  "latency_ms": 215
+ },
+ "4caf415dbabdfb0c81cd": {
+  "text": "When my FD matures, don't renew it, just pay the money into my account.",
+  "context": "",
+  "intents": [
+   "pay matured fixed deposit into account"
+  ],
+  "latency_ms": 217
+ },
+ "7a8fa6421c57c12e64bd": {
+  "text": "Please add my father, Anil Sharma, as my nominee.",
+  "context": "",
+  "intents": [
+   "add nominee Anil Sharma"
+  ],
+  "latency_ms": 225
+ },
+ "b6c16c6154754b601fcf": {
+  "text": "I earn 1.4 lakh a month and want to buy an 80 lakh flat. How much home loan can I get?",
+  "context": "",
+  "intents": [
+   "check eligibility for home loan",
+   "calculate home loan amount"
+  ],
+  "latency_ms": 214
+ },
+ "877e9343c5217cd7d47d": {
+  "text": "Please move my personal loan EMI date to the 10th.",
+  "context": "",
+  "intents": [
+   "change EMI date of personal loan"
+  ],
+  "latency_ms": 271
+ },
+ "202f8840645558119ac4": {
+  "text": "What would the EMI be on a 5 lakh loan for 3 years at 12 percent?",
+  "context": "",
+  "intents": [
+   "calculate EMI of personal loan",
+   "check personal loan interest rate",
+   "compare personal loan with fixed deposit"
+  ],
+  "latency_ms": 334
+ },
+ "0e9d019f25ad389a9fa6": {
+  "text": "Can I settle my personal loan with a one-time payment?",
+  "context": "",
+  "intents": [
+   "settle personal loan with one-time payment"
+  ],
+  "latency_ms": 404
+ },
+ "6943ec99954f12434d4c": {
+  "text": "What's the status of my loan application A4001?",
+  "context": "",
+  "intents": [
+   "check status of loan application A4001"
+  ],
+  "latency_ms": 194
+ },
+ "d21f139c5ac19be147b4": {
+  "text": "How do I send the documents for application A4001?",
+  "context": "",
+  "intents": [
+   "submit documents for application A4001"
+  ],
+  "latency_ms": 227
+ },
+ "0162b30c173d910a4e40": {
+  "text": "Stop calling me in the morning, only call between 5 and 7 in the evening.",
+  "context": "",
+  "intents": [
+   "stop calling personal loan in the morning",
+   "call personal loan between 5 and 7 in the evening"
+  ],
+  "latency_ms": 214
+ },
+ "8af329f652a6f3216696": {
+  "text": "I work late, please make reminder calls only between 8 and 10 at night.",
+  "context": "",
+  "intents": [
+   "set reminder call time for loans between 8 and 10 at night"
+  ],
+  "latency_ms": 214
+ },
+ "15fe8354f2b392eeb343": {
+  "text": "Where's the nearest branch to pincode 500034?",
+  "context": "",
+  "intents": [
+   "find nearest branch for loans, credit card, fixed deposits"
+  ],
+  "latency_ms": 331
+ },
+ "7a82ec0eb60e23299679": {
+  "text": "When is my next EMI?",
+  "context": "",
+  "intents": [
+   "check next EMI of loan"
+  ],
+  "latency_ms": 549
+ },
+ "ea2f3a51e6dbb0bcf128": {
+  "text": "How much is my card bill?",
+  "context": "",
+  "intents": [
+   "check credit card bill"
+  ],
+  "latency_ms": 197
+ },
+ "fcadbe7a9bc33d915b89": {
+  "text": "And the personal one?",
+  "context": "How much to close my home loan? Home loan abhi band karne ke liye lagbhag 43 lakh 70 hazaar rupees lagenge. Home loan par koi foreclosure charge nahi hai.",
+  "intents": [
+   "check foreclosure amount of personal loan"
+  ],
+  "latency_ms": 262
+ },
+ "221a8ad4443de03f4638": {
+  "text": "Make one for one lakh for two years.",
+  "context": "What interest do you give on FDs? 1 saal ki FD par 7.1 percent, 2 saal par 7.25, 3 saal par 7.5, aur 5 saal par 7.75 percent interest hai.",
+  "intents": [
+   "open fixed deposit of one lakh for two years"
+  ],
+  "latency_ms": 279
+ },
+ "c89e2e99d4a1cc9dab67": {
+  "text": "How many EMIs are overdue?",
+  "context": "",
+  "intents": [
+   "check overdue EMIs of loans",
+   "check overdue EMIs of credit card",
+   "check overdue EMIs of fixed deposit"
+  ],
+  "latency_ms": 282
+ },
+ "8f6152ce61ab84247d2d": {
+  "text": "I can't pay now, I'll pay by the 25th.",
+  "context": "How many EMIs are overdue? Aapki 4 EMIs overdue hain, June se September tak. Total 35,156 rupees baaki hai.",
+  "intents": [
+   "pay overdue personal loan by the 25th"
+  ],
+  "latency_ms": 255
+ },
+ "b5b3a46899ad5f7ff41d": {
+  "text": "Can I settle the loan?",
+  "context": "",
+  "intents": [
+   "settle personal loan"
+  ],
+  "latency_ms": 526
+ },
+ "a993adc6714f8d25d1a1": {
+  "text": "Tell me my recent card transactions.",
+  "context": "",
+  "intents": [
+   "check recent transactions of credit card"
+  ],
+  "latency_ms": 212
+ },
+ "78324a49fc31d9e51472": {
+  "text": "When does my car insurance expire in your records?",
+  "context": "",
+  "intents": [
+   "check car insurance expiry of policy"
+  ],
+  "latency_ms": 346
+ },
+ "36e9eba250f5496d0833": {
+  "text": "I already renewed it. New number VI778899, valid till 30 September 2027.",
+  "context": "When does my car insurance expire in your records? Hamare record mein aapki car insurance 6 February 2027 tak valid hai.",
+  "intents": [
+   "update car insurance details",
+   "update mobile number for car insurance"
+  ],
+  "latency_ms": 298
+ },
+ "38143f8743993cd10e80": {
+  "text": "What's the status of application number A4001?",
+  "context": "",
+  "intents": [
+   "check status of loan application A4001"
+  ],
+  "latency_ms": 446
+ },
+ "168973e4b46c0a2b494e": {
+  "text": "How do I send the documents?",
+  "context": "What's the status of application number A4001? Aapki application A4001 mein documents pending hain. Documents milte hi hum aage process karenge.",
+  "intents": [
+   "submit pending documents for application A4001"
+  ],
+  "latency_ms": 282
+ },
+ "ba4e2a75942ea49f8fcc": {
+  "text": "When is my next personal loan EMI?",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 287
+ },
+ "a3d13ccde45f915f1903": {
+  "text": "How much to close my car loan?",
+  "context": "",
+  "intents": [
+   "close car loan"
+  ],
+  "latency_ms": 308
+ },
+ "9361cc4483f04e68b98d": {
+  "text": "Forget it, just change that loan's EMI date to the 10th.",
+  "context": "How much to close my car loan? Car loan abhi band karne ke liye lagbhag 7 lakh 27 hazaar rupees lagenge, jismein 3 percent foreclosure charge shamil hai.",
+  "intents": [
+   "change EMI date of car loan"
+  ],
+  "latency_ms": 282
+ },
+ "cc9b8bacd219e15a9327": {
+  "text": "mera credit card bill kitna hai aur due date kya hai?",
+  "context": "",
+  "intents": [
+   "check credit card bill amount",
+   "check credit card due date"
+  ],
+  "latency_ms": 205
+ },
+ "ab92177b8e142b969603": {
+  "text": "mera credit card kal kho gaya, please block kar dijiye",
+  "context": "",
+  "intents": [
+   "block lost credit card"
+  ],
+  "latency_ms": 211
+ },
+ "1296390511ebbc8b9e56": {
+  "text": "mujhe pichle saal ka home loan certificate chahiye tax return ke liye",
+  "context": "",
+  "intents": [
+   "get last year home loan certificate"
+  ],
+  "latency_ms": 210
+ },
+ "8841660876e58c16cddd": {
+  "text": "yeh machine baat nahi kar rahi, mujhe real agent se baat karni hai",
+  "context": "",
+  "intents": [
+   "talk to real agent"
+  ],
+  "latency_ms": 207
+ },
+ "280171d1046618da5e81": {
+  "text": "Maine car insurance renew kar liya hai, naya policy number VI778899 hai.",
+  "context": "",
+  "intents": [
+   "update car insurance policy number"
+  ],
+  "latency_ms": 212
+ },
+ "329972687541c0058013": {
+  "text": "meri car loan early close karni hai, kitna bharna padega?",
+  "context": "",
+  "intents": [
+   "close car loan early",
+   "calculate early closure amount of car loan"
+  ],
+  "latency_ms": 234
+ },
+ "792bb17dcf659a5d90de": {
+  "text": "mera monthly salary 1.4 lakh hai, 80 lakh ka flat lena hai, kitna home loan milega?",
+  "context": "",
+  "intents": [
+   "check eligibility for home loan"
+  ],
+  "latency_ms": 899
+ },
+ "9ac206deef318cf4ecdf": {
+  "text": "mera personal loan EMI date 10th ko kar do please",
+  "context": "",
+  "intents": [
+   "change EMI date of personal loan"
+  ],
+  "latency_ms": 350
+ },
+ "d1cc517e568580e6bebd": {
+  "text": "5 lakh loan 3 saal ke liye 12 percent par EMI kitni hogi?",
+  "context": "",
+  "intents": [
+   "calculate EMI for personal loan"
+  ],
+  "latency_ms": 251
+ },
+ "d517b69e3e96e09c2b85": {
+  "text": "mera application A4001 ka document kaise bhejun?",
+  "context": "",
+  "intents": [
+   "submit documents for application A4001"
+  ],
+  "latency_ms": 213
+ },
+ "99098a5b84720c469eee": {
+  "text": "mera FD kab mature hoga aur car loan close karne ka kitna charge lagega?",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit",
+   "check foreclosure charge of car loan"
+  ],
+  "latency_ms": 613
+ },
+ "53ee14b6c71b6bebef62": {
+  "text": "Main abhi isko pay karna chahta hoon",
+  "context": "personal loan ki baat kar rahe hain. Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai. Pichhli do EMIs bhi abhi pending hain.",
+  "intents": [
+   "pay personal loan"
+  ],
+  "latency_ms": 376
+ },
+ "a42887b42c05088f20cc": {
+  "text": "abhi sirf minimum due hi pay karunga",
+  "context": "mera credit card ka bill kitna bacha hai Aapka credit card bill 42,300 rupees hai. Minimum due 2,115 rupees hai, aur last date 20 October hai.",
+  "intents": [
+   "pay minimum due of credit card"
+  ],
+  "latency_ms": 234
+ },
+ "d74cde133bcdd6075327": {
+  "text": "toh please abhi NOC ki request daal do",
+  "context": "Mera purana personal loan last year close ho gaya tha, kya NOC bhej diya hai? Aapke purane personal loan ke liye abhi tak NOC ki request nahi daali gayi hai.",
+  "intents": [
+   "submit NOC request for personal loan"
+  ],
+  "latency_ms": 209
+ },
+ "1e7947d2a51c139c3982": {
+  "text": "Theek hai, mujhe 1 lakh ki 2 saal ki FD kholni hai.",
+  "context": "Mujhe fixed deposit pe kya interest rate mil raha hai? 1 saal ki FD par 7.1 percent, 2 saal par 7.25, 3 saal par 7.5, aur 5 saal par 7.75 percent interest hai.",
+  "intents": [
+   "open fixed deposit",
+   "open fixed deposit"
+  ],
+  "latency_ms": 200
+ },
+ "85c64b214876f03065bf": {
+  "text": "abhi payment nahi kar sakta, 25 tak kar dunga",
+  "context": "mera kitna payment pending hai batao Aapki 4 EMIs overdue hain, June se September tak. Total 35,156 rupees baaki hai.",
+  "intents": [
+   "pay overdue personal loan"
+  ],
+  "latency_ms": 319
+ },
+ "6b59697626891dda2b8d": {
+  "text": "haan, main offer accept karta hoon.",
+  "context": "mera loan ek saath settle kar sakte hain kya Haan, aap 1 lakh 30 hazaar rupees ek baar mein dekar loan settle kar sakte hain. Lekin credit report mein 'settled' dikhega, jisse aapka score kam ho sakta hai.",
+  "intents": [
+   "settle personal loan"
+  ],
+  "latency_ms": 188
+ },
+ "5d2a09e67b43b9ed1a17": {
+  "text": "maine pehle hi renew kar liya hai, naya policy number VI778899 hai jo 30 Sept 2027 tak valid hai.",
+  "context": "mere car insurance ki expiry kab hai records ke hisaab se? Hamare record mein aapki car insurance 6 February 2027 tak valid hai.",
+  "intents": [
+   "renew car insurance"
+  ],
+  "latency_ms": 230
+ },
+ "0171c6b223bd5b40d3b2": {
+  "text": "documents kaise bhejun is application ke liye?",
+  "context": "mera naya application A4001 ka status bata do Aapki application A4001 mein documents pending hain. Documents milte hi hum aage process karenge.",
+  "intents": [
+   "upload pending documents for application A4001"
+  ],
+  "latency_ms": 250
+ },
+ "9aca484fa12c53c2b7d1": {
+  "text": "mera agla personal loan ka EMI kab due hai?",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 195
+ },
+ "e8ffa366e0d960bf582c": {
+  "text": "maine ghar shift kar liya hai, apna address update karna hai",
+  "context": "mera agla personal loan ka EMI kab due hai? Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai.",
+  "intents": [
+   "update address of personal loan"
+  ],
+  "latency_ms": 180
+ },
+ "fd958f40c9377978b3fe": {
+  "text": "mera car loan close karne ka kitna charge lagega",
+  "context": "",
+  "intents": [
+   "check car loan foreclosure charges"
+  ],
+  "latency_ms": 192
+ },
+ "6626ea2aa3feefefe5fb": {
+  "text": "मेरा next due कब है बता दो",
+  "context": "",
+  "intents": [
+   "check next due of loan"
+  ],
+  "latency_ms": 207
+ },
+ "71b10c129ecff61f01d2": {
+  "text": "मेरा credit card bill कितना है और due date क्या है?",
+  "context": "",
+  "intents": [
+   "check credit card bill",
+   "check credit card due date"
+  ],
+  "latency_ms": 199
+ },
+ "e15503a8922c8a27f2a9": {
+  "text": "मेरा credit card कल खो गया, please block कर दीजिए",
+  "context": "",
+  "intents": [
+   "block lost credit card"
+  ],
+  "latency_ms": 188
+ },
+ "30dca3ad0e73500b9efa": {
+  "text": "mujhe पिछले साल का home loan certificate चाहिए tax return के लिए",
+  "context": "",
+  "intents": [
+   "request home loan certificate"
+  ],
+  "latency_ms": 193
+ },
+ "abb676fe076f1ebceef1": {
+  "text": "yeh auto agent kaam nahi kar raha, मुझे real person से बात करनी है",
+  "context": "",
+  "intents": [
+   "talk to real person of loans",
+   "talk to real person of credit card",
+   "talk to real person of fixed deposits"
+  ],
+  "latency_ms": 237
+ },
+ "db55ceca8dca8dea5397": {
+  "text": "मेरी car insurance renew हो गई है, नया policy number VI778899 है.",
+  "context": "",
+  "intents": [
+   "check car insurance policy"
+  ],
+  "latency_ms": 230
+ },
+ "f4425766f2c79409d79b": {
+  "text": "मेरी car loan early close करनी है, कितना भरना पड़ेगा?",
+  "context": "",
+  "intents": [
+   "close car loan early",
+   "check early closure amount of car loan"
+  ],
+  "latency_ms": 220
+ },
+ "3605a9b62cd5d7e709fb": {
+  "text": "मेरा nominee update करना है, मेरे पापा अनिल शर्मा को add कर दो.",
+  "context": "",
+  "intents": [
+   "add nominee to fixed deposit",
+   "add nominee to credit card",
+   "add nominee to loan"
+  ],
+  "latency_ms": 216
+ },
+ "47dcfeaba22baf614d11": {
+  "text": "मेरा bonus आया है, अगर मैं 50,000 extra दे दूँ तो क्या होगा?",
+  "context": "",
+  "intents": [
+   "check effect of prepaying 50000 on personal loan"
+  ],
+  "latency_ms": 304
+ },
+ "9f56603fa651c4b78358": {
+  "text": "मेरे personal loan में 1 lakh और add हो सकता है क्या",
+  "context": "",
+  "intents": [
+   "add 1 lakh to personal loan"
+  ],
+  "latency_ms": 226
+ },
+ "3584e762dfc1996e4f23": {
+  "text": "मेरा monthly salary 1.4 lakh है, 80 lakh का flat लेना है, कितना home loan मिलेगा?",
+  "context": "",
+  "intents": [
+   "calculate home loan eligibility",
+   "check home loan"
+  ],
+  "latency_ms": 250
+ },
+ "1c9b6fca40caa1841dd1": {
+  "text": "mera personal loan का EMI date 10th कर दो please",
+  "context": "",
+  "intents": [
+   "change EMI date of personal loan"
+  ],
+  "latency_ms": 247
+ },
+ "fa1b2ca50236db62ea45": {
+  "text": "5 lakh loan 3 साल के लिए 12 percent पर EMI क्या होगी?",
+  "context": "",
+  "intents": [
+   "calculate EMI of 5 lakh loan",
+   "check interest rate of 3 year loan"
+  ],
+  "latency_ms": 209
+ },
+ "5385bc40d8abe6f9e852": {
+  "text": "job chali gayi hai, abhi payment nahi kar paunga, क्या कर सकते हैं?",
+  "context": "",
+  "intents": [
+   "request payment relief for personal loan",
+   "request payment relief for credit card"
+  ],
+  "latency_ms": 212
+ },
+ "012ca7aba163c600594f": {
+  "text": "मेरा personal loan एक बार में settle हो सकता है क्या",
+  "context": "",
+  "intents": [
+   "settle personal loan in one go"
+  ],
+  "latency_ms": 181
+ },
+ "729095e5d4bf891e0a90": {
+  "text": "application A4001 के documents कैसे भेजने हैं",
+  "context": "",
+  "intents": [
+   "submit documents of application A4001"
+  ],
+  "latency_ms": 195
+ },
+ "77747c132a4a62b5cafe": {
+  "text": "सुबह बार बार call आता है शाम 5 से 7 के बीच ही call करो",
+  "context": "",
+  "intents": [
+   "stop morning calls",
+   "call during 5 to 7 PM"
+  ],
+  "latency_ms": 274
+ },
+ "b6ffa0ba272e63b0167e": {
+  "text": "मेरा FD कब mature होगा और car loan close करने का कितना charge लगेगा?",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit",
+   "check foreclosure charges of car loan"
+  ],
+  "latency_ms": 217
+ },
+ "af71737f95b0575a7b49": {
+  "text": "मेरा next payment कब due है",
+  "context": "",
+  "intents": [
+   "check next due date of loan"
+  ],
+  "latency_ms": 231
+ },
+ "578588dc85cd104f1536": {
+  "text": "abhi sirf minimum due ही pay करूंगा",
+  "context": "मेरा credit card bill कितना बचा है Aapka credit card bill 42,300 rupees hai. Minimum due 2,115 rupees hai, aur last date 20 October hai.",
+  "intents": [
+   "pay minimum due of credit card"
+  ],
+  "latency_ms": 219
+ },
+ "17b57fb466dfe00dd35b": {
+  "text": "theek hai, मुझे 1 lakh की 2 साल की FD खुलवानी है.",
+  "context": "मेरे fixed deposit पर क्या interest rate मिलेगा? 1 saal ki FD par 7.1 percent, 2 saal par 7.25, 3 saal par 7.5, aur 5 saal par 7.75 percent interest hai.",
+  "intents": [
+   "open 2 year fixed deposit",
+   "open 1 lakh fixed deposit"
+  ],
+  "latency_ms": 206
+ },
+ "79a5cb1f8ebaed4e5e8a": {
+  "text": "मेरे कितने payments pending हैं बताइए",
+  "context": "",
+  "intents": [
+   "check pending payments of loans",
+   "check pending payments of credit card",
+   "check pending payments of fixed deposits"
+  ],
+  "latency_ms": 290
+ },
+ "315e51b681c571ba8918": {
+  "text": "अभी payment नहीं कर सकता, 25 तक कर दूँगा",
+  "context": "मेरे कितने payments pending हैं बताइए Aapki 4 EMIs overdue hain, June se September tak. Total 35,156 rupees baaki hai.",
+  "intents": [
+   "pay overdue EMIs of personal loan",
+   "extend due date of personal loan"
+  ],
+  "latency_ms": 263
+ },
+ "ff3f70752911e8d978e3": {
+  "text": "मेरा loan एक साथ settle कर सकते हैं क्या",
+  "context": "",
+  "intents": [
+   "close personal loan"
+  ],
+  "latency_ms": 305
+ },
+ "f003e3f45d4c818ef2ab": {
+  "text": "हाँ, मैं offer accept करता हूँ.",
+  "context": "मेरा loan एक साथ settle कर सकते हैं क्या Haan, aap 1 lakh 30 hazaar rupees ek baar mein dekar loan settle kar sakte hain. Lekin credit report mein 'settled' dikhega, jisse aapka score kam ho sakta hai.",
+  "intents": [
+   "accept loan settlement offer"
+  ],
+  "latency_ms": 286
+ },
+ "23d19d083906fb44b388": {
+  "text": "मेरे credit card के recent transactions सुना दो",
+  "context": "",
+  "intents": [
+   "check recent transactions of credit card"
+  ],
+  "latency_ms": 311
+ },
+ "55e9ec2f2c6aceca8b06": {
+  "text": "maine pehle hi renew kar liya hai, naya policy number VI778899 hai jo 30 Sept 2027 तक valid है.",
+  "context": "मेरे car insurance की expiry कब है आपके records के हिसाब से Hamare record mein aapki car insurance 6 February 2027 tak valid hai.",
+  "intents": [
+   "renew car insurance"
+  ],
+  "latency_ms": 560
+ },
+ "7583132fcd54a9ed0fef": {
+  "text": "documents kaise भेजूँ A4001 के लिए?",
+  "context": "मेरा नया application A4001 का status बताओ Aapki application A4001 mein documents pending hain. Documents milte hi hum aage process karenge.",
+  "intents": [
+   "submit documents of loan application A4001"
+  ],
+  "latency_ms": 216
+ },
+ "c71c4b0cd9aa96d1440c": {
+  "text": "mera agla personal loan का EMI कब due है",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 276
+ },
+ "2fe33c69c609895de3b2": {
+  "text": "मैंने घर shift कर लिया है, अपना address update करना है",
+  "context": "mera agla personal loan का EMI कब due है Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai.",
+  "intents": [
+   "update address of personal loan"
+  ],
+  "latency_ms": 190
+ },
+ "fba4786a99b83da7747b": {
+  "text": "मेरा car loan close करने का कितना charge लगेगा",
+  "context": "",
+  "intents": [
+   "check close charges of car loan"
+  ],
+  "latency_ms": 207
+ },
+ "12f40beb14e8d45209c7": {
+  "text": "When is my next personal loan payment due and how much is it?",
+  "context": "",
+  "intents": [
+   "check next due date of personal loan",
+   "check next payment amount of personal loan"
+  ],
+  "latency_ms": 245
+ },
+ "bdd56be80ce15e82dc51": {
+  "text": "When is my next payment due?",
+  "context": "",
+  "intents": [
+   "check next payment due of loan"
+  ],
+  "latency_ms": 317
+ },
+ "366144b4885aac0b4351": {
+  "text": "How many EMIs have I missed on my personal loan?",
+  "context": "",
+  "intents": [
+   "check missed EMIs of personal loan"
+  ],
+  "latency_ms": 255
+ },
+ "8e5df2169035990368f3": {
+  "text": "I paid by UPI two days ago but it still shows as unpaid.",
+  "context": "",
+  "intents": [
+   "check status of fixed deposit payment"
+  ],
+  "latency_ms": 233
+ },
+ "9f47e77ab1c77cdf18de": {
+  "text": "Please tell me how much home loan has been disbursed to the builder till now",
+  "context": "",
+  "intents": [
+   "check disbursed amount of home loan"
+  ],
+  "latency_ms": 264
+ },
+ "f1003b9899fd872533c6": {
+  "text": "Can you tell me my credit card bill amount and due date?",
+  "context": "",
+  "intents": [
+   "check credit card bill amount",
+   "check credit card due date"
+  ],
+  "latency_ms": 207
+ },
+ "fe40848ee4e70294af6b": {
+  "text": "I lost my credit card yesterday, please block it right now",
+  "context": "",
+  "intents": [
+   "block lost credit card"
+  ],
+  "latency_ms": 233
+ },
+ "1dd274723f5375e8b525": {
+  "text": "How much late fee is charged on my personal loan?",
+  "context": "",
+  "intents": [
+   "check late fee of personal loan"
+  ],
+  "latency_ms": 196
+ },
+ "dd709c274f1d15109d12": {
+  "text": "This automated agent is useless, I want to talk to a real person",
+  "context": "",
+  "intents": [
+   "speak to human agent for loans",
+   "speak to human agent for credit card",
+   "speak to human agent for fixed deposits"
+  ],
+  "latency_ms": 283
+ },
+ "fad9d3ad66a729c1c914": {
+  "text": "I want to close my car loan early, how much do I need to pay?",
+  "context": "",
+  "intents": [
+   "close car loan early"
+  ],
+  "latency_ms": 205
+ },
+ "cff81e0276f7310781aa": {
+  "text": "When will my 2 lakh FD mature?",
+  "context": "",
+  "intents": [
+   "check maturity date of fixed deposit"
+  ],
+  "latency_ms": 206
+ },
+ "7dd86936967ad76bb78e": {
+  "text": "Please add my father Anil Sharma as the nominee on my account.",
+  "context": "",
+  "intents": [
+   "add nominee Anil Sharma to account"
+  ],
+  "latency_ms": 198
+ },
+ "558bb4140e19a850a7fc": {
+  "text": "Please change my personal loan EMI date to the 10th.",
+  "context": "",
+  "intents": [
+   "change EMI date of personal loan"
+  ],
+  "latency_ms": 235
+ },
+ "b3fb839f06252b209058": {
+  "text": "I am thinking of buying a second car, what interest rate do you charge on car loans these days?",
+  "context": "",
+  "intents": [
+   "check car loan interest rate"
+  ],
+  "latency_ms": 194
+ },
+ "1c24547df249f4ea8fc9": {
+  "text": "My bike loan is fully paid, please remove the bank name from the RC",
+  "context": "",
+  "intents": [
+   "remove hypothecation from bike loan",
+   "update RC for vehicle"
+  ],
+  "latency_ms": 234
+ },
+ "fdf2b7e0d8014976ffbb": {
+  "text": "I am getting calls in the morning, please call me only between 5 to 7 in the evening",
+  "context": "",
+  "intents": [
+   "stop morning calls for credit card",
+   "call only between 5 to 7 in the evening for credit card"
+  ],
+  "latency_ms": 260
+ },
+ "eb2115e998aeb7ca8bb3": {
+  "text": "please call me only between 8 and 10 at night",
+  "context": "",
+  "intents": [
+   "call regarding loan between 8 and 10 at night"
+  ],
+  "latency_ms": 218
+ },
+ "29cdb2df8500005f2574": {
+  "text": "Can you tell me where the nearest branch is for pincode 500034?",
+  "context": "",
+  "intents": [
+   "find nearest branch for fixed deposit"
+  ],
+  "latency_ms": 253
+ },
+ "2aa68d8f78ab3fa8fd04": {
+  "text": "The recovery agent was very rude yesterday, I want to file a complaint.",
+  "context": "",
+  "intents": [
+   "lodge complaint about recovery agent for loan"
+  ],
+  "latency_ms": 206
+ },
+ "9d3303f746da91f945e7": {
+  "text": "I want to pay it right this moment",
+  "context": "I am asking about the personal loan. Aapke personal loan ki agli EMI 5 November ko 13,538 rupees hai. Pichhli do EMIs bhi abhi pending hain.",
+  "intents": [
+   "pay pending personal loan"
+  ],
+  "latency_ms": 187
+ },
+ "c2d02ec7055157e4e740": {
+  "text": "My old personal loan got closed last year, has the NOC been sent?",
+  "context": "",
+  "intents": [
+   "check sent NOC of personal loan"
+  ],
+  "latency_ms": 205
+ },
+ "4d9a7eb5a5a18c07d97c": {
+  "text": "Can I settle my loan in one go?",
+  "context": "",
+  "intents": [
+   "pay off loan in one go"
+  ],
+  "latency_ms": 203
+ },
+ "eadb11256c067158b824": {
+  "text": "Yes, I accept the offer.",
+  "context": "Can I settle my loan in one go? Haan, aap 1 lakh 30 hazaar rupees ek baar mein dekar loan settle kar sakte hain. Lekin credit report mein 'settled' dikhega, jisse aapka score kam ho sakta hai.",
+  "intents": [
+   "settle personal loan"
+  ],
+  "latency_ms": 228
+ },
+ "c40fa9842c12dd0123e1": {
+  "text": "Please tell me my recent credit card transactions",
+  "context": "",
+  "intents": [
+   "check recent transactions of credit card"
+  ],
+  "latency_ms": 222
+ },
+ "d316da20a186b53872ee": {
+  "text": "When does my car insurance expire according to your records?",
+  "context": "",
+  "intents": [
+   "check expiry date of car insurance"
+  ],
+  "latency_ms": 384
+ },
+ "2348dab710a3bbc901a0": {
+  "text": "I have already renewed it, the new policy number is VI778899 and it is valid till 30 September 2027.",
+  "context": "When does my car insurance expire according to your records? Hamare record mein aapki car insurance 6 February 2027 tak valid hai.",
+  "intents": [
+   "update car insurance",
+   "verify car insurance"
+  ],
+  "latency_ms": 283
+ },
+ "a7698a4e0410073cf8e8": {
+  "text": "Can you check the status of my application A4001?",
+  "context": "",
+  "intents": [
+   "check status of application A4001"
+  ],
+  "latency_ms": 264
+ },
+ "b14b7385549121956123": {
+  "text": "When is my next personal loan EMI due?",
+  "context": "",
+  "intents": [
+   "check next EMI of personal loan"
+  ],
+  "latency_ms": 500
+ },
+ "205c9feae8870efcadc4": {
+  "text": "How much will it cost to close my car loan?",
+  "context": "",
+  "intents": [
+   "check foreclosure charges of car loan"
+  ],
+  "latency_ms": 389
+ },
+ "87e6a1053ccf7e338a8c": {
+  "text": "Forget it then, just change my car loan EMI date to the 10th.",
+  "context": "How much will it cost to close my car loan? Car loan abhi band karne ke liye lagbhag 7 lakh 27 hazaar rupees lagenge, jismein 3 percent foreclosure charge shamil hai.",
+  "intents": [
+   "change EMI date of car loan"
+  ],
+  "latency_ms": 192
+ },
+ "721ecd767751d98cac8f": {
+  "text": "Mera bank account badal gaya hai, EMI ab naye account se katni chahiye",
+  "context": "",
+  "intents": [
+   "update linked account for personal loan"
+  ],
+  "latency_ms": 252
+ },
+ "ace8c98fdffd7d5b6e00": {
+  "text": "I've lost my job and can't pay my EMIs right now. What are my options?",
+  "context": "",
+  "intents": [
+   "request EMI relief for personal loan",
+   "request EMI relief for credit card",
+   "request EMI relief for fixed deposit"
+  ],
+  "latency_ms": 274
+ },
+ "668168f473796a77e1d0": {
+  "text": "home loan ka kitna amount release hua, card pe kitne reward points hain aur 560001 ke paas ka branch kahan hai",
+  "context": "",
+  "intents": [
+   "check released amount of home loan",
+   "check reward points of credit card",
+   "find nearby branch of fixed deposit"
+  ],
+  "latency_ms": 295
+ },
+ "e2f4608bb0485582300b": {
+  "text": "Has my KYC been completed and what is the status of application A4001",
+  "context": "",
+  "intents": [
+   "check KYC status of loan",
+   "check status of application A4001"
+  ],
+  "latency_ms": 288
+ },
+ "0297eef9eaef2d3418af": {
+  "text": "mera home loan abhi close karne ka kitna charge lagega",
+  "context": "",
+  "intents": [
+   "calculate prepayment charges of home loan"
+  ],
+  "latency_ms": 228
+ },
+ "cfbfc1b8bdda3a1d0213": {
+  "text": "personal loan ka payment aaj nahi ho payega, main 20 ko de dunga",
+  "context": "",
+  "intents": [
+   "pay personal loan"
+  ],
+  "latency_ms": 330
+ },
+ "a890dbd6fee87bcf1824": {
+  "text": "कितनी EMI overdue हैं",
+  "context": "",
+  "intents": [
+   "check overdue EMI of loan"
+  ],
+  "latency_ms": 362
+ }
+}

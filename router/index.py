@@ -1,7 +1,7 @@
 """Searchable descriptions of every tool: text documents, keyword index and embeddings.
 
-Embeddings are cached per tool with a hash of its document, so when a tool is added or its
-description changes, only that tool is re-embedded (incremental indexing).
+Embeddings are cached on disk per text (keyed by a hash), so when a tool is added or its
+description changes, only the changed text is embedded again (incremental indexing).
 """
 import hashlib
 import json
@@ -13,16 +13,52 @@ from pathlib import Path
 from tools import TOOLS, schema
 
 CACHE_DIR = Path(__file__).parent / "cache"
+GENERATED = Path(__file__).parent.parent / "eval" / "data" / "generated"
 
-# ---------- tool documents ----------
 
-def tool_document(tool, with_examples=True):
-    """Text that represents a tool for search. Template from the Semantic Tool Discovery paper,
-    with our example phrases as the 'Capabilities' line."""
-    params = "; ".join(f"{n}: {p.description}" for n, p in tool.params.items()) or "none"
-    lines = [f"Tool: {tool.name.replace('_', ' ')}", f"Purpose: {tool.description}"]
-    if with_examples:
-        lines.append(f"Capabilities: {' | '.join(tool.examples)}")
+# ---------- searchable tool entries ----------
+
+class Entry:
+    """One searchable tool: our real tools, or a distractor from the scaling test."""
+
+    def __init__(self, name, description, params, examples, synthetic=None, area=None, real=True):
+        self.name, self.description, self.params = name, description, params
+        self.examples, self.synthetic = examples, synthetic or []
+        self.area, self.real = area, real
+        self.needs, self.next = [], []
+
+
+def real_entries():
+    queries = _load(GENERATED / "tool_queries.json")
+    out = []
+    for t in TOOLS:
+        e = Entry(t.name, t.description, {n: p.description for n, p in t.params.items()}, t.examples,
+                  [q["text"] for q in queries.get(t.name, []) if isinstance(q, dict) and q.get("text")], t.area)
+        e.needs, e.next = t.needs, t.next
+        out.append(e)
+    return out
+
+
+def distractor_entries(n):
+    """First n distractor tools (neighbouring banking products), in a fixed order."""
+    data = _load(GENERATED / "distractor_tools.json")
+    items = [x for domain in sorted(data) for x in data[domain] if isinstance(x, dict) and x.get("name")]
+    return [Entry(x["name"], x.get("description", ""), {p: p for p in x.get("params", [])}, x.get("examples", []),
+                  area="distractor", real=False) for x in items[:n]]
+
+
+def _load(path):
+    return json.loads(path.read_text()) if path.exists() else {}
+
+
+def document(e, with_examples=True, with_synthetic=False):
+    """Text that represents a tool for search. Template from the Semantic Tool Discovery paper;
+    'Capabilities' holds example phrases (ours) and optionally generated caller queries (Re-Invoke)."""
+    params = "; ".join(f"{n}: {d}" for n, d in e.params.items()) or "none"
+    lines = [f"Tool: {e.name.replace('_', ' ')}", f"Purpose: {e.description}"]
+    caps = (e.examples if with_examples else []) + (e.synthetic if with_synthetic else [])
+    if caps:
+        lines.append(f"Capabilities: {' | '.join(caps)}")
     lines.append(f"Parameters: {params}")
     return "\n".join(lines)
 
@@ -30,14 +66,18 @@ def tool_document(tool, with_examples=True):
 # ---------- token cost of exposing a tool ----------
 
 def _tool_tokens():
-    """Estimated prompt tokens per tool definition, calibrated on the Step 6 measurement:
-    all 111 tools = 11,960 prompt tokens, of which ~65 are the base prompt."""
+    """Prompt tokens per tool definition, calibrated on Step 6: all 111 tools = 11,960 tokens, ~65 base."""
     chars = {t.name: len(json.dumps(schema(t))) for t in TOOLS}
     per_char = (11_960 - 65) / sum(chars.values())
     return {name: round(c * per_char) for name, c in chars.items()}
 
 
 TOOL_TOKENS = _tool_tokens()
+AVG_TOOL_TOKENS = round(sum(TOOL_TOKENS.values()) / len(TOOL_TOKENS))
+
+
+def tokens_for(names):
+    return sum(TOOL_TOKENS.get(n, AVG_TOOL_TOKENS) for n in names)
 
 
 # ---------- keyword search (BM25) ----------
@@ -85,41 +125,41 @@ class BM25:
 MODELS = {
     "e5-small": ("intfloat/multilingual-e5-small", "query: ", "passage: "),
     "minilm": ("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "", ""),
+    "e5-ft": (str(Path(__file__).parent / "models" / "e5-small-lending"), "query: ", "passage: "),
 }
 
 
 class Embedder:
-    """Embeds tool documents once (cached on disk by hash) and queries on demand."""
+    """Embeds texts with a disk cache keyed by hash, so each text is embedded only once ever."""
+    _models = {}
 
-    def __init__(self, model_key, docs):
-        from sentence_transformers import SentenceTransformer
+    def __init__(self, model_key):
         import numpy as np
+        from sentence_transformers import SentenceTransformer
 
         self.np = np
-        model_name, self.q_prefix, self.d_prefix = MODELS[model_key]
-        self.model = SentenceTransformer(model_name)
-        self.names = list(docs)
-        self.vectors = self._index(model_key, docs)
-
-    def _index(self, model_key, docs):
+        self.key = model_key
+        path, self.q_prefix, self.d_prefix = MODELS[model_key]
+        if path not in Embedder._models:
+            Embedder._models[path] = SentenceTransformer(path)
+        self.model = Embedder._models[path]
         CACHE_DIR.mkdir(exist_ok=True)
-        path = CACHE_DIR / f"{model_key}.json"
-        cache = json.loads(path.read_text()) if path.exists() else {}
-        hashes = {n: hashlib.sha256(docs[n].encode()).hexdigest()[:16] for n in self.names}
-        stale = [n for n in self.names if cache.get(n, {}).get("hash") != hashes[n]]
-        if stale:  # only new or changed tools are embedded again
-            vecs = self.model.encode([self.d_prefix + docs[n] for n in stale], normalize_embeddings=True)
-            for n, v in zip(stale, vecs):
-                cache[n] = {"hash": hashes[n], "vector": [round(float(x), 6) for x in v]}
-        removed = set(cache) - set(self.names)
-        for n in removed:
-            del cache[n]
-        if stale or removed:
-            path.write_text(json.dumps(cache))
-        self.reindexed = len(stale)
-        return self.np.array([cache[n]["vector"] for n in self.names], dtype="float32")
+        self.cache_path = CACHE_DIR / f"{model_key}.json"
+        self.cache = json.loads(self.cache_path.read_text()) if self.cache_path.exists() else {}
+        self.dirty = False
 
-    def scores(self, query):
-        q = self.model.encode([self.q_prefix + query], normalize_embeddings=True)[0]
-        sims = self.vectors @ q
-        return dict(zip(self.names, map(float, sims)))
+    def embed(self, texts, as_query):
+        prefix = self.q_prefix if as_query else self.d_prefix
+        keys = [hashlib.sha256((prefix + t).encode()).hexdigest()[:20] for t in texts]
+        missing = [(k, prefix + t) for k, t in zip(keys, texts) if k not in self.cache]
+        if missing:
+            vecs = self.model.encode([t for _, t in missing], normalize_embeddings=True, batch_size=64)
+            for (k, _), v in zip(missing, vecs):
+                self.cache[k] = [round(float(x), 5) for x in v]
+            self.dirty = True
+        return self.np.array([self.cache[k] for k in keys], dtype="float32")
+
+    def save(self):
+        if self.dirty:
+            self.cache_path.write_text(json.dumps(self.cache))
+            self.dirty = False

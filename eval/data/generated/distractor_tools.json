@@ -1,0 +1,5513 @@
+{
+ "gold loans": [
+  {
+   "name": "gold_loan_get_payout_status",
+   "description": "Retrieves the current disbursement status of a gold loan application.",
+   "params": [
+    "application_id"
+   ],
+   "examples": [
+    "Mujhe gold loan ka payout status bataiye.",
+    "मेरा गोल्ड लोन का स्टेटस क्या है?",
+    "Tell me the gold loan payout status."
+   ]
+  },
+  {
+   "name": "gold_loan_get_interest_due",
+   "description": "Calculates and returns the outstanding interest amount for a gold loan.",
+   "params": [
+    "loan_account_number",
+    "due_date"
+   ],
+   "examples": [
+    "Gold loan ka interest kitna bacha hai?",
+    "गोल्ड लोन का ब्याज कितना बकाया है?",
+    "What is the interest due on my gold loan?"
+   ]
+  },
+  {
+   "name": "gold_loan_get_renewal_options",
+   "description": "Lists available renewal or extension options for an active gold loan.",
+   "params": [
+    "loan_account_number"
+   ],
+   "examples": [
+    "Gold loan renew karne ke kya options hain?",
+    "गोल्ड लोन रिन्यू करने के विकल्प बताइए.",
+    "Show me the renewal options for my gold loan."
+   ]
+  },
+  {
+   "name": "gold_loan_get_pledge_details",
+   "description": "Fetches the item details and valuation report for pledged gold.",
+   "params": [
+    "loan_account_number"
+   ],
+   "examples": [
+    "Mere gold ki purity aur weight bataiye.",
+    "मेरे गोल्ड की शुद्धता और वजन बताइए।",
+    "Tell me the pledge details of my gold."
+   ]
+  },
+  {
+   "name": "gold_loan_get_foreclosure_quote",
+   "description": "Provides a foreclosure payoff quote including charges for early closure.",
+   "params": [
+    "loan_account_number"
+   ],
+   "examples": [
+    "Gold loan ko jaldi close karne ka amount kya hoga?",
+    "गोल्ड लोन बंद करने का कितना खर्च आएगा?",
+    "Give me the foreclosure quote for my gold loan."
+   ]
+  },
+  {
+   "name": "gold_loan_update_mobile_number",
+   "description": "Updates the registered mobile number for a gold loan account.",
+   "params": [
+    "loan_account_number",
+    "new_mobile_number",
+    "otp_code"
+   ],
+   "examples": [
+    "Mera naya number register karna hai gold loan ke liye.",
+    "गोल्ड लोन के लिए नया नंबर अपडेट करें।",
+    "I want to update my mobile number for the gold loan."
+   ]
+  },
+  {
+   "name": "gold_loan_update_address",
+   "description": "Changes the correspondence address on a gold loan record.",
+   "params": [
+    "loan_account_number",
+    "new_address"
+   ],
+   "examples": [
+    "Mera address change karna hai gold loan mein.",
+    "गोल्ड लोन में पता बदलें।",
+    "Update my address in the gold loan account."
+   ]
+  },
+  {
+   "name": "gold_loan_submit_renewal_request",
+   "description": "Submits a renewal request to extend the maturity date of a gold loan.",
+   "params": [
+    "loan_account_number",
+    "renewal_months",
+    "payment_amount"
+   ],
+   "examples": [
+    "Gold loan renew karne ki request daal do.",
+    "गोल्ड लोन रिन्यू करने का अनुरोध दर्ज करें।",
+    "Submit a renewal request for my gold loan."
+   ]
+  },
+  {
+   "name": "gold_loan_make_interest_payment",
+   "description": "Processes an online interest payment toward an active gold loan.",
+   "params": [
+    "loan_account_number",
+    "payment_amount",
+    "payment_method"
+   ],
+   "examples": [
+    "Gold loan ka interest pay karna hai.",
+    "गोल्ड लोन का ब्याज भुगतान करें।",
+    "Make an interest payment to my gold loan."
+   ]
+  },
+  {
+   "name": "gold_loan_initiate_foreclosure",
+   "description": "Starts the early closure process for a gold loan.",
+   "params": [
+    "loan_account_number",
+    "foreclosure_amount",
+    "payment_method"
+   ],
+   "examples": [
+    "Gold loan close karna hai abhi.",
+    "गोल्ड लोन बंद करना शुरू करें।",
+    "Initiate foreclosure for my gold loan."
+   ]
+  }
+ ],
+ "loan against property": [
+  {
+   "name": "loan_against_property_get_property_details",
+   "description": "Retrieves the registered property address, valuation status, and legal encumbrance summary for the customer's collateral.",
+   "params": [
+    "customer_id",
+    "property_id"
+   ],
+   "examples": [
+    "Mujhe meri property ki details chahiye.",
+    "मेरी प्रॉपर्टी की जानकारी बताइए।",
+    "I want to check the property details."
+   ]
+  },
+  {
+   "name": "loan_against_property_get_ltv_ratio",
+   "description": "Calculates and returns the current loan-to-value ratio based on the latest registered property appraisal.",
+   "params": [
+    "property_id",
+    "current_appraised_value"
+   ],
+   "examples": [
+    "Kitna LTV ratio bacha hai mere loan ka?",
+    "मेरे लोन का LTV अनुपात क्या है?",
+    "What is the remaining LTV ratio?"
+   ]
+  },
+  {
+   "name": "loan_against_property_submit_income_proof",
+   "description": "Accepts and uploads a new income or business turnover document to support a top-up or renewal request.",
+   "params": [
+    "customer_id",
+    "property_id",
+    "document_url"
+   ],
+   "examples": [
+    "Main income proof upload kar raha hoon.",
+    "मैं आय प्रमाण जमा कर रहा हूँ।",
+    "I am uploading my income proof."
+   ]
+  },
+  {
+   "name": "loan_against_property_request_top_up",
+   "description": "Initiates a request for an additional sanctioned limit against the same registered property collateral.",
+   "params": [
+    "customer_id",
+    "property_id",
+    "requested_top_up_amount"
+   ],
+   "examples": [
+    "Mujhe top up chahiye 5 lakh ka.",
+    "मुझे 5 लाख का टॉप-अप चाहिए।",
+    "I need a top-up of 5 lakhs."
+   ]
+  },
+  {
+   "name": "loan_against_property_change_emi_date",
+   "description": "Changes the monthly EMI due date for an existing loan against property account within policy limits.",
+   "params": [
+    "customer_id",
+    "loan_account_number",
+    "new_emi_date"
+   ],
+   "examples": [
+    "EMI date 15 tareekh kar do.",
+    "ईएमआई की तारीख 15 कर दीजिए।",
+    "Change my EMI date to the 15th."
+   ]
+  },
+  {
+   "name": "loan_against_property_pay_partial_prepayment",
+   "description": "Processes a partial prepayment using the customer's linked account to reduce the outstanding principal.",
+   "params": [
+    "customer_id",
+    "loan_account_number",
+    "prepayment_amount"
+   ],
+   "examples": [
+    "Main 10,000 ka prepayment kar raha hoon.",
+    "मैं 10,000 का आंशिक भुगतान कर रहा हूँ।",
+    "I want to make a partial prepayment of 10,000."
+   ]
+  },
+  {
+   "name": "loan_against_property_get_outstanding_principal",
+   "description": "Returns the current outstanding principal balance excluding accrued interest and fees.",
+   "params": [
+    "customer_id",
+    "loan_account_number"
+   ],
+   "examples": [
+    "Bacha hua principal kitna hai?",
+    "बचा हुआ मूलधन कितना है?",
+    "Tell me the outstanding principal."
+   ]
+  },
+  {
+   "name": "loan_against_property_raise_foreclosure_query",
+   "description": "Logs a customer query or request to understand the foreclosure charges and process for closing the loan early.",
+   "params": [
+    "customer_id",
+    "loan_account_number",
+    "query_text"
+   ],
+   "examples": [
+    "Foreclosure charges ka process batao.",
+    "फोरक्लोज़र शुल्क की प्रक्रिया बताइए।",
+    "Explain the foreclosure process."
+   ]
+  },
+  {
+   "name": "loan_against_property_update_contact_address",
+   "description": "Updates the customer's postal mailing address on record for loan against property correspondence.",
+   "params": [
+    "customer_id",
+    "loan_account_number",
+    "new_address_line_1",
+    "new_city",
+    "new_pincode"
+   ],
+   "examples": [
+    "Mera address update kar do.",
+    "मेरा पता अपडेट कर दीजिए।",
+    "Please update my address."
+   ]
+  },
+  {
+   "name": "loan_against_property_get_renewal_eligibility",
+   "description": "Checks whether the loan against property contract is eligible for renewal or extension based on tenure and compliance.",
+   "params": [
+    "customer_id",
+    "property_id",
+    "current_expiry_date"
+   ],
+   "examples": [
+    "Loan renew ho sakta hai kya?",
+    "क्या लोन रिन्यू हो सकता है?",
+    "Can my loan be renewed?"
+   ]
+  }
+ ],
+ "education loans": [
+  {
+   "name": "education_loan_get_eligibility",
+   "description": "Retrieves whether the caller meets the basic eligibility criteria for an education loan.",
+   "params": [
+    "co_borrower_annual_income",
+    "course_type",
+    "university_name"
+   ],
+   "examples": [
+    "Mujhe pata karna hai ki main eligible hoon ya nahi.",
+    "मेरी पात्रता क्या है?",
+    "I want to check my eligibility."
+   ]
+  },
+  {
+   "name": "education_loan_get_outstanding_principal",
+   "description": "Looks up the current outstanding principal amount on an active education loan account.",
+   "params": [
+    "loan_account_number",
+    "customer_dob"
+   ],
+   "examples": [
+    "Bataiye kitna principal baaki hai.",
+    "मूलधन कितना बचा है?",
+    "What is the outstanding principal?"
+   ]
+  },
+  {
+   "name": "education_loan_get_moratorium_status",
+   "description": "Checks whether the education loan is currently within its moratorium or repayment period.",
+   "params": [
+    "loan_account_number",
+    "customer_dob"
+   ],
+   "examples": [
+    "Moratorium khatam hua kya?",
+    "क्या मोराटोरियम चल रहा है?",
+    "Is the moratorium still active?"
+   ]
+  },
+  {
+   "name": "education_loan_update_contact_number",
+   "description": "Changes the registered mobile number linked to the education loan account after verification.",
+   "params": [
+    "loan_account_number",
+    "new_mobile_number",
+    "otp"
+   ],
+   "examples": [
+    "Mera naya number update kar dijiye.",
+    "मेरा नया नंबर अपडेट कर दीजिए.",
+    "Please update my new contact number."
+   ]
+  },
+  {
+   "name": "education_loan_update_email_address",
+   "description": "Updates the email address on file for receiving education loan statements and notices.",
+   "params": [
+    "loan_account_number",
+    "new_email_address",
+    "otp"
+   ],
+   "examples": [
+    "Email ID badalna hai.",
+    "ईमेल आईडी बदलनी है.",
+    "I need to change my email address."
+   ]
+  },
+  {
+   "name": "education_loan_get_interest_rate",
+   "description": "Returns the applicable floating or fixed interest rate for the specified education loan.",
+   "params": [
+    "loan_account_number",
+    "customer_dob"
+   ],
+   "examples": [
+    "Interest rate kya chal raha hai abhi?",
+    "अभी ब्याज दर क्या है?",
+    "Tell me the current interest rate."
+   ]
+  },
+  {
+   "name": "education_loan_get_emi_schedule",
+   "description": "Fetches the EMI breakup, due dates, and total tenure for the education loan.",
+   "params": [
+    "loan_account_number",
+    "customer_dob"
+   ],
+   "examples": [
+    "EMI ka pura schedule bata dijiye.",
+    "EMI का पूरा शेड्यूल बताइए.",
+    "Show me my EMI schedule."
+   ]
+  },
+  {
+   "name": "education_loan_request_foreclosure",
+   "description": "Initiates a request to close the education loan early by paying the outstanding balance.",
+   "params": [
+    "loan_account_number",
+    "foreclosure_amount",
+    "customer_dob"
+   ],
+   "examples": [
+    "Main loan jaldi close karna chahta hoon.",
+    "मैं लोन जल्दी बंद करना चाहता हूँ.",
+    "I want to request early foreclosure."
+   ]
+  },
+  {
+   "name": "education_loan_get_document_status",
+   "description": "Checks whether submitted documents such as marksheets, admission letters, or collateral papers are pending or verified.",
+   "params": [
+    "application_reference_number",
+    "customer_dob"
+   ],
+   "examples": [
+    "Documents ka status kya hai?",
+    "डॉक्यूमेंट्स का स्टेटस क्या है?",
+    "What is the status of my documents?"
+   ]
+  },
+  {
+   "name": "education_loan_get_subsidy_details",
+   "description": "Retrieves information on government education loan interest subsidy eligibility and disbursed amounts.",
+   "params": [
+    "loan_account_number",
+    "customer_dob"
+   ],
+   "examples": [
+    "Subsidy kitni mili hai mujhe?",
+    "मुझे कितनी सब्सिडी मिली है?",
+    "How much subsidy have I received?"
+   ]
+  }
+ ],
+ "business loans for shops": [
+  {
+   "name": "business_loan_for_shops_get_eligibility_status",
+   "description": "Retrieves the preliminary eligibility status for a shop business loan based on the applicant's provided details.",
+   "params": [
+    "mobile_number",
+    "shop_gst_number",
+    "years_in_business"
+   ],
+   "examples": [
+    "Mujhe check karna hai ki meri dukaan ke loan ke liye eligibility hai ya nahi.",
+    "मेरी दुकान के लिए eligibility status बताइए.",
+    "Can you tell me if my shop is eligible for this loan?"
+   ]
+  },
+  {
+   "name": "business_loan_for_shops_get_required_documents_list",
+   "description": "Returns the checklist of mandatory and optional documents needed to process a shop business loan application.",
+   "params": [
+    "loan_amount",
+    "business_type"
+   ],
+   "examples": [
+    "Mujhe batayein ki shop loan ke liye kaun kaun se documents lagenge.",
+    "दुकान लोन के लिए कौन-कौन से डॉक्यूमेंट चाहिए?",
+    "What documents are required for a shop business loan?"
+   ]
+  },
+  {
+   "name": "business_loan_for_shops_submit_application",
+   "description": "Submits a new business loan application for a shop after validating the provided customer and business details.",
+   "params": [
+    "customer_id",
+    "shop_name",
+    "monthly_turnover",
+    "requested_amount"
+   ],
+   "examples": [
+    "Mera application submit kar do.",
+    "मेरा आवेदन जमा कर दीजिए.",
+    "Please submit my shop loan application."
+   ]
+  },
+  {
+   "name": "business_loan_for_shops_get_application_status",
+   "description": "Fetches the current processing stage and pending steps for an existing shop business loan application.",
+   "params": [
+    "application_id",
+    "registered_mobile_number"
+   ],
+   "examples": [
+    "Application ka status kya hai?",
+    "आवेदन की स्थिति क्या है?",
+    "What is the status of my application?"
+   ]
+  },
+  {
+   "name": "business_loan_for_shops_modify_contact_details",
+   "description": "Updates the primary contact phone number or email address linked to a shop business loan account.",
+   "params": [
+    "application_id",
+    "new_mobile_number",
+    "new_email_address"
+   ],
+   "examples": [
+    "Mera number change karna hai.",
+    "मेरा नंबर बदल दीजिए.",
+    "I need to change my contact number."
+   ]
+  },
+  {
+   "name": "business_loan_for_shops_request_disbursement_date_change",
+   "description": "Requests a reschedule for the scheduled fund disbursement date of an approved shop business loan.",
+   "params": [
+    "loan_account_number",
+    "original_date",
+    "requested_date"
+   ],
+   "examples": [
+    "Disbursement date aage badha do.",
+    "डिस्बर्समेंट की तारीख आगे बढ़ा दीजिए.",
+    "Please change my disbursement date."
+   ]
+  },
+  {
+   "name": "business_loan_for_shops_get_emi_schedule",
+   "description": "Retrieves the complete EMI repayment schedule including due dates, amounts, and outstanding principal for a shop business loan.",
+   "params": [
+    "loan_account_number",
+    "financial_year"
+   ],
+   "examples": [
+    "EMI schedule bata do.",
+    "EMI का शेड्यूल बताइए.",
+    "Show me my EMI schedule."
+   ]
+  },
+  {
+   "name": "business_loan_for_shops_pay_emi",
+   "description": "Processes an EMI payment against a specific shop business loan account using the provided payment method.",
+   "params": [
+    "loan_account_number",
+    "payment_method_id",
+    "amount"
+   ],
+   "examples": [
+    "EMI pay kar do.",
+    "EMI भर दीजिए.",
+    "Process my EMI payment."
+   ]
+  },
+  {
+   "name": "business_loan_for_shops_get_prepayment_quote",
+   "description": "Calculates and returns the prepayment amount, applicable charges, and effective interest savings for early closure of a shop business loan.",
+   "params": [
+    "loan_account_number",
+    "prepayment_amount"
+   ],
+   "examples": [
+    "Prepayment ka quote de do.",
+    "प्रीपेमेंट का कोट बताइए.",
+    "Give me a prepayment quote."
+   ]
+  },
+  {
+   "name": "business_loan_for_shops_initiate_foreclosure",
+   "description": "Closes the outstanding shop business loan account immediately upon receiving the full prepayment amount.",
+   "params": [
+    "loan_account_number",
+    "foreclosure_amount",
+    "closure_reason"
+   ],
+   "examples": [
+    "Loan band kar do.",
+    "लोन बंद कर दीजिए.",
+    "Initiate loan foreclosure."
+   ]
+  }
+ ],
+ "two-wheeler insurance": [
+  {
+   "name": "two_wheeler_insurance_get_policy_status",
+   "description": "Looks up and returns the current active or expired status of a specific two-wheeler insurance policy.",
+   "params": [
+    "policy_number"
+   ],
+   "examples": [
+    "Mera policy abhi active hai kya?",
+    "मेरा पॉलिसी अभी चालू है क्या?",
+    "Is my policy currently active?"
+   ]
+  },
+  {
+   "name": "two_wheeler_insurance_get_renewal_due_date",
+   "description": "Retrieves the exact expiry date and grace period remaining for an existing two-wheeler insurance renewal.",
+   "params": [
+    "policy_number"
+   ],
+   "examples": [
+    "Renewal ki last date kab hai?",
+    "नवीनीकरण की आखिरी तारीख क्या है?",
+    "When is the renewal deadline?"
+   ]
+  },
+  {
+   "name": "two_wheeler_insurance_get_coverage_details",
+   "description": "Fetches the list of covered risks, IDV, and add-ons for a given two-wheeler insurance policy.",
+   "params": [
+    "policy_number"
+   ],
+   "examples": [
+    "Cover mein kya kya included hai?",
+    "कवर में क्या-क्या शामिल है?",
+    "What are the coverage inclusions?"
+   ]
+  },
+  {
+   "name": "two_wheeler_insurance_get_claim_status",
+   "description": "Checks the current progress and outcome of a submitted insurance claim for a two-wheeler.",
+   "params": [
+    "claim_id"
+   ],
+   "examples": [
+    "Claim ka status batao",
+    "क्लेम का स्टेटस बताओ",
+    "Tell me the claim status."
+   ]
+  },
+  {
+   "name": "two_wheeler_insurance_submit_claim",
+   "description": "Registers a new insurance claim after capturing the required incident and policy details.",
+   "params": [
+    "policy_number",
+    "incident_date",
+    "incident_type",
+    "vehicle_number"
+   ],
+   "examples": [
+    "Accident ka claim daal do",
+    "एक्सीडेंट का क्लेम दर्ज कर दो",
+    "Please file a claim for the accident."
+   ]
+  },
+  {
+   "name": "two_wheeler_insurance_upload_claim_document",
+   "description": "Attaches supporting evidence such as photos or bills to an existing claim record.",
+   "params": [
+    "claim_id",
+    "document_type",
+    "file_url"
+   ],
+   "examples": [
+    "Photo upload kar do",
+    "फोटो अपलोड कर दो",
+    "Upload the photo now."
+   ]
+  },
+  {
+   "name": "two_wheeler_insurance_update_mobile_number",
+   "description": "Changes the registered mobile number linked to a two-wheeler insurance policy.",
+   "params": [
+    "policy_number",
+    "new_mobile_number"
+   ],
+   "examples": [
+    "Naya number update kar do",
+    "नया नंबर अपडेट कर दो",
+    "Update my new mobile number."
+   ]
+  },
+  {
+   "name": "two_wheeler_insurance_update_address",
+   "description": "Modifies the residential address on record for a two-wheeler insurance policy.",
+   "params": [
+    "policy_number",
+    "new_address"
+   ],
+   "examples": [
+    "Address change karna hai",
+    "पता बदलना है",
+    "I need to change the address."
+   ]
+  },
+  {
+   "name": "two_wheeler_insurance_pay_premium",
+   "description": "Processes an online payment to renew or pay the outstanding premium for a two-wheeler policy.",
+   "params": [
+    "policy_number",
+    "payment_amount",
+    "payment_method"
+   ],
+   "examples": [
+    "Premium pay kar do online",
+    "प्रीमियम ऑनलाइन भर दो",
+    "Pay the premium online."
+   ]
+  },
+  {
+   "name": "two_wheeler_insurance_cancel_policy",
+   "description": "Terminates an active two-wheeler insurance policy and initiates the refund or cancellation process.",
+   "params": [
+    "policy_number",
+    "cancellation_reason"
+   ],
+   "examples": [
+    "Policy cancel kardo",
+    "पॉलिसी रद्द कर दो",
+    "Cancel the policy."
+   ]
+  }
+ ],
+ "health insurance": [
+  {
+   "name": "health_insurance_check_policy_status",
+   "description": "Retrieves the active or lapsed status of a health insurance policy linked to the customer's profile.",
+   "params": [
+    "policy_number",
+    "date_of_birth"
+   ],
+   "examples": [
+    "Mera policy active hai ya nahi?",
+    "मेरा पॉलिसी स्टेटस चेक कर दीजिए",
+    "Please check if my policy is active"
+   ]
+  },
+  {
+   "name": "health_insurance_download_document",
+   "description": "Generates and sends a digital copy of the health insurance policy certificate to the customer's registered email or mobile.",
+   "params": [
+    "policy_number",
+    "delivery_channel"
+   ],
+   "examples": [
+    "Policy ka PDF bhej do",
+    "पॉलिसी का सर्टिफिकेट भेज दीजिए",
+    "Send me the policy document"
+   ]
+  },
+  {
+   "name": "health_insurance_update_nominee",
+   "description": "Submits a request to change the nominee details on an existing health insurance policy.",
+   "params": [
+    "policy_number",
+    "nominee_full_name",
+    "nominee_relationship",
+    "nominee_dob",
+    "nominee_contact"
+   ],
+   "examples": [
+    "Naya nominee add karna hai",
+    "नया नॉमिनी अपडेट करना है",
+    "I want to update my nominee"
+   ]
+  },
+  {
+   "name": "health_insurance_submit_claim",
+   "description": "Registers a new cashless or reimbursement claim for a hospitalization or treatment event.",
+   "params": [
+    "policy_number",
+    "hospital_name",
+    "admission_date",
+    "claim_type",
+    "estimated_amount"
+   ],
+   "examples": [
+    "Cashless claim daal do",
+    "कैशलेस क्लेम दर्ज कर दीजिए",
+    "I need to file a claim"
+   ]
+  },
+  {
+   "name": "health_insurance_track_claim_status",
+   "description": "Returns the current progress and latest update for a previously submitted health insurance claim.",
+   "params": [
+    "claim_reference_number"
+   ],
+   "examples": [
+    "Claim ka status batao",
+    "क्लेम का स्टेटस बताइए",
+    "Track my claim status"
+   ]
+  },
+  {
+   "name": "health_insurance_add_family_member",
+   "description": "Adds a dependent family member to an existing health insurance policy by capturing their details.",
+   "params": [
+    "policy_number",
+    "member_full_name",
+    "member_relationship",
+    "member_dob",
+    "member_gender"
+   ],
+   "examples": [
+    "Bhai ko policy mein add karo",
+    "भाई को पॉलिसी में जोड़ दीजिए",
+    "Add my brother to the policy"
+   ]
+  },
+  {
+   "name": "health_insurance_remove_family_member",
+   "description": "Removes a dependent family member from the health insurance policy upon request.",
+   "params": [
+    "policy_number",
+    "member_full_name",
+    "member_relationship"
+   ],
+   "examples": [
+    "Beti ko hata do",
+    "बेटी को हटा दीजिए",
+    "Remove my daughter from coverage"
+   ]
+  },
+  {
+   "name": "health_insurance_request_renewal",
+   "description": "Initiates the annual renewal process for a health insurance policy before expiry.",
+   "params": [
+    "policy_number",
+    "payment_mode"
+   ],
+   "examples": [
+    "Policy renew kar do",
+    "पॉलिसी रिन्यू कर दीजिए",
+    "Please renew my policy"
+   ]
+  },
+  {
+   "name": "health_insurance_update_address",
+   "description": "Changes the mailing and service address recorded against the health insurance policy.",
+   "params": [
+    "policy_number",
+    "new_address_line_1",
+    "new_city",
+    "new_state",
+    "new_pincode"
+   ],
+   "examples": [
+    "Address change karna hai",
+    "पता बदलना है",
+    "I need to update my address"
+   ]
+  },
+  {
+   "name": "health_insurance_check_waiting_period",
+   "description": "Looks up and returns the remaining waiting period for a specific disease or pre-existing condition on the policy.",
+   "params": [
+    "policy_number",
+    "condition_name"
+   ],
+   "examples": [
+    "Pre-existing waiting period kitna hai?",
+    "प्री-एग्जिस्टिंग वेटिंग पीरियड कितना बचा है?",
+    "What is the waiting period for this condition?"
+   ]
+  }
+ ],
+ "term life insurance": [
+  {
+   "name": "term_life_insurance_get_policy_details",
+   "description": "Retrieves the active coverage amount, premium frequency, and policy term for a given term life insurance policy.",
+   "params": [
+    "policy_number",
+    "customer_dob"
+   ],
+   "examples": [
+    "Mera term plan ka coverage kitna hai?",
+    "मेरी पॉलिसी का सम एश्योर्ड क्या है?",
+    "What is the sum assured on my policy?"
+   ]
+  },
+  {
+   "name": "term_life_insurance_check_premium_due",
+   "description": "Checks the next premium installment amount and its exact due date for a selected term life insurance policy.",
+   "params": [
+    "policy_number"
+   ],
+   "examples": [
+    "Agla premium kab bharna hai?",
+    "अगली किस्त की तारीख क्या है?",
+    "When is the next premium due?"
+   ]
+  },
+  {
+   "name": "term_life_insurance_pay_premium",
+   "description": "Processes an online premium payment for a specified term life insurance policy using saved payment methods.",
+   "params": [
+    "policy_number",
+    "payment_amount",
+    "payment_mode"
+   ],
+   "examples": [
+    "Premium abhi pay kar do",
+    "प्रीमियम अभी जमा कर दो",
+    "Please pay my premium now."
+   ]
+  },
+  {
+   "name": "term_life_insurance_request_lapse_extension",
+   "description": "Submits a request to extend the grace period before a term life insurance policy lapses due to non-payment.",
+   "params": [
+    "policy_number",
+    "extension_reason"
+   ],
+   "examples": [
+    "Policy lapse hone se bachao",
+    "पॉलिसी लैप्स न हो इसके लिए समय बढ़ा दो",
+    "Extend the grace period so the policy does not lapse."
+   ]
+  },
+  {
+   "name": "term_life_insurance_update_nominee",
+   "description": "Updates or adds a new nominee for a term life insurance policy after verifying identity and relationship details.",
+   "params": [
+    "policy_number",
+    "nominee_name",
+    "nominee_relationship",
+    "nominee_dob"
+   ],
+   "examples": [
+    "Naya nominee add karna hai",
+    "नया नॉमिनी जोड़ना है",
+    "I want to update my nominee."
+   ]
+  },
+  {
+   "name": "term_life_insurance_download_receipt",
+   "description": "Generates and sends a digital premium payment receipt to the registered email or mobile number.",
+   "params": [
+    "policy_number",
+    "receipt_month"
+   ],
+   "examples": [
+    "Receipt bhej do",
+    "रसीद भेज दो",
+    "Send me the payment receipt."
+   ]
+  },
+  {
+   "name": "term_life_insurance_check_conversion_option",
+   "description": "Evaluates and returns whether a convertible term life insurance policy can be turned into a permanent plan.",
+   "params": [
+    "policy_number",
+    "conversion_date"
+   ],
+   "examples": [
+    "Convert kar sakte hain kya?",
+    "कन्वर्ट कर सकते हैं?",
+    "Can I convert this policy?"
+   ]
+  },
+  {
+   "name": "term_life_insurance_submit_claim_intimation",
+   "description": "Registers a death claim intimation for a term life insurance policy and generates a claim reference number.",
+   "params": [
+    "policy_number",
+    "deceased_name",
+    "date_of_death",
+    "claimant_name"
+   ],
+   "examples": [
+    "Claim register karna hai",
+    "क्लेम दर्ज करना है",
+    "I need to register a death claim."
+   ]
+  },
+  {
+   "name": "term_life_insurance_get_surrender_value",
+   "description": "Calculates the surrender value available if the policyholder voluntarily terminates an eligible term life insurance contract early.",
+   "params": [
+    "policy_number",
+    "as_of_date"
+   ],
+   "examples": [
+    "Surrender value kitna milega?",
+    "सरेंडर वैल्यू कितनी मिलेगी?",
+    "What is the surrender value?"
+   ]
+  },
+  {
+   "name": "term_life_insurance_update_address",
+   "description": "Changes the registered communication address for a term life insurance policy after authentication.",
+   "params": [
+    "policy_number",
+    "new_address",
+    "pincode"
+   ],
+   "examples": [
+    "Address change karna hai",
+    "एड्रेस बदलना है",
+    "Please update my address."
+   ]
+  }
+ ],
+ "mutual fund SIPs": [
+  {
+   "name": "mutual_fund_sip_get_details",
+   "description": "Retrieves the current status, amount, and schedule of an existing SIP.",
+   "params": [
+    "sip_id"
+   ],
+   "examples": [
+    "Mera SIP ka status kya hai?",
+    "What is the status of my SIP?",
+    "mera SIP active hai ya nahi batao"
+   ]
+  },
+  {
+   "name": "mutual_fund_sip_start",
+   "description": "Initiates a new systematic investment plan for a selected mutual fund scheme.",
+   "params": [
+    "scheme_id",
+    "amount",
+    "frequency",
+    "start_date",
+    "payment_method"
+   ],
+   "examples": [
+    "Mujhe ek naya SIP shuru karna hai",
+    "Start a new SIP for me.",
+    "naya SIP start kar do"
+   ]
+  },
+  {
+   "name": "mutual_fund_sip_modify_amount",
+   "description": "Changes the monthly investment amount of an active SIP.",
+   "params": [
+    "sip_id",
+    "new_amount"
+   ],
+   "examples": [
+    "SIP ka amount badhana hai",
+    "Increase my SIP amount.",
+    "mera SIP amount change kar do"
+   ]
+  },
+  {
+   "name": "mutual_fund_sip_pause",
+   "description": "Temporarily suspends upcoming SIP debits without cancelling the plan.",
+   "params": [
+    "sip_id",
+    "pause_duration"
+   ],
+   "examples": [
+    "SIP ko thode din ke liye rok do",
+    "Pause my SIP temporarily.",
+    "SIP pause kar do"
+   ]
+  },
+  {
+   "name": "mutual_fund_sip_cancel",
+   "description": "Permanently stops a recurring SIP from future cycles.",
+   "params": [
+    "sip_id",
+    "cancellation_reason"
+   ],
+   "examples": [
+    "SIP cancel karna hai",
+    "Cancel this SIP.",
+    "mera SIP band kar do"
+   ]
+  },
+  {
+   "name": "mutual_fund_sip_pay_due",
+   "description": "Pays a missed or pending SIP installment that failed auto-debit.",
+   "params": [
+    "sip_id",
+    "due_amount",
+    "payment_method"
+   ],
+   "examples": [
+    "Missed SIP ka payment kar do",
+    "Pay the pending SIP due.",
+    "failed SIP ka paisa jama kar do"
+   ]
+  },
+  {
+   "name": "mutual_fund_sip_switch_scheme",
+   "description": "Transfers an existing SIP from one mutual fund scheme to another within the same folio.",
+   "params": [
+    "sip_id",
+    "target_scheme_id"
+   ],
+   "examples": [
+    "SIP ko dusre fund mein shift karna hai",
+    "Switch my SIP to another scheme.",
+    "SIP scheme change kar do"
+   ]
+  },
+  {
+   "name": "mutual_fund_sip_get_history",
+   "description": "Fetches the transaction history of past SIP installments.",
+   "params": [
+    "sip_id",
+    "start_date",
+    "end_date"
+   ],
+   "examples": [
+    "Pichle SIP payments ka record do",
+    "Show my SIP transaction history.",
+    "pichle SIP ka history batao"
+   ]
+  },
+  {
+   "name": "mutual_fund_sip_update_mandate",
+   "description": "Updates the bank mandate or NACH details linked to a SIP.",
+   "params": [
+    "sip_id",
+    "mandate_type",
+    "bank_account_number",
+    "ifsc_code"
+   ],
+   "examples": [
+    "SIP ke liye naya mandate update karna hai",
+    "Update the payment mandate for this SIP.",
+    "SIP ka mandate change kar do"
+   ]
+  },
+  {
+   "name": "mutual_fund_sip_get_tax_certificate",
+   "description": "Retrieves or reissues an annual capital gains and tax certificate for a SIP.",
+   "params": [
+    "sip_id",
+    "financial_year"
+   ],
+   "examples": [
+    "SIP ka tax certificate chahiye",
+    "Get the tax certificate for this SIP.",
+    "SIP ka tax proof bhej do"
+   ]
+  }
+ ],
+ "demat and stock trading account": [
+  {
+   "name": "demat_get_holding_statement",
+   "description": "Retrieves the current equity and derivative holdings for a linked demat account.",
+   "params": [
+    "client_id",
+    "folio_number"
+   ],
+   "examples": [
+    "mera demat portfolio check kijiye",
+    "मेरे डीमैट होल्डिंग्स का स्टेटमेंट दीजिए",
+    "Show me my demat holdings"
+   ]
+  },
+  {
+   "name": "demat_get_pledged_status",
+   "description": "Checks whether specific securities in the demat account are currently pledged as collateral.",
+   "params": [
+    "client_id",
+    "isin_code"
+   ],
+   "examples": [
+    "check kijiye kya mere shares pledged hain",
+    "मेरे शेयर pledged हैं या नहीं बताइए",
+    "Is this stock pledged or not"
+   ]
+  },
+  {
+   "name": "demat_get_corporate_actions",
+   "description": "Fetches upcoming corporate actions such as dividends, bonuses, and splits for the account.",
+   "params": [
+    "client_id",
+    "isin_code"
+   ],
+   "examples": [
+    "upcoming corporate actions batao",
+    "आने वाले corporate actions बताइए",
+    "Tell me about future corporate actions"
+   ]
+  },
+  {
+   "name": "demat_get_delivery_instruction_status",
+   "description": "Returns the processing status of a submitted delivery instruction for transferring securities.",
+   "params": [
+    "client_id",
+    "instruction_id"
+   ],
+   "examples": [
+    "DI ka status kya hai",
+    "डिलीवरी इंस्ट्रक्शन का स्टेटस बताइए",
+    "What is the status of my delivery instruction"
+   ]
+  },
+  {
+   "name": "demat_get_is_in_demat_form",
+   "description": "Verifies whether a requested security is eligible to be held in demat form.",
+   "params": [
+    "isin_code"
+   ],
+   "examples": [
+    "yeh share demat ho sakta hai kya",
+    "क्या यह शेयर डीमैट में हो सकता है",
+    "Can this security be converted to demat"
+   ]
+  },
+  {
+   "name": "demat_submit_remat_request",
+   "description": "Submits a request to convert physical share certificates into electronic demat holdings.",
+   "params": [
+    "client_id",
+    "isin_code",
+    "certificate_number"
+   ],
+   "examples": [
+    "remat request daal do",
+    "रिमैट रिक्वेस्ट दर्ज कर दीजिए",
+    "Submit a remat request"
+   ]
+  },
+  {
+   "name": "demat_submit_demat_request",
+   "description": "Submits a request to convert physical share certificates into electronic demat holdings.",
+   "params": [
+    "client_id",
+    "isin_code",
+    "certificate_number"
+   ],
+   "examples": [
+    "demat request submit karo",
+    "डीमैट रिक्वेस्ट दर्ज कर दीजिए",
+    "Submit a demat conversion request"
+   ]
+  },
+  {
+   "name": "demat_get_statement_of_account",
+   "description": "Retrieves the detailed statement of account including debits, credits, and balances for the demat segment.",
+   "params": [
+    "client_id",
+    "from_date",
+    "to_date"
+   ],
+   "examples": [
+    "demat statement bhej do",
+    "डीमैट स्टेटमेंट भेज दीजिए",
+    "Send me my demat statement"
+   ]
+  },
+  {
+   "name": "stock_trading_get_order_book",
+   "description": "Fetches the current open, pending, and executed orders for a selected trading segment.",
+   "params": [
+    "client_id",
+    "segment",
+    "symbol"
+   ],
+   "examples": [
+    "order book dikhao",
+    "ऑर्डर बुक दिखाइए",
+    "Show my order book"
+   ]
+  },
+  {
+   "name": "stock_trading_place_cnc_order",
+   "description": "Places a CNC (Cash and Carry) equity order to buy or sell deliverable shares.",
+   "params": [
+    "client_id",
+    "symbol",
+    "transaction_type",
+    "quantity",
+    "price",
+    "product_type"
+   ],
+   "examples": [
+    "50 shares buy karne ka order lagao",
+    "50 शेयर खरीदने का ऑर्डर लगा दीजिए",
+    "Place a CNC buy order for 50 shares"
+   ]
+  }
+ ],
+ "savings account": [
+  {
+   "name": "savings_account_check_balance",
+   "description": "Retrieves the current available and ledger balance for the caller's linked savings account.",
+   "params": [
+    "account_id"
+   ],
+   "examples": [
+    "Mera balance check karna hai",
+    "मेरा बैलेंस बताइए",
+    "I want to know my balance"
+   ]
+  },
+  {
+   "name": "savings_account_check_mini_statement",
+   "description": "Fetches the last 5 to 10 recent transactions for the savings account.",
+   "params": [
+    "account_id",
+    "transaction_count"
+   ],
+   "examples": [
+    "Pichle transactions dikhao",
+    "पिछले लेन-देन बताओ",
+    "Show me the recent transactions"
+   ]
+  },
+  {
+   "name": "savings_account_block_debit_card",
+   "description": "Immediately blocks the linked debit card to prevent further usage.",
+   "params": [
+    "card_number"
+   ],
+   "examples": [
+    "Card block kar do",
+    "डेबिट कार्ड ब्लॉक करें",
+    "Block my debit card"
+   ]
+  },
+  {
+   "name": "savings_account_unblock_debit_card",
+   "description": "Restores access to a previously blocked debit card after verification.",
+   "params": [
+    "card_number",
+    "otp"
+   ],
+   "examples": [
+    "Card dobara chalu karo",
+    "डेबिट कार्ड अनब्लॉक करें",
+    "Unblock my debit card"
+   ]
+  },
+  {
+   "name": "savings_account_freeze_account",
+   "description": "Temporarily freezes the savings account to stop all credits and debits.",
+   "params": [
+    "account_id",
+    "reason_code"
+   ],
+   "examples": [
+    "Account hold pe daal do",
+    "खाता फ्रीज करें",
+    "Freeze my account"
+   ]
+  },
+  {
+   "name": "savings_account_unfreeze_account",
+   "description": "Removes a temporary hold and reactivates the savings account.",
+   "params": [
+    "account_id",
+    "otp"
+   ],
+   "examples": [
+    "Account wapas chalu karo",
+    "खाता अनफ्रीज करें",
+    "Unfreeze my account"
+   ]
+  },
+  {
+   "name": "savings_account_update_mobile_number",
+   "description": "Changes the registered mobile number after OTP-based verification.",
+   "params": [
+    "account_id",
+    "old_mobile",
+    "new_mobile",
+    "otp"
+   ],
+   "examples": [
+    "Naya number update kar do",
+    "मोबाइल नंबर अपडेट करें",
+    "Update my mobile number"
+   ]
+  },
+  {
+   "name": "savings_account_update_nominee",
+   "description": "Adds or replaces a nominee for the savings account.",
+   "params": [
+    "account_id",
+    "nominee_name",
+    "relationship",
+    "nominee_dob",
+    "nominee_share_percent"
+   ],
+   "examples": [
+    "Nominee badal do",
+    "नॉमिनी बदलें",
+    "Change my nominee"
+   ]
+  },
+  {
+   "name": "savings_account_request_cheque_book",
+   "description": "Places an order for a new cheque book to be delivered to the registered address.",
+   "params": [
+    "account_id",
+    "cheque_book_quantity"
+   ],
+   "examples": [
+    "Cheque book mangwao",
+    "चेक बुक ऑर्डर करें",
+    "Order a cheque book"
+   ]
+  },
+  {
+   "name": "savings_account_request_account_statement",
+   "description": "Generates and queues a PDF copy of the account statement for email or branch pickup.",
+   "params": [
+    "account_id",
+    "statement_period_months"
+   ],
+   "examples": [
+    "Statement bhej do",
+    "स्टेटमेंट भेजें",
+    "Send me the account statement"
+   ]
+  }
+ ],
+ "debit card for savings account": [
+  {
+   "name": "debit_card_savings_get_status",
+   "description": "Retrieves the current active, blocked, or expired status of a savings account debit card.",
+   "params": [
+    "account_id",
+    "card_number"
+   ],
+   "examples": [
+    "Mera debit card chal raha hai ya nahi?",
+    "मेरा डेबिट कार्ड चालू है?",
+    "Is my debit card active?"
+   ]
+  },
+  {
+   "name": "debit_card_savings_block_card",
+   "description": "Immediately blocks a savings account debit card to prevent unauthorized transactions.",
+   "params": [
+    "account_id",
+    "card_number",
+    "reason_code"
+   ],
+   "examples": [
+    "Card gum ho gaya, block kar do.",
+    "कार्ड खो गया है, इसे ब्लॉक कर दीजिए.",
+    "I lost my card, please block it."
+   ]
+  },
+  {
+   "name": "debit_card_savings_unblock_card",
+   "description": "Removes a temporary block from a savings account debit card after identity verification.",
+   "params": [
+    "account_id",
+    "card_number",
+    "otp"
+   ],
+   "examples": [
+    "Block hata do abhi.",
+    "ब्लॉक हटा दीजिए.",
+    "Please unblock my card now."
+   ]
+  },
+  {
+   "name": "debit_card_savings_set_daily_limit",
+   "description": "Updates the maximum daily transaction limit for a savings account debit card.",
+   "params": [
+    "account_id",
+    "card_number",
+    "daily_limit_amount"
+   ],
+   "examples": [
+    "Daily limit 50000 kar do.",
+    "दैनिक सीमा 50000 कर दीजिए.",
+    "Set my daily limit to 50000."
+   ]
+  },
+  {
+   "name": "debit_card_savings_get_atm_withdrawal_limit",
+   "description": "Returns the remaining ATM cash withdrawal limit for a savings account debit card.",
+   "params": [
+    "account_id",
+    "card_number"
+   ],
+   "examples": [
+    "ATM limit kitni bachi hai?",
+    "एटीएम निकासी सीमा कितनी बची है?",
+    "How much ATM limit is left?"
+   ]
+  },
+  {
+   "name": "debit_card_savings_request_replacement",
+   "description": "Initiates a request to issue a new physical debit card for a savings account.",
+   "params": [
+    "account_id",
+    "card_number",
+    "delivery_address_pincode"
+   ],
+   "examples": [
+    "Naya card mangwa do.",
+    "नया कार्ड मंगवा दीजिए.",
+    "Please order a replacement card."
+   ]
+  },
+  {
+   "name": "debit_card_savings_get_charges",
+   "description": "Fetches the fee schedule for savings account debit card services such as replacements and cash withdrawals.",
+   "params": [
+    "account_id",
+    "card_number"
+   ],
+   "examples": [
+    "Charges batao.",
+    "शुल्क बताइए.",
+    "Tell me the charges."
+   ]
+  },
+  {
+   "name": "debit_card_savings_get_transaction_history",
+   "description": "Retrieves recent transactions performed using a savings account debit card.",
+   "params": [
+    "account_id",
+    "card_number",
+    "start_date",
+    "end_date"
+   ],
+   "examples": [
+    "Last 10 transactions dikhao.",
+    "पिछले 10 लेन-देन दिखाइए.",
+    "Show me my last 10 transactions."
+   ]
+  },
+  {
+   "name": "debit_card_savings_report_fraudulent_txn",
+   "description": "Logs a dispute for a suspected fraudulent transaction on a savings account debit card.",
+   "params": [
+    "account_id",
+    "card_number",
+    "transaction_id",
+    "dispute_reason"
+   ],
+   "examples": [
+    "Yeh transaction fraud hai, dispute raise karo.",
+    "यह लेन-देन धोखाधड़ी है, विवाद दर्ज कीजिए.",
+    "This transaction is fraudulent, raise a dispute."
+   ]
+  },
+  {
+   "name": "debit_card_savings_link_upi",
+   "description": "Enables or updates UPI linkage for a savings account debit card.",
+   "params": [
+    "account_id",
+    "card_number",
+    "upi_id",
+    "consent_flag"
+   ],
+   "examples": [
+    "UPI link kar do is card se.",
+    "इस कार्ड से UPI लिंक कर दीजिए.",
+    "Link UPI to this card."
+   ]
+  }
+ ],
+ "UPI and payments app": [
+  {
+   "name": "upi_payment_send_to_upi_id",
+   "description": "Transfers money to a recipient using their UPI ID.",
+   "params": [
+    "recipient_upi_id",
+    "amount_inr",
+    "note"
+   ],
+   "examples": [
+    "Mujhe Sharma ji ko 500 rupaye bhejne hain.",
+    "मुझे xyz@okhdfcbank भेजना है.",
+    "I want to send 250 rupees to this UPI ID."
+   ]
+  },
+  {
+   "name": "upi_payment_send_to_mobile",
+   "description": "Initiates a UPI payment to a recipient using their registered mobile number.",
+   "params": [
+    "recipient_mobile",
+    "amount_inr",
+    "upi_vpa"
+   ],
+   "examples": [
+    "Is 9876543210 par 1000 bhejo.",
+    "इस मोबाइल नंबर पर पेमेंट कर दो.",
+    "Please send 1000 to this mobile number."
+   ]
+  },
+  {
+   "name": "upi_payment_check_status",
+   "description": "Checks the current status of a pending or recent UPI transaction.",
+   "params": [
+    "transaction_id"
+   ],
+   "examples": [
+    "Mera payment stuck ho gaya hai, status batao.",
+    "मेरा ट्रांजैक्शन पेंडिंग दिख रहा है, चेक करो.",
+    "What is the status of my transaction?"
+   ]
+  },
+  {
+   "name": "upi_collect_request_create",
+   "description": "Generates a UPI collect request so a recipient can approve and receive funds.",
+   "params": [
+    "amount_inr",
+    "recipient_upi_id",
+    "note"
+   ],
+   "examples": [
+    "Mera collect request bhej do.",
+    "कलेक्ट रिक्वेस्ट भेजो.",
+    "Create a collect request for 750 rupees."
+   ]
+  },
+  {
+   "name": "upi_link_bank_account",
+   "description": "Links an existing bank account to the user's UPI profile.",
+   "params": [
+    "account_number",
+    "ifsc_code",
+    "mpin"
+   ],
+   "examples": [
+    "Naya account link karna hai.",
+    "नया खाता लिंक करो.",
+    "Link my savings account."
+   ]
+  },
+  {
+   "name": "upi_link_bank_account_remove",
+   "description": "Removes a linked bank account from the user's UPI profile.",
+   "params": [
+    "account_number",
+    "ifsc_code"
+   ],
+   "examples": [
+    "Purana account hata do.",
+    "पुराना खाता हटा दो.",
+    "Remove this bank account."
+   ]
+  },
+  {
+   "name": "upi_bill_payment_pay",
+   "description": "Pays a utility or merchant bill through the UPI platform.",
+   "params": [
+    "bill_reference_number",
+    "amount_inr",
+    "merchant_name"
+   ],
+   "examples": [
+    "Bijli ka bill bhar do.",
+    "बिजली बिल का भुगतान करो.",
+    "Pay my electricity bill."
+   ]
+  },
+  {
+   "name": "upi_qr_scan_pay",
+   "description": "Processes a payment by scanning and validating a merchant QR code.",
+   "params": [
+    "qr_code_data",
+    "amount_inr"
+   ],
+   "examples": [
+    "QR scan karke payment karo.",
+    "क्यूआर स्कैन करके पेमेंट करो.",
+    "Scan the QR and pay the amount."
+   ]
+  },
+  {
+   "name": "upi_auto_pay_mandate_create",
+   "description": "Sets up an auto-pay mandate for recurring bill or subscription payments.",
+   "params": [
+    "merchant_upi_id",
+    "amount_inr",
+    "frequency"
+   ],
+   "examples": [
+    "Auto pay set kar do.",
+    "ऑटो-पे सेट करो.",
+    "Create an auto-pay mandate."
+   ]
+  },
+  {
+   "name": "upi_auto_pay_mandate_cancel",
+   "description": "Cancels an existing auto-pay mandate for recurring transactions.",
+   "params": [
+    "mandate_id"
+   ],
+   "examples": [
+    "Auto pay bandh kar do.",
+    "ऑटो-पे बंद करो.",
+    "Cancel the auto-pay mandate."
+   ]
+  }
+ ],
+ "electricity and mobile bill payments": [
+  {
+   "name": "utility_bill_lookup_due_amount",
+   "description": "Retrieves the outstanding due amount for a customer's electricity or mobile bill using the supplied identifiers.",
+   "params": [
+    "account_number",
+    "utility_provider",
+    "bill_type"
+   ],
+   "examples": [
+    "Mera bijli ka bill kitna pending hai?",
+    "मेरा मोबाइल बिल कितना बकाया है?",
+    "What is the due amount for my electricity bill?"
+   ]
+  },
+  {
+   "name": "utility_bill_fetch_payment_history",
+   "description": "Retrieves the recent payment history for a specific utility account.",
+   "params": [
+    "account_number",
+    "utility_provider",
+    "bill_type",
+    "limit"
+   ],
+   "examples": [
+    "Pichle teen mahine ka payment history batao.",
+    "पिछले तीन महीनों की पेमेंट हिस्ट्री दिखाओ।",
+    "Show me the last three payments made."
+   ]
+  },
+  {
+   "name": "utility_bill_initiate_payment",
+   "description": "Initiates an immediate payment transaction for an outstanding electricity or mobile bill.",
+   "params": [
+    "account_number",
+    "utility_provider",
+    "bill_type",
+    "amount",
+    "payment_method_token"
+   ],
+   "examples": [
+    "Mera mobile bill abhi pay kar do.",
+    "मेरा मोबाइल बिल अभी भर दो।",
+    "Please pay my electricity bill right now."
+   ]
+  },
+  {
+   "name": "utility_bill_schedule_future_payment",
+   "description": "Schedules a bill payment to be processed automatically on a future date.",
+   "params": [
+    "account_number",
+    "utility_provider",
+    "bill_type",
+    "amount",
+    "scheduled_date",
+    "payment_method_token"
+   ],
+   "examples": [
+    "Agle hafte ka bill schedule kar do.",
+    "अगले हफ्ते का बिल शेड्यूल कर दो।",
+    "Schedule this bill payment for next week."
+   ]
+  },
+  {
+   "name": "utility_bill_check_auto_debit_status",
+   "description": "Checks whether an active auto-debit mandate is enabled for a utility bill.",
+   "params": [
+    "account_number",
+    "utility_provider",
+    "bill_type"
+   ],
+   "examples": [
+    "Auto-debit on hai kya?",
+    "ऑटो-डेबिट चालू है क्या?",
+    "Is auto-debit enabled for this bill?"
+   ]
+  },
+  {
+   "name": "utility_bill_update_auto_debit_mandate",
+   "description": "Updates or modifies the auto-debit mandate details for a utility bill account.",
+   "params": [
+    "account_number",
+    "utility_provider",
+    "bill_type",
+    "mandate_amount",
+    "mandate_frequency"
+   ],
+   "examples": [
+    "Auto-debit amount change karna hai.",
+    "ऑटो-डेबिट राशि बदलनी है।",
+    "I want to update my auto-debit amount."
+   ]
+  },
+  {
+   "name": "utility_bill_fetch_receipt_details",
+   "description": "Retrieves the receipt or transaction reference for a recently completed utility payment.",
+   "params": [
+    "transaction_id",
+    "account_number",
+    "utility_provider",
+    "bill_type"
+   ],
+   "examples": [
+    "Receipt ka reference number batao.",
+    "रसीद का रेफरेंस नंबर बताओ।",
+    "Give me the receipt reference number."
+   ]
+  },
+  {
+   "name": "utility_bill_raise_dispute_payment",
+   "description": "Registers a dispute or complaint regarding an incorrect or failed utility bill payment.",
+   "params": [
+    "account_number",
+    "utility_provider",
+    "bill_type",
+    "transaction_id",
+    "dispute_reason"
+   ],
+   "examples": [
+    "Payment fail ho gaya, dispute raise karo.",
+    "पेमेंट फेल हो गया, डिस्प्यूट उठाओ।",
+    "Raise a dispute because my payment failed."
+   ]
+  },
+  {
+   "name": "utility_bill_close_account_linkage",
+   "description": "Removes or closes the linkage between the customer's banking profile and a utility bill account.",
+   "params": [
+    "account_number",
+    "utility_provider",
+    "bill_type",
+    "customer_id"
+   ],
+   "examples": [
+    "Is account ko unlink kar do.",
+    "इस अकाउंट को अनलिंक कर दो।",
+    "Please unlink this account from my profile."
+   ]
+  },
+  {
+   "name": "utility_bill_get_supported_providers",
+   "description": "Returns the list of supported electricity and mobile utility providers available for bill payment.",
+   "params": [],
+   "examples": [
+    "Kaun kaun se providers hain?",
+    "कौन से प्रोवाइडर हैं?",
+    "Which providers are supported?"
+   ]
+  }
+ ],
+ "FASTag": [
+  {
+   "name": "fastag_get_balance",
+   "description": "Retrieves the current available prepaid balance for a specific FASTag account.",
+   "params": [
+    "tag_id",
+    "customer_id"
+   ],
+   "examples": [
+    "Mujhe apna FASTag ka balance check karna hai.",
+    "मेरा फास्टैग का बैलेंस बताओ।",
+    "I want to check my FASTag balance."
+   ]
+  },
+  {
+   "name": "fastag_add_money",
+   "description": "Adds funds to a customer's linked FASTag wallet.",
+   "params": [
+    "tag_id",
+    "amount",
+    "payment_method"
+   ],
+   "examples": [
+    "FASTag mein 500 rupees dal do.",
+    "फास्टैग में पैसे डालो।",
+    "Please add 500 rupees to my FASTag."
+   ]
+  },
+  {
+   "name": "fastag_block_tag",
+   "description": "Temporarily disables a FASTag to prevent further toll transactions.",
+   "params": [
+    "tag_id",
+    "reason"
+   ],
+   "examples": [
+    "Mera tag chori ho gaya hai, block kar do.",
+    "टैग चोरी हो गया है, ब्लॉक करो।",
+    "My tag is lost, please block it."
+   ]
+  },
+  {
+   "name": "fastag_unblock_tag",
+   "description": "Re-enables a previously blocked FASTag once the issue is resolved.",
+   "params": [
+    "tag_id",
+    "agent_id"
+   ],
+   "examples": [
+    "Ab tag unblock kar do.",
+    "अब टैग अनब्लॉक करो।",
+    "Please unblock my tag now."
+   ]
+  },
+  {
+   "name": "fastag_generate_statement",
+   "description": "Fetches and returns a toll transaction history for a given date range.",
+   "params": [
+    "tag_id",
+    "start_date",
+    "end_date"
+   ],
+   "examples": [
+    "Is mahine ka FASTag statement bhej do.",
+    "इस महीने का स्टेटमेंट भेजो।",
+    "Send me this month's FASTag statement."
+   ]
+  },
+  {
+   "name": "fastag_update_vehicle_details",
+   "description": "Modifies the registered vehicle number or class for a FASTag.",
+   "params": [
+    "tag_id",
+    "new_vehicle_number",
+    "rc_copy_url"
+   ],
+   "examples": [
+    "Gaadi ka number change karna hai.",
+    "गाड़ी का नंबर बदलना है।",
+    "I need to update my vehicle number."
+   ]
+  },
+  {
+   "name": "fastag_replace_tag",
+   "description": "Initiates a request to issue a physical replacement FASTag to a customer.",
+   "params": [
+    "tag_id",
+    "delivery_address",
+    "reason"
+   ],
+   "examples": [
+    "Naya tag ghar pe mangwa do.",
+    "नया टैग घर पे मंगवा दो।",
+    "Order a new replacement tag for home delivery."
+   ]
+  },
+  {
+   "name": "fastag_check_blacklist_status",
+   "description": "Checks whether a FASTag is currently on the issuer blacklist.",
+   "params": [
+    "tag_id"
+   ],
+   "examples": [
+    "Check karo mera tag blacklist hai kya.",
+    "चेक करो मेरा टैग ब्लैकलिस्ट है क्या।",
+    "Check if my tag is blacklisted."
+   ]
+  },
+  {
+   "name": "fastag_report_wrong_deduction",
+   "description": "Logs a dispute for an incorrect toll amount charged to the FASTag.",
+   "params": [
+    "tag_id",
+    "transaction_id",
+    "dispute_reason",
+    "supporting_doc_url"
+   ],
+   "examples": [
+    "Galat toll kat gaya, complaint raise karo.",
+    "गलत टोल कट गया, शिकायत दर्ज करो।",
+    "Raise a complaint for a wrong toll deduction."
+   ]
+  },
+  {
+   "name": "fastag_link_wallet",
+   "description": "Associates a new bank account or digital wallet with an existing FASTag.",
+   "params": [
+    "tag_id",
+    "wallet_id",
+    "auth_token"
+   ],
+   "examples": [
+    "Naya wallet link karna hai.",
+    "नया वॉलेट लिंक करना है।",
+    "Link a new wallet to my FASTag."
+   ]
+  }
+ ],
+ "credit score report": [
+  {
+   "name": "credit_score_report_fetch_current",
+   "description": "Retrieves the customer's latest credit score from the bureau.",
+   "params": [
+    "customer_id",
+    "dob"
+   ],
+   "examples": [
+    "Mera CIBIL score bataiye",
+    "मेरा क्रेडिट स्कोर बताइए",
+    "Tell me my current credit score"
+   ]
+  },
+  {
+   "name": "credit_score_report_fetch_history",
+   "description": "Fetches past credit score snapshots for a specified date range.",
+   "params": [
+    "customer_id",
+    "start_date",
+    "end_date"
+   ],
+   "examples": [
+    "Pichle 6 mahine ka score check karo",
+    "पिछले 6 महीने का स्कोर चेक करें",
+    "Check my score history for the last 6 months"
+   ]
+  },
+  {
+   "name": "credit_score_report_explain_factors",
+   "description": "Returns the key factors currently affecting the customer's credit score.",
+   "params": [
+    "customer_id"
+   ],
+   "examples": [
+    "Score kyun gira hai ye batao",
+    "स्कोर क्यों गिरा है यह बताइए",
+    "Explain why my score dropped"
+   ]
+  },
+  {
+   "name": "credit_score_report_dispute_inquiry",
+   "description": "Checks the status of an existing dispute raised on the credit report.",
+   "params": [
+    "customer_id",
+    "dispute_reference"
+   ],
+   "examples": [
+    "Meri dispute ka status kya hai",
+    "मेरी डिस्प्यूट का स्टेटस क्या है",
+    "What is the status of my dispute"
+   ]
+  },
+  {
+   "name": "credit_score_report_generate_pdf",
+   "description": "Generates and emails a PDF copy of the latest credit score report.",
+   "params": [
+    "customer_id",
+    "email"
+   ],
+   "examples": [
+    "Score report PDF email kar do",
+    "स्कोर रिपोर्ट पीडीएफ ईमेल कर दो",
+    "Email me the score report PDF"
+   ]
+  },
+  {
+   "name": "credit_score_report_request_freeze",
+   "description": "Places a temporary freeze on the customer's credit report to prevent new inquiries.",
+   "params": [
+    "customer_id",
+    "freeze_duration_days"
+   ],
+   "examples": [
+    "Report freeze kar do 30 din ke liye",
+    "रिपोर्ट फ्रीज कर दो 30 दिन के लिए",
+    "Freeze my report for 30 days"
+   ]
+  },
+  {
+   "name": "credit_score_report_lift_freeze",
+   "description": "Removes an active credit report freeze before its expiry date.",
+   "params": [
+    "customer_id"
+   ],
+   "examples": [
+    "Freeze hata do abhi",
+    "फ्रीज हटा दो अभी",
+    "Lift the freeze now"
+   ]
+  },
+  {
+   "name": "credit_score_report_update_contact_details",
+   "description": "Updates the customer's registered mobile or email used for score notifications.",
+   "params": [
+    "customer_id",
+    "new_mobile",
+    "new_email"
+   ],
+   "examples": [
+    "Naya email update kar do",
+    "नया ईमेल अपडेट कर दो",
+    "Update my new email address"
+   ]
+  },
+  {
+   "name": "credit_score_report_link_account",
+   "description": "Links an eligible external account so score changes are monitored automatically.",
+   "params": [
+    "customer_id",
+    "account_number",
+    "bank_name"
+   ],
+   "examples": [
+    "Ye account link kar do monitoring ke liye",
+    "यह अकाउंट लिंक कर दो मॉनitoring के लिए",
+    "Link this account for monitoring"
+   ]
+  },
+  {
+   "name": "credit_score_report_unsubscribe_alerts",
+   "description": "Stops sending periodic credit score update alerts to the customer.",
+   "params": [
+    "customer_id"
+   ],
+   "examples": [
+    "Alerts band kar do please",
+    "अलर्ट बंद कर दो प्लीज़",
+    "Stop sending me alerts"
+   ]
+  }
+ ],
+ "microfinance group loans": [
+  {
+   "name": "microfinance_group_loan_get_group_details",
+   "description": "Retrieves the registered members, internal codes, and current status of a specific microfinance group loan.",
+   "params": [
+    "group_id"
+   ],
+   "examples": [
+    "Is group ka naam aur members batao.",
+    "Mujhe is group ki details chahiye.",
+    "Tell me the group details."
+   ]
+  },
+  {
+   "name": "microfinance_group_loan_check_repayment_due",
+   "description": "Checks the next scheduled repayment amount and due date for a specific microfinance group loan.",
+   "params": [
+    "group_id",
+    "due_date"
+   ],
+   "examples": [
+    "Agla installment kitna hai?",
+    "अगली किस्त की तारीख क्या है?",
+    "How much is the next due amount?"
+   ]
+  },
+  {
+   "name": "microfinance_group_loan_record_repayment",
+   "description": "Records a cash repayment made by a group on behalf of its members and updates the loan ledger.",
+   "params": [
+    "group_id",
+    "amount_paid",
+    "payment_mode",
+    "agent_id"
+   ],
+   "examples": [
+    "Humne cash jama kar diya hai.",
+    "हमने नकद जमा कर दिया है।",
+    "We have paid the cash."
+   ]
+  },
+  {
+   "name": "microfinance_group_loan_report_member_default",
+   "description": "Flags a specific member within a group loan as having missed a payment.",
+   "params": [
+    "group_id",
+    "member_id",
+    "missed_amount"
+   ],
+   "examples": [
+    "Ramesh ne payment nahi kiya.",
+    "रमेश ने भुगतान नहीं किया।",
+    "Ramesh has not paid."
+   ]
+  },
+  {
+   "name": "microfinance_group_loan_update_member_contact",
+   "description": "Updates the mobile number or address for a specific member within a group loan record.",
+   "params": [
+    "group_id",
+    "member_id",
+    "new_mobile",
+    "new_address"
+   ],
+   "examples": [
+    "Naya number register kar do.",
+    "नया नंबर दर्ज कर दो।",
+    "Register my new number."
+   ]
+  },
+  {
+   "name": "microfinance_group_loan_apply_top_up",
+   "description": "Submits a request to increase the sanctioned limit for an existing group loan.",
+   "params": [
+    "group_id",
+    "requested_amount",
+    "business_reason"
+   ],
+   "examples": [
+    "Loan badhana hai.",
+    "लोन बढ़ाना है।",
+    "I want to increase the loan."
+   ]
+  },
+  {
+   "name": "microfinance_group_loan_get_insurance_status",
+   "description": "Checks whether the mandatory life or health insurance cover is active for a group loan account.",
+   "params": [
+    "group_id"
+   ],
+   "examples": [
+    "Insurance chalu hai kya?",
+    "इंश्योरेंस चालू है क्या?",
+    "Is the insurance active?"
+   ]
+  },
+  {
+   "name": "microfinance_group_loan_disburse_group_fund",
+   "description": "Triggers the release of the next installment fund to the field officer for a specific group loan.",
+   "params": [
+    "group_id",
+    "disbursement_amount",
+    "officer_id"
+   ],
+   "examples": [
+    "Field agent ko paise release karo.",
+    "फील्ड एजेंट को पैसे रिलीज़ करो।",
+    "Release money to the field agent."
+   ]
+  },
+  {
+   "name": "microfinance_group_loan_flag_dispute",
+   "description": "Opens a dispute ticket for a specific transaction or charge on a group loan account.",
+   "params": [
+    "group_id",
+    "transaction_id",
+    "dispute_reason"
+   ],
+   "examples": [
+    "Yeh charge galat hai.",
+    "यह चार्ज गलत है।",
+    "This charge is incorrect."
+   ]
+  },
+  {
+   "name": "microfinance_group_loan_close_account",
+   "description": "Initiates the full settlement and closure process for a group loan once all dues are cleared.",
+   "params": [
+    "group_id",
+    "settlement_amount",
+    "closure_reason"
+   ],
+   "examples": [
+    "Loan band kar do.",
+    "लोन बंद कर दो।",
+    "Close the loan account."
+   ]
+  }
+ ],
+ "agriculture and tractor loans": [
+  {
+   "name": "agri_tractor_loan_check_eligibility",
+   "description": "Looks up whether a customer qualifies for an agriculture tractor loan based on provided farm and financial details.",
+   "params": [
+    "customer_mobile",
+    "land_holding_acres",
+    "tractor_model",
+    "estimated_cost"
+   ],
+   "examples": [
+    "Mujhe check karna hai ki main tractor loan ke liye eligible hoon ya nahi.",
+    "कृषि ट्रैक्टर लोन के लिए मेरी पात्रता क्या है?",
+    "I want to check if I am eligible for a tractor loan."
+   ]
+  },
+  {
+   "name": "agri_tractor_loan_calculate_emi",
+   "description": "Calculates the monthly EMI for a requested agriculture tractor loan using loan amount, tenure, and interest rate.",
+   "params": [
+    "loan_amount",
+    "tenure_months",
+    "interest_rate",
+    "down_payment"
+   ],
+   "examples": [
+    "EMI kitni banegi mere tractor loan ki?",
+    "ट्रैक्टर लोन की EMI निकाल दीजिए.",
+    "Please calculate the EMI for my tractor loan."
+   ]
+  },
+  {
+   "name": "agri_tractor_loan_submit_application",
+   "description": "Submits a new agriculture tractor loan application after validating the provided documents and details.",
+   "params": [
+    "customer_mobile",
+    "land_records_id",
+    "tractor_dealer_name",
+    "dealer_quote_amount"
+   ],
+   "examples": [
+    "Mera application submit kar do.",
+    "कृषि ट्रैक्टर लोन आवेदन जमा करें.",
+    "Submit my new tractor loan application."
+   ]
+  },
+  {
+   "name": "agri_tractor_loan_track_status",
+   "description": "Retrieves the current processing status of an existing agriculture tractor loan application using its reference number.",
+   "params": [
+    "application_reference_number"
+   ],
+   "examples": [
+    "Application ka status batao.",
+    "आवेदन की स्थिति बताएं.",
+    "Track the status of my application."
+   ]
+  },
+  {
+   "name": "agri_tractor_loan_upload_document",
+   "description": "Uploads a required supporting document such as land records or KYC for an agriculture tractor loan file.",
+   "params": [
+    "application_reference_number",
+    "document_type",
+    "file_url",
+    "customer_consent"
+   ],
+   "examples": [
+    "Mera document upload kar do.",
+    "दस्तावेज़ अपलोड करें.",
+    "Upload my land record document."
+   ]
+  },
+  {
+   "name": "agri_tractor_loan_disburse_amount",
+   "description": "Initiates the disbursement of an approved agriculture tractor loan directly to the registered dealer or customer account.",
+   "params": [
+    "application_reference_number",
+    "disbursement_mode",
+    "dealer_account_number"
+   ],
+   "examples": [
+    "Loan ka paisa disburse kar do.",
+    "ऋण राशि वितरित करें.",
+    "Disburse the loan amount to the dealer."
+   ]
+  },
+  {
+   "name": "agri_tractor_loan_pay_installment",
+   "description": "Processes a one-time EMI payment against an active agriculture tractor loan using the supplied payment details.",
+   "params": [
+    "loan_account_number",
+    "payment_amount",
+    "payment_method",
+    "transaction_reference"
+   ],
+   "examples": [
+    "Is mahine ki EMI bhar do.",
+    "किस्त का भुगतान करें.",
+    "Pay my current EMI installment."
+   ]
+  },
+  {
+   "name": "agri_tractor_loan_request_foreclosure",
+   "description": "Requests full foreclosure of an agriculture tractor loan by calculating and collecting the outstanding principal plus applicable charges.",
+   "params": [
+    "loan_account_number",
+    "foreclosure_date",
+    "customer_consent"
+   ],
+   "examples": [
+    "Loan jaldi close karna hai.",
+    "ऋण का पूर्ण समापन अनुरोध करें.",
+    "Request full foreclosure of my loan."
+   ]
+  },
+  {
+   "name": "agri_tractor_loan_get_due_statement",
+   "description": "Fetches the latest outstanding dues, overdue amounts, and due dates for an active agriculture tractor loan.",
+   "params": [
+    "loan_account_number",
+    "statement_month"
+   ],
+   "examples": [
+    "Mera due statement batao.",
+    "बकाया विवरण प्राप्त करें.",
+    "Get my due statement."
+   ]
+  },
+  {
+   "name": "agri_tractor_loan_update_contact_details",
+   "description": "Updates the registered mobile number or email address for an agriculture tractor loan account after verification.",
+   "params": [
+    "loan_account_number",
+    "new_mobile_number",
+    "new_email_address",
+    "otp_verification_code"
+   ],
+   "examples": [
+    "Mera number update kar do.",
+    "संपर्क विवरण अपडेट करें.",
+    "Update my contact details."
+   ]
+  }
+ ],
+ "NRI accounts": [
+  {
+   "name": "nri_account_get_balance",
+   "description": "Retrieves the latest available balance for the specified NRI account.",
+   "params": [
+    "account_id",
+    "currency_code"
+   ],
+   "examples": [
+    "Mujhe mere NRE account ka balance bataiye",
+    "मेरे NRE अकाउंट का बैलेंस क्या है?",
+    "What is the balance in my NRE account?"
+   ]
+  },
+  {
+   "name": "nri_account_update_contact",
+   "description": "Changes the registered mobile number or email address for an NRI account.",
+   "params": [
+    "account_id",
+    "new_mobile",
+    "new_email"
+   ],
+   "examples": [
+    "Mera number update karna hai",
+    "मेरा मोबाइल नंबर अपडेट करें",
+    "Update my registered mobile number."
+   ]
+  },
+  {
+   "name": "nri_account_request_statement",
+   "description": "Generates and queues an electronic statement for a given date range of an NRI account.",
+   "params": [
+    "account_id",
+    "statement_type",
+    "start_date",
+    "end_date"
+   ],
+   "examples": [
+    "Statement bhej dijiye",
+    "स्टेटमेंट भेज दें",
+    "Send me the account statement."
+   ]
+  },
+  {
+   "name": "nri_account_link_fema_declaration",
+   "description": "Attaches or updates the customer's FEMA self-declaration form for the NRI account.",
+   "params": [
+    "account_id",
+    "fema_form_url",
+    "declaration_date"
+   ],
+   "examples": [
+    "FEMA form upload kar do",
+    "फेमा डिक्लेरेशन अपलोड करें",
+    "Link my FEMA declaration."
+   ]
+  },
+  {
+   "name": "nri_account_check_repatriation_limit",
+   "description": "Checks the remaining permissible annual repatriation limit under LRS for the NRI account holder.",
+   "params": [
+    "account_id",
+    "financial_year"
+   ],
+   "examples": [
+    "Kitna LRS bacha hai?",
+    "कितनी LRS लिमिट बची है?",
+    "How much LRS limit is remaining?"
+   ]
+  },
+  {
+   "name": "nri_account_add_joint_holder",
+   "description": "Adds an eligible joint holder to an existing NRI account after verification.",
+   "params": [
+    "account_id",
+    "joint_holder_name",
+    "joint_holder_passport_number"
+   ],
+   "examples": [
+    "Joint holder add karna hai",
+    "जॉइंट होल्डर जोड़ें",
+    "Add a joint holder to the account."
+   ]
+  },
+  {
+   "name": "nri_account_update_nomination",
+   "description": "Records or modifies the nominee details for an NRI account.",
+   "params": [
+    "account_id",
+    "nominee_name",
+    "nominee_relationship",
+    "nominee_dob"
+   ],
+   "examples": [
+    "Nominee change karna hai",
+    "नॉमिनी अपडेट करें",
+    "Update the nominee information."
+   ]
+  },
+  {
+   "name": "nri_account_request_account_closure",
+   "description": "Initiates the closure process for an NRI account and schedules the final settlement.",
+   "params": [
+    "account_id",
+    "closure_reason",
+    "settlement_currency"
+   ],
+   "examples": [
+    "Account band karna hai",
+    "अकाउंट बंद करें",
+    "Request account closure."
+   ]
+  },
+  {
+   "name": "nri_account_get_fx_charges",
+   "description": "Returns the applicable foreign exchange conversion and inward remittance charges for an NRI account.",
+   "params": [
+    "account_id",
+    "transaction_type",
+    "amount_inr"
+   ],
+   "examples": [
+    "FX charges kitne lagenge?",
+    "FX चार्जेस कितने लगेंगे?",
+    "What are the FX charges?"
+   ]
+  },
+  {
+   "name": "nri_account_update_power_of_attorney",
+   "description": "Submits or replaces the registered Power of Attorney details for an NRI account.",
+   "params": [
+    "account_id",
+    "attorney_name",
+    "attorney_country",
+    "attorney_document_url"
+   ],
+   "examples": [
+    "POA update karna hai",
+    "पीओए अपडेट करें",
+    "Update the power of attorney."
+   ]
+  }
+ ],
+ "bank locker": [
+  {
+   "name": "bank_locker_get_availability",
+   "description": "Checks available locker sizes and locations at a specified branch.",
+   "params": [
+    "branch_code",
+    "locker_size"
+   ],
+   "examples": [
+    "Mujhe branch pe locker khali hai kya?",
+    "Branch 400001 mein locker available hai?",
+    "Is there a medium locker available at Connaught Place branch?"
+   ]
+  },
+  {
+   "name": "bank_locker_book_new",
+   "description": "Creates a new bank locker booking request for a customer.",
+   "params": [
+    "customer_id",
+    "branch_code",
+    "locker_size",
+    "tenancy_type"
+   ],
+   "examples": [
+    "Naya locker book karna hai.",
+    "मुझे नया लॉकर बुक करना है.",
+    "I want to book a new locker."
+   ]
+  },
+  {
+   "name": "bank_locker_modify_booking",
+   "description": "Updates an existing pending locker booking, such as changing the branch or size.",
+   "params": [
+    "booking_reference",
+    "new_branch_code",
+    "new_locker_size"
+   ],
+   "examples": [
+    "Booking change karni hai size.",
+    "बुकिंग का ब्रांच बदलना है.",
+    "I need to modify my booking."
+   ]
+  },
+  {
+   "name": "bank_locker_cancel_booking",
+   "description": "Cancels a pending bank locker booking before activation.",
+   "params": [
+    "booking_reference"
+   ],
+   "examples": [
+    "Booking cancel kar do.",
+    "बुकिंग रद्द करनी है.",
+    "Cancel my locker booking."
+   ]
+  },
+  {
+   "name": "bank_locker_get_agreement_copy",
+   "description": "Retrieves and sends the locker rental agreement document to the customer.",
+   "params": [
+    "locker_account_number"
+   ],
+   "examples": [
+    "Agreement ki copy bhejo.",
+    "लॉकर एग्रीमेंट की कॉपी भेजिए.",
+    "Send me the agreement copy."
+   ]
+  },
+  {
+   "name": "bank_locker_pay_annual_rent",
+   "description": "Processes the annual rental payment for an active locker.",
+   "params": [
+    "locker_account_number",
+    "payment_amount",
+    "payment_method"
+   ],
+   "examples": [
+    "Rent ka payment kar do.",
+    "वार्षिक किराया भर दो.",
+    "Please pay the annual rent."
+   ]
+  },
+  {
+   "name": "bank_locker_get_access_hours",
+   "description": "Returns the operating hours and access rules for a specific branch's locker facility.",
+   "params": [
+    "branch_code"
+   ],
+   "examples": [
+    "Time kya hai locker ke liye?",
+    "लॉकर का समय क्या है?",
+    "What are the locker access hours?"
+   ]
+  },
+  {
+   "name": "bank_locker_report_lost_key",
+   "description": "Registers a lost locker key report and initiates the key replacement workflow.",
+   "params": [
+    "locker_account_number",
+    "customer_id",
+    "branch_code"
+   ],
+   "examples": [
+    "Key kho gaya hai.",
+    "चाबी खो गई है.",
+    "I have lost my locker key."
+   ]
+  },
+  {
+   "name": "bank_locker_request_access_extension",
+   "description": "Requests an after-hours access extension for an active locker customer.",
+   "params": [
+    "locker_account_number",
+    "requested_date",
+    "reason"
+   ],
+   "examples": [
+    "Extra time chahiye aaj ke liye.",
+    "आज के लिए अतिरिक्त समय चाहिए.",
+    "I need an access extension for today."
+   ]
+  },
+  {
+   "name": "bank_locker_close_locker",
+   "description": "Initiates the permanent closure and surrender process for a bank locker.",
+   "params": [
+    "locker_account_number",
+    "customer_id",
+    "closure_reason"
+   ],
+   "examples": [
+    "Locker band karna hai.",
+    "लॉकर बंद करना है.",
+    "I want to close my locker."
+   ]
+  }
+ ],
+ "forex card and travel money": [
+  {
+   "name": "forex_card_get_card_status",
+   "description": "Retrieves the current status of a customer's forex card.",
+   "params": [
+    "card_number",
+    "customer_id"
+   ],
+   "examples": [
+    "Mera forex card active hai ya nahi?",
+    "मेरा फॉरेक्स कार्ड एक्टिव है?",
+    "Is my forex card active?"
+   ]
+  },
+  {
+   "name": "forex_card_block_card",
+   "description": "Immediately blocks a lost or stolen forex card to prevent unauthorized transactions.",
+   "params": [
+    "card_number",
+    "customer_id",
+    "reason"
+   ],
+   "examples": [
+    "Mera card kho gaya hai, block kar do please.",
+    "मेरा कार्ड खो गया है, ब्लॉक कर दें.",
+    "Please block my lost card."
+   ]
+  },
+  {
+   "name": "forex_card_unblock_card",
+   "description": "Removes a temporary block on a forex card after identity verification.",
+   "params": [
+    "card_number",
+    "customer_id",
+    "verification_code"
+   ],
+   "examples": [
+    "Card temporary block tha, ab unblock karna hai.",
+    "कार्ड टेम्परेरी ब्लॉक था, अब अनब्लॉक करना है.",
+    "I need to unblock my temporarily blocked card."
+   ]
+  },
+  {
+   "name": "forex_card_get_transaction_history",
+   "description": "Fetches recent transactions made using a specific forex card.",
+   "params": [
+    "card_number",
+    "transaction_date"
+   ],
+   "examples": [
+    "Last 5 transactions batao card ke.",
+    "पिछले 5 ट्रांजैक्शन बताओ.",
+    "Show me the last five transactions on my card."
+   ]
+  },
+  {
+   "name": "forex_card_load_balance",
+   "description": "Adds prepaid forex card load to the existing card balance.",
+   "params": [
+    "card_number",
+    "amount",
+    "source_account"
+   ],
+   "examples": [
+    "Card mein 5000 rupees load kar do.",
+    "कार्ड में 5000 रुपये लोड कर दें.",
+    "Load five thousand rupees onto my card."
+   ]
+  },
+  {
+   "name": "travel_money_order_create",
+   "description": "Places a new request for physical travel money in the form of foreign currency notes.",
+   "params": [
+    "customer_id",
+    "currency_code",
+    "amount",
+    "delivery_branch"
+   ],
+   "examples": [
+    "Mujhe USD notes chahiye, order laga do.",
+    "मुझे USD नोट्स चाहिए, ऑर्डर लगा दें.",
+    "I want to order US dollars in cash."
+   ]
+  },
+  {
+   "name": "travel_money_order_track_status",
+   "description": "Checks the current processing status of an existing travel money order.",
+   "params": [
+    "order_id"
+   ],
+   "examples": [
+    "Order ka status kya hai?",
+    "ऑर्डर का स्टेटस क्या है?",
+    "What is the status of my order?"
+   ]
+  },
+  {
+   "name": "travel_money_order_cancel",
+   "description": "Cancels a pending travel money order before it is dispatched.",
+   "params": [
+    "order_id",
+    "customer_id"
+   ],
+   "examples": [
+    "Order cancel karna hai abhi.",
+    "ऑर्डर अभी रद्द करना है.",
+    "Cancel my pending order immediately."
+   ]
+  },
+  {
+   "name": "forex_card_request_replacement",
+   "description": "Initiates the issuance of a replacement forex card due to damage or expiry.",
+   "params": [
+    "card_number",
+    "customer_id",
+    "reason"
+   ],
+   "examples": [
+    "Naya card mangwana hai.",
+    "नया कार्ड मंगवाना है.",
+    "I need to request a replacement card."
+   ]
+  },
+  {
+   "name": "travel_money_get_exchange_rate",
+   "description": "Returns the current buying and selling exchange rates for a requested foreign currency.",
+   "params": [
+    "currency_code",
+    "transaction_type"
+   ],
+   "examples": [
+    "Aaj ka USD rate batao.",
+    "आज का USD रेट बताओ.",
+    "Tell me today's USD exchange rate."
+   ]
+  }
+ ],
+ "cheque book and cheques": [
+  {
+   "name": "cheque_book_request",
+   "description": "Requests a new cheque book for the customer's account.",
+   "params": [
+    "account_number",
+    "cheque_book_type",
+    "delivery_address"
+   ],
+   "examples": [
+    "Mujhe naya cheque book chahiye.",
+    "मुझे नया चेकबुक चाहिए।",
+    "I need a new cheque book."
+   ]
+  },
+  {
+   "name": "cheque_book_status",
+   "description": "Looks up the current dispatch or delivery status of an ordered cheque book.",
+   "params": [
+    "order_id"
+   ],
+   "examples": [
+    "Mera cheque book kahan hai abhi?",
+    "मेरा चेकबुक कहाँ है अभी?",
+    "Where is my cheque book right now?"
+   ]
+  },
+  {
+   "name": "cheque_stop_payment",
+   "description": "Places a stop payment instruction on a specific cheque issued by the customer.",
+   "params": [
+    "cheque_number",
+    "reason_code"
+   ],
+   "examples": [
+    "Is cheque ko rok do.",
+    "इस चेक को रोक दो।",
+    "Please stop payment on this cheque."
+   ]
+  },
+  {
+   "name": "cheque_clearance_status",
+   "description": "Checks whether a presented cheque has cleared or is still pending in the clearing cycle.",
+   "params": [
+    "cheque_number"
+   ],
+   "examples": [
+    "Is cheque clear hua kya?",
+    "क्या यह चेक क्लियर हुआ?",
+    "Has this cheque cleared?"
+   ]
+  },
+  {
+   "name": "cheque_leaf_count",
+   "description": "Returns the remaining number of leaves in the customer's current cheque book.",
+   "params": [
+    "account_number"
+   ],
+   "examples": [
+    "Kitne cheque bache hain?",
+    "कितने चेक बचे हैं?",
+    "How many cheque leaves are left?"
+   ]
+  },
+  {
+   "name": "cheque_reissue_request",
+   "description": "Requests a replacement or reissue of a lost, stolen, or exhausted cheque book.",
+   "params": [
+    "account_number",
+    "reason_code",
+    "delivery_address"
+   ],
+   "examples": [
+    "Mera cheque book kho gaya, dobara bhej do.",
+    "मेरा चेकबुक खो गया, दोबारा भेज दो।",
+    "My cheque book is lost, please reissue it."
+   ]
+  },
+  {
+   "name": "cheque_micr_verify",
+   "description": "Validates the MICR code and basic formatting of a cheque image supplied by the caller.",
+   "params": [
+    "cheque_image_base64",
+    "account_number"
+   ],
+   "examples": [
+    "Is cheque ka MICR sahi hai?",
+    "क्या इस चेक का MICR सही है?",
+    "Is this cheque's MICR code correct?"
+   ]
+  },
+  {
+   "name": "cheque_leaf_activate",
+   "description": "Activates or enables a specific leaf in a multi-leaf cheque book for the first time.",
+   "params": [
+    "cheque_book_number",
+    "leaf_number"
+   ],
+   "examples": [
+    "Pehla leaf activate kar do.",
+    "पहला लीफ एक्टिवेट कर दो।",
+    "Activate the first leaf."
+   ]
+  },
+  {
+   "name": "cheque_return_reason",
+   "description": "Retrieves the official return reason code for a previously presented and dishonoured cheque.",
+   "params": [
+    "cheque_number",
+    "branch_code"
+   ],
+   "examples": [
+    "Cheque wapas kyun aaya?",
+    "चेक वापस क्यों आया?",
+    "Why was the cheque returned?"
+   ]
+  },
+  {
+   "name": "cheque_book_expiry_alert",
+   "description": "Checks if the existing cheque book has expired and whether a renewal is due.",
+   "params": [
+    "account_number"
+   ],
+   "examples": [
+    "Mera cheque book expire toh nahi hua?",
+    "मेरा चेकबुक एक्सपायर तो नहीं हुआ?",
+    "Has my cheque book expired?"
+   ]
+  }
+ ],
+ "recurring deposits": [
+  {
+   "name": "recurring_deposit_get_maturity_amount",
+   "description": "Calculates and returns the total maturity amount for a given recurring deposit account.",
+   "params": [
+    "account_number",
+    "tenure_months"
+   ],
+   "examples": [
+    "Mera RD ka maturity amount bata do",
+    "मेरे आरडी का मैच्योरिटी अमाउंट बताएं",
+    "Tell me the maturity amount for my recurring deposit"
+   ]
+  },
+  {
+   "name": "recurring_deposit_modify_monthly_installment",
+   "description": "Changes the monthly contribution amount for an existing recurring deposit account.",
+   "params": [
+    "account_number",
+    "new_monthly_amount"
+   ],
+   "examples": [
+    "RD ki EMI 5000 kar do",
+    "आरडी की मासिक किस्त 5000 कर दें",
+    "Increase my recurring deposit monthly installment to 5000"
+   ]
+  },
+  {
+   "name": "recurring_deposit_pause_account",
+   "description": "Temporarily suspends monthly auto-debits on a recurring deposit for a specified number of months.",
+   "params": [
+    "account_number",
+    "pause_months"
+   ],
+   "examples": [
+    "RD ko 2 mahine ke liye rok do",
+    "आरडी को 2 महीने के लिए रोक दें",
+    "Pause my recurring deposit for two months"
+   ]
+  },
+  {
+   "name": "recurring_deposit_add_nominee",
+   "description": "Registers or updates a nominee for a recurring deposit account.",
+   "params": [
+    "account_number",
+    "nominee_name",
+    "nominee_relationship"
+   ],
+   "examples": [
+    "RD mein nominee add karna hai",
+    "आरडी में नॉमिनी जोड़ना है",
+    "I want to add a nominee to my recurring deposit"
+   ]
+  },
+  {
+   "name": "recurring_deposit_calculate_interest_earned",
+   "description": "Retrieves the total interest accrued on a recurring deposit up to a specific date.",
+   "params": [
+    "account_number",
+    "as_of_date"
+   ],
+   "examples": [
+    "Kitna interest mila hai ab tak",
+    "अब तक कितना ब्याज मिला है",
+    "How much interest have I earned so far"
+   ]
+  },
+  {
+   "name": "recurring_deposit_extend_tenure",
+   "description": "Extends the original maturity period of a recurring deposit by a given number of months.",
+   "params": [
+    "account_number",
+    "extra_months"
+   ],
+   "examples": [
+    "RD ko 12 mahine aur badha do",
+    "आरडी को 12 महीने और बढ़ा दें",
+    "Extend my recurring deposit tenure by 12 months"
+   ]
+  },
+  {
+   "name": "recurring_deposit_check_overdue_installments",
+   "description": "Checks and lists any missed or delayed monthly installments for a recurring deposit.",
+   "params": [
+    "account_number"
+   ],
+   "examples": [
+    "Meri koi RD installment pending hai kya",
+    "क्या मेरी कोई आरडी किस्त पेंडिंग है",
+    "Check if I have any overdue recurring deposit installments"
+   ]
+  },
+  {
+   "name": "recurring_deposit_close_account",
+   "description": "Initiates the closure of a recurring deposit account and processes the final payout.",
+   "params": [
+    "account_number",
+    "closure_reason"
+   ],
+   "examples": [
+    "RD band kar do",
+    "आरडी बंद कर दें",
+    "Close my recurring deposit account"
+   ]
+  },
+  {
+   "name": "recurring_deposit_update_auto_debit_source",
+   "description": "Changes the linked savings account or NACH mandate used for monthly recurring deposit deductions.",
+   "params": [
+    "account_number",
+    "new_source_account_number"
+   ],
+   "examples": [
+    "Auto debit ka account change karna",
+    "ऑटो डेबिट का खाता बदलना",
+    "Change the auto-debit source for my recurring deposit"
+   ]
+  },
+  {
+   "name": "recurring_deposit_get_statement",
+   "description": "Fetches and returns the transaction history for a recurring deposit account.",
+   "params": [
+    "account_number",
+    "statement_period"
+   ],
+   "examples": [
+    "RD ka statement bhejo",
+    "आरडी का स्टेटमेंट भेजें",
+    "Send me the statement for my recurring deposit"
+   ]
+  }
+ ],
+ "public provident fund (PPF)": [
+  {
+   "name": "ppf_get_account_balance",
+   "description": "Retrieves the current maturity value and accumulated principal for a specified PPF account.",
+   "params": [
+    "account_number"
+   ],
+   "examples": [
+    "Mera PPF balance check karna hai.",
+    "मेरा PPF खाता शेष बताइए।",
+    "I want to check my PPF account balance."
+   ]
+  },
+  {
+   "name": "ppf_get_contribution_history",
+   "description": "Fetches the yearly deposit records and transaction details for a given PPF account.",
+   "params": [
+    "account_number"
+   ],
+   "examples": [
+    "PPF mein is saal kitna dala hai batao.",
+    "इस साल की PPF जमा राशि बताइए।",
+    "Tell me how much I have contributed this year."
+   ]
+  },
+  {
+   "name": "ppf_get_maturity_date",
+   "description": "Looks up and returns the scheduled maturity date of a PPF account.",
+   "params": [
+    "account_number"
+   ],
+   "examples": [
+    "Mera PPF kab mature hoga?",
+    "मेरा PPF कब परिपक्व होगा? बताइए।",
+    "When does my PPF account mature?"
+   ]
+  },
+  {
+   "name": "ppf_get_interest_rate",
+   "description": "Returns the currently applicable government-notified interest rate for PPF accounts.",
+   "params": [],
+   "examples": [
+    "PPF ka interest rate kya hai abhi?",
+    "अभी PPF की ब्याज दर क्या है? बताइए।",
+    "What is the current PPF interest rate?"
+   ]
+  },
+  {
+   "name": "ppf_submit_nomination",
+   "description": "Registers or updates a nominee for a specified PPF account.",
+   "params": [
+    "account_number",
+    "nominee_name",
+    "nominee_relationship",
+    "nominee_share_percentage"
+   ],
+   "examples": [
+    "PPF mein nominee add karna hai.",
+    "PPF में nominee जोड़ना है।",
+    "I need to add a nominee to my PPF account."
+   ]
+  },
+  {
+   "name": "ppf_change_nominee",
+   "description": "Modifies an existing nominee record for a PPF account.",
+   "params": [
+    "account_number",
+    "nominee_id",
+    "new_nominee_name",
+    "new_nominee_relationship",
+    "new_nominee_share_percentage"
+   ],
+   "examples": [
+    "Nominee change karna hai account mein.",
+    "खाते में nominee बदलना है।",
+    "I want to change the nominee on my PPF account."
+   ]
+  },
+  {
+   "name": "ppf_close_account",
+   "description": "Initiates the closure process for a PPF account, subject to applicable rules and tenure checks.",
+   "params": [
+    "account_number",
+    "closure_reason"
+   ],
+   "examples": [
+    "Mera PPF account close karna hai.",
+    "मेरा PPF खाता बंद करना है।",
+    "I would like to close my PPF account."
+   ]
+  },
+  {
+   "name": "ppf_extend_account",
+   "description": "Extends the maturity period of a PPF account by blocks of five years.",
+   "params": [
+    "account_number",
+    "extension_blocks"
+   ],
+   "examples": [
+    "PPF ko extend karna hai.",
+    "PPF को बढ़ाना है।",
+    "Please extend my PPF account."
+   ]
+  },
+  {
+   "name": "ppf_transfer_between_accounts",
+   "description": "Transfers funds from one active PPF account to another valid PPF account under the same holder.",
+   "params": [
+    "source_account_number",
+    "target_account_number",
+    "transfer_amount"
+   ],
+   "examples": [
+    "Ek PPF se dusre mein paisa transfer karna hai.",
+    "एक PPF से दूसरे में राशि स्थानांतरित करनी है।",
+    "I need to transfer money between my two PPF accounts."
+   ]
+  },
+  {
+   "name": "ppf_get_tax_exemption_status",
+   "description": "Checks whether contributions, interest, and maturity proceeds for a PPF account qualify for tax exemption under current regulations.",
+   "params": [
+    "account_number"
+   ],
+   "examples": [
+    "PPF par tax benefit milega ya nahi?",
+    "PPF पर कर छूट मिलेगी या नहीं? बताइए।",
+    "Can you confirm the tax exemption status for my PPF?"
+   ]
+  }
+ ],
+ "pension (NPS)": [
+  {
+   "name": "nps_get_pension_corpus",
+   "description": "Retrieves the current accumulated pension corpus for a given National Pension System (NPS) account.",
+   "params": [
+    "nps_account_number",
+    "date_of_birth"
+   ],
+   "examples": [
+    "Mera NPS corpus kitna bacha hai",
+    "मेरा एनपीएस कॉर्पस कितना बचा है",
+    "What is my NPS corpus balance"
+   ]
+  },
+  {
+   "name": "nps_change_nominee",
+   "description": "Updates or replaces the nominee registered for an NPS account.",
+   "params": [
+    "nps_account_number",
+    "new_nominee_name",
+    "new_nominee_relationship",
+    "new_nominee_dob"
+   ],
+   "examples": [
+    "Nominee badalna hai",
+    "नॉमिनी बदलना है",
+    "I want to change my nominee"
+   ]
+  },
+  {
+   "name": "nps_submit_pran_update",
+   "description": "Submits updated Permanent Retirement Account Number (PRAN) details such as address or contact information.",
+   "params": [
+    "nps_account_number",
+    "current_pran",
+    "updated_address",
+    "updated_mobile"
+   ],
+   "examples": [
+    "PRAN update karna hai address ke liye",
+    "पीआरएएन अपडेट करना है एड्रेस के लिए",
+    "Please update my PRAN address"
+   ]
+  },
+  {
+   "name": "nps_request_partial_withdrawal",
+   "description": "Initiates a request for a partial withdrawal from an NPS Tier-I account subject to applicable rules.",
+   "params": [
+    "nps_account_number",
+    "withdrawal_amount",
+    "withdrawal_reason_code"
+   ],
+   "examples": [
+    "Thoda paisa nikalna hai",
+    "थोड़ा पैसा निकालना है",
+    "I need a partial withdrawal"
+   ]
+  },
+  {
+   "name": "nps_check_tax_benefit_eligibility",
+   "description": "Checks the caller's eligibility for tax-saving benefits under Section 80CCD for their NPS contributions.",
+   "params": [
+    "nps_account_number",
+    "financial_year"
+   ],
+   "examples": [
+    "80C ka benefit milega kya",
+    "80C का benefit मिलेगा क्या",
+    "Can I claim the tax benefit"
+   ]
+  },
+  {
+   "name": "nps_update_kyc_details",
+   "description": "Updates Know Your Customer (KYC) information such as PAN, Aadhaar, or address for an NPS account.",
+   "params": [
+    "nps_account_number",
+    "kyc_type",
+    "document_number",
+    "document_expiry_date"
+   ],
+   "examples": [
+    "KYC update kar do",
+    "केवाईसी अपडेट कर दो",
+    "I need to update my KYC"
+   ]
+  },
+  {
+   "name": "nps_view_transaction_history",
+   "description": "Fetches the recent contribution and transaction history for an NPS account.",
+   "params": [
+    "nps_account_number",
+    "from_date",
+    "to_date"
+   ],
+   "examples": [
+    "Pichle saal ke transactions batao",
+    "पिछले साल के transactions बताओ",
+    "Show me last year's transactions"
+   ]
+  },
+  {
+   "name": "nps_switch_fund_manager",
+   "description": "Changes the pension fund manager or scheme option for an active NPS account.",
+   "params": [
+    "nps_account_number",
+    "new_fund_manager_code",
+    "new_scheme_code"
+   ],
+   "examples": [
+    "Fund manager badalna hai",
+    "फंड मैनेजर बदलना है",
+    "I want to switch my fund manager"
+   ]
+  },
+  {
+   "name": "nps_download_annual_statement",
+   "description": "Generates and delivers the annual pension statement for a specified financial year via email or SMS.",
+   "params": [
+    "nps_account_number",
+    "financial_year",
+    "delivery_channel"
+   ],
+   "examples": [
+    "Statement bhej do email pe",
+    "स्टेटमेंट भेज दो email पे",
+    "Send me the annual statement"
+   ]
+  },
+  {
+   "name": "nps_close_tier_i_account",
+   "description": "Processes the closure of an NPS Tier-I retirement account after maturity or exit eligibility.",
+   "params": [
+    "nps_account_number",
+    "closure_reason_code",
+    "bank_account_for_refund"
+   ],
+   "examples": [
+    "Account close karna hai",
+    "अकाउंट close करना है",
+    "Close my NPS account"
+   ]
+  }
+ ],
+ "buy now pay later": [
+  {
+   "name": "bnpl_get_available_limit",
+   "description": "Retrieves the remaining spendable BNPL limit for the customer's active account.",
+   "params": [
+    "mobile_number",
+    "customer_id"
+   ],
+   "examples": [
+    "Mujhe mera available BNPL limit bataiye.",
+    "मेरा BNPL लिमिट कितना बचा है?",
+    "Please tell me my available BNPL limit."
+   ]
+  },
+  {
+   "name": "bnpl_create_installment_plan",
+   "description": "Sets up a new BNPL repayment schedule for a qualifying recent purchase.",
+   "params": [
+    "transaction_id",
+    "installment_count",
+    "auto_debit_flag"
+   ],
+   "examples": [
+    "Is purchase ko 3 EMI mein convert kar do.",
+    "इस ट्रांज़ैक्शन को 3 किस्तों में बदल दीजिए।",
+    "Convert this purchase into 3 EMIs."
+   ]
+  },
+  {
+   "name": "bnpl_pay_partial_amount",
+   "description": "Processes a partial upfront payment toward an outstanding BNPL balance.",
+   "params": [
+    "bnpl_account_id",
+    "payment_amount",
+    "upi_id"
+   ],
+   "examples": [
+    "Main 2000 rupaye abhi pay kar deta hoon.",
+    "मैं अभी 2000 रुपये जमा कर रहा हूँ।",
+    "I want to pay a partial amount of 2000 now."
+   ]
+  },
+  {
+   "name": "bnpl_get_due_date",
+   "description": "Looks up the next due date for an active BNPL installment.",
+   "params": [
+    "bnpl_account_id"
+   ],
+   "examples": [
+    "Meri agli due date kab hai?",
+    "मेरी अगली due date कब है?",
+    "When is my next due date?"
+   ]
+  },
+  {
+   "name": "bnpl_modify_due_date",
+   "description": "Requests a reschedule of a future BNPL due date within policy limits.",
+   "params": [
+    "bnpl_account_id",
+    "new_due_date"
+   ],
+   "examples": [
+    "Due date ko 5 din aage shift kar do.",
+    "due date को 5 दिन आगे बढ़ा दीजिए।",
+    "Please shift my due date by 5 days."
+   ]
+  },
+  {
+   "name": "bnpl_check_late_fee",
+   "description": "Calculates and returns any applicable late fee for a missed BNPL installment.",
+   "params": [
+    "bnpl_account_id",
+    "due_date"
+   ],
+   "examples": [
+    "Late fee kitni lagegi agar main late ho gaya?",
+    "अगर मैं लेट हो गया तो late fee कितनी लगेगी?",
+    "How much late fee will apply if I miss the date?"
+   ]
+  },
+  {
+   "name": "bnpl_close_account",
+   "description": "Permanently closes an active BNPL account after verifying zero outstanding balance.",
+   "params": [
+    "bnpl_account_id",
+    "customer_verification_code"
+   ],
+   "examples": [
+    "Mera BNPL account band kar do.",
+    "मेरा BNPL खाता बंद कर दीजिए।",
+    "Please close my BNPL account."
+   ]
+  },
+  {
+   "name": "bnpl_get_transaction_history",
+   "description": "Fetches the recent BNPL purchase and repayment history for the caller.",
+   "params": [
+    "mobile_number",
+    "date_from",
+    "date_to"
+   ],
+   "examples": [
+    "Pichle 7 din ka BNPL history dikhao.",
+    "पिछले 7 दिनों का BNPL इतिहास दिखाइए।",
+    "Show me my BNPL history for the last 7 days."
+   ]
+  },
+  {
+   "name": "bnpl_update_auto_debit",
+   "description": "Enables or disables automatic bank debit for upcoming BNPL installments.",
+   "params": [
+    "bnpl_account_id",
+    "auto_debit_enabled"
+   ],
+   "examples": [
+    "Auto debit on kar do.",
+    "auto debit चालू कर दीजिए।",
+    "Turn on auto debit."
+   ]
+  },
+  {
+   "name": "bnpl_raise_dispute",
+   "description": "Registers a dispute for a specific BNPL transaction that the customer does not recognize.",
+   "params": [
+    "bnpl_account_id",
+    "transaction_id",
+    "dispute_reason"
+   ],
+   "examples": [
+    "Is transaction pe dispute raise karna hai.",
+    "इस ट्रांज़ैक्शन पर dispute दर्ज करना है।",
+    "I need to raise a dispute on this transaction."
+   ]
+  }
+ ],
+ "consumer durable EMI (phones, TVs)": [
+  {
+   "name": "consumer_durable_emi_get_due_amount",
+   "description": "Retrieves the total outstanding EMI amount, including principal, interest, and any applicable late fees, for a specific consumer durable loan.",
+   "params": [
+    "loan_account_number",
+    "customer_mobile_number"
+   ],
+   "examples": [
+    "Mera consumer durable EMI kitna baaki hai bataiye.",
+    "मेरे कंज्यूमर ड्यूरेबल लोन का ड्यू अमाउंट बताएं।",
+    "Tell me my remaining EMI for the consumer durable loan."
+   ]
+  },
+  {
+   "name": "consumer_durable_emi_get_next_due_date",
+   "description": "Looks up and returns the scheduled due date for the next upcoming EMI installment on a consumer durable loan.",
+   "params": [
+    "loan_account_number",
+    "customer_dob"
+   ],
+   "examples": [
+    "Agla EMI kab cut hone wala hai?",
+    "अगली EMI की due date क्या है?",
+    "When is the next EMI due for my TV loan?"
+   ]
+  },
+  {
+   "name": "consumer_durable_emi_get_payment_history",
+   "description": "Fetches the recent EMI payment history, including paid dates, amounts, and transaction references, for a consumer durable loan.",
+   "params": [
+    "loan_account_number",
+    "months_to_fetch"
+   ],
+   "examples": [
+    "Pichle 6 mahine ka payment history dikhao.",
+    "पिछले 6 महीने का पेमेंट हिस्ट्री बताइए।",
+    "Show me the last 6 EMI payments for my phone loan."
+   ]
+  },
+  {
+   "name": "consumer_durable_emi_modify_auto_debit_mandate",
+   "description": "Updates or cancels the standing auto-debit mandate (NACH/ECS) linked to a consumer durable EMI account.",
+   "params": [
+    "loan_account_number",
+    "mandate_action",
+    "bank_account_number",
+    "ifsc_code"
+   ],
+   "examples": [
+    "Auto debit band kar do mere account se.",
+    "मेरे अकाउंट से ऑटो डेबिट बंद कर दीजिए।",
+    "Please stop the auto-debit from my savings account for this EMI."
+   ]
+  },
+  {
+   "name": "consumer_durable_emi_request_foreclosure",
+   "description": "Initiates a full foreclosure request to close the consumer durable loan before its original tenure by paying the outstanding principal and applicable charges.",
+   "params": [
+    "loan_account_number",
+    "customer_mobile_number",
+    "foreclosure_reason"
+   ],
+   "examples": [
+    "Loan jaldi close karna hai, foreclosure request daal do.",
+    "मुझे लोन जल्दी बंद करवाना है, फोरक्लोज़र रिक्वेस्ट डाल दीजिए।",
+    "I want to prepay and close my TV EMI loan early."
+   ]
+  },
+  {
+   "name": "consumer_durable_emi_get_preclosure_quote",
+   "description": "Calculates and returns the estimated foreclosure amount, including principal outstanding, interest rebate, and processing charges, for a consumer durable loan.",
+   "params": [
+    "loan_account_number",
+    "requested_foreclosure_date"
+   ],
+   "examples": [
+    "Preclosure amount kitna aayega batao.",
+    "प्रीक्लोज़र अमाउंट कितना होगा बताएं।",
+    "Give me a quote to close my consumer durable loan today."
+   ]
+  },
+  {
+   "name": "consumer_durable_emi_update_contact_details",
+   "description": "Changes the registered mobile number or email address for a consumer durable EMI account after verification.",
+   "params": [
+    "loan_account_number",
+    "customer_dob",
+    "new_mobile_number",
+    "new_email_address"
+   ],
+   "examples": [
+    "Mera number update kar do is loan ke liye.",
+    "इस लोन के लिए मेरा नंबर अपडेट कर दीजिए।",
+    "Update my registered mobile number for the consumer durable EMI."
+   ]
+  },
+  {
+   "name": "consumer_durable_emi_get_insurance_status",
+   "description": "Checks and returns the active status, coverage type, and expiry date of the mandatory insurance bundled with a consumer durable loan.",
+   "params": [
+    "loan_account_number"
+   ],
+   "examples": [
+    "Mere phone loan ka insurance active hai ya nahi?",
+    "मेरे फोन लोन का इंश्योरेंस एक्टिव है या नहीं? बताइए।",
+    "Is the insurance cover active on my TV EMI?"
+   ]
+  },
+  {
+   "name": "consumer_durable_emi_raise_dispute_payment",
+   "description": "Registers a dispute when an EMI payment was debited from the customer's account but not reflected against the consumer durable loan.",
+   "params": [
+    "loan_account_number",
+    "transaction_reference_number",
+    "payment_date",
+    "amount"
+   ],
+   "examples": [
+    "Mera payment deduct ho gaya par loan mein show nahi ho raha.",
+    "मेरा पेमेंट कट गया पर लोन में दिख नहीं रहा।",
+    "I need to raise a dispute because my EMI payment is missing."
+   ]
+  },
+  {
+   "name": "consumer_durable_emi_get_reschedule_options",
+   "description": "Lists available EMI rescheduling or tenure extension options, along with revised installment amounts and applicable charges, for a consumer durable loan.",
+   "params": [
+    "loan_account_number",
+    "customer_mobile_number"
+   ],
+   "examples": [
+    "EMI restructure ke options dikhao.",
+    "EMI रीस्ट्रक्चर के ऑप्शन्स दिखाइए।",
+    "Show me ways to reschedule my consumer durable EMI."
+   ]
+  }
+ ],
+ "salary account and payroll": [
+  {
+   "name": "salary_account_get_net_pay",
+   "description": "Retrieves the net salary amount credited to the customer's salary account for the current or specified pay period.",
+   "params": [
+    "account_number",
+    "pay_period"
+   ],
+   "examples": [
+    "Mera is mahine ka net pay kitna aaya hai?",
+    "इस महीने की सैलरी कितनी जमा हुई?",
+    "What is my net salary for this month?"
+   ]
+  },
+  {
+   "name": "salary_account_get_pay_slip",
+   "description": "Fetches and returns the digital pay slip PDF or structured details for the requested pay period.",
+   "params": [
+    "account_number",
+    "pay_period"
+   ],
+   "examples": [
+    "Mujhe last month ka pay slip bhej do.",
+    "पिछले महीने का payslip दे दीजिए।",
+    "Send me last month's pay slip."
+   ]
+  },
+  {
+   "name": "salary_account_update_bank_details",
+   "description": "Updates the customer's salary crediting bank account or IFSC details in the payroll system.",
+   "params": [
+    "account_number",
+    "new_account_number",
+    "ifsc_code"
+   ],
+   "examples": [
+    "Mera naya salary account number update kar do.",
+    "मेरा नया सैलरी अकाउंट नंबर अपडेट कर दीजिए।",
+    "Update my new salary account number."
+   ]
+  },
+  {
+   "name": "salary_account_change_nominee",
+   "description": "Modifies or adds a nominee for the salary account holder's records.",
+   "params": [
+    "account_number",
+    "nominee_name",
+    "nominee_relation",
+    "nominee_dob"
+   ],
+   "examples": [
+    "Nominee change karna hai account mein.",
+    "खाते में नॉमिनी बदलना है।",
+    "I want to change the nominee."
+   ]
+  },
+  {
+   "name": "salary_account_get_allowances_breakdown",
+   "description": "Looks up and returns the detailed breakdown of basic pay, HRA, special allowance, and other components.",
+   "params": [
+    "account_number",
+    "pay_period"
+   ],
+   "examples": [
+    "Mera allowance ka hisaab batao.",
+    "मेरा अलाउंस का ब्रेकअप बताइए।",
+    "Show me my allowance breakdown."
+   ]
+  },
+  {
+   "name": "salary_account_get_deductions",
+   "description": "Retrieves the list of statutory and voluntary deductions applied to the current or specified pay slip.",
+   "params": [
+    "account_number",
+    "pay_period"
+   ],
+   "examples": [
+    "Kitne deductions hue hain is baar?",
+    "इस बार कितने कट हुए हैं? ",
+    "How many deductions were there this time?"
+   ]
+  },
+  {
+   "name": "salary_account_request_salary_certificate",
+   "description": "Initiates the generation and dispatch of an employment and salary certificate for the requested period.",
+   "params": [
+    "account_number",
+    "pay_period",
+    "certificate_type"
+   ],
+   "examples": [
+    "Mujhe salary certificate chahiye.",
+    "मुझे सैलरी सर्टिफिकेट चाहिए।",
+    "I need a salary certificate."
+   ]
+  },
+  {
+   "name": "salary_account_get_payroll_status",
+   "description": "Checks the current processing status of the employer's salary credit with the bank.",
+   "params": [
+    "account_number",
+    "employer_code"
+   ],
+   "examples": [
+    "Salary credit ka status kya hai?",
+    "सैलरी क्रेडिट का स्टेटस क्या है? ",
+    "What is the status of my salary credit?"
+   ]
+  },
+  {
+   "name": "salary_account_enable_autopay_deduction",
+   "description": "Activates automatic monthly deduction of a specified mandate amount from the salary account.",
+   "params": [
+    "account_number",
+    "mandate_amount",
+    "start_date"
+   ],
+   "examples": [
+    "Auto-debit chalu kar do.",
+    "ऑटो-डेबिट चालू कर दीजिए।",
+    "Enable auto-debit."
+   ]
+  },
+  {
+   "name": "salary_account_close_account",
+   "description": "Closes the salary account after verifying no pending payroll credits or holds exist.",
+   "params": [
+    "account_number",
+    "closure_reason",
+    "confirmation_code"
+   ],
+   "examples": [
+    "Mera salary account band karna hai.",
+    "मेरा सैलरी अकाउंट बंद करना है।",
+    "I want to close my salary account."
+   ]
+  }
+ ],
+ "home insurance": [
+  {
+   "name": "home_insurance_get_policy_status",
+   "description": "Retrieves the current status and validity period of an existing home insurance policy.",
+   "params": [
+    "policy_number"
+   ],
+   "examples": [
+    "Mujhe apni home insurance ki policy status check karni hai.",
+    "मेरी होम इंश्योरेंस पॉलिसी की स्थिति बताएं।",
+    "Check the status of my home insurance policy."
+   ]
+  },
+  {
+   "name": "home_insurance_download_document",
+   "description": "Sends a digital copy of the policy document to the customer's registered email or mobile.",
+   "params": [
+    "policy_number",
+    "delivery_channel"
+   ],
+   "examples": [
+    "Bhejo mere registered email pe policy document.",
+    "मुझे पॉलिसी डॉक्यूमेंट भेज दीजिए।",
+    "Send the policy document to my registered email."
+   ]
+  },
+  {
+   "name": "home_insurance_update_contact_details",
+   "description": "Changes the policyholder's registered phone number or email address.",
+   "params": [
+    "policy_number",
+    "new_mobile_number",
+    "new_email_address"
+   ],
+   "examples": [
+    "Mera number change karna hai policy mein.",
+    "पॉलिसी में मेरा मोबाइल नंबर अपडेट करें।",
+    "Update my contact details on the policy."
+   ]
+  },
+  {
+   "name": "home_insurance_report_claim",
+   "description": "Registers a new home insurance claim after property damage or theft.",
+   "params": [
+    "policy_number",
+    "claim_type",
+    "incident_date",
+    "description"
+   ],
+   "examples": [
+    "Mera claim register karna hai.",
+    "घर में चोरी का क्लेम दर्ज करें।",
+    "I want to report a claim for water damage."
+   ]
+  },
+  {
+   "name": "home_insurance_check_claim_status",
+   "description": "Provides the current processing stage and expected resolution date for an active claim.",
+   "params": [
+    "claim_id"
+   ],
+   "examples": [
+    "Mera claim ka status kya hai?",
+    "मेरे क्लेम की स्थिति बताएं।",
+    "What is the status of my claim?"
+   ]
+  },
+  {
+   "name": "home_insurance_submit_renewal_payment",
+   "description": "Processes the premium payment to renew an expiring home insurance policy.",
+   "params": [
+    "policy_number",
+    "payment_amount",
+    "payment_method"
+   ],
+   "examples": [
+    "Premium renew karne ke liye payment kar do.",
+    "प्रीमियम का भुगतान करें।",
+    "Renew my policy by paying the premium."
+   ]
+  },
+  {
+   "name": "home_insurance_cancel_policy",
+   "description": "Initiates the cancellation of an active home insurance policy and calculates any applicable refund.",
+   "params": [
+    "policy_number",
+    "cancellation_reason",
+    "refund_preference"
+   ],
+   "examples": [
+    "Policy cancel karni hai, process batao.",
+    "पॉलिसी रद्द करें।",
+    "Cancel my home insurance policy."
+   ]
+  },
+  {
+   "name": "home_insurance_add_beneficiary",
+   "description": "Adds or updates a nominee for claim settlement on a home insurance policy.",
+   "params": [
+    "policy_number",
+    "beneficiary_name",
+    "beneficiary_relation",
+    "beneficiary_contact"
+   ],
+   "examples": [
+    "Nominee add karna hai policy mein.",
+    "लाभार्थी जोड़ें।",
+    "Add a nominee to my home insurance policy."
+   ]
+  },
+  {
+   "name": "home_insurance_get_coverage_details",
+   "description": "Returns the list of covered perils, sum insured, and exclusions for a specific policy.",
+   "params": [
+    "policy_number"
+   ],
+   "examples": [
+    "Coverage details batao.",
+    "कवरेज विवरण बताएं।",
+    "Tell me what is covered under my policy."
+   ]
+  },
+  {
+   "name": "home_insurance_request_inspection",
+   "description": "Schedules a physical property inspection for claim assessment or policy underwriting.",
+   "params": [
+    "policy_number",
+    "preferred_date",
+    "preferred_time_slot",
+    "property_address"
+   ],
+   "examples": [
+    "Inspection schedule kar do.",
+    "निरीक्षण तय करें।",
+    "Schedule an inspection for my property."
+   ]
+  }
+ ],
+ "rewards and cashback programme": [
+  {
+   "name": "rewards_program_check_points_balance",
+   "description": "Looks up the current reward points balance linked to the caller's account.",
+   "params": [
+    "account_id"
+   ],
+   "examples": [
+    "Mera rewards points kitna bacha hai?",
+    "मेरे रिवॉर्ड पॉइंट्स का बैलेंस क्या है?",
+    "How many reward points do I have?"
+   ]
+  },
+  {
+   "name": "rewards_program_view_cashback_history",
+   "description": "Retrieves the recent cashback transactions credited under the rewards programme.",
+   "params": [
+    "account_id",
+    "limit"
+   ],
+   "examples": [
+    "Last month ka cashback statement dikhao",
+    "पिछले महीने का कैशबैक इतिहास दिखाएं.",
+    "Show me my cashback history for last month."
+   ]
+  },
+  {
+   "name": "rewards_program_activate_partner_offer",
+   "description": "Enrolls the caller in a limited-time partner cashback or discount offer.",
+   "params": [
+    "account_id",
+    "offer_id",
+    "partner_code"
+   ],
+   "examples": [
+    "Is Flipkart wale offer ko activate kar do",
+    "इस फ्लिपकार्ट ऑफर को सक्रिय करें।",
+    "Activate the Flipkart partner offer."
+   ]
+  },
+  {
+   "name": "rewards_program_redeem_points_for_voucher",
+   "description": "Converts a specified number of reward points into a digital shopping voucher.",
+   "params": [
+    "account_id",
+    "points_to_redeem",
+    "voucher_category"
+   ],
+   "examples": [
+    "200 points se voucher redeem kar do",
+    "200 पॉइंट्स से वाउचर रिडीम करें।",
+    "Redeem 200 points for a voucher."
+   ]
+  },
+  {
+   "name": "rewards_program_link_upi_for_instant_cashback",
+   "description": "Links or updates a UPI handle so cashback is credited instantly after transactions.",
+   "params": [
+    "account_id",
+    "upi_id"
+   ],
+   "examples": [
+    "Mera cashback UPI pe bhejne ke liye link karo",
+    "मेरा कैशबैक UPI पर भेजने के लिए लिंक करें।",
+    "Link my UPI for instant cashback."
+   ]
+  },
+  {
+   "name": "rewards_program_check_offer_eligibility",
+   "description": "Checks whether the caller qualifies for a specific cashback campaign based on recent activity.",
+   "params": [
+    "account_id",
+    "offer_id"
+   ],
+   "examples": [
+    "Is offer ke liye main eligible hoon kya?",
+    "क्या मैं इस ऑफर के लिए पात्र हूँ?",
+    "Am I eligible for this offer?"
+   ]
+  },
+  {
+   "name": "rewards_program_set_auto_redeem_threshold",
+   "description": "Configures an automatic redemption rule when points reach a chosen minimum balance.",
+   "params": [
+    "account_id",
+    "threshold_points",
+    "redemption_type"
+   ],
+   "examples": [
+    "500 points pe auto redeem on kar do",
+    "500 पॉइंट्स पर ऑटो रिडीम चालू करें।",
+    "Set auto redeem at 500 points."
+   ]
+  },
+  {
+   "name": "rewards_program_reverse_expired_points",
+   "description": "Reverses points that expired in the last 7 days back into the active balance.",
+   "params": [
+    "account_id",
+    "grace_days"
+   ],
+   "examples": [
+    "Expired points ko wapas lao",
+    "एक्सपायर हुए पॉइंट्स वापस लाएं।",
+    "Reverse my expired points."
+   ]
+  },
+  {
+   "name": "rewards_program_download_tax_statement",
+   "description": "Generates and retrieves a tax statement for cashback and rewards income.",
+   "params": [
+    "account_id",
+    "financial_year"
+   ],
+   "examples": [
+    "1099-INT jaisa rewards ka tax statement do",
+    "रिवॉर्ड्स का टैक्स स्टेटमेंट दें।",
+    "Give me the tax statement for rewards."
+   ]
+  },
+  {
+   "name": "rewards_program_opt_out_marketing_communications",
+   "description": "Stops promotional calls and SMS related to the rewards and cashback programme.",
+   "params": [
+    "account_id",
+    "channel"
+   ],
+   "examples": [
+    "Rewards ke marketing calls band kar do",
+    "रिवॉर्ड्स के मार्केटिंग कॉल बंद करें।",
+    "Opt me out of rewards marketing."
+   ]
+  }
+ ],
+ "account statements and tax forms": [
+  {
+   "name": "account_statement_get_summary",
+   "description": "Retrieves a brief summary of recent transactions for a specified account.",
+   "params": [
+    "account_number",
+    "from_date",
+    "to_date"
+   ],
+   "examples": [
+    "Mera pichle mahine ka statement batao",
+    "मुझे पिछले महीने का स्टेटमेंट दिखाओ",
+    "Show me my last month statement"
+   ]
+  },
+  {
+   "name": "account_statement_email_send",
+   "description": "Emails a selected account statement to a registered or provided email address.",
+   "params": [
+    "account_number",
+    "email",
+    "statement_period"
+   ],
+   "examples": [
+    "Statement mere email pe bhej do",
+    "स्टेटमेंट मेरे ईमेल पर भेज दो",
+    "Send the statement to my email"
+   ]
+  },
+  {
+   "name": "account_statement_download_pdf",
+   "description": "Generates and initiates a download of the account statement as a PDF file.",
+   "params": [
+    "account_number",
+    "format",
+    "from_date",
+    "to_date"
+   ],
+   "examples": [
+    "PDF download kar do",
+    "PDF डाउनलोड कर दो",
+    "Download the PDF version"
+   ]
+  },
+  {
+   "name": "tax_form_request_16a",
+   "description": "Requests a Form 16A certificate for TDS deductions on interest income.",
+   "params": [
+    "account_number",
+    "financial_year",
+    "tds_amount"
+   ],
+   "examples": [
+    "Mera 16A form nikal do",
+    "मेरा 16A फॉर्म निकाल दो",
+    "Fetch my Form 16A"
+   ]
+  },
+  {
+   "name": "tax_form_request_16b",
+   "description": "Requests a Form 16B certificate for TDS deductions on property-related transactions.",
+   "params": [
+    "property_transaction_id",
+    "financial_year",
+    "tds_amount"
+   ],
+   "examples": [
+    "16B form chahiye",
+    "16B फॉर्म चाहिए",
+    "Get my Form 16B"
+   ]
+  },
+  {
+   "name": "tax_form_download_pdf",
+   "description": "Downloads a requested tax form as a PDF to the caller's registered device or email.",
+   "params": [
+    "form_type",
+    "financial_year",
+    "delivery_channel"
+   ],
+   "examples": [
+    "PDF bhej do",
+    "PDF भेज दो",
+    "Send the PDF"
+   ]
+  },
+  {
+   "name": "tax_form_verify_status",
+   "description": "Checks and returns the current processing status of a submitted tax form request.",
+   "params": [
+    "request_id",
+    "form_type"
+   ],
+   "examples": [
+    "Status kya hai?",
+    "स्टेटस क्या है?",
+    "What is the status"
+   ]
+  },
+  {
+   "name": "tax_form_reissue_request",
+   "description": "Submits a request to reissue a previously issued tax form due to errors or missing details.",
+   "params": [
+    "form_type",
+    "financial_year",
+    "reason",
+    "account_number"
+   ],
+   "examples": [
+    "Dobara bhej do",
+    "फिर से भेज दो",
+    "Reissue the form"
+   ]
+  },
+  {
+   "name": "account_statement_print_at_branch",
+   "description": "Places a request to print and hold an account statement at a selected branch for pickup.",
+   "params": [
+    "account_number",
+    "branch_code",
+    "from_date",
+    "to_date"
+   ],
+   "examples": [
+    "Branch pe print rakh do",
+    "ब्रांच पर प्रिंट रख दो",
+    "Hold a print at branch"
+   ]
+  },
+  {
+   "name": "tax_form_update_mobile_otp",
+   "description": "Validates and updates the mobile number used for OTP delivery when requesting tax forms.",
+   "params": [
+    "account_number",
+    "new_mobile",
+    "otp"
+   ],
+   "examples": [
+    "Naya number daal do",
+    "नया नंबर डाल दो",
+    "Update my mobile number"
+   ]
+  }
+ ],
+ "doorstep banking": [
+  {
+   "name": "doorstep_banking_schedule_visit",
+   "description": "Books a new doorstep banking appointment for a specific service at a chosen address.",
+   "params": [
+    "service_type",
+    "preferred_date",
+    "preferred_time",
+    "customer_pincode"
+   ],
+   "examples": [
+    "Mujhe aaj hi doorstep banking book karni hai.",
+    "मुझे आज ही डोरस्टेप बैंकिंग बुक करनी है।",
+    "I want to book a doorstep visit today."
+   ]
+  },
+  {
+   "name": "doorstep_banking_reschedule_visit",
+   "description": "Changes the date or time of an already scheduled doorstep banking visit.",
+   "params": [
+    "visit_id",
+    "new_date",
+    "new_time"
+   ],
+   "examples": [
+    "Mera visit kal ke liye shift kar do.",
+    "मेरा विजिट कल के लिए शिफ्ट कर दो।",
+    "Please reschedule my visit to tomorrow."
+   ]
+  },
+  {
+   "name": "doorstep_banking_cancel_visit",
+   "description": "Cancels a pending or upcoming doorstep banking appointment.",
+   "params": [
+    "visit_id"
+   ],
+   "examples": [
+    "Mujhe yeh visit cancel karna hai.",
+    "मुझे यह विजिट कैंसिल करना है।",
+    "Cancel this doorstep visit."
+   ]
+  },
+  {
+   "name": "doorstep_banking_track_visit_status",
+   "description": "Retrieves the current status of a scheduled or in-progress doorstep banking visit.",
+   "params": [
+    "visit_id"
+   ],
+   "examples": [
+    "Meri booking ka status batao.",
+    "मेरी बुकिंग का स्टेटस बताओ।",
+    "Tell me the status of my booking."
+   ]
+  },
+  {
+   "name": "doorstep_banking_upload_kyc_document",
+   "description": "Submits a KYC document for verification during a doorstep banking request.",
+   "params": [
+    "visit_id",
+    "document_type",
+    "file_url"
+   ],
+   "examples": [
+    "Aadhaar ka photo bhej do.",
+    "आधार का फोटो भेज दो।",
+    "Send the Aadhaar photo."
+   ]
+  },
+  {
+   "name": "doorstep_banking_check_agent_availability",
+   "description": "Checks available time slots and agent coverage for a given pincode and service.",
+   "params": [
+    "service_type",
+    "customer_pincode",
+    "preferred_date"
+   ],
+   "examples": [
+    "Mere area mein kaun sa slot free hai?",
+    "मेरे एरिया में कौन सा स्लॉट फ्री है?",
+    "Which slot is free in my area?"
+   ]
+  },
+  {
+   "name": "doorstep_banking_modify_visit_address",
+   "description": "Updates the delivery or service address for an existing doorstep banking booking.",
+   "params": [
+    "visit_id",
+    "new_address",
+    "new_pincode"
+   ],
+   "examples": [
+    "Address change karna hai.",
+    "एड्रेस चेंज करना है।",
+    "I need to change the address."
+   ]
+  },
+  {
+   "name": "doorstep_banking_request_callback",
+   "description": "Requests a human agent callback to discuss a doorstep banking requirement.",
+   "params": [
+    "customer_mobile",
+    "reason",
+    "preferred_time"
+   ],
+   "examples": [
+    "Mujhe agent ka call back chahiye.",
+    "मुझे एजेंट का कॉल बैक चाहिए।",
+    "I want a callback from an agent."
+   ]
+  },
+  {
+   "name": "doorstep_banking_get_service_charges",
+   "description": "Retrieves applicable fees and charges for a selected doorstep banking service.",
+   "params": [
+    "service_type"
+   ],
+   "examples": [
+    "Iske charges kya hain?",
+    "इसके चार्जेस क्या हैं?",
+    "What are the charges for this?"
+   ]
+  },
+  {
+   "name": "doorstep_banking_close_request",
+   "description": "Closes or withdraws an open doorstep banking service request.",
+   "params": [
+    "request_id",
+    "closure_reason"
+   ],
+   "examples": [
+    "Mujhe yeh request band karni hai.",
+    "मुझे यह रिक्वेस्ट बंद करनी है।",
+    "I want to close this request."
+   ]
+  }
+ ],
+ "senior citizen services": [
+  {
+   "name": "senior_services_get_pension_credit_status",
+   "description": "Looks up whether the senior citizen's monthly pension has been credited to their account and returns the date and amount.",
+   "params": [
+    "account_number",
+    "pension_scheme_code"
+   ],
+   "examples": [
+    "Mujhe check karna hai ki is mahine pension aayi ya nahi.",
+    "मेरी पेंशन का स्टेटस बताओ।",
+    "Please tell me if my pension was credited this month."
+   ]
+  },
+  {
+   "name": "senior_services_update_nominee_details",
+   "description": "Changes or adds a nominee for a senior citizen's savings account or fixed deposit after verifying identity.",
+   "params": [
+    "account_number",
+    "nominee_name",
+    "nominee_relationship",
+    "nominee_aadhaar"
+   ],
+   "examples": [
+    "Nominee change karna hai account mein.",
+    "खाते में नॉमिनी अपडेट कर दो।",
+    "I want to update the nominee for my account."
+   ]
+  },
+  {
+   "name": "senior_services_request_home_visit",
+   "description": "Schedules an in-person bank representative visit to the senior citizen's residence for document collection or assistance.",
+   "params": [
+    "customer_mobile",
+    "preferred_date",
+    "preferred_time_slot",
+    "address"
+   ],
+   "examples": [
+    "Mujhe ghar aake help chahiye, visit book kar do.",
+    "घर पर बैंक अधिकारी भेजिए।",
+    "Please arrange a home visit for me."
+   ]
+  },
+  {
+   "name": "senior_services_get_medicine_bill_payment_status",
+   "description": "Retrieves the payment status of a medicine bill that was previously paid through the bank's assisted payment service.",
+   "params": [
+    "transaction_reference",
+    "bill_month"
+   ],
+   "examples": [
+    "Dawai ka bill payment hua ya nahi check karo.",
+    "दवा के बिल का पेमेंट स्टेटस बताओ।",
+    "Check if my medicine bill payment went through."
+   ]
+  },
+  {
+   "name": "senior_services_enable_auto_debit_for_insurance",
+   "description": "Activates automatic monthly debit from the senior citizen's account for their life or health insurance premium.",
+   "params": [
+    "account_number",
+    "insurance_policy_number",
+    "premium_amount",
+    "start_date"
+   ],
+   "examples": [
+    "Insurance ka auto debit chalu kar do.",
+    "बीमा का ऑटो डेबिट चालू कर दो।",
+    "Turn on auto debit for my insurance."
+   ]
+  },
+  {
+   "name": "senior_services_get_accessibility_facility_info",
+   "description": "Looks up available accessibility facilities such as wheelchair access, reserved parking, or braille signage at a branch.",
+   "params": [
+    "branch_code",
+    "facility_type"
+   ],
+   "examples": [
+    "Wheelchair available hai kya branch pe?",
+    "शाखा में व्हीलचेयर की सुविधा है क्या?.",
+    "Tell me if wheelchair access is available at the branch."
+   ]
+  },
+  {
+   "name": "senior_services_lodge_fraud_report",
+   "description": "Registers a fraud or suspicious transaction complaint specifically for a senior citizen's account.",
+   "params": [
+    "account_number",
+    "incident_date",
+    "transaction_amount",
+    "fraud_description"
+   ],
+   "examples": [
+    "Account se galat transaction hua hai, report karna hai.",
+    "खाते में धोखाधड़ी की शिकायत दर्ज करो।",
+    "I need to report a fraudulent transaction on my account."
+   ]
+  },
+  {
+   "name": "senior_services_request_large_print_passbook",
+   "description": "Places an order for a large-print passbook to be mailed to the senior citizen's registered address.",
+   "params": [
+    "account_number",
+    "delivery_address"
+   ],
+   "examples": [
+    "Bada print wala passbook bhijwa do.",
+    "बड़ा अक्षर वाला पासबुक भेजिए।",
+    "Please send me a large print passbook."
+   ]
+  },
+  {
+   "name": "senior_services_get_subsidy_eligibility",
+   "description": "Checks whether the senior citizen qualifies for government or bank-specific interest subsidy schemes.",
+   "params": [
+    "customer_dob",
+    "annual_income",
+    "state_code"
+   ],
+   "examples": [
+    "Mujhe subsidy ke liye eligible hoon ya nahi batao.",
+    "मैं सब्सिडी के लिए पात्र हूँ या नहीं बताइए।",
+    "Tell me if I am eligible for any subsidy."
+   ]
+  },
+  {
+   "name": "senior_services_schedule_account_statement_dispatch",
+   "description": "Arranges for a physical copy of the account statement to be printed and sent by post to the senior citizen.",
+   "params": [
+    "account_number",
+    "statement_period",
+    "postal_address"
+   ],
+   "examples": [
+    "Statement ka print nikal ke ghar bhej do.",
+    "स्टेटमेंट की कॉपी डाक से भेजिए।",
+    "Please dispatch a printed statement to my home."
+   ]
+  }
+ ],
+ "joint accounts and minors' accounts": [
+  {
+   "name": "joint_account_get_holders",
+   "description": "Retrieves the list of all authorized holders linked to a specified joint account.",
+   "params": [
+    "account_number",
+    "account_type"
+   ],
+   "examples": [
+    "Mujhe is joint account ke saare holders dekhne hain.",
+    "इस जॉइंट अकाउंट के सभी होल्डर्स बताइए.",
+    "Show me all account holders for this joint account."
+   ]
+  },
+  {
+   "name": "joint_account_update_holder_status",
+   "description": "Changes the operational or signature status of a specific holder on a joint account.",
+   "params": [
+    "account_number",
+    "holder_id",
+    "new_status"
+   ],
+   "examples": [
+    "Mera co-holder ka status active karna hai.",
+    "इस जॉइंट अकाउंट में होल्डर की स्थिति सक्रिय करें.",
+    "I want to update the co-holder status."
+   ]
+  },
+  {
+   "name": "joint_account_add_holder",
+   "description": "Registers a new individual as an authorized holder on an existing joint account.",
+   "params": [
+    "account_number",
+    "new_holder_name",
+    "new_holder_dob",
+    "new_holder_relationship"
+   ],
+   "examples": [
+    "Naya holder add karna hai account mein.",
+    "इस जॉइंट अकाउंट में नया होल्डर जोड़ें.",
+    "Please add a new holder to the account."
+   ]
+  },
+  {
+   "name": "joint_account_remove_holder",
+   "description": "Deletes an existing holder from a joint account upon verification.",
+   "params": [
+    "account_number",
+    "holder_id",
+    "reason_code"
+   ],
+   "examples": [
+    "Ek holder ko remove karna hai.",
+    "इस जॉइंट अकाउंट से होल्डर हटाएं.",
+    "I need to remove a holder."
+   ]
+  },
+  {
+   "name": "minor_account_get_guardian_details",
+   "description": "Fetches the registered guardian information for a minor's savings or current account.",
+   "params": [
+    "account_number"
+   ],
+   "examples": [
+    "Guardian details chahiye minor account ke liye.",
+    "माइनर अकाउंट के गार्जियन का विवरण बताइए.",
+    "Get the guardian details for the minor account."
+   ]
+  },
+  {
+   "name": "minor_account_update_guardian",
+   "description": "Replaces or corrects the guardian record associated with a minor's account.",
+   "params": [
+    "account_number",
+    "new_guardian_name",
+    "new_guardian_contact",
+    "new_guardian_relationship"
+   ],
+   "examples": [
+    "Guardian ka number change ho gaya hai.",
+    "माइनर अकाउंट का गार्जियन अपडेट करें.",
+    "Update the guardian contact details."
+   ]
+  },
+  {
+   "name": "minor_account_freeze_account",
+   "description": "Temporarily suspends all debit transactions on a minor's account.",
+   "params": [
+    "account_number",
+    "freeze_reason",
+    "freeze_duration_days"
+   ],
+   "examples": [
+    "Account ko thode din ke liye freeze kar do.",
+    "माइनर अकाउंट को अस्थायी रूप से फ्रीज करें.",
+    "Freeze this minor account immediately."
+   ]
+  },
+  {
+   "name": "minor_account_unfreeze_account",
+   "description": "Restores normal transaction capabilities to a previously frozen minor account.",
+   "params": [
+    "account_number",
+    "unfreeze_reason",
+    "authorized_signatory_code"
+   ],
+   "examples": [
+    "Ab account unfreeze kar do.",
+    "माइनर अकाउंट को फिर से चालू करें.",
+    "Unfreeze the minor account now."
+   ]
+  },
+  {
+   "name": "minor_account_get_maturity_date",
+   "description": "Returns the date on which a minor account will automatically convert to a regular adult account.",
+   "params": [
+    "account_number"
+   ],
+   "examples": [
+    "Account kab mature hoga ye batao.",
+    "माइनर अकाउंट की परिपक्वता तिथि बताइए.",
+    "Tell me when this minor account matures."
+   ]
+  },
+  {
+   "name": "minor_account_transfer_to_adult",
+   "description": "Initiates the process to convert a minor account into a standard individual account upon reaching maturity.",
+   "params": [
+    "account_number",
+    "customer_dob",
+    "kyc_document_reference"
+   ],
+   "examples": [
+    "Account ko adult mein convert karna hai.",
+    "माइनर अकाउंट को वयस्क खाते में बदलें.",
+    "Convert this minor account to an adult account."
+   ]
+  }
+ ],
+ "fraud and cyber security": [
+  {
+   "name": "fraud_alert_raise_ticket",
+   "description": "Logs a new fraud complaint ticket in the security operations system.",
+   "params": [
+    "caller_id",
+    "transaction_id",
+    "incident_summary",
+    "timestamp"
+   ],
+   "examples": [
+    "Mera account block kar do, mujhe suspicious activity dikh rahi hai.",
+    "मेरे बैंक खाते से कोई अनधिकृत लेन-देन हुआ है, शिकायत दर्ज करें.",
+    "I noticed a transaction I did not authorize, please raise a ticket."
+   ]
+  },
+  {
+   "name": "fraud_alert_check_ticket_status",
+   "description": "Retrieves the current status and latest update for an existing fraud ticket.",
+   "params": [
+    "ticket_id"
+   ],
+   "examples": [
+    "Mera ticket number 45892 ka kya status hai?",
+    "टिकट 45892 की वर्तमान स्थिति बताएं.",
+    "Can you tell me the status of ticket 45892?"
+   ]
+  },
+  {
+   "name": "fraud_alert_block_card_account",
+   "description": "Immediately blocks the specified debit card or linked account to prevent further unauthorized usage.",
+   "params": [
+    "card_number_or_account_id",
+    "block_reason",
+    "caller_verification_code"
+   ],
+   "examples": [
+    "Mere card ko turant block karo, fraud ho raha hai.",
+    "मेरे कार्ड को तुरंत ब्लॉक कर दीजिए, धोखाधड़ी हो रही है.",
+    "Please block my card right away, I suspect fraud."
+   ]
+  },
+  {
+   "name": "fraud_alert_whitelist_beneficiary",
+   "description": "Adds a trusted payee to the customer's secure whitelist after verification.",
+   "params": [
+    "beneficiary_account_number",
+    "beneficiary_name",
+    "ifsc_code",
+    "caller_otp"
+   ],
+   "examples": [
+    "Is beneficiary ko whitelist mein daal do.",
+    "इस लाभार्थी को व्हाइटलिस्ट में जोड़ दें.",
+    "Add this beneficiary to my whitelist."
+   ]
+  },
+  {
+   "name": "fraud_alert_report_phishing_url",
+   "description": "Submits a suspected phishing or malware URL to the cybersecurity threat intelligence team.",
+   "params": [
+    "url",
+    "caller_ip_address",
+    "caller_contact",
+    "threat_description"
+   ],
+   "examples": [
+    "Yeh link fake lag raha hai, report karo.",
+    "यह लिंक फर्जी लग रहा है, रिपोर्ट करें.",
+    "This link looks fake, please report it."
+   ]
+  },
+  {
+   "name": "fraud_alert_get_recent_risk_events",
+   "description": "Fetches the latest high-risk security events associated with the caller's profile.",
+   "params": [
+    "caller_id",
+    "lookback_hours"
+   ],
+   "examples": [
+    "Mere account pe pichle 24 ghante mein kya risk events aaye?",
+    "पिछले 24 घंटों में मेरे खाते पर क्या जोखिम घटनाएँ आईं?",
+    "What risk events occurred on my account in the last 24 hours?"
+   ]
+  },
+  {
+   "name": "fraud_alert_disable_upi_link",
+   "description": "Revokes an active UPI collect request or payment link generated by the customer.",
+   "params": [
+    "upi_link_id",
+    "caller_otp"
+   ],
+   "examples": [
+    "Is UPI link ko abhi deactivate kar do.",
+    "इस यूपीआई लिंक को अभी निष्क्रिय कर दें.",
+    "Deactivate this UPI link immediately."
+   ]
+  },
+  {
+   "name": "fraud_alert_request_chargeback",
+   "description": "Initiates a chargeback request for a disputed card transaction within the allowed window.",
+   "params": [
+    "transaction_id",
+    "chargeback_reason",
+    "supporting_document_ref"
+   ],
+   "examples": [
+    "Is transaction pe chargeback file kar do.",
+    "इस लेनदेन पर चार्जबैक दर्ज करें.",
+    "File a chargeback for this transaction."
+   ]
+  },
+  {
+   "name": "fraud_alert_verify_otp_device",
+   "description": "Validates and registers a new device as trusted using the one-time password sent to the customer.",
+   "params": [
+    "device_id",
+    "otp",
+    "customer_mobile"
+   ],
+   "examples": [
+    "Naye device pe OTP verify kar do.",
+    "नए डिवाइस पर ओटीपी सत्यापित करें.",
+    "Verify the OTP for the new device."
+   ]
+  },
+  {
+   "name": "fraud_alert_suspend_netbanking_session",
+   "description": "Terminates all active internet banking sessions for the customer's profile.",
+   "params": [
+    "caller_id",
+    "session_id"
+   ],
+   "examples": [
+    "Mere saare netbanking sessions band kar do.",
+    "मेरे सभी नेटबैंकिंग सत्र बंद कर दें.",
+    "Close all my netbanking sessions."
+   ]
+  }
+ ],
+ "loan against mutual funds": [
+  {
+   "name": "mataf_get_collateral_value",
+   "description": "Looks up the current market valuation of the pledged mutual fund units.",
+   "params": [
+    "folio_number",
+    "scheme_name"
+   ],
+   "examples": [
+    "Mera folio number se collateral value bataiye.",
+    "मेरा फॉोलियो नंबर से कोलैटरल वैल्यू बताइए.",
+    "Please tell me the collateral value for my folio number."
+   ]
+  },
+  {
+   "name": "mataf_check_eligibility",
+   "description": "Determines whether the pledged mutual fund holdings qualify for an advance against them.",
+   "params": [
+    "folio_number",
+    "client_pan",
+    "account_type"
+   ],
+   "examples": [
+    "Check kar do eligibility.",
+    "पात्रता जांच कर दीजिए.",
+    "Check my eligibility for a loan against these funds."
+   ]
+  },
+  {
+   "name": "mataf_create_loan_application",
+   "description": "Opens a new loan application using the specified mutual fund holdings as security.",
+   "params": [
+    "folio_number",
+    "requested_amount",
+    "applicant_name",
+    "mobile_number"
+   ],
+   "examples": [
+    "Naya loan application bana dijiye.",
+    "नया ऋण आवेदन बना दीजिए.",
+    "Create a new loan application for me."
+   ]
+  },
+  {
+   "name": "mataf_submit_kyc",
+   "description": "Uploads or records the customer's identity and address proofs for regulatory verification.",
+   "params": [
+    "application_id",
+    "pan_scan",
+    "address_proof_scan",
+    "signature_image"
+   ],
+   "examples": [
+    "KYC documents upload kar do.",
+    "केवाईसी दस्तावेज अपलोड कर दीजिए.",
+    "Submit my KYC documents for verification."
+   ]
+  },
+  {
+   "name": "mataf_disburse_loan",
+   "description": "Transfers the approved loan amount to the customer's linked savings account.",
+   "params": [
+    "application_id",
+    "disbursement_account_number",
+    "ifsc_code"
+   ],
+   "examples": [
+    "Loan amount disburse kar do.",
+    "ऋण राशि वितरित कर दीजिए.",
+    "Disburse the loan amount to my account."
+   ]
+  },
+  {
+   "name": "mataf_get_interest_due",
+   "description": "Retrieves the interest amount currently due on the outstanding loan balance.",
+   "params": [
+    "loan_account_number",
+    "billing_cycle"
+   ],
+   "examples": [
+    "Interest due kitna hai?",
+    "बकाया ब्याज कितना है?",
+    "How much interest is due this cycle?"
+   ]
+  },
+  {
+   "name": "mataf_pay_emi",
+   "description": "Processes a one-time repayment towards the equated monthly installment.",
+   "params": [
+    "loan_account_number",
+    "payment_amount",
+    "payment_method"
+   ],
+   "examples": [
+    "EMI pay kar do.",
+    "ईएमआई भर दीजिए.",
+    "Pay my EMI right now."
+   ]
+  },
+  {
+   "name": "mataf_modify_loan_tenor",
+   "description": "Requests a change to the remaining repayment period of the loan.",
+   "params": [
+    "loan_account_number",
+    "new_tenor_months",
+    "reason_code"
+   ],
+   "examples": [
+    "Tenor badalna hai.",
+    "अवधि बदलना है.",
+    "I want to modify my loan tenor."
+   ]
+  },
+  {
+   "name": "mataf_get_foreclosure_quote",
+   "description": "Calculates the total amount required to completely close the loan before maturity.",
+   "params": [
+    "loan_account_number",
+    "foreclosure_date"
+   ],
+   "examples": [
+    "Foreclosure amount bataiye.",
+    "प्री-क्लोजर राशि बताइए.",
+    "Give me the foreclosure quote."
+   ]
+  },
+  {
+   "name": "mataf_close_loan",
+   "description": "Initiates the final settlement and releases the mutual fund lien upon full repayment.",
+   "params": [
+    "loan_account_number",
+    "final_payment_amount",
+    "lien_release_confirmation"
+   ],
+   "examples": [
+    "Loan close kar do.",
+    "ऋण बंद कर दीजिए.",
+    "Close my loan today."
+   ]
+  }
+ ],
+ "car insurance claims": [
+  {
+   "name": "car_insurance_claim_get_status",
+   "description": "Looks up the current processing status of an existing car insurance claim using the claim number.",
+   "params": [
+    "claim_number",
+    "policy_number"
+   ],
+   "examples": [
+    "Mera claim ka status bataiye na.",
+    "Mujhe apna claim status check karna hai.",
+    "What is the status of my claim?"
+   ]
+  },
+  {
+   "name": "car_insurance_claim_lodge_new",
+   "description": "Creates a new car insurance claim record by submitting the incident and vehicle details.",
+   "params": [
+    "policy_number",
+    "vehicle_registration_number",
+    "incident_date",
+    "incident_location"
+   ],
+   "examples": [
+    "Naya claim register kar do.",
+    "Mujhe ek naya car insurance claim file karna hai.",
+    "I want to lodge a new car insurance claim."
+   ]
+  },
+  {
+   "name": "car_insurance_claim_upload_photo",
+   "description": "Attaches photographic evidence to an existing claim record for verification.",
+   "params": [
+    "claim_number",
+    "photo_url",
+    "photo_type"
+   ],
+   "examples": [
+    "Photo upload kar do is claim mein.",
+    "Mujhe damage ki photo upload karni hai.",
+    "Please upload the damage photos to my claim."
+   ]
+  },
+  {
+   "name": "car_insurance_claim_update_contact",
+   "description": "Changes the registered mobile number or email address linked to a claim.",
+   "params": [
+    "claim_number",
+    "contact_type",
+    "new_value"
+   ],
+   "examples": [
+    "Mera number update kar do claim pe.",
+    "Mujhe apna contact detail change karna hai.",
+    "Update my mobile number on the claim."
+   ]
+  },
+  {
+   "name": "car_insurance_claim_assign_garage",
+   "description": "Assigns an approved cashless garage to the claim for vehicle repair.",
+   "params": [
+    "claim_number",
+    "garage_id"
+   ],
+   "examples": [
+    "Nearest garage assign kar do.",
+    "Mujhe nearest garage assign karna hai.",
+    "Assign the nearest garage to my claim."
+   ]
+  },
+  {
+   "name": "car_insurance_claim_check_deductible",
+   "description": "Retrieves the excess or deductible amount payable by the policyholder for a specific claim.",
+   "params": [
+    "claim_number"
+   ],
+   "examples": [
+    "Kitna deductible lagega batao.",
+    "Mujhe deductible amount jaan-na hai.",
+    "How much is the deductible for this claim?"
+   ]
+  },
+  {
+   "name": "car_insurance_claim_submit_repair_bill",
+   "description": "Records the final repair invoice submitted by the garage against a settled claim.",
+   "params": [
+    "claim_number",
+    "repair_invoice_amount",
+    "garage_name"
+   ],
+   "examples": [
+    "Repair bill submit kar do.",
+    "Mujhe repair bill submit karna hai.",
+    "Submit the repair bill for approval."
+   ]
+  },
+  {
+   "name": "car_insurance_claim_request_surveyor",
+   "description": "Requests an on-site surveyor visit to inspect the vehicle damage for a pending claim.",
+   "params": [
+    "claim_number",
+    "preferred_date"
+   ],
+   "examples": [
+    "Surveyor bhejne ka request daal do.",
+    "Mujhe surveyor visit schedule karni hai.",
+    "Schedule a surveyor visit for the claim."
+   ]
+  },
+  {
+   "name": "car_insurance_claim_close_approved",
+   "description": "Marks a fully settled car insurance claim as closed in the system.",
+   "params": [
+    "claim_number",
+    "closure_reason"
+   ],
+   "examples": [
+    "Claim close kar do ab.",
+    "Mujhe claim close karvana hai.",
+    "Please close this approved claim."
+   ]
+  },
+  {
+   "name": "car_insurance_claim_get_survey_report",
+   "description": "Fetches and returns the uploaded surveyor inspection report for a claim.",
+   "params": [
+    "claim_number"
+   ],
+   "examples": [
+    "Survey report dikhao mujhe.",
+    "Mujhe surveyor report chahiye.",
+    "Show me the survey report."
+   ]
+  }
+ ],
+ "home renovation loans": [
+  {
+   "name": "home_renovation_loan_get_eligibility",
+   "description": "Retrieves the preliminary eligibility criteria and maximum sanctioned limit for a home renovation loan based on the customer's profile.",
+   "params": [
+    "customer_id",
+    "property_city",
+    "estimated_project_cost"
+   ],
+   "examples": [
+    "Mera renovation loan ka eligibility batao.",
+    "मुझे होम रेनोवेशन लोन की एलिजिबिलिटी बता दीजिए.",
+    "Tell me my eligibility for the renovation loan."
+   ]
+  },
+  {
+   "name": "home_renovation_loan_check_documents_required",
+   "description": "Returns the checklist of mandatory and optional documents needed to process a home renovation loan application.",
+   "params": [
+    "loan_type",
+    "property_location"
+   ],
+   "examples": [
+    "Kaun se documents lagenge iske liye?",
+    "इस लोन के लिए कौन से डॉक्यूमेंट्स चाहिए?",
+    "Which documents are required for this loan?"
+   ]
+  },
+  {
+   "name": "home_renovation_loan_submit_application",
+   "description": "Submits a new home renovation loan request into the bank's backend system for further underwriting review.",
+   "params": [
+    "customer_id",
+    "property_address",
+    "renovation_scope",
+    "quoted_amount"
+   ],
+   "examples": [
+    "Mera application submit kar do.",
+    "मेरा आवेदन सबमिट कर दीजिए.",
+    "Please submit my application."
+   ]
+  },
+  {
+   "name": "home_renovation_loan_get_application_status",
+   "description": "Fetches the current processing stage and expected timeline for an existing home renovation loan application.",
+   "params": [
+    "application_id",
+    "customer_contact"
+   ],
+   "examples": [
+    "Application ka status kya hai?",
+    "आवेदन की स्थिति क्या है?",
+    "What is the status of my application?"
+   ]
+  },
+  {
+   "name": "home_renovation_loan_modify_project_details",
+   "description": "Updates the approved renovation scope or quoted amount in an existing home renovation loan record before disbursement.",
+   "params": [
+    "application_id",
+    "updated_scope",
+    "updated_quoted_amount"
+   ],
+   "examples": [
+    "Project details change karne hain.",
+    "प्रोजेक्ट डिटेल्स बदलनी हैं.",
+    "I need to modify my project details."
+   ]
+  },
+  {
+   "name": "home_renovation_loan_disburse_funds",
+   "description": "Triggers the release of sanctioned loan proceeds to the customer's linked account or contractor escrow.",
+   "params": [
+    "application_id",
+    "disbursement_mode",
+    "beneficiary_account_number"
+   ],
+   "examples": [
+    "Disbursement initiate karo.",
+    "डिस्बर्समेंट शुरू करें.",
+    "Initiate the disbursement."
+   ]
+  },
+  {
+   "name": "home_renovation_loan_request_foreclosure",
+   "description": "Processes a request to partially or fully close the outstanding home renovation loan balance ahead of schedule.",
+   "params": [
+    "loan_account_number",
+    "foreclosure_type",
+    "payment_amount"
+   ],
+   "examples": [
+    "Loan jaldi close karna hai.",
+    "लोन जल्दी बंद करना है.",
+    "I want to close the loan early."
+   ]
+  },
+  {
+   "name": "home_renovation_loan_get_emi_schedule",
+   "description": "Generates and returns the monthly EMI breakup, due dates, and outstanding principal for the renovation loan.",
+   "params": [
+    "loan_account_number",
+    "financial_year"
+   ],
+   "examples": [
+    "EMI schedule bhejo.",
+    "ईएमआई शेड्यूल भेज दीजिए.",
+    "Send me the EMI schedule."
+   ]
+  },
+  {
+   "name": "home_renovation_loan_report_fraudulent_transaction",
+   "description": "Logs a fraud complaint against a suspicious transaction linked to the home renovation loan account.",
+   "params": [
+    "loan_account_number",
+    "transaction_date",
+    "transaction_amount",
+    "fraud_description"
+   ],
+   "examples": [
+    "Yeh transaction fraud lag rahi hai.",
+    "यह ट्रांजेक्शन फ्रॉड लग रही है.",
+    "This transaction looks fraudulent."
+   ]
+  },
+  {
+   "name": "home_renovation_loan_update_contact_details",
+   "description": "Changes the registered mobile number, email address, or postal mailing address for home renovation loan communications.",
+   "params": [
+    "loan_account_number",
+    "new_mobile_number",
+    "new_email_address",
+    "new_mailing_address"
+   ],
+   "examples": [
+    "Mera number update kar do.",
+    "मेरा नंबर अपडेट कर दीजिए.",
+    "Please update my contact details."
+   ]
+  }
+ ],
+ "wedding loans": [
+  {
+   "name": "wedding_loan_check_eligibility",
+   "description": "Checks whether the caller meets the basic eligibility criteria for a wedding loan.",
+   "params": [
+    "monthly_income",
+    "credit_score",
+    "existing_loan_emi"
+   ],
+   "examples": [
+    "Mujhe check karna hai ki meri shaadi ke loan ki eligibility hai ya nahi.",
+    "मेरी शादी के लिए लोन की पात्रता क्या है?",
+    "Please check my eligibility for a wedding loan."
+   ]
+  },
+  {
+   "name": "wedding_loan_fetch_documents_required",
+   "description": "Retrieves the list of mandatory documents needed to apply for a wedding loan.",
+   "params": [],
+   "examples": [
+    "Wedding loan ke liye kaun kaun se documents lagte hain?",
+    "शादी के लोन के लिए कौन से दस्तावेज़ चाहिए?",
+    "Tell me the documents required for a wedding loan."
+   ]
+  },
+  {
+   "name": "wedding_loan_submit_application",
+   "description": "Submits a new wedding loan application using the provided applicant details.",
+   "params": [
+    "applicant_name",
+    "spouse_name",
+    "wedding_date",
+    "estimated_budget"
+   ],
+   "examples": [
+    "Meri wedding loan application submit kar do.",
+    "मेरी शादी के लोन की एप्लीकेशन जमा कर दीजिए.",
+    "Please submit my wedding loan application."
+   ]
+  },
+  {
+   "name": "wedding_loan_get_status",
+   "description": "Looks up the current processing status of an existing wedding loan application.",
+   "params": [
+    "application_id"
+   ],
+   "examples": [
+    "Meri wedding loan ka status bataiye.",
+    "मेरे वेडिंग लोन की स्थिति बताइए.",
+    "What is the status of my wedding loan?"
+   ]
+  },
+  {
+   "name": "wedding_loan_calculate_emi",
+   "description": "Calculates the estimated monthly EMI for a wedding loan based on requested amount and tenure.",
+   "params": [
+    "loan_amount",
+    "tenure_months"
+   ],
+   "examples": [
+    "15 lakh ke loan ka EMI kitna banega?",
+    "15 लाख के लोन की EMI कितनी होगी?",
+    "Calculate the EMI for a 15 lakh loan."
+   ]
+  },
+  {
+   "name": "wedding_loan_fetch_interest_rate",
+   "description": "Retrieves the current applicable interest rate for wedding loans.",
+   "params": [],
+   "examples": [
+    "Aaj kal wedding loan ka interest rate kya chal raha hai?",
+    "आज वेडिंग लोन का ब्याज दर क्या है?",
+    "What is the current interest rate for wedding loans?"
+   ]
+  },
+  {
+   "name": "wedding_loan_disburse_amount",
+   "description": "Initiates the disbursement of an approved wedding loan amount to the borrower's account.",
+   "params": [
+    "application_id",
+    "disbursement_account"
+   ],
+   "examples": [
+    "Approved amount mere account mein daal do.",
+    "स्वीकृत राशि मेरे खाते में डाल दीजिए.",
+    "Disburse the approved amount to my account."
+   ]
+  },
+  {
+   "name": "wedding_loan_make_prepayment",
+   "description": "Processes a partial prepayment toward an outstanding wedding loan balance.",
+   "params": [
+    "loan_account_number",
+    "prepayment_amount"
+   ],
+   "examples": [
+    "Main kuch extra paise prepay karna chahta hoon.",
+    "मैं कुछ अतिरिक्त पैसे प्रीपे करना चाहता हूँ।",
+    "I want to make a prepayment on my wedding loan."
+   ]
+  },
+  {
+   "name": "wedding_loan_schedule_emi_payment",
+   "description": "Schedules an automatic EMI payment for an active wedding loan.",
+   "params": [
+    "loan_account_number",
+    "payment_date",
+    "payment_method"
+   ],
+   "examples": [
+    "Meri EMI auto-debit set kar do.",
+    "मेरी EMI ऑटो-डेबिट सेट कर दीजिए।",
+    "Schedule my EMI payment via auto-debit."
+   ]
+  },
+  {
+   "name": "wedding_loan_close_account",
+   "description": "Closes a wedding loan account after verifying that all dues are settled.",
+   "params": [
+    "loan_account_number",
+    "closure_reason"
+   ],
+   "examples": [
+    "Mera wedding loan close karna hai ab.",
+    "मेरा वेडिंग लोन बंद करना है।",
+    "Please close my wedding loan account."
+   ]
+  }
+ ],
+ "medical loans": [
+  {
+   "name": "medical_loan_check_eligibility",
+   "description": "Checks whether the caller meets the basic eligibility criteria for a medical loan.",
+   "params": [
+    "pan_number",
+    "date_of_birth",
+    "monthly_income"
+   ],
+   "examples": [
+    "Mujhe check karna hai ki main eligible hoon ya nahi.",
+    "मेरी पात्रता जांचें।",
+    "Please check if I am eligible."
+   ]
+  },
+  {
+   "name": "medical_loan_get_interest_rate",
+   "description": "Retrieves the current applicable interest rate for a medical loan.",
+   "params": [
+    "loan_amount",
+    "tenure_months"
+   ],
+   "examples": [
+    "Medical loan ka interest rate kya hai?",
+    "मेडिकल लोन का ब्याज दर बताएं।",
+    "What is the interest rate for a medical loan?"
+   ]
+  },
+  {
+   "name": "medical_loan_calculate_emi",
+   "description": "Calculates the monthly EMI based on the specified loan amount and tenure.",
+   "params": [
+    "loan_amount",
+    "tenure_months",
+    "interest_rate"
+   ],
+   "examples": [
+    "10 lakh ka EMI batao.",
+    "10 लाख का EMI निकालें।",
+    "Calculate the EMI for 10 lakhs."
+   ]
+  },
+  {
+   "name": "medical_loan_submit_application",
+   "description": "Submits a new medical loan application using the provided details.",
+   "params": [
+    "applicant_name",
+    "mobile_number",
+    "hospital_name",
+    "estimated_cost"
+   ],
+   "examples": [
+    "Naya application submit kar do.",
+    "नया आवेदन जमा करें।",
+    "Submit a new application."
+   ]
+  },
+  {
+   "name": "medical_loan_upload_bill",
+   "description": "Registers a medical bill for upload and verification during processing.",
+   "params": [
+    "application_id",
+    "bill_image_url",
+    "hospital_gstin"
+   ],
+   "examples": [
+    "Bill upload kar do.",
+    "बिल अपलोड करें।",
+    "Upload the hospital bill."
+   ]
+  },
+  {
+   "name": "medical_loan_check_status",
+   "description": "Retrieves the current processing status of an existing medical loan application.",
+   "params": [
+    "application_id"
+   ],
+   "examples": [
+    "Status kya hai abhi?",
+    "स्थिति जांचें।",
+    "Check the status."
+   ]
+  },
+  {
+   "name": "medical_loan_disburse_funds",
+   "description": "Triggers the disbursement of approved loan funds directly to the hospital or claimant account.",
+   "params": [
+    "application_id",
+    "disbursement_mode",
+    "account_number"
+   ],
+   "examples": [
+    "Paise hospital ko bhej do.",
+    "धन अस्पताल को भेजें।",
+    "Disburse the funds."
+   ]
+  },
+  {
+   "name": "medical_loan_make_payment",
+   "description": "Processes a partial or full EMI payment toward the outstanding medical loan balance.",
+   "params": [
+    "loan_account_number",
+    "payment_amount",
+    "payment_method"
+   ],
+   "examples": [
+    "EMI pay kar do online.",
+    "EMI का भुगतान करें।",
+    "Make a payment."
+   ]
+  },
+  {
+   "name": "medical_loan_request_foreclosure",
+   "description": "Initiates an early closure request for the medical loan by paying the outstanding dues.",
+   "params": [
+    "loan_account_number",
+    "foreclosure_amount",
+    "closure_reason"
+   ],
+   "examples": [
+    "Loan jaldi close karna hai.",
+    "ऋण जल्दी बंद करें।",
+    "Request early foreclosure."
+   ]
+  },
+  {
+   "name": "medical_loan_get_documents_required",
+   "description": "Returns the list of mandatory documents needed to process a medical loan.",
+   "params": [],
+   "examples": [
+    "Kaunse documents lagenge?",
+    "कौन से दस्तावेज आवश्यक हैं?.",
+    "Tell me the required documents."
+   ]
+  }
+ ],
+ "credit line / overdraft": [
+  {
+   "name": "od_limit_check_available",
+   "description": "Retrieves the remaining available overdraft limit for a linked current account.",
+   "params": [
+    "account_number",
+    "customer_id"
+   ],
+   "examples": [
+    "Mere current account ka OD limit kitna bacha hai?",
+    "मेरे चालू खाते का ओवरड्राफ्ट लिमिट क्या बचा है?",
+    "Check the available OD limit for my account."
+   ]
+  },
+  {
+   "name": "od_interest_due_get",
+   "description": "Fetches the outstanding interest amount currently due on an active overdraft facility.",
+   "params": [
+    "facility_id",
+    "customer_id"
+   ],
+   "examples": [
+    "OD pe interest kitna pending hai abhi?",
+    "ओवरड्राफ्ट पर कितना ब्याज बकाया है?",
+    "What is the interest due on my overdraft?"
+   ]
+  },
+  {
+   "name": "od_statement_fetch_monthly",
+   "description": "Downloads or displays the most recent monthly statement for an overdraft account.",
+   "params": [
+    "account_number",
+    "statement_month"
+   ],
+   "examples": [
+    "Mujhe pichle mahine ka OD statement bhej do",
+    "पिछले महीने का ओवरड्राफ्ट स्टेटमेंट दिखाओ",
+    "Send me the monthly OD statement."
+   ]
+  },
+  {
+   "name": "od_request_increase_limit",
+   "description": "Submits a request to raise the sanctioned overdraft limit based on updated turnover or collateral details.",
+   "params": [
+    "account_number",
+    "requested_limit",
+    "supporting_document_reference"
+   ],
+   "examples": [
+    "Mera OD limit badhana hai, request daal do",
+    "मेरा ओवरड्राफ्ट लिमिट बढ़ाना है, अनुरोध दर्ज करें",
+    "I want to request an increase in my OD limit."
+   ]
+  },
+  {
+   "name": "od_collateral_update",
+   "description": "Updates or replaces the pledged collateral details for an existing overdraft facility.",
+   "params": [
+    "facility_id",
+    "new_collateral_id",
+    "customer_id"
+   ],
+   "examples": [
+    "OD ke liye naya collateral update kar do",
+    "ओवरड्राफ्ट के लिए नया गिरवी विवरण अपडेट करें",
+    "Update the collateral for my overdraft."
+   ]
+  },
+  {
+   "name": "od_emi_schedule_get",
+   "description": "Retrieves the upcoming EMI or installment repayment schedule for the overdraft.",
+   "params": [
+    "facility_id",
+    "start_date"
+   ],
+   "examples": [
+    "OD ki next due date bata do",
+    "ओवरड्राफ्ट की अगली किस्त की तारीख बताओ",
+    "Show me the OD EMI schedule."
+   ]
+  },
+  {
+   "name": "od_partial_repay",
+   "description": "Processes a partial repayment toward the outstanding principal of an overdraft facility.",
+   "params": [
+    "facility_id",
+    "repayment_amount",
+    "payment_reference"
+   ],
+   "examples": [
+    "OD mein thoda amount repay kar do",
+    "ओवरड्राफ्ट में थोड़ा भुगतान कर दो",
+    "Make a partial repayment to my overdraft."
+   ]
+  },
+  {
+   "name": "od_full_settle",
+   "description": "Closes the overdraft facility in full by applying the provided payment amount.",
+   "params": [
+    "facility_id",
+    "settlement_amount",
+    "payment_reference"
+   ],
+   "examples": [
+    "OD ko full settle kar do",
+    "ओवरड्राफ्ट पूरी तरह बंद कर दो",
+    "Fully settle my overdraft."
+   ]
+  },
+  {
+   "name": "od_auto_debit_toggle",
+   "description": "Enables or disables the NACH/ECS auto-debit mandate for scheduled OD repayments.",
+   "params": [
+    "facility_id",
+    "auto_debit_enabled"
+   ],
+   "examples": [
+    "OD ka auto debit on ya off karo",
+    "ओवरड्राफ्ट का ऑटो डेबिट चालू या बंद करें",
+    "Toggle auto-debit for my OD."
+   ]
+  },
+  {
+   "name": "od_closure_request",
+   "description": "Initiates the formal closure process for an overdraft facility after full repayment verification.",
+   "params": [
+    "facility_id",
+    "customer_id",
+    "closure_reason_code"
+   ],
+   "examples": [
+    "Mera OD account band kar do",
+    "मेरा ओवरड्राफ्ट खाता बंद कर दो",
+    "Request closure of my overdraft."
+   ]
+  }
+ ]
+}

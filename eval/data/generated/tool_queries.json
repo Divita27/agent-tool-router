@@ -1,0 +1,5592 @@
+{
+ "list_loans": [
+  {
+   "style": "hinglish",
+   "text": "mujhe check karna hai ki mere kitne loan chal rahe hain aur unki details kya hain"
+  },
+  {
+   "style": "codemix",
+   "text": "mera jo bhi loan outstanding hai uska status bataiye"
+  },
+  {
+   "style": "english",
+   "text": "Can you pull up all my active loans and their monthly payments?"
+  },
+  {
+   "style": "hinglish",
+   "text": "main apni car finance ki details dekhna chahta hoon"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे सारे loan products और उनकी EMI amount दिखा दो"
+  },
+  {
+   "style": "english",
+   "text": "I need a complete breakdown of my personal and home loans"
+  },
+  {
+   "style": "hinglish",
+   "text": "batao mere upar abhi total kitna amount due hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे credit card aur fixed deposit ka status kya है"
+  },
+  {
+   "style": "english",
+   "text": "Just tell me the product name, balance, and EMI for every loan I have with you"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apni pending liabilities ka poora hisaab chahiye"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे जितने भी loans हैं उनकी list दिखा दो"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to verify the outstanding amount and EMI schedule for my accounts"
+  }
+ ],
+ "get_overdue_emis": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe check karna hai ki mere loan ke kitne paise pending hain"
+  },
+  {
+   "style": "codemix",
+   "text": "mere loan ki EMI miss ho gayi hai uska total amount batao"
+  },
+  {
+   "style": "english",
+   "text": "I haven't paid my installments on time, can you tell me how much is due?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe yaad nahi exact date, par pichle mahine se ek bhi payment nahi ki hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan की कौन सी EMIs रुकी हुई हैं और total कितना बकाया है"
+  },
+  {
+   "style": "english",
+   "text": "I need to know which of my monthly dues are overdue and the total pending amount"
+  },
+  {
+   "style": "hinglish",
+   "text": "Meri salary late ho gayi thi isliye is mahine ka installment nahi ja paya"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे home loan की missed payments की details दिखा दो"
+  },
+  {
+   "style": "english",
+   "text": "I missed a few payments recently, please let me know what I owe"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe darr lag raha hai ki kahi mere account pe penalty na lag jaye"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan की कौन सी किश्तें bounce हुई हैं total बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me exactly which of my loan installments are overdue and the total balance?"
+  }
+ ],
+ "get_interest_rate": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apne home loan ka interest rate pata karna hai, wo bata sakte ho?"
+  },
+  {
+   "style": "codemix",
+   "text": "mera loan ka rate kya chal raha hai, check kar ke batao na"
+  },
+  {
+   "style": "english",
+   "text": "I have an active loan and I need to know what interest I am paying right now."
+  },
+  {
+   "style": "hinglish",
+   "text": "bhai, mera loan ID hai L1005, iska rate fixed hai ya floating?"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan L1005 का interest rate कितना है और type क्या है"
+  },
+  {
+   "style": "english",
+   "text": "Can you check the interest details for my loan, ID is L1005?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe yaad nahi aa raha mera loan number, par mujhe bas ye jaanna hai ki mera current rate kya set hai."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा loan का interest rate और fixed ya floating status check करो"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to find out the interest rate on my existing loan and whether it is fixed or floating."
+  },
+  {
+   "style": "hinglish",
+   "text": "yaar, maine suna tha rates badh gaye hain, mere loan ka kya scene hai batao."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे existing loan का interest rate और उसका type बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Please tell me the exact interest rate on my current loan and if it is fixed or floating."
+  }
+ ],
+ "get_home_loan_disbursement_status": [
+  {
+   "style": "hinglish",
+   "text": "mera home loan ka amount kitna release hua hai aur kitna baaki hai bata sakte ho"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe check karna hai ki mere property loan mein abhi tak kitne paise aaye hain"
+  },
+  {
+   "style": "hinglish",
+   "text": "loan account ka disbursement status kya hai, thoda update de do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे home loan में कितना disburse हुआ है और कितना बचा है"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan account का amount कितना release हुआ है ये देखना है"
+  },
+  {
+   "style": "codemix",
+   "text": "कितनी amount अभी pending है मेरे property loan में"
+  },
+  {
+   "style": "english",
+   "text": "I want to know how much of my home loan has been paid out so far"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me the remaining balance against my disbursed home loan amount?"
+  },
+  {
+   "style": "english",
+   "text": "I need to check what portion of my housing loan is still pending from your side"
+  },
+  {
+   "style": "hinglish",
+   "text": "paison ka hisaab samajhna hai, batao kitna loan clear hua aur kitna bacha hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे home loan disbursement का status बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Please tell me the total amount disbursed and the outstanding amount for my home loan."
+  }
+ ],
+ "get_property_documents_status": [
+  {
+   "style": "hinglish",
+   "text": "mera home loan ka original paper kahan rakha hai, please bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "घर के loan के property documents कहाँ हैं, मुझे urgently जानना है"
+  },
+  {
+   "style": "english",
+   "text": "I need to know the current location of my house loan papers"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe yaad nahi aa raha mere property ke documents bank mein hain ya ghar par, check karoge"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे home loan के original papers का status बताओ ना"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me where my home loan property documents are right now?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera ghar ka loan hai, uske kagzat ka kya scene hai abhi"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan के property documents कहाँ रखे हैं, status check करो"
+  },
+  {
+   "style": "english",
+   "text": "Where are the original papers for my home loan filed?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe ek baar confirm karna tha ki mere ghar ke loan ke papers safe hain ya nahi"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे property documents कहाँ हैं, please check कर लो"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to find out the whereabouts of my home loan documents"
+  }
+ ],
+ "check_payment_status": [
+  {
+   "style": "hinglish",
+   "text": "maine kal EMI bheji thi, wo abhi tak update nahi hui kya?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera payment stuck lag raha hai, please check kar lo."
+  },
+  {
+   "style": "hinglish",
+   "text": "kya aap bata sakte ho mera jo last due tha wo clear hua ya nahi?"
+  },
+  {
+   "style": "codemix",
+   "text": "मैंने payment कर दिया है पर status क्या है मुझे check करके बताओ"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा transaction pending दिख रहा है, क्या issue है ये बताओ"
+  },
+  {
+   "style": "codemix",
+   "text": "मैंने online transfer किया था, वो reflect क्यों नहीं हो रहा"
+  },
+  {
+   "style": "english",
+   "text": "I paid my vehicle loan yesterday, can you tell me if it went through?"
+  },
+  {
+   "style": "english",
+   "text": "I am getting an error on my app, I need to know if the money left my account."
+  },
+  {
+   "style": "english",
+   "text": "Please verify whether my recent credit card bill payment has been received."
+  },
+  {
+   "style": "english",
+   "text": "I transferred the amount for my fixed deposit, just want to confirm it hit your end."
+  },
+  {
+   "style": "english",
+   "text": "My home loan installment is showing as unpaid, I need you to look into it."
+  },
+  {
+   "style": "english",
+   "text": "I made the payment this morning but I haven't got any confirmation, what is the status?"
+  }
+ ],
+ "request_loan_restructuring": [
+  {
+   "style": "hinglish",
+   "text": "bhai meri salary cut ho gayi hai, toh kya main apni loan ki EMI thodi kam karwa sakta hoon?"
+  },
+  {
+   "style": "hinglish",
+   "text": "business bilkul slow chal raha hai, mujhe loan ki tenure extend karni padegi warna default ho jayega"
+  },
+  {
+   "style": "hinglish",
+   "text": "ghar mein medical emergency aa gayi thi isliye pichle kuch mahine se payment time pe nahi ja rahi, kuch adjust kar do na"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी job chali gayi hai, ab EMI manage karna mushkil ho raha hai, please kuch karo"
+  },
+  {
+   "style": "codemix",
+   "text": "घर की मरम्मत के लिए extra खर्चा आ गया है, loan की शर्तों में change चाहिए ताकि burden कम हो"
+  },
+  {
+   "style": "codemix",
+   "text": "business loss ho raha hai, isliye mujhe loan restructure करवाना है, please help karo"
+  },
+  {
+   "style": "english",
+   "text": "I have been facing severe financial issues recently, so I really need a lower EMI or a longer repayment period."
+  },
+  {
+   "style": "english",
+   "text": "My shop has not made any profit for the last six months, I cannot keep paying the current amount."
+  },
+  {
+   "style": "english",
+   "text": "There was a sudden hospital admission at home and all my savings got exhausted, I am struggling to clear the dues."
+  },
+  {
+   "style": "english",
+   "text": "I am going through a tough patch at work and need to reduce my monthly outgo to avoid missing payments."
+  },
+  {
+   "style": "hinglish",
+   "text": "bachon ki fees bhi deni hai aur upar se loan ka pressure hai, kuch toh karna padega, please help karo"
+  },
+  {
+   "style": "codemix",
+   "text": "market down है इसलिए income कम हो गई है, loan की terms change करनी हैं"
+  }
+ ],
+ "report_financial_hardship": [
+  {
+   "style": "hinglish",
+   "text": "Bhaiya meri naukri chali gayi hai toh abhi loan ki EMI bharne mein problem ho rahi hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी salary cut हो गई है इसलिए repayment में dikkat आ रही है"
+  },
+  {
+   "style": "english",
+   "text": "I recently lost my job, so I won't be able to pay my upcoming installments on time"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mere ghar mein medical emergency aa gayi hai aur abhi paise tight hain"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे papa बीमार हैं और hospital का bill भरना मुश्किल हो रहा है"
+  },
+  {
+   "style": "english",
+   "text": "My father is very sick and I need some time to manage the medical expenses"
+  },
+  {
+   "style": "hinglish",
+   "text": "Business bilkul down ho gaya hai, is mahine profit nahi aaya"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा business बंद हो गया है, loan कैसे चुकाऊं समझ नहीं आ रहा"
+  },
+  {
+   "style": "english",
+   "text": "My shop has been closed for months, I am facing a severe cash crunch right now"
+  },
+  {
+   "style": "hinglish",
+   "text": "Company ne mujhe layoff kar diya hai, abhi situation thodi kharab chal rahi hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे company से निकाल दिया गया है, payment में delay होगा"
+  },
+  {
+   "style": "english",
+   "text": "I got laid off from my company and I am struggling to make ends meet"
+  }
+ ],
+ "update_collection_call_preferences": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe call subah 9 se 12 ke beech hi aani chahiye, aur Hindi mein baat kijiye."
+  },
+  {
+   "style": "codemix",
+   "text": "call ka time change karna hai, 11:00 se 14:00 ke beech rakhna aur language English rakhna"
+  },
+  {
+   "style": "english",
+   "text": "Can you set my reminder calls for the afternoon, like between 2 and 5 pm?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Main office mein hota hoon, isliye shaam ko mat karna, subah 8 se 11 ka slot de do."
+  },
+  {
+   "style": "codemix",
+   "text": "mujhe 10:00 से 13:00 का time window update karna hai aur Tamil language chahiye"
+  },
+  {
+   "style": "english",
+   "text": "Please update my collection call timings to 11:00 AM to 2:00 PM, I will be free then."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe abhi ghar pe nahi milta, raat ko call mat karna, subah 7 se 10 theek rahega."
+  },
+  {
+   "style": "codemix",
+   "text": "call ka timing 08:00 से 19:00 के बीच adjust karna hai aur Hindi mein karna"
+  },
+  {
+   "style": "english",
+   "text": "I am usually traveling during the day, so morning calls between 8 and 11 would work best."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe yaad dilane wali call sirf lunch ke time aani chahiye, aur Bengali mein kijiye."
+  },
+  {
+   "style": "codemix",
+   "text": "reminder call ka time 12:00 से 15:00 kar do aur language Odia rakhna"
+  },
+  {
+   "style": "english",
+   "text": "Kindly change my preferred callback window to 10:00 to 13:00 and switch the language to Marathi."
+  }
+ ],
+ "check_home_loan_eligibility": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe ghar kharidna hai, batao kitne paise ka home loan mil jayega mere budget ke hisaab se"
+  },
+  {
+   "style": "hinglish",
+   "text": "Meri salary itni hai aur property ka rate ye hai, mere liye kitna amount pass hoga"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे पास एक property है उसकी value इतनी है मुझे home loan की eligibility check करनी है"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी monthly income 50000 है और घर की कीमत 80 lakh है तो कितना loan बन सकता है"
+  },
+  {
+   "style": "english",
+   "text": "I am planning to buy a flat, can you tell me the maximum loan amount I might get"
+  },
+  {
+   "style": "english",
+   "text": "My monthly income is around 60k and I found a property worth 90 lakhs, what is my eligibility"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bank wale kuch nahi bata rahe, mujhe bas ek rough idea chahiye ki main kitne tak ka loan utha sakta hoon"
+  },
+  {
+   "style": "hinglish",
+   "text": "Salary 45000 hai aur plot ka rate 60 lakh hai, please check karke batao eligibility kya hogi"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे home loan लेना है पर exact amount नहीं पता चल रहा मेरी income के हिसाब से"
+  },
+  {
+   "style": "codemix",
+   "text": "property value 75 lakh है और monthly income 55000 है eligibility कितनी बनेगी"
+  },
+  {
+   "style": "english",
+   "text": "I need a rough estimate of the loan I can get for a house I am looking at"
+  },
+  {
+   "style": "english",
+   "text": "I earn 52000 per month and the house costs 70 lakhs, just tell me my indicative limit"
+  }
+ ],
+ "get_complaint_status": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe bas yeh jaanna tha ki meri shikayat ka kya update hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी complaint का status check करना है"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me where my complaint stands right now?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Maine kuch din pehle ek issue raise kiya tha, uska result kya aaya?"
+  },
+  {
+   "style": "codemix",
+   "text": "मैंने complaint दर्ज की थी उसका क्या हुआ"
+  },
+  {
+   "style": "english",
+   "text": "I need to know the current progress on my grievance"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhai mera complaint number dala tha, ab please batao ki process mein hai ya close ho gaya"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी शिकायत का हाल बताओ"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to check if my complaint has been resolved yet"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe tension ho rahi hai, meri complaint ka status bata do na"
+  },
+  {
+   "style": "codemix",
+   "text": "शिकायत का status क्या है मुझे देखना है"
+  },
+  {
+   "style": "english",
+   "text": "Please check and let me know the latest on my filed complaint"
+  }
+ ],
+ "request_personal_loan_top_up": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apne purane personal loan ke upar kuch extra paise chahiye, kitna process hoga?"
+  },
+  {
+   "style": "codemix",
+   "text": "mera loan L1001 hai aur mujhe thoda aur fund chahiye top-up ke liye"
+  },
+  {
+   "style": "english",
+   "text": "I need an additional amount on my current personal loan, how do I apply for it?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhaiya, abhi urgent paisa chahiye, mera jo loan chal raha hai usme se top-up milega kya?"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे personal loan में extra amount add करना है, process बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Can you help me get a top-up on my existing personal loan?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mere paas pehle se loan hai, abhi thoda aur amount chahiye usme add karke"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा existing loan L2045 है इसमें extra amount request करना है"
+  },
+  {
+   "style": "english",
+   "text": "I want to borrow some more against my current personal loan, please guide me."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe ghar ke kaam ke liye extra cash chahiye, mere loan pe top-up ho sakta hai kya?"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan id L3091 में extra funds add करने हैं"
+  },
+  {
+   "style": "english",
+   "text": "Please process a top-up request on my personal loan for fifty thousand rupees."
+  }
+ ],
+ "foreclose_vehicle_loan": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apni gaadi ka loan jaldi close karwana hai, please batao kya karna padega"
+  },
+  {
+   "style": "codemix",
+   "text": "mera vehicle loan band karna hai, foreclosure amount kitna hoga?"
+  },
+  {
+   "style": "english",
+   "text": "I want to prepay my car loan completely since I got a bonus"
+  },
+  {
+   "style": "hinglish",
+   "text": "Loan clear karna hai, abhi extra paise bhej doon kya?"
+  },
+  {
+   "style": "codemix",
+   "text": "गाड़ी का loan बंद करना है पूरा amount भरकर"
+  },
+  {
+   "style": "english",
+   "text": "I am planning to sell my bike, so I need to settle this loan today"
+  },
+  {
+   "style": "hinglish",
+   "text": "Abhi extra fund aa gaya hai, toh loan foreclose kar dete hain"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे vehicle loan early close करवाना है"
+  },
+  {
+   "style": "english",
+   "text": "I want to pay off my auto loan in full and stop the EMIs"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera vehicle loan khatam karna hai, process kya hai batao"
+  },
+  {
+   "style": "codemix",
+   "text": "गाड़ी लोन पूरा भरना है, foreclosure process start करो"
+  },
+  {
+   "style": "english",
+   "text": "I have the cash ready, please help me close my two wheeler loan immediately"
+  }
+ ],
+ "get_hypothecation_status": [
+  {
+   "style": "hinglish",
+   "text": "bhai mere gaadi pe loan chal raha hai, abhi check kardo RC mein lender ka naam hai ya nahi"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे देखना है कि गाड़ी की RC पे hypothecation लगी है क्या"
+  },
+  {
+   "style": "english",
+   "text": "I want to know if the bank's hypothecation is still showing on my car's registration certificate"
+  },
+  {
+   "style": "hinglish",
+   "text": "maine gaadi bechne ka socha hai par pehle confirm karna hai ki RC clear hai ya nahi"
+  },
+  {
+   "style": "codemix",
+   "text": "rc transfer करना है तो बताइए lender का नाम हटाया है या नहीं"
+  },
+  {
+   "style": "english",
+   "text": "Can you check if the hypothecation is still active on my two-wheeler?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe tension ho rahi hai, RC pe koi dikkat toh nahi hai na?"
+  },
+  {
+   "style": "codemix",
+   "text": "gaadi ka loan close ho gaya par r c update nahi hui, status batao"
+  },
+  {
+   "style": "english",
+   "text": "I am planning to sell my vehicle, so please verify the hypothecation status for me"
+  },
+  {
+   "style": "hinglish",
+   "text": "agency wale keh rahe hain hypothecation clear nahi hai, kya sach mein pending hai?"
+  },
+  {
+   "style": "codemix",
+   "text": "rc check करो कि lender का नाम अभी भी है या हटा दिया"
+  },
+  {
+   "style": "english",
+   "text": "Just let me know whether the lender has removed their hypothecation from my vehicle's RC or not"
+  }
+ ],
+ "record_promise_to_pay": [
+  {
+   "style": "hinglish",
+   "text": "bhai ek hafte ke andar 5000 bhej dunga, isko record kar lo"
+  },
+  {
+   "style": "codemix",
+   "text": "mera salary late ho gaya is mahine, 15 tareekh tak 12000 jama kar dunga"
+  },
+  {
+   "style": "english",
+   "text": "I got a medical emergency, I will clear 35000 by next Monday"
+  },
+  {
+   "style": "hinglish",
+   "text": "ghar ka kaam aa gaya tha, 10 din mein 8000 de dunga"
+  },
+  {
+   "style": "codemix",
+   "text": "next month se sab theek ho jayega, 22 तारीख तक 15000 pay kar dunga"
+  },
+  {
+   "style": "english",
+   "text": "I am arranging funds from my friend, I will pay 20000 on the 28th"
+  },
+  {
+   "style": "hinglish",
+   "text": "thoda adjust kar lena, 30000 ka payment 5 din mein kar dunga"
+  },
+  {
+   "style": "codemix",
+   "text": "office mein bonus aa gaya hai, 12 तारीख को 25000 जमा करूंगा"
+  },
+  {
+   "style": "english",
+   "text": "Please note down that I will settle 18000 by the 14th of this month"
+  },
+  {
+   "style": "hinglish",
+   "text": "abhi cash nahi hai par 2 hafte mein 10000 definitely de dunga"
+  },
+  {
+   "style": "codemix",
+   "text": "car repair mein paise chale gaye, 20 तारीख तक 7000 भेज दूंगा"
+  },
+  {
+   "style": "english",
+   "text": "I will transfer 45000 on the 3rd, kindly update it in my account"
+  }
+ ],
+ "create_loan_lead": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe nayi car lene ke liye loan chahiye, kab tak callback aayega?"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे home loan lena hai 20 lakh ka, kya process hai?"
+  },
+  {
+   "style": "english",
+   "text": "I am looking to buy a new bike, please register my requirement."
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhaiya mere paas fixed deposit ka amount hai, uske against mein loan chahiye."
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे credit card ka limit badhana hai, please lead create kar do"
+  },
+  {
+   "style": "english",
+   "text": "I need around three lakhs for some urgent medical expenses, can you help?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera C001 account hai, mujhe personal loan ke liye update karna hai."
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे 15 lakh ka loan chahiye property ke liye"
+  },
+  {
+   "style": "english",
+   "text": "I want to apply for a vehicle loan, please have someone call me back."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe urgent paise chahiye, aap log kuch kar sakte ho kya?"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे 5 lakh ka personal loan lena है"
+  },
+  {
+   "style": "english",
+   "text": "I am interested in a fixed deposit backed loan, kindly note this down."
+  }
+ ],
+ "get_kyc_status": [
+  {
+   "style": "hinglish",
+   "text": "mera account KYC ka kya scene hai abhi?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe check karna hai ki mera verification complete hua ya nahi"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera document approve hua kya abhi tak?"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा KYC status बताओ, pending है क्या?"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा verification complete हुआ या expire हो गया?"
+  },
+  {
+   "style": "codemix",
+   "text": "status check करो, document verify हुए हैं या नहीं"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me if my KYC is verified or still pending?"
+  },
+  {
+   "style": "english",
+   "text": "I submitted my documents last week, is it cleared now?"
+  },
+  {
+   "style": "english",
+   "text": "My account is showing some issue, is my identity verification done?"
+  },
+  {
+   "style": "english",
+   "text": "I want to know if my records are active or have expired."
+  },
+  {
+   "style": "hinglish",
+   "text": "loan ke liye mera record theek hai na?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera id proof check ho gaya kya bank wale ne?"
+  }
+ ],
+ "update_address": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apna registered address change karwana hai, abhi naya flat shift ho gaya hoon."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा address update करना है, नई जगह shift हो गया हूँ."
+  },
+  {
+   "style": "english",
+   "text": "I need to update my residential address because we just moved to a new house in Pune."
+  },
+  {
+   "style": "hinglish",
+   "text": "Pichle hafte naya ghar liya hai toh details update karni padegi."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा address बदलना है, proof attach कर दूंगा."
+  },
+  {
+   "style": "english",
+   "text": "Can you please change my mailing address? I have the rent agreement ready."
+  },
+  {
+   "style": "hinglish",
+   "text": "Loan ki paperwork ke liye address badalna hai, ab yahan se sab manage karunga."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा registered address update करना है, नया pincode 400050 है."
+  },
+  {
+   "style": "english",
+   "text": "I recently relocated to Bangalore, so I want to change my address with you immediately."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mummy ke naye flat ka address daal do, wahi ab mera permanent hai."
+  },
+  {
+   "style": "codemix",
+   "text": "पता बदल दो, यहाँ से सारे documents भेजूंगा."
+  },
+  {
+   "style": "english",
+   "text": "Since I bought a new apartment, I need to register the new address on my profile."
+  }
+ ],
+ "get_card_details": [
+  {
+   "style": "hinglish",
+   "text": "mujhe bas ye check karna tha ki mera credit card abhi chal raha hai ya nahi"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera card number ka aakhri hissa kya hai bata do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe pata karna hai ki mere paas kaunsa card type hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे card का status क्या है बता सकते हो"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे card के last 4 digits क्या हैं"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा card कौनसे category का है"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me what type of card I have with your bank?"
+  },
+  {
+   "style": "english",
+   "text": "I need to know if my plastic is active right now"
+  },
+  {
+   "style": "english",
+   "text": "Just give me the last four digits of my card"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to see if my card is working or not"
+  },
+  {
+   "style": "english",
+   "text": "I want to verify which credit card is linked to my profile"
+  },
+  {
+   "style": "english",
+   "text": "Please check and let me know the status of my card"
+  }
+ ],
+ "get_card_limit": [
+  {
+   "style": "hinglish",
+   "text": "bhai mera credit limit kitna bacha hai card pe?"
+  },
+  {
+   "style": "codemix",
+   "text": "mujhe pata karna hai available limit kitni hai मेरे card पे"
+  },
+  {
+   "style": "english",
+   "text": "I want to know what my current credit limit is on my card."
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe ek urgent payment karni hai, check karo na mere paas limit hai ya nahi"
+  },
+  {
+   "style": "codemix",
+   "text": "available balance बता दो card का"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me how much limit I have left on my card?"
+  },
+  {
+   "style": "hinglish",
+   "text": "pichla bill bhar diya hai, ab total limit aur bachi hui limit bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "total credit limit और available limit कितना है"
+  },
+  {
+   "style": "english",
+   "text": "I just paid my bill, so please tell me my overall and available limit."
+  },
+  {
+   "style": "hinglish",
+   "text": "yaar shopping karni hai, pehle batao card limit check kar lo"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे card की total और available limit क्या है"
+  },
+  {
+   "style": "english",
+   "text": "I need to do some shopping soon, so please check and tell me my card limit."
+  }
+ ],
+ "block_card": [
+  {
+   "style": "hinglish",
+   "text": "mera credit card kahin gir gaya, isko turant band kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा card चोरी हो गया है इसे block कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I think someone used my card without permission, please block it right away"
+  },
+  {
+   "style": "hinglish",
+   "text": "pichle hafte se isme bahut saare fake charges dikh rahe hain, mujhe darr lag raha hai, isko band karo"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा card पानी में गिर गया damaged हो गया है इसे permanently block कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I misplaced my wallet and I need to stop all transactions on my card immediately"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe lagta hai kisi ne copy kar liya hai, please isko deactivate kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा card कट गया है इसे urgently block करना है"
+  },
+  {
+   "style": "english",
+   "text": "I found an unauthorized transaction on my statement, I want to block the card today itself"
+  },
+  {
+   "style": "hinglish",
+   "text": "bank waale ne bola hai ki card hack ho gaya hai, isko jaldi lock karo"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा card ab use nahi ho raha, permanently block कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I am throwing away this card because it is completely torn, please block it from your end"
+  }
+ ],
+ "get_card_transactions": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe check karna tha ki mere card pe pichle hafte kya kya spend hua tha"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhaiya zara batao kal raat ko mere account se kya charge hua tha"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe pichle teen din ka statement dekhna hai card ka"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे card की last few transactions दिखा दो"
+  },
+  {
+   "style": "codemix",
+   "text": "पिछली बार कितने पैसे कटे ये check करना है"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे account से recent payments की list चाहिए"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me what purchases I made recently on my card?"
+  },
+  {
+   "style": "english",
+   "text": "I need to verify the last few transactions on my credit card"
+  },
+  {
+   "style": "english",
+   "text": "Please show me the recent spends on my account"
+  },
+  {
+   "style": "english",
+   "text": "I want to see the latest charges on my card"
+  },
+  {
+   "style": "hinglish",
+   "text": "Kal jo shopping ki thi uska bill card mein dikha do"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe confirm karna tha ki mera payment clear ho gaya ya nahi"
+  }
+ ],
+ "get_fd_rates": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe thoda paisa secure karna hai, batao fixed deposit par kitna interest chal raha hai abhi"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे FD का current interest rate जानना है different time period के लिए"
+  },
+  {
+   "style": "english",
+   "text": "What are the interest rates for fixed deposits right now?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mummy ke naam pe FD kholni hai, tenure ke hisaab se rate kya milega?"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे different tenure के लिए fixed deposit का interest rate check करना है"
+  },
+  {
+   "style": "english",
+   "text": "I want to know the latest rates for locking in a fixed deposit."
+  },
+  {
+   "style": "hinglish",
+   "text": "Ek saal ya do saal ke liye FD karwaun toh kitna return milega?"
+  },
+  {
+   "style": "codemix",
+   "text": "अलग अलग tenure के लिए fixed deposit का current interest rate बता दीजिए"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me what the current fixed deposit rates are for different durations?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe safe investment karni hai, batao aajkal 6 mahine ya 1 saal wali FD par kitna milega"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे tenure wise fixed deposit का interest rate जानना है"
+  },
+  {
+   "style": "english",
+   "text": "I am looking to put some money in a fixed deposit, so I need to know the rates based on how long I keep it."
+  }
+ ],
+ "break_fixed_deposit": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apna FD jaldi close karna hai, koi penalty lagegi kya?"
+  },
+  {
+   "style": "codemix",
+   "text": "mera fixed deposit time se pehle break karna hai batao kya process hai"
+  },
+  {
+   "style": "english",
+   "text": "I need to withdraw my deposit before the due date, how much will I lose?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhai medical emergency aa gayi hai, FD todni padegi abhi."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे fd को maturity से पहले break करना है interest कम होगा क्या"
+  },
+  {
+   "style": "english",
+   "text": "I have to break my fixed deposit urgently for some house repairs."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera paisa abhi chahiye, toh deposit close karna padega."
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे loan के लिए funds चाहिए तो fd बंद करना है"
+  },
+  {
+   "style": "english",
+   "text": "Can you help me close my deposit early? I need the money for my kid's school fees."
+  },
+  {
+   "style": "hinglish",
+   "text": "Interest rate accha tha par ab mujhe paise return karne hain."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे deposit को pre-maturely break करना है interest cut होगा"
+  },
+  {
+   "style": "english",
+   "text": "Please break my fixed deposit, I got a better investment opportunity elsewhere."
+  }
+ ],
+ "get_deposit_interest_certificate": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe pichle financial year ka FD ka interest certificate email karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "Mujhe इस साल का fixed deposit का interest statement चाहिए email पर"
+  },
+  {
+   "style": "english",
+   "text": "Can you send me the interest earned on my fixed deposit for last year?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe tax filing ke liye 2024-25 ka FD interest proof chahiye"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे fixed deposit का interest कितने रुपये बना ये बताओ और mail कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I need the interest certificate for my deposit from the financial year 2024-25"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe 2025-26 ke liye mere FD ka interest certificate bhejna hai jaldi se"
+  },
+  {
+   "style": "codemix",
+   "text": "पिछले साल का fixed deposit कितना interest दिया है उसका certificate भेजो"
+  },
+  {
+   "style": "english",
+   "text": "Please email me the interest details for my deposit ID FD3001 for this financial year"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera ek fixed deposit hai uske interest ka proof chahiye jo maine 2025-26 mein kamaya hai"
+  },
+  {
+   "style": "codemix",
+   "text": "FD का interest certificate चाहिए financial year 2024-25 के लिए email कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to claim my tax deduction, so I need the interest earned on my fixed deposit for 2025-26"
+  }
+ ],
+ "faq_search": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe home loan ke pre-closure charges ka pata karna hai, kitna lagega?"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे credit card पे late payment fee कितनी लगी है, check कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I want to know the processing fee for a personal loan of five lakhs."
+  },
+  {
+   "style": "hinglish",
+   "text": "FD break karne par penalty kitni hoti hai bata do yaar"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan ka tenure extend kaise karte हैं वो बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me how long it takes to get the loan amount disbursed after approval?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mere account se EMI auto-debit fail ho gaya, ab kya karna padega?"
+  },
+  {
+   "style": "codemix",
+   "text": "fixed deposit mature होने के बाद interest account में कब तक आएगा"
+  },
+  {
+   "style": "english",
+   "text": "I need to understand the hidden charges before I apply for a new credit card."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe loan transfer kisi doosre bank mein karvana hai, uska process kya hai?"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan ke liye cibil score कितना होना चाहिए minimum"
+  },
+  {
+   "style": "english",
+   "text": "What documents do I need to submit if I am applying for a joint home loan?"
+  }
+ ],
+ "escalate_complaint": [
+  {
+   "style": "hinglish",
+   "text": "mera loan ka status update nahi mila, isko aage bhej do"
+  },
+  {
+   "style": "hinglish",
+   "text": "pichle teen din se call kar raha hoon par koi solution nahi mila, please isko escalate kar do"
+  },
+  {
+   "style": "hinglish",
+   "text": "aap log meri complaint ko seriously nahi le rahe, mujhe officer se baat karni hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे credit card application reject हो गए बिना किसी reason के, इसको escalate कर दो"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे FD का interest time पे नहीं मिला, ये issue solve नहीं हो रहा"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan ki processing bahut lgi हुई है, अब मुझे grievance officer से बात करनी है"
+  },
+  {
+   "style": "english",
+   "text": "I have been waiting for weeks for my vehicle loan approval and nobody is replying to me"
+  },
+  {
+   "style": "english",
+   "text": "My fixed deposit amount is stuck and the branch staff is just giving me the runaround"
+  },
+  {
+   "style": "english",
+   "text": "I raised this issue ages ago but I still haven't gotten a proper callback from anyone"
+  },
+  {
+   "style": "hinglish",
+   "text": "system mein dikha raha hai pending hai par mere paas koi update nahi aaya, please escalate kar do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe lagta hai aap log meri problem ignore kar rahe ho, isko turant upar bhejo"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा personal loan account गलत show कर रहा है, इसे immediately escalate करो"
+  }
+ ],
+ "find_customer_by_phone": [
+  {
+   "style": "hinglish",
+   "text": "mera mobile number 9876543210 hai, ispe mera account check karo"
+  },
+  {
+   "style": "codemix",
+   "text": "mera phone number 4567890123 hai, please details निकालो"
+  },
+  {
+   "style": "english",
+   "text": "Can you look up my profile using 7890123456, I need to apply for a home loan"
+  },
+  {
+   "style": "hinglish",
+   "text": "maine 5678901234 se loan apply kiya tha, abhi tak status kya hai"
+  },
+  {
+   "style": "codemix",
+   "text": "mera registered number 3216549870 है, please verify कर लो"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to check my fixed deposit, my number is 2468135790"
+  },
+  {
+   "style": "hinglish",
+   "text": "bhai mera credit card block ho gaya hai, 1357924680 se check kardo"
+  },
+  {
+   "style": "codemix",
+   "text": "mera vehicle loan ka record देखना है, number 8642097531 है"
+  },
+  {
+   "style": "english",
+   "text": "Please find my customer details, I am calling from 6135792480"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe urgent personal loan chahiye, 9753186420 par mera record nikalo"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा number 4826135790 है, इसे system में देखो"
+  },
+  {
+   "style": "english",
+   "text": "I want to know my loan eligibility, my mobile is 5279631840"
+  }
+ ],
+ "verify_customer": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apne home loan ka update chahiye, bas apni date of birth bata deta hoon"
+  },
+  {
+   "style": "codemix",
+   "text": "mera credit card का bill check करना है तो बताओ मेरी birth date क्या है"
+  },
+  {
+   "style": "english",
+   "text": "I need to check my vehicle loan details, so please verify me with my date of birth"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhaiya, fixed deposit mature ho gayi hai kya, ID check karne ke liye apna janm din bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "personal loan में कुछ change करना है, पहले मेरी dob confirm कर लो"
+  },
+  {
+   "style": "english",
+   "text": "Can you help me with my account details? I will give you my date of birth for verification"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mummy ke naam par ek loan tha, uski jankari chahiye, date of birth kya bolun"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card का limit बढ़ाना है तो पहले मेरी date of birth verify करो"
+  },
+  {
+   "style": "english",
+   "text": "I want to know the status of my application, please ask for my birth date to proceed"
+  },
+  {
+   "style": "hinglish",
+   "text": "Sir, main apna customer number bhool gaya, par apni janm tithi bata deta hoon"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan की EMI adjust करनी है, मेरी dob बता रहा हूँ check कर लो"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to update my mobile number, kindly verify my identity using my date of birth first"
+  }
+ ],
+ "get_customer_profile": [
+  {
+   "style": "hinglish",
+   "text": "mera naam aur shehar bata do, mujhe profile dekhni hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा city और KYC status क्या है मुझे जानना है"
+  },
+  {
+   "style": "english",
+   "text": "I want to know my registered name and which language is selected for my account"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe check karna hai ki mera KYC complete hua hai ya nahi"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा KYC status बताओ जल्दी"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me if my documents are verified or pending?"
+  },
+  {
+   "style": "hinglish",
+   "text": "bhai mera address update karna hai, pehle details bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा city बताओ मैं कहाँ registered हूँ"
+  },
+  {
+   "style": "english",
+   "text": "I need to confirm my city of residence for my records"
+  },
+  {
+   "style": "hinglish",
+   "text": "apni details check karni hain, kya language select ki thi"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी preferred language क्या सेट है"
+  },
+  {
+   "style": "english",
+   "text": "Please share my basic details so I can proceed with my query"
+  }
+ ],
+ "list_customer_products": [
+  {
+   "style": "hinglish",
+   "text": "bhai mujhe check karna hai ki mere paas abhi kaun kaun se accounts chal rahe hain"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे पास कौन से loans और cards active हैं एक बार देख कर बताओ"
+  },
+  {
+   "style": "english",
+   "text": "I need to know all the active loans and cards linked to my profile"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera account statement nikalna hai sab kuch dekh ke"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे सारे products की list दिखा दो जो भी मेरे नाम पे हैं"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me everything I have with your bank?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe yaad nahi kitne loans chal rahe hain, please check kardo"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे fixed deposits और credit cards की details निकाल दो"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to figure out my total exposure with you guys, please list them"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apna pura portfolio dikhao abhi"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे नाम पे कौन कौन से products हैं वो सब बताओ"
+  },
+  {
+   "style": "english",
+   "text": "I want a complete breakdown of all my investments and liabilities"
+  }
+ ],
+ "get_loan_details": [
+  {
+   "style": "hinglish",
+   "text": "bhai mujhe apne home loan ka hisaab check karna hai, kitna bacha hai batao"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera vehicle loan ka status kya hai, remaining amount aur tenure bata do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apne credit card ka outstanding aur due date pata karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "mera loan कितने का है और कितनी EMI बाकी है बताओ"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan का interest rate और tenure क्या है मुझे जानना है"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे vehicle loan की start date और EMI details निकाल दो"
+  },
+  {
+   "style": "english",
+   "text": "I want to know the total amount left on my personal loan and the monthly installment"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me the exact interest rate and tenure for my fixed deposit?"
+  },
+  {
+   "style": "english",
+   "text": "I need to check how many EMIs I have already paid towards my housing loan"
+  },
+  {
+   "style": "english",
+   "text": "Please tell me my current outstanding balance and the next due date for my credit card bill"
+  },
+  {
+   "style": "english",
+   "text": "How much is left to pay on my car loan and what is the monthly payout?"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to plan my budget, can you share the details of my loan?"
+  }
+ ],
+ "get_outstanding_amount": [
+  {
+   "style": "hinglish",
+   "text": "bhai mujhe bata do abhi kitna balance pending hai mere loan ka"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera account check karke batao kitna amount baaki reh gaya hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe urgently pata karna hai ki total due kitna ban raha hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan का outstanding कितना बचा है बता सकते हो"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे देखना है कि principal और overdue मिलाकर कितना देना है"
+  },
+  {
+   "style": "codemix",
+   "text": "अभी कितना amount clear करना बाकी है मेरे account में"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me how much is still left to pay on my loan?"
+  },
+  {
+   "style": "english",
+   "text": "I need to know my current dues before I visit the branch"
+  },
+  {
+   "style": "english",
+   "text": "How much do I still owe including any late fees?"
+  },
+  {
+   "style": "english",
+   "text": "Please check and tell me the total amount outstanding right now"
+  },
+  {
+   "style": "english",
+   "text": "I want to figure out exactly how much money I have left to clear"
+  },
+  {
+   "style": "english",
+   "text": "Just let me know the remaining balance on my account"
+  }
+ ],
+ "get_next_emi": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apne home loan ki agli kist ka amount aur date bata do"
+  },
+  {
+   "style": "hinglish",
+   "text": "next emi kab bharne ka time hai, woh check karke batao na"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera vehicle loan ka due amount kitna hai aane wale mahine mein"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी credit card की next emi की due date और amount बताओ"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan का next installment कब due है और कितना भरना है"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan की अगली emi का amount और date बताओ please"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me when the next payment for my personal loan is due?"
+  },
+  {
+   "style": "english",
+   "text": "I want to know the exact amount and date for my upcoming EMI."
+  },
+  {
+   "style": "english",
+   "text": "What is the due amount and date for my next fixed deposit installment?"
+  },
+  {
+   "style": "english",
+   "text": "Please check and let me know my next card installment details."
+  },
+  {
+   "style": "hinglish",
+   "text": "agla payment kab aana hai, jaldi se check karke batao"
+  },
+  {
+   "style": "codemix",
+   "text": "personal loan का next emi कितना है और due date क्या है"
+  }
+ ],
+ "get_emi_schedule": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apne agle kuch months ki loan payment details bata do na"
+  },
+  {
+   "style": "codemix",
+   "text": "Mujhe upcoming emi dates dekhne hain please"
+  },
+  {
+   "style": "english",
+   "text": "Can you check when my next few installments are due?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhaiya, mere home loan ka agla schedule kya hai, jaldi batao"
+  },
+  {
+   "style": "codemix",
+   "text": "अगले 6 महीने की emi list दिखा दो मुझे"
+  },
+  {
+   "style": "english",
+   "text": "I need to know the upcoming EMIs for my vehicle loan"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe credit card ka due amount aur dates pata karne hain"
+  },
+  {
+   "style": "codemix",
+   "text": "loan का payment plan बताओ ना"
+  },
+  {
+   "style": "english",
+   "text": "Please tell me how much I have to pay in the coming installments"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera fixed deposit linked loan ka schedule dikhao"
+  },
+  {
+   "style": "codemix",
+   "text": "अगले payments की list भेज दो"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to get the EMI schedule for my account"
+  }
+ ],
+ "get_interest_certificate": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe last financial year ka interest certificate email kar do na mere loan ke liye"
+  },
+  {
+   "style": "codemix",
+   "text": "2024-25 का interest और principal का statement भेजिए account से"
+  },
+  {
+   "style": "english",
+   "text": "Can you send me the breakup of the principal and interest paid on my loan for this financial year?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe tax filing ke liye mere loan ka year-wise interest proof chahiye"
+  },
+  {
+   "style": "codemix",
+   "text": "financial year 2025-26 का loan details email कर दो please"
+  },
+  {
+   "style": "english",
+   "text": "I need a record of how much principal and interest I have paid on my car loan."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera loan close ho gaya hai aur mujhe income tax ke liye details mangti hai"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan के लिए 2025-26 का certificate भेज दीजिए"
+  },
+  {
+   "style": "english",
+   "text": "Please email me the interest and principal paid on my education loan for the current financial year."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe bank mein submit karne ke liye loan payment ka saalana record chahiye"
+  },
+  {
+   "style": "codemix",
+   "text": "financial year 2024-25 का interest और principal का email कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to claim a deduction and need the exact interest and principal figures for my personal loan."
+  }
+ ],
+ "get_loan_statement": [
+  {
+   "style": "hinglish",
+   "text": "mujhe purane loan ka hisaab chahiye, pichle mahine se is mahine tak bhej do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera home loan statement email pe bhej do 1st january se 31st january ke beech ka"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe check karna hai ki kitna amount bacha hai, statement nikaal kar bhejo"
+  },
+  {
+   "style": "codemix",
+   "text": "mujhe loan का statement email करना है 2023-01-01 से 2023-01-31 तक"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan की details भेज दो 2023-05-10 से 2023-05-20 के बीच"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card का bill 2023-02-01 से 2023-02-28 तक email कर दो"
+  },
+  {
+   "style": "english",
+   "text": "please share my loan account details from 15th march to 15th april"
+  },
+  {
+   "style": "english",
+   "text": "I need the statement for my personal loan between january 1st and january 15th"
+  },
+  {
+   "style": "english",
+   "text": "can you email me the fixed deposit summary for the last financial quarter"
+  },
+  {
+   "style": "english",
+   "text": "send across the vehicle loan report from 2023-08-01 to 2023-08-31"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to settle my dues, kindly mail the statement covering march 2023"
+  },
+  {
+   "style": "english",
+   "text": "I need proof of payment for my credit card, please send the statement for june 2023"
+  }
+ ],
+ "get_loan_agreement": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe loan ka paper chahiye, email kar do please"
+  },
+  {
+   "style": "codemix",
+   "text": "mera loan agreement भेजो email पे"
+  },
+  {
+   "style": "english",
+   "text": "I need a copy of the loan document sent to my inbox"
+  },
+  {
+   "style": "hinglish",
+   "text": "Agreement ka PDF bhej do na jaldi se"
+  },
+  {
+   "style": "codemix",
+   "text": "loan agreement की copy email कर दो"
+  },
+  {
+   "style": "english",
+   "text": "Can you mail me the signed loan contract?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe agreement ki detail email kardo"
+  },
+  {
+   "style": "codemix",
+   "text": "loan agreement की copy भेज दो email पे"
+  },
+  {
+   "style": "english",
+   "text": "Please send the loan agreement to my registered email address"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe wo loan wala document email karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "loan agreement email कर दो मुझे"
+  },
+  {
+   "style": "english",
+   "text": "I want to download the loan paperwork, kindly share it on email"
+  }
+ ],
+ "change_emi_date": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apni car loan ki EMI date badalni hai, 10th pe set kar do please."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे home loan की monthly due date बदलनी है 5 तारीख कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I want to move my credit card payment date to the 15th of every month."
+  },
+  {
+   "style": "hinglish",
+   "text": "Salary 12th ko aati hai, isliye mujhe 15th pe EMI shift karni hai."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा personal loan है उसकी due date 10 पर set कर दो"
+  },
+  {
+   "style": "english",
+   "text": "Can we change the auto-debit date for my fixed deposit to the 1st?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Har mahine 1st ko paise nikalne hain account se, toh date wahi fix kar do."
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे loan installment की date 5th करनी है"
+  },
+  {
+   "style": "english",
+   "text": "I am facing a cash flow issue, kindly adjust my vehicle loan due date to the 10th."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe lagta hai 15th theek rahega, please wahi kar do."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी EMI date 1 तारीख करनी है"
+  },
+  {
+   "style": "english",
+   "text": "I need to reschedule my monthly payment so that it falls on the 5th."
+  }
+ ],
+ "request_noc": [
+  {
+   "style": "hinglish",
+   "text": "mera loan poora close ho gaya tha, uska NOC kaise milega batao"
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan close ho gaya hai, ab NOC ke liye kya process hai"
+  },
+  {
+   "style": "english",
+   "text": "I have completely paid off my vehicle loan, I need the NOC for it"
+  },
+  {
+   "style": "hinglish",
+   "text": "pichla credit card ka bill clear kar diya hai, ab NOC request karni hai"
+  },
+  {
+   "style": "codemix",
+   "text": "fixed deposit close हो गया था, उसका NOC generate करवाना है"
+  },
+  {
+   "style": "english",
+   "text": "My personal loan got fully settled last week, please get me the no objection certificate"
+  },
+  {
+   "style": "hinglish",
+   "text": "loan band ho gaya hai, mujhe bank se NOC chahiye property bechne ke liye"
+  },
+  {
+   "style": "codemix",
+   "text": "mera loan account पूरी तरह बंद हो चुका है, NOC भेज दो"
+  },
+  {
+   "style": "english",
+   "text": "I closed my loan account yesterday, I am calling to request the NOC"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe car loan ka final closure document aur NOC dono chahiye abhi"
+  },
+  {
+   "style": "codemix",
+   "text": "loan fully paid हो गया है, NOC का status check करो"
+  },
+  {
+   "style": "english",
+   "text": "I need the no objection certificate for my closed fixed deposit account"
+  }
+ ],
+ "get_noc_status": [
+  {
+   "style": "hinglish",
+   "text": "mera home loan band ho gaya hai, check karo NOC aayi hai ya nahi"
+  },
+  {
+   "style": "codemix",
+   "text": "mera loan close ho gaya tha, NOC ka status bata do"
+  },
+  {
+   "style": "english",
+   "text": "I need to know if the no objection certificate for my vehicle loan has been sent out"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe bank se NOC ka update chahiye, loan pehle hi close kar diya tha"
+  },
+  {
+   "style": "codemix",
+   "text": "closed loan ka NOC request hua hai ya nahi mujhe जानना है"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me if the NOC for my closed personal loan is ready or pending?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera credit card ka loan khatam ho gaya, ab NOC ka kya scene hai"
+  },
+  {
+   "style": "codemix",
+   "text": "loan close होने के बाद NOC issue हुई है क्या"
+  },
+  {
+   "style": "english",
+   "text": "I closed my account last month, just checking if you guys have issued the NOC"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe property ke liye NOC mangwana tha, status kya hai please"
+  },
+  {
+   "style": "codemix",
+   "text": "closed loan के लिए NOC request डाली थी या नहीं बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Please check whether the no objection certificate for my settled fixed deposit loan has been requested or not"
+  }
+ ],
+ "get_personal_loan_foreclosure_quote": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apna personal loan jaldi close karna hai, kitna paisa lagega bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "mera loan early band karne ka total amount kya hoga"
+  },
+  {
+   "style": "english",
+   "text": "I want to prepay my personal loan, can you tell me the exact amount?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Abhi extra paise deke loan khatam karna hai, foreclosure charges kitne hain"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे home loan की तरह personal loan भी close करना है total amount बताओ"
+  },
+  {
+   "style": "english",
+   "text": "I have some bonus money, so I am looking to settle my personal loan today. Please give me the quote."
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhaiya mujhe loan close karne ka final bill bata do including sab fees"
+  },
+  {
+   "style": "codemix",
+   "text": "personal loan को early close करने के charges कितने हैं"
+  },
+  {
+   "style": "english",
+   "text": "I need to know the total payout to foreclose my personal loan, please include all hidden charges."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera loan jaldi close karna hai, kitna total amount dena padega"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे personal loan का foreclosure quote चाहिए जिसमें सारे charges शामिल हों"
+  },
+  {
+   "style": "english",
+   "text": "I am planning to shut my personal loan ahead of schedule, kindly calculate the total amount for me."
+  }
+ ],
+ "foreclose_personal_loan": [
+  {
+   "style": "hinglish",
+   "text": "mera personal loan jaldi close karna hai, kya process hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे अपना personal loan बंद करवाना है, foreclosure amount बताओ"
+  },
+  {
+   "style": "english",
+   "text": "I want to prepay my personal loan completely because I got a bonus"
+  },
+  {
+   "style": "hinglish",
+   "text": "abhi extra paise hain, loan full settle karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "loan का balance चुकाकर account बंद करना है"
+  },
+  {
+   "style": "english",
+   "text": "I received a tax refund and I want to close my personal loan today"
+  },
+  {
+   "style": "hinglish",
+   "text": "interest bachana hai, loan ko early close kar do na"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे full foreclosure amount भरना है और loan खत्म करना है"
+  },
+  {
+   "style": "english",
+   "text": "I am selling my old car and I have the cash to close the personal loan"
+  },
+  {
+   "style": "hinglish",
+   "text": "bhaiya mera loan band kar do, mujhe aur EMI nahi deni"
+  },
+  {
+   "style": "codemix",
+   "text": "personal loan को full payment करके बंद करना है"
+  },
+  {
+   "style": "english",
+   "text": "I got a promotion at work so I am ready to pay off my loan in full"
+  }
+ ],
+ "get_personal_loan_part_payment_quote": [
+  {
+   "style": "hinglish",
+   "text": "mera personal loan ka kuch hissa abhi prepay karna hai, charges kya lagenge bata do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe ek urgent payment karni hai, check karo ki 50,000 advance dene pe kitna penalty lagega"
+  },
+  {
+   "style": "hinglish",
+   "text": "main apni loan amount thodi kam karna chahti hoon, part payment ka process aur fees samjha do"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे personal loan का कुछ हिस्सा early clear करना है, charges कितने होंगे बताओ"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे पास अभी extra पैसे हैं, 30 हज़ार part payment करने पर क्या effect होगा"
+  },
+  {
+   "style": "codemix",
+   "text": "loan का burden कम करना है, part payment quote निकाल के बताओ कितना interest बचेगा"
+  },
+  {
+   "style": "english",
+   "text": "I want to pay a chunk of my personal loan early, can you tell me the processing fees and impact?"
+  },
+  {
+   "style": "english",
+   "text": "I got a bonus at work, so I am looking to prepay some money on my loan, what will be the charges?"
+  },
+  {
+   "style": "english",
+   "text": "I need to reduce my outstanding balance, please give me a quote for a part payment of fifty thousand rupees."
+  },
+  {
+   "style": "hinglish",
+   "text": "paison ki thodi dikkat ho gayi thi par ab manage ho gayi, loan ka kuch amount abhi jama karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे पास extra cash है, part payment करने से loan tenure कम होगा क्या"
+  },
+  {
+   "style": "english",
+   "text": "I am planning to settle a part of my dues before the due date, please calculate the exact charges."
+  }
+ ],
+ "make_personal_loan_part_payment": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apne personal loan ka kuch hissa jaldi clear karna hai, tenure kam karna hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "Main apni gaadi ke loan mein extra paise jama karna chahta hoon"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mere paas abhi extra cash aaya hai, isko loan mein daal do"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे अपनी home loan की tenure कम करनी है, part payment डालनी है"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे पास extra funds हैं, vehicle loan में pay off करना है"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा bonus आ गया है, personal loan में थोड़ा amount add कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I got a salary hike, so I want to prepay some amount on my personal loan"
+  },
+  {
+   "style": "english",
+   "text": "I need to reduce my loan tenure, can I make a partial payment?"
+  },
+  {
+   "style": "english",
+   "text": "I have some savings right now, please apply it to my credit card dues"
+  },
+  {
+   "style": "english",
+   "text": "Can I pay a lump sum towards my home loan to finish it faster?"
+  },
+  {
+   "style": "english",
+   "text": "I want to close a bit of my vehicle loan early using my bonus money"
+  },
+  {
+   "style": "english",
+   "text": "I received my tax refund, please use it to pay off a portion of my loan"
+  }
+ ],
+ "request_home_loan_disbursement": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe next payment ka process start karna hai, mera project abhi plaster stage mein hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे अगली disbursement चाहिए मेरे loan के लिए, construction slab तक पहुँच गया है"
+  },
+  {
+   "style": "english",
+   "text": "Sir, I am ready for the next release of funds, the house work is currently at the finishing stage"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhaiya, builder ne bola hai abhi amount release karne ka time aa gaya hai, advance de do"
+  },
+  {
+   "style": "codemix",
+   "text": "अगले installment का process initiate करो, घर का काम plaster stage पर है"
+  },
+  {
+   "style": "english",
+   "text": "Madam, I need to request the upcoming home loan payout because we have reached the finishing phase"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe urgently paise chahiye, abhi construction slab level par chal raha hai"
+  },
+  {
+   "style": "codemix",
+   "text": "अगली disbursement request डाल दो, project plaster stage में है"
+  },
+  {
+   "style": "english",
+   "text": "I want to push through the next home loan disbursement since the site is at the slab stage right now"
+  },
+  {
+   "style": "hinglish",
+   "text": "Dada, abhi ghar ka kaam finishing stage mein hai, next payment kab aayegi batao"
+  },
+  {
+   "style": "codemix",
+   "text": "अगला amount release करने का process शुरू करो, construction slab stage पर है"
+  },
+  {
+   "style": "english",
+   "text": "Please process the next home loan payout, the construction has reached the plaster stage"
+  }
+ ],
+ "request_property_documents_return": [
+  {
+   "style": "hinglish",
+   "text": "mere home loan ka account close ho gaya hai, mujhe original papers waapas chahiye"
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan settle ho gaya tha, ab original property papers collect karne hain"
+  },
+  {
+   "style": "english",
+   "text": "I have paid off my home loan completely, I need to get my original property documents back"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe branch jaake saare original documents wapas lene hain, loan toh band ho gaya hai"
+  },
+  {
+   "style": "codemix",
+   "text": "loan close ho gaya hai ab property के papers return करने होंगे"
+  },
+  {
+   "style": "english",
+   "text": "My home loan is fully closed now, please arrange to return my original property documents"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe urgently original document chahiye, loan toh close ho chuka hai na"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan close हो गया है, original documents वापस भेजो"
+  },
+  {
+   "style": "english",
+   "text": "I finished paying the home loan, I want to know how to collect my original property papers"
+  },
+  {
+   "style": "hinglish",
+   "text": "ab loan band ho gaya hai toh mere papers mujhe wapas kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan close हो चुका है, original documents return करो"
+  },
+  {
+   "style": "english",
+   "text": "The home loan is closed, I need to retrieve my original property documents from the branch"
+  }
+ ],
+ "get_home_loan_foreclosure_quote": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apni home loan ki loan ID L1001 check karni hai, agar main jaldi close karu toh kitna bharna padega?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Main apna ghar ka loan pehle hi band karna chahta hoon, iske liye total amount kya aayega mujhe batao."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe foreclosure quote chahiye mere loan account L1001 ke liye, please calculate karke batao."
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan L1001 जल्दी close करना है तो total कितना amount देना पड़ेगा"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे अपना loan account L1001 का early closure amount जानना है"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan L1001 को time से पहले बंद करने का total amount बताओ"
+  },
+  {
+   "style": "english",
+   "text": "I want to prepay my home loan, can you tell me the exact amount required for loan ID L1001?"
+  },
+  {
+   "style": "english",
+   "text": "I am planning to shut my home loan account early, what will be the total foreclosure amount for L1001?"
+  },
+  {
+   "style": "english",
+   "text": "Please help me figure out how much I need to pay to close my home loan with ID L1001 before the tenure ends."
+  },
+  {
+   "style": "hinglish",
+   "text": "Meri salary badh gayi hai, isliye main L1001 ko jaldi close karna chahta hoon, batao kitna dena hoga."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी income बढ़ गई है तो मैं L1001 को जल्दी close करना चाहता हूँ total कितना लगेगा"
+  },
+  {
+   "style": "english",
+   "text": "I got a bonus at work so I want to settle my home loan L1001 early, just need to know the final payout figure."
+  }
+ ],
+ "foreclose_home_loan": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apna home loan jaldi close karana hai, kaise karein?"
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan band karna hai, foreclosure process batao"
+  },
+  {
+   "style": "english",
+   "text": "I want to prepay my house loan completely right now"
+  },
+  {
+   "style": "hinglish",
+   "text": "maine extra paise jama kar diye hain, loan khatam karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan को early close करना है, amount कितना लगेगा बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Can I pay the full outstanding and close my mortgage today?"
+  },
+  {
+   "style": "hinglish",
+   "text": "ab mujhe home loan ki zaroorat nahi hai, close kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "loan settle करना है, foreclosure amount कितना है बताइए"
+  },
+  {
+   "style": "english",
+   "text": "I got a bonus at work so I am looking to close my housing loan"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe final payment karke yeh loan band karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan close करवाना है, process क्या है"
+  },
+  {
+   "style": "english",
+   "text": "I need to pay off my property loan in full and terminate it"
+  }
+ ],
+ "get_home_loan_tax_certificate": [
+  {
+   "style": "hinglish",
+   "text": "mujhe 2025-26 ka home loan certificate email karna hai tax ke liye"
+  },
+  {
+   "style": "codemix",
+   "text": "mujhe पिछले साल का home loan का tax certificate भेजिए email पे"
+  },
+  {
+   "style": "english",
+   "text": "I need the home loan interest certificate for 2024-25 to claim my deduction"
+  },
+  {
+   "style": "hinglish",
+   "text": "pichle financial year ka ghar ka loan ka paper bhejo mere inbox mein"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे 2025-26 के लिए home loan का tax certificate चाहिए"
+  },
+  {
+   "style": "english",
+   "text": "Can you send me the certificate showing my home loan interest for this financial year?"
+  },
+  {
+   "style": "hinglish",
+   "text": "income tax file karne ke liye mera home loan ka document chahiye"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे home loan का certificate email कर दो 2025-26 का"
+  },
+  {
+   "style": "english",
+   "text": "I am filing my returns and need the home loan tax certificate for 2024-25"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe income tax mein dikhane ke liye ghar ke loan ka proof bhejo"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे 2025-26 का home loan certificate चाहिए email पर"
+  },
+  {
+   "style": "english",
+   "text": "Please email me the home loan certificate so I can use it for my tax deduction this year"
+  }
+ ],
+ "request_home_loan_balance_transfer_letter": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe ek letter chahiye jisme poora balance likha ho, mujhe dusre bank mein home loan shift karna hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhai, mere loan ka outstanding certificate nikalwa do, main dusri jagah transfer karwana chahta hoon"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera home loan account kisi aur bank mein move karna hai, toh uske liye kitna baki hai, uska document bhejo"
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan transfer karna hai toh outstanding letter भेजो"
+  },
+  {
+   "style": "codemix",
+   "text": "loan close करने के लिए outstanding amount का letter चाहिए"
+  },
+  {
+   "style": "codemix",
+   "text": "dusre bank में shift करना है इसलिए balance letter भेजिए"
+  },
+  {
+   "style": "english",
+   "text": "I want to transfer my home loan to another bank, please send me the outstanding statement"
+  },
+  {
+   "style": "english",
+   "text": "Can you issue a letter showing the current dues on my home loan? I am planning to switch lenders"
+  },
+  {
+   "style": "english",
+   "text": "I need the document with my exact remaining balance to apply for a balance transfer elsewhere"
+  },
+  {
+   "style": "english",
+   "text": "Please get me the no dues or outstanding letter for my property loan, I am looking to move it"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to shift my housing loan to a different NBFC, so I need the latest statement of account"
+  },
+  {
+   "style": "english",
+   "text": "Send me the required letter that mentions how much is left to pay on my home loan, I want to transfer it"
+  }
+ ],
+ "get_home_loan_insurance_details": [
+  {
+   "style": "hinglish",
+   "text": "mera home loan ka insurance policy details bata do na"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे home loan से कौन सी insurance जुड़ी है मुझे जानना है"
+  },
+  {
+   "style": "english",
+   "text": "I need to check the insurance policy attached to my home loan"
+  },
+  {
+   "style": "hinglish",
+   "text": "pichle saal jo loan liya tha, usme insurance ka kya scene hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे home loan account में कौन सा insurance policy active है"
+  },
+  {
+   "style": "english",
+   "text": "Can you pull up the insurance details for my housing loan?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe check karna hai ki mere home loan par kaun si company ka cover hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे घर के loan से linked insurance की जानकारी चाहिए"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to find out the insurance policy linked to my home loan"
+  },
+  {
+   "style": "hinglish",
+   "text": "woh jo home loan hai uske papers mein insurance ka naam dhoondh ke batao"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे home loan account से कौन सी insurance policy जुड़ी है बताइए"
+  },
+  {
+   "style": "english",
+   "text": "I want to know which insurance policy is tied to my housing loan"
+  }
+ ],
+ "get_vehicle_loan_foreclosure_quote": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apni car ka loan jaldi close karna hai, batao total kitna bharna padega?"
+  },
+  {
+   "style": "codemix",
+   "text": "mera vehicle loan time se pehle band karna hai, foreclosure amount kya hoga?"
+  },
+  {
+   "style": "english",
+   "text": "I want to prepay my two-wheeler loan, what is the total amount I need to pay to close it?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhai, mujhe pata karna tha ki bike ka loan early band karne mein kitna charge lagega."
+  },
+  {
+   "style": "codemix",
+   "text": "car loan को जल्दी close करना है, total amount कितना देना पड़ेगा?"
+  },
+  {
+   "style": "english",
+   "text": "I am planning to sell my vehicle, so I need the exact foreclosure quote for my loan."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera gaadi ka loan chal raha hai, agar main abhi bharaun toh total kitna dena hoga?"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे vehicle loan की foreclosure details चाहिए, total due कितना है?"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me the exact total amount required to shut my vehicle loan account completely?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe jaldi paisa dena hai loan close karne ke liye, please quote batao."
+  },
+  {
+   "style": "codemix",
+   "text": "गाड़ी का loan early बंद करना है, total amount कितना लगेगा?"
+  },
+  {
+   "style": "english",
+   "text": "I have some extra cash now and I want to close my car loan, how much do I need to pay including all charges?"
+  }
+ ],
+ "request_hypothecation_removal": [
+  {
+   "style": "hinglish",
+   "text": "Bhaiya mera car ka loan toh poora ho gaya hai, ab gaadi ki RC se naam hatane ka kya process hai?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera two wheeler ka loan close ho gaya hai, mujhe RC se hypothecation hatwana hai, batao kaise hoga?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mummy ke naam par car ka loan tha wo ab settle ho gaya, ab NOC aur Form 35 kaise milega?"
+  },
+  {
+   "style": "codemix",
+   "text": "mera bike loan close हो गया है अब RC से hypothecation हटाने के लिए क्या documents लगेंगे"
+  },
+  {
+   "style": "codemix",
+   "text": "गाड़ी का loan पूरा हो गया है मुझे NOC और form 35 चाहिए ताकि r c clear हो जाए"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा car loan बंद हो चुका है अब r c से bank का नाम कैसे हटाऊँ"
+  },
+  {
+   "style": "english",
+   "text": "I have fully paid off my vehicle loan, I need to get the hypothecation removed from my registration certificate."
+  },
+  {
+   "style": "english",
+   "text": "My bike loan is closed now, please help me with the paperwork to remove the bank's charge on my RC."
+  },
+  {
+   "style": "english",
+   "text": "I just finished paying my car EMI, how do I apply for the NOC and Form 35 to clear the hypothecation?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera loan close ho gaya tha pichle mahine, ab gaadi bechni hai isliye RC clear karwani padegi."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe apni car ka hypothecation hatwana hai kyunki loan khatam ho gaya hai, kya karna padega?"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे r c से bank का hypothecation हटाना है क्योंकि loan complete हो गया है"
+  }
+ ],
+ "get_vehicle_insurance_status": [
+  {
+   "style": "hinglish",
+   "text": "mujhe check karna hai ki meri gaadi ka insurance valid hai ya nahi"
+  },
+  {
+   "style": "hinglish",
+   "text": "meri car ki policy expire toh nahi ho gayi hai na?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe batana hai ki mere financed vehicle ka cover active hai ya nahi"
+  },
+  {
+   "style": "hinglish",
+   "text": "bhai mujhe apni bike ka insurance status dekhna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी car का insurance policy active है या नहीं check करो"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे financed vehicle की insurance expiry date क्या है बता दो"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे पास loan वाली gaadi का cover valid है या नहीं देखना है"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे अपनी bike का insurance status check करना है जल्दी से"
+  },
+  {
+   "style": "english",
+   "text": "Can you verify if my car's insurance is still active?"
+  },
+  {
+   "style": "english",
+   "text": "I need to know when my vehicle's insurance policy expires"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to check if the insurance on my financed car is valid"
+  },
+  {
+   "style": "english",
+   "text": "Please tell me the current status of my two wheeler's insurance"
+  }
+ ],
+ "update_vehicle_insurance": [
+  {
+   "style": "hinglish",
+   "text": "meri car ka insurance renew ho gaya hai, naya number bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "गाड़ी का insurance update करना है, policy number बता रहा हूँ"
+  },
+  {
+   "style": "english",
+   "text": "I got a new insurance for my car, I need to update it with you"
+  },
+  {
+   "style": "hinglish",
+   "text": "gaadi ka naya insurance aa gaya hai, details update kar do please"
+  },
+  {
+   "style": "codemix",
+   "text": "गाड़ी के insurance की expiry date बदलनी है"
+  },
+  {
+   "style": "english",
+   "text": "The insurance expired last month, I need to give you the new policy details"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera car loan hai, uski insurance policy badalni hai abhi"
+  },
+  {
+   "style": "codemix",
+   "text": "loan account में insurance policy update करनी है"
+  },
+  {
+   "style": "english",
+   "text": "Please update the insurance for my financed vehicle, I have the new policy"
+  },
+  {
+   "style": "hinglish",
+   "text": "insurance company se naya paper aaya hai, yahan daal do"
+  },
+  {
+   "style": "codemix",
+   "text": "गाड़ी का insurance renew हो गया है, record में डाल दो"
+  },
+  {
+   "style": "english",
+   "text": "I just renewed my vehicle insurance, I want to submit the new expiry date and policy number"
+  }
+ ],
+ "send_payment_link": [
+  {
+   "style": "hinglish",
+   "text": "mujhe aaj ki due amount ke liye link bhej do"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan ki payment karne ke liye SMS भेजो"
+  },
+  {
+   "style": "english",
+   "text": "Can you send me the payment link for my upcoming EMI?"
+  },
+  {
+   "style": "hinglish",
+   "text": "vehicle loan ka amount pay karna hai, link bhej do zara"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card का bill भरने के लिए link भेजिए"
+  },
+  {
+   "style": "english",
+   "text": "I want to clear my pending dues, please send the payment link on SMS"
+  },
+  {
+   "style": "hinglish",
+   "text": "FD break nahi karni, bas payment ka link bhej do"
+  },
+  {
+   "style": "codemix",
+   "text": "mera loan due है, payment link भेजो"
+  },
+  {
+   "style": "english",
+   "text": "Please SMS the link so I can settle my credit card bill today"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe urgently payment karni hai, link bhej do"
+  },
+  {
+   "style": "codemix",
+   "text": "personal loan की payment करनी है link भेजो"
+  },
+  {
+   "style": "english",
+   "text": "I need the payment link for my loan to be sent via text message"
+  }
+ ],
+ "pay_emi": [
+  {
+   "style": "hinglish",
+   "text": "bhai aaj ki jo monthly installment hai wo clear karni hai, upi se kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan ka next payment karna hai 5000 rupees"
+  },
+  {
+   "style": "english",
+   "text": "I want to clear this month's due on my car loan before the deadline"
+  },
+  {
+   "style": "hinglish",
+   "text": "mere credit card ka due pending dikha raha hai, uska bill bharna hai aaj"
+  },
+  {
+   "style": "codemix",
+   "text": "auto loan की EMI आज pay करनी है 3500 amount से"
+  },
+  {
+   "style": "english",
+   "text": "Please process the oldest unpaid installment on my personal loan, I am transferring the exact amount now"
+  },
+  {
+   "style": "hinglish",
+   "text": "sasu ji ka FD tha usme se thoda paisa nikal ke loan ki kisht jama karni hai"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan का पुराना due भरना है 8000 rupees से"
+  },
+  {
+   "style": "english",
+   "text": "I have the exact cash ready, just need to pay the oldest due on my account"
+  },
+  {
+   "style": "hinglish",
+   "text": "salary aagayi hai abhi, pehla unpaid wala amount send kar deta hoon"
+  },
+  {
+   "style": "codemix",
+   "text": "fixed deposit से पैसे निकालकर credit card का पुराना payment clear करना है"
+  },
+  {
+   "style": "english",
+   "text": "Can you help me settle the oldest outstanding installment from my home loan today?"
+  }
+ ],
+ "pay_overdue": [
+  {
+   "style": "hinglish",
+   "text": "bhai mere loan ke pending installments aur jo late charges lage hain, wo ek saath clear karne hain"
+  },
+  {
+   "style": "codemix",
+   "text": "mujhe अपने loan की सारी overdue EMI और late fees एक साथ pay करनी हैं"
+  },
+  {
+   "style": "english",
+   "text": "I want to settle all my pending dues and late fees in one go"
+  },
+  {
+   "style": "hinglish",
+   "text": "abhi sab overdue amount clear karna hai, kaise karun"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan का जो भी बकाया है और penalty है वो एक payment में भरना है"
+  },
+  {
+   "style": "english",
+   "text": "Please help me pay the pending installments along with the extra fees together"
+  },
+  {
+   "style": "hinglish",
+   "text": "mere paas time nahi hai, pending dues ek baar mein clear kar do"
+  },
+  {
+   "style": "codemiri",
+   "text": "मेरा loan overdue हो गया है, सब कुछ एक साथ pay करना है"
+  },
+  {
+   "style": "english",
+   "text": "I need to clear all the pending amounts and late fees right now"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe late fees wala pura pending amount ek hi baar mein clear karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan की सारी due date निकल चुकी है, सब एक साथ pay करना है"
+  },
+  {
+   "style": "english",
+   "text": "I want to clear my entire pending balance and the late charges in a single transaction"
+  }
+ ],
+ "get_payment_history": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe check karna hai ki pichle mahine maine kitne installments diye hain mere loan par"
+  },
+  {
+   "style": "codemix",
+   "text": "mere loan की payment history दिखा दो last 10 transactions के साथ"
+  },
+  {
+   "style": "english",
+   "text": "I want to verify the last few payments I made on my home loan"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhaiya, mere account se pichle hafte jo amount kati thi, uska record nikaal do"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan के पिछले payments का status बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Can you pull up the recent payments for my account? I think I missed checking one"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe darr lag raha hai ki kahi payment pending toh nahi dikhayi de rahi"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card का payment history दिखा दो पिछले 5 transactions"
+  },
+  {
+   "style": "english",
+   "text": "I need to see the recent dues cleared for my personal loan"
+  },
+  {
+   "style": "hinglish",
+   "text": "Pichle do mahine ki payment details bata do mujhe"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan की recent payments की list दिखा दो"
+  },
+  {
+   "style": "english",
+   "text": "Please show me the last few transactions I made towards my fixed deposit"
+  }
+ ],
+ "get_last_payment": [
+  {
+   "style": "hinglish",
+   "text": "mere loan ka pichla payment kab hua tha bata sakte ho"
+  },
+  {
+   "style": "codemix",
+   "text": "mujhe loan ka last payment date check karna hai"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me when I made my last EMI for my personal loan?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apni gaadi wale loan ka latest transaction dekhna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan की last payment कब हुई है बताइए"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to know the details of my most recent payment."
+  },
+  {
+   "style": "hinglish",
+   "text": "pichla amount kab deduct hua tha, ye pata karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card का recent due payment कब किया था"
+  },
+  {
+   "style": "english",
+   "text": "Please check when I paid my last installment."
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe bas ye jaanna tha ki mera last due kab clear hua"
+  },
+  {
+   "style": "codemix",
+   "text": "fixed deposit की last payment history निकाल दो"
+  },
+  {
+   "style": "english",
+   "text": "I need to know the date of my recent loan repayment."
+  }
+ ],
+ "report_payment_not_reflected": [
+  {
+   "style": "hinglish",
+   "text": "maine pichle hafte loan ka payment kar diya tha par abhi tak update nahi hua hai"
+  },
+  {
+   "style": "codemix",
+   "text": "kal maine 5000 rupaye transfer kiye the par system में नहीं दिख रहे"
+  },
+  {
+   "style": "english",
+   "text": "I made a payment for my vehicle loan yesterday but it is not showing up on my account"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera credit card bill ka amount clear ho gaya tha, par statement mein pending dikha raha hai"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan की EMI मैंने जमा कर दी पर portal पर status same है"
+  },
+  {
+   "style": "english",
+   "text": "I paid my fixed deposit interest online last month but the bank is not reflecting it"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe lagta hai meri payment atak gayi hai, please check kar lo"
+  },
+  {
+   "style": "codemix",
+   "text": "upi reference number है पर payment reflect नहीं हुई अभी तक"
+  },
+  {
+   "style": "english",
+   "text": "I transferred the money on the 10th but the system still shows it as unpaid"
+  },
+  {
+   "style": "hinglish",
+   "text": "bank se paisa kat gaya tha par aapke yahan record mein entry nahi aayi"
+  },
+  {
+   "style": "codemix",
+   "text": "amount 12000 जमा कर दिया था पर loan account में credit नहीं हुआ"
+  },
+  {
+   "style": "english",
+   "text": "Can you please look into why my recent payment is missing from my loan account?"
+  }
+ ],
+ "get_late_fee": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe batao ki mere loan par late charge kitna lag raha hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे home loan का late fee कितना कटा है"
+  },
+  {
+   "style": "english",
+   "text": "Can you check how much penalty I have to pay for missing my EMI"
+  },
+  {
+   "style": "hinglish",
+   "text": "Pichle mahine ki due date nikal gayi thi, uska extra amount kya hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे credit card bill पे कितना late fee add हुआ है"
+  },
+  {
+   "style": "english",
+   "text": "I need to know the extra amount charged on my vehicle loan for the delay"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe samajh nahi aa raha kitna extra dena padega due date ke baad"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे fixed deposit पर late payment का charge बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Please tell me the charges applied because I could not pay on time"
+  },
+  {
+   "style": "hinglish",
+   "text": "System mein dikha raha hai ki kuch extra paisa laga hai, exact late fee bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे personal loan का overdue penalty कितना है"
+  },
+  {
+   "style": "english",
+   "text": "How much is the late fee on my account for this month"
+  }
+ ],
+ "request_late_fee_waiver": [
+  {
+   "style": "hinglish",
+   "text": "mera loan ka late charge hata do, is baar payment mein thodi deri ho gayi thi"
+  },
+  {
+   "style": "codemix",
+   "text": "loan l1005 ki late fee maaf kar do, medical emergency thi ghar pe"
+  },
+  {
+   "style": "english",
+   "text": "I couldn't pay on time because my salary got delayed, please remove the extra charge"
+  },
+  {
+   "style": "hinglish",
+   "text": "bhai ek baar check karo, fees maaf ho sakti hai kya? office mein meeting chal rahi thi"
+  },
+  {
+   "style": "codemix",
+   "text": "ये l2012 का late fee waive करना पड़ेगा, मेरा account temporarily freeze हो गया था"
+  },
+  {
+   "style": "english",
+   "text": "I missed the due date since I was stuck in the hospital, kindly waive the penalty"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe samajh nahi aaya ye extra amount kyun laga hai, please isko hata do"
+  },
+  {
+   "style": "codemix",
+   "text": "इस l3003 की late fee cancel करनी है, घर में function था तो पैसे कहीं और लग गए"
+  },
+  {
+   "style": "english",
+   "text": "I had a sudden family function and couldn't arrange the cash, so kindly waive the late fee"
+  },
+  {
+   "style": "hinglish",
+   "text": "pichle mahine ka charge galat hai, mujhe isko maaf kar do na"
+  },
+  {
+   "style": "codemix",
+   "text": "l4004 पर late fee remove करनी है, internet down था तो payment time पे नहीं हुई"
+  },
+  {
+   "style": "english",
+   "text": "My internet was not working that day so I couldn't pay, please forgive the late fee"
+  }
+ ],
+ "get_bounce_charges": [
+  {
+   "style": "hinglish",
+   "text": "mera auto pay fail ho gaya tha, uske charges kitne lage mujhe bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी loan की EMI bounce हुई थी, उसका penalty कितना कटा बताओ"
+  },
+  {
+   "style": "english",
+   "text": "I think my monthly autopay did not go through, can you tell me the fees for that?"
+  },
+  {
+   "style": "hinglish",
+   "text": "bank se amount cut nahi hua par fees charge kar di, iska detail do"
+  },
+  {
+   "style": "codemix",
+   "text": "पिछले महीने की auto debit bounce हुई थी उसका charge बताओ"
+  },
+  {
+   "style": "english",
+   "text": "I had insufficient balance last month and the payment failed, what is the bounce fee?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe message aaya tha ki payment bounce hui, uska kitna paisa gaya"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan के लिए failed payment का charge क्या है"
+  },
+  {
+   "style": "english",
+   "text": "My salary was delayed so the auto-debit bounced, please check the charges"
+  },
+  {
+   "style": "hinglish",
+   "text": "auto pay attempt fail hone par kitna charge lagta hai ye check karo"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan का auto pay fail हुआ था उसका bounce charges बताओ"
+  },
+  {
+   "style": "english",
+   "text": "I need to know the fee for the failed standing instruction on my account"
+  }
+ ],
+ "get_autopay_mandate": [
+  {
+   "style": "hinglish",
+   "text": "mujhe check karna hai ki meri monthly EMI auto-debit set up hai ya nahi"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे home loan की monthly deduction हो रही है या नहीं ये बताइए"
+  },
+  {
+   "style": "english",
+   "text": "I want to know which account is linked for my monthly loan payment"
+  },
+  {
+   "style": "hinglish",
+   "text": "auto-debit fail ho gaya kya, mera bank account check karo"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे vehicle loan का auto-debit mandate active है क्या"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me the status of my standing instruction for the credit card bill?"
+  },
+  {
+   "style": "hinglish",
+   "text": "bank se paisa kat raha hai ya nahi, ye dekh ke batao"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे FD के लिए जो auto-debit है उसका status क्या है"
+  },
+  {
+   "style": "english",
+   "text": "Please verify which savings account is connected to my loan EMI"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera auto pay band ho gaya kya, ek baar check kar lo"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan का mandate bank में update हुआ है या नहीं"
+  },
+  {
+   "style": "english",
+   "text": "I need to confirm if my recurring payment setup is active from my side"
+  }
+ ],
+ "update_autopay_bank_account": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apna auto debit wala account badalna hai, naya bank details daal do"
+  },
+  {
+   "style": "codemix",
+   "text": "mera auto pay bank account update karna hai, loan id l1205 ke liye naya account number 445566778899 aur ifsc sbii0001234 daal do"
+  },
+  {
+   "style": "english",
+   "text": "I want to switch the bank account from which my monthly payments are deducted."
+  },
+  {
+   "style": "hinglish",
+   "text": "mere naye salary account se payment cut karni hai, please wo link kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan की emi अब नए account से कटनी है, account number 998877665544 और ifsc hdfc0004567 डाल दो"
+  },
+  {
+   "style": "english",
+   "text": "Can you update my vehicle loan autopay to my new savings account?"
+  },
+  {
+   "style": "hinglish",
+   "text": "purana account close ho gaya hai isliye naya number dena padega"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card का auto debit बदलना है, नया account number 334455667788 और ifsc icici0009876 update कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I recently opened a new current account and need to change where my fixed deposit auto-renewal debit happens."
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe lagta hai galat account se paise kat rahe hain, please check karke change kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "personal loan l9988 ke लिए auto debit bank details update करनी हैं, नया account number 112233445566 और ifsc axis0000112 डाल दो"
+  },
+  {
+   "style": "english",
+   "text": "I received a message saying my old debit mandate failed, so please register my new banking details."
+  }
+ ],
+ "cancel_autopay": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apna auto-debit band karwana hai, abhi is mahine se"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera salary account abhi naya khula hai, is loan ka auto-pay hata do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe manual payment karna hai, isliye ye auto debit cancel kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे इस loan का auto debit बंद करना है please"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा account change हो गया है तो EMI का auto debit हटा दो"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे manual payment करना है इसलिए auto debit cancel कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I want to stop the automatic debit for my loan starting next month"
+  },
+  {
+   "style": "english",
+   "text": "Please remove the auto-debit from my account, I will pay the EMIs myself"
+  },
+  {
+   "style": "english",
+   "text": "I am closing my old bank account so cancel the auto-pay setup"
+  },
+  {
+   "style": "hinglish",
+   "text": "ghar pe paise kam hain isliye auto payment mat kaato, main khud de dunga"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे पास अभी cash नहीं है तो auto debit मत काटना मैं खुद pay कर लूंगा"
+  },
+  {
+   "style": "english",
+   "text": "I am facing some financial issues right now so I need to cancel the auto-debit"
+  }
+ ],
+ "get_refund_status": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe batao na ki mere loan ka extra amount wapas hua ya nahi"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan से जो extra charge कटा था उसका refund status क्या है"
+  },
+  {
+   "style": "english",
+   "text": "I had requested a refund for my loan, can you check where it stands?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhaiya, mere paas overpayment ka paisa aaya hai kya, status check kardo"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan account में overpayment हुआ है उसका refund अभी तक आया या नहीं देख लो"
+  },
+  {
+   "style": "english",
+   "text": "I need to know if my refund request for the loan has been processed yet"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe darr lag raha hai, mera refund atka hua hai kya?"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा refund pending तो नहीं है loan के लिए check कर लो"
+  },
+  {
+   "style": "english",
+   "text": "Please check the status of my refund on the loan, I am waiting for the money"
+  },
+  {
+   "style": "hinglish",
+   "text": "Pichle mahine extra payment kiya tha, uska refund mila kya?"
+  },
+  {
+   "style": "codemix",
+   "text": "पिछले महीने extra payment किया था उसका refund status बता दो"
+  },
+  {
+   "style": "english",
+   "text": "Can you help me track the refund on my loan?"
+  }
+ ],
+ "request_refund": [
+  {
+   "style": "hinglish",
+   "text": "mera home loan ka extra charge kat gaya hai, uska refund lagwa do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe galat amount deduct hua hai account se, please refund karwa do"
+  },
+  {
+   "style": "hinglish",
+   "text": "vehicle loan mein jo extra EMI lagi hai, usko wapas chahiye"
+  },
+  {
+   "style": "hinglish",
+   "text": "credit card par double payment ho gayi hai, mujhe mera paisa wapas chahiye"
+  },
+  {
+   "style": "codemix",
+   "text": "personal loan में गलत charges लगे हैं, मुझे refund चाहिए"
+  },
+  {
+   "style": "codemix",
+   "text": "fixed deposit का amount कट गया पर मुझे नहीं पता क्यों, पैसे वापस करवा दो"
+  },
+  {
+   "style": "codemix",
+   "text": "L1002 का extra charge लग गया है, इसे reverse करवा दो"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan की EMI ज़्यादा कट गई है, मुझे refund चाहिए"
+  },
+  {
+   "style": "english",
+   "text": "I got charged twice on my loan, can you process a refund for the extra amount"
+  },
+  {
+   "style": "english",
+   "text": "There is a wrong deduction from my credit card, please refund 500 rupees to my account"
+  },
+  {
+   "style": "english",
+   "text": "I paid an extra installment for my vehicle loan by mistake, I need my money back"
+  },
+  {
+   "style": "english",
+   "text": "My fixed deposit interest was calculated wrongly and charged extra, I want a refund of 1000 rupees"
+  }
+ ],
+ "get_promise_to_pay": [
+  {
+   "style": "hinglish",
+   "text": "mujhe yaad nahi aa raha, humne last month kya date bola tha payment ke liye?"
+  },
+  {
+   "style": "hinglish",
+   "text": "humne ek baar bola tha ki salary aate hi de denge, wo date kya thi bata sakte ho?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apna commitment yaad karwana hai, humne kya fix kiya tha?"
+  },
+  {
+   "style": "codemix",
+   "text": "sir humne pehle kya date bola tha installment ke liye?"
+  },
+  {
+   "style": "codemix",
+   "text": "mujhe वो promise याद दिला दो जो हमने पिछले महीने किया था"
+  },
+  {
+   "style": "codemix",
+   "text": "loan के लिए हमने क्या date बताई थी payment की?"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to remember when I promised to clear the dues, can you check that for me?"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me the exact date I committed to for the next EMI?"
+  },
+  {
+   "style": "english",
+   "text": "I had told someone earlier about a specific date for the payment, I need to recall what that was."
+  },
+  {
+   "style": "english",
+   "text": "I want to know the date I assured you guys for paying back the loan."
+  },
+  {
+   "style": "hinglish",
+   "text": "jab humne baat ki thi tab kya date fix hui thi, wo check karke batao na"
+  },
+  {
+   "style": "codemix",
+   "text": "please मुझे वो date बताओ जो हमने पहले तय की थी"
+  }
+ ],
+ "request_emi_holiday": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe 2 mahine ke liye EMI rokni hai, office mein kaam thoda slow chal raha hai abhi"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera business abhi down hai, kya main 1 month ki chhut le sakta hoon?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Ghar mein medical emergency aa gayi thi, isliye 3 mahine ka break chahiye tha"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी salary delay हो गई है, तो मुझे 2 महीने की EMI pause करनी है"
+  },
+  {
+   "style": "codemix",
+   "text": "थोड़ा cash flow tight है, 1 month का break दे सकते हो क्या"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे पास अभी funds नहीं हैं, please 3 महीने के लिए payment रोक दो"
+  },
+  {
+   "style": "english",
+   "text": "I am facing a temporary cash crunch due to a job loss, can I get a 2 month EMI holiday?"
+  },
+  {
+   "style": "english",
+   "text": "There was a sudden medical issue at home, I need to pause my EMIs for 1 month."
+  },
+  {
+   "style": "english",
+   "text": "My business is not doing well right now, I would like to request a 3 month EMI break."
+  },
+  {
+   "style": "hinglish",
+   "text": "Abhi paise ka arrangement nahi ho pa raha, 1 mahina rukwa do meri payment"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी job चली गई है इसलिए मुझे 2 महीने का time चाहिए"
+  },
+  {
+   "style": "english",
+   "text": "I have an unexpected expense right now, please allow me to skip my EMIs for 2 months."
+  }
+ ],
+ "get_settlement_offer": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apne loan ka ek one time settlement plan chahiye, kaafi time se payments pending hain"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे vehicle loan के लिए कोई settlement offer है क्या, तीन महीने से dues pending हैं"
+  },
+  {
+   "style": "english",
+   "text": "I am unable to pay the monthly installments right now, please tell me if there is any settlement option available"
+  },
+  {
+   "style": "hinglish",
+   "text": "bank wale baar baar phone kar rahe hain, kuch toh solution batao settlement ka"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan में delay हो गया था अब एक बार settle करना है"
+  },
+  {
+   "style": "english",
+   "text": "I have missed a few EMIs due to a medical emergency, I want to clear the dues through a settlement"
+  },
+  {
+   "style": "hinglish",
+   "text": "ek baar check karo ki mere account par koi discount wala offer aa sakta hai kya"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card का bill बहुत बढ़ गया है कोई settlement scheme है"
+  },
+  {
+   "style": "english",
+   "text": "I heard that if you have more than three missed EMIs, the company gives a reduced payout option, is that true?"
+  },
+  {
+   "style": "hinglish",
+   "text": "salary nahi aayi is mahine, mujhe kam amount mein loan close karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे fixed deposit से linked loan के लिए कोई offer है settlement का"
+  },
+  {
+   "style": "english",
+   "text": "Please check if I am eligible for a one time settlement because I have not paid three EMIs in a row"
+  }
+ ],
+ "accept_settlement_offer": [
+  {
+   "style": "hinglish",
+   "text": "bhai abhi jo settlement wala offer aaya hai wo accept karke payment kar deta hoon"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe home loan ka ek offer dikh raha hai, usko process kar do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera vehicle loan close karna hai, jo bhi discount mil raha hai le lo"
+  },
+  {
+   "style": "codemix",
+   "text": "mera personal loan settle karna hai, jo offer आया है उसे accept कर दो"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card का outstanding clear करना है, settlement option लगा दो"
+  },
+  {
+   "style": "codemix",
+   "text": "fixed deposit से पैसे transfer करके loan close करवाना है, offer approve कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I got an SMS about a settlement, please go ahead and process it from my netbanking"
+  },
+  {
+   "style": "english",
+   "text": "I want to clear my pending dues today, can you apply the settlement offer for me"
+  },
+  {
+   "style": "english",
+   "text": "My salary just came in, use it to pay the settlement for my loan"
+  },
+  {
+   "style": "english",
+   "text": "I am ready to pay the discounted amount right now, just confirm the settlement"
+  },
+  {
+   "style": "english",
+   "text": "Please accept the offer and deduct the money directly from my account"
+  },
+  {
+   "style": "english",
+   "text": "I have the funds ready, go ahead and settle my dues using netbanking"
+  }
+ ],
+ "get_collection_call_preferences": [
+  {
+   "style": "hinglish",
+   "text": "mujhe yaad dilane ke liye call ka time bata do, main office mein hota hoon"
+  },
+  {
+   "style": "codemix",
+   "text": "reminder call का time क्या रखूँ, सुबह जल्दी नहीं आ सकता"
+  },
+  {
+   "style": "english",
+   "text": "what time should I expect your reminder calls, I am usually at work in the mornings"
+  },
+  {
+   "style": "hinglish",
+   "text": "hindi mein baat karni hai aur shaam ko call karna"
+  },
+  {
+   "style": "codemix",
+   "text": "reminder call शाम को भेजिए और भाषा hindi रखिये"
+  },
+  {
+   "style": "english",
+   "text": "please call me in the evening and keep the language as hindi"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe raat ko free time milta hai, tab call karna"
+  },
+  {
+   "style": "codemix",
+   "text": "रात में free होता हूँ तब call कर लेना"
+  },
+  {
+   "style": "english",
+   "text": "I am free only at night so you can reach me then"
+  },
+  {
+   "style": "hinglish",
+   "text": "weekend par call karna theek rahega, tab ghar pe hota hoon"
+  },
+  {
+   "style": "codemix",
+   "text": "weekend पर call करना ठीक रहेगा मैं घर पर रहता हूँ"
+  },
+  {
+   "style": "english",
+   "text": "it would be better if you call me on the weekend since I am at home then"
+  }
+ ],
+ "check_personal_loan_eligibility": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe ek personal loan chahiye, kitna mil sakta hai bata do."
+  },
+  {
+   "style": "hinglish",
+   "text": "Meri monthly income 50000 hai, mujhe kitna loan mil jayega?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe urgent paise chahiye, eligibility check kar do please."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी monthly income 60000 है, personal loan कितना मिलेगा"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे home loan नहीं बल्कि personal loan के लिए estimate बताओ"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी salary 45000 है, eligibility check करो"
+  },
+  {
+   "style": "english",
+   "text": "I need to know roughly how much personal loan I can get."
+  },
+  {
+   "style": "english",
+   "text": "I earn around 55000 a month, what is my estimated loan limit?"
+  },
+  {
+   "style": "english",
+   "text": "Can you check how much I might be eligible for? I need some funds."
+  },
+  {
+   "style": "hinglish",
+   "text": "Salary 48000 hai, batao kitna loan banega."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe idea chahiye kitna loan mil sakta hai mere current income par."
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी monthly income 70000 है, personal loan eligibility बताओ"
+  }
+ ],
+ "check_vehicle_loan_eligibility": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe nayi gaadi leni hai, batao kitna loan mil sakta hai mere hisaab se"
+  },
+  {
+   "style": "codemix",
+   "text": "mujhe car ke liye kitna loan eligible hoga"
+  },
+  {
+   "style": "english",
+   "text": "I am planning to buy a new car, can you tell me the loan amount I might get"
+  },
+  {
+   "style": "hinglish",
+   "text": "Meri monthly salary itni hai, ispe kitna vehicle loan pass hoga"
+  },
+  {
+   "style": "codemix",
+   "text": "गाड़ी की on-road price कितनी है और मुझे कितना loan मिल सकता है"
+  },
+  {
+   "style": "english",
+   "text": "What is the maximum loan I can get for this specific car model"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe second hand car leni hai, uska kitna finance ho payega"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे नई bike लेनी है, eligibility check कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I want to know roughly how much you can fund for my dream car"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera income itna hai, batao kitne tak ka loan mil jayega"
+  },
+  {
+   "style": "codemix",
+   "text": "गाड़ी का price 10 lakh है, मुझे कितना loan मिलेगा"
+  },
+  {
+   "style": "english",
+   "text": "Estimate my vehicle loan limit based on my monthly earnings and the price of the car"
+  }
+ ],
+ "get_loan_products": [
+  {
+   "style": "hinglish",
+   "text": "bhai mere ko 10 lakh tak ka loan chahiye, batao kya options hain"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan का interest rate क्या रहेगा"
+  },
+  {
+   "style": "english",
+   "text": "I am looking for a vehicle loan, what are the maximum limits and time periods you offer"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe credit card apply karna hai, kitna limit mil jayega"
+  },
+  {
+   "style": "codemix",
+   "text": "fixed deposit के लिए कितना return rate मिलेगा"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me the tenure range for personal loans"
+  },
+  {
+   "style": "hinglish",
+   "text": "ghar ke liye kitne tak ka loan mil sakta hai, rate bhi batao"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan की minimum amount और maximum tenure कितनी है"
+  },
+  {
+   "style": "english",
+   "text": "I need to know the rate ranges for all your loan products"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe urgent paise chahiye, batao kitne time tak ka loan milta hai"
+  },
+  {
+   "style": "codemix",
+   "text": "personal loan के लिए eligibility क्या है और कितने time का tenure है"
+  },
+  {
+   "style": "english",
+   "text": "Please list all the loan products with their amount, tenure and rate details"
+  }
+ ],
+ "get_current_interest_rates": [
+  {
+   "style": "hinglish",
+   "text": "bhai mujhe nayi car lene ka plan hai, abhi ka interest rate kya chal raha hai batao na"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे home loan चाहिए, अभी का interest rate क्या है"
+  },
+  {
+   "style": "english",
+   "text": "I am looking to get a new personal loan, can you tell me what rates you are currently offering?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe ek fresh credit card lena hai, iska current interest rate kya hai?"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे नयी vehicle loan की interest rate जाननी है"
+  },
+  {
+   "style": "english",
+   "text": "I want to open a new fixed deposit, please share the latest interest rates."
+  },
+  {
+   "style": "hinglish",
+   "text": "arre yaar market mein rates bahut upar neeche ho rahe hain, abhi kya offer hai batao"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे new loan product का current interest rate बताइए"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to figure out if I should take a loan now, what are the current interest rates?"
+  },
+  {
+   "style": "hinglish",
+   "text": "kal mere dost ne loan liya tha, usne bola rates change ho gaye hain, sach mein?"
+  },
+  {
+   "style": "codemix",
+   "text": "अभी नयी loan product के interest rate क्या हैं"
+  },
+  {
+   "style": "english",
+   "text": "Do you have the updated interest rates for a brand new loan product?"
+  }
+ ],
+ "calculate_emi": [
+  {
+   "style": "hinglish",
+   "text": "bhai mujhe ek chota loan lena hai, kitni EMI banegi batao"
+  },
+  {
+   "style": "hinglish",
+   "text": "agar main 8 percent par 5 saal ke liye 5 lakh leun toh monthly kitna dena hoga"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe ghar ke liye loan chahiye, ek rough calculation bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "car loan की EMI कितनी बनेगी, 10 percent interest पर 4 साल के लिए 8 lakh रुपये"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan के लिए monthly payment कितनी आएगी, principal 20 लाख और tenure 240 months"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card का bill clear करने के लिए 3 लाख का loan लेना है, rate 12 percent है"
+  },
+  {
+   "style": "english",
+   "text": "I want to take a personal loan of 3 lakhs, can you tell me the monthly installment?"
+  },
+  {
+   "style": "english",
+   "text": "How much do I need to pay every month if I borrow 10 lakhs for 10 years at 9 percent?"
+  },
+  {
+   "style": "english",
+   "text": "I am planning to buy a bike, please calculate the EMI for 75 thousand at 11 percent for 36 months"
+  },
+  {
+   "style": "english",
+   "text": "Need to know the exact monthly outgo for a 15 lakh home loan at 8.5 percent over 20 years"
+  },
+  {
+   "style": "english",
+   "text": "If I take 5 lakhs for 60 months at 10 percent yearly, what will my EMI be?"
+  },
+  {
+   "style": "english",
+   "text": "Can you help me figure out the monthly payment for a 2 lakh vehicle loan at 13 percent for 48 months?"
+  }
+ ],
+ "get_application_status": [
+  {
+   "style": "hinglish",
+   "text": "bhai mera loan application ka kya scene hai abhi tak"
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan status bata do please"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to know where my credit card application stands"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe pata karna hai mere vehicle loan ki file kahan tak aayi hai"
+  },
+  {
+   "style": "codemix",
+   "text": "application का status check करना है मुझे"
+  },
+  {
+   "style": "english",
+   "text": "Can you check if my personal loan got approved or is still pending?"
+  },
+  {
+   "style": "hinglish",
+   "text": "maine FD open karne ke liye apply kiya tha, uska update do"
+  },
+  {
+   "style": "codemix",
+   "text": "mera application id se status देखना है"
+  },
+  {
+   "style": "english",
+   "text": "I submitted my papers yesterday, just want to see the progress"
+  },
+  {
+   "style": "hinglish",
+   "text": "yaar bahut din ho gaye, batao mera case clear hua ya nahi"
+  },
+  {
+   "style": "codemix",
+   "text": "loan application का current status क्या है"
+  },
+  {
+   "style": "english",
+   "text": "Please tell me the latest update on my home loan request"
+  }
+ ],
+ "send_document_upload_link": [
+  {
+   "style": "hinglish",
+   "text": "loan ke liye jo documents mange the, wo bhejne hain, link bhej do na"
+  },
+  {
+   "style": "hinglish",
+   "text": "application ruk gayi hai, please upload karne ka message bhej do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe app pe upload karne mein dikkat aa rahi thi, SMS bhej do please"
+  },
+  {
+   "style": "codemix",
+   "text": "mera loan application pending hai, documents upload karne ka link भेजो"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan waale papers submit karne hain, SMS भेज दो"
+  },
+  {
+   "style": "codemix",
+   "text": "mera application ID A4001 hai, document upload का link भेजिए"
+  },
+  {
+   "style": "english",
+   "text": "I need to submit my paperwork, can you send me the upload link?"
+  },
+  {
+   "style": "english",
+   "text": "My application is stuck right now, please send the document link on SMS."
+  },
+  {
+   "style": "english",
+   "text": "I am trying to upload my salary slips but the portal is not working, send me the link."
+  },
+  {
+   "style": "hinglish",
+   "text": "ghar ke loan ke papers ready hain, bas link bhej do upload karne ke liye"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe urgent submit karna hai, please document upload karne wala link bhej do"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan के documents ready हैं, link भेजो जल्दी"
+  }
+ ],
+ "cancel_loan_application": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe abhi loan lene ka plan cancel karna hai, please application rok do"
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan apply kiya tha wo cancel karna hai"
+  },
+  {
+   "style": "english",
+   "text": "I changed my mind, so I want to withdraw my car loan request"
+  },
+  {
+   "style": "hinglish",
+   "text": "Application ka process abhi band kar do, mujhe paise nahi chahiye ab"
+  },
+  {
+   "style": "codemix",
+   "text": "mera credit card apply किया था उसे अभी cancel कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I am not going ahead with the personal loan, please remove my request"
+  },
+  {
+   "style": "hinglish",
+   "text": "Baad mein soch ke dekha toh mujhe ye loan nahi lena"
+  },
+  {
+   "style": "codemix",
+   "text": "fixed deposit wala form withdraw करना है अभी"
+  },
+  {
+   "style": "english",
+   "text": "I don't need this vehicle loan anymore, please cancel it from your side"
+  },
+  {
+   "style": "hinglish",
+   "text": "Abhi mera interest nahi hai is loan mein, cancel kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "mera application id wala loan application cancel कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I got approval from another bank so drop my request here"
+  }
+ ],
+ "get_preapproved_offers": [
+  {
+   "style": "hinglish",
+   "text": "bhaiya mere paas koi achha loan offer hai kya abhi ke liye"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe urgent paise chahiye, batao kya pre-approved deals chal rahi hain"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera credit card limit badhana hai, koi special offer dikhao na"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan के लिए कोई preapproved offer है क्या"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan का best deal दिखाओ अभी"
+  },
+  {
+   "style": "codemix",
+   "text": "fixed deposit पे अच्छा interest rate मिल रहा है क्या"
+  },
+  {
+   "style": "english",
+   "text": "I am looking for some quick personal loan options right now"
+  },
+  {
+   "style": "english",
+   "text": "Can you check if I have any active credit card deals?"
+  },
+  {
+   "style": "english",
+   "text": "I need to upgrade my two wheeler, please check my offers"
+  },
+  {
+   "style": "english",
+   "text": "Do I have any pre-approved home loan offers that I can avail today?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe abhi paison ki zaroorat hai, koi fast loan option hai kya"
+  },
+  {
+   "style": "codemix",
+   "text": "mere account में कौन कौन से loan offers available हैं check करो"
+  }
+ ],
+ "start_video_kyc": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apna KYC update karna hai abhi, link bhej do na"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा video verification करना है, link भेज दीजिए"
+  },
+  {
+   "style": "english",
+   "text": "I need to do my KYC again, please send me the video link"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera home loan ka account renew karna hai, video call ka link do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा KYC expire हो गया है, नया process शुरू कर दो"
+  },
+  {
+   "style": "english",
+   "text": "My KYC is pending, can you share the video KYC link?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera card block ho gaya tha, ab dobara activate karne ke liye video kyc karni padegi"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे credit card के लिए video kyc करनी है link भेजिए"
+  },
+  {
+   "style": "english",
+   "text": "I want to renew my KYC, send me the video link please"
+  },
+  {
+   "style": "hinglish",
+   "text": "bank waale bol rahe the ki video call karke details verify karni padegi, link bhej do"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे loan account के लिए video kyc complete करनी है"
+  },
+  {
+   "style": "english",
+   "text": "I got a message saying my documents need verification, send the video KYC link"
+  }
+ ],
+ "get_registered_contact_details": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apna registered mobile number aur email id check karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "mera ghar ka address verify karna hai please"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me what contact details are saved with my account?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera customer number C005 hai, isme kya details registered hain batao"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे अपनी registered details चाहिए थीं"
+  },
+  {
+   "style": "english",
+   "text": "I need to know my official phone number and address on record"
+  },
+  {
+   "style": "hinglish",
+   "text": "app update karne ke liye email address dekhna tha"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे account में जो number linked है वो बता दो"
+  },
+  {
+   "style": "english",
+   "text": "Please share my registered address so I can update my records"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe lag raha hai mera phone number galat update ho gaya hai, ek baar check kar lo"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे home loan के लिए registered contact details चाहिए"
+  },
+  {
+   "style": "english",
+   "text": "I want to verify my email and postal address right now"
+  }
+ ],
+ "update_phone": [
+  {
+   "style": "hinglish",
+   "text": "mera purana number band ho gaya hai, please naya add kar do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe loan account ke liye apna mobile number update karwana hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "maine naya sim liya hai, isko system mein link karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा registered mobile number change करना है"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे नया phone number update करवाना है sir"
+  },
+  {
+   "style": "codemix",
+   "text": "पुराना number बंद हो गया था तो नया डालना है"
+  },
+  {
+   "style": "english",
+   "text": "I need to change my registered mobile number on my account"
+  },
+  {
+   "style": "english",
+   "text": "I recently got a new SIM, so I want to update my contact details"
+  },
+  {
+   "style": "english",
+   "text": "Can you please register my new ten digit mobile number?"
+  },
+  {
+   "style": "hinglish",
+   "text": "nayi sim lene ke baad number update karna hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera phone number change kar do, ab yeh active nahi hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा पुराना number बंद हो गया है, नया डाल दो"
+  }
+ ],
+ "update_email": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apna email update karna hai, purana spam mein chala gaya hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "account ka registered email address badalna hai, naya wala bata doon"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera email id change karna hai, abhi naya wala type kar deta hoon"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apne profile mein naya email add karna hai, please note kar lo"
+  },
+  {
+   "style": "hinglish",
+   "text": "email galat register ho gaya tha, usko abhi theek karna hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera inbox badal gaya hai isliye details update karni padengi"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा email address update करना है, नया वाला बता रहा हूँ"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे profile में नया email डालना है, please update कर दीजिए"
+  },
+  {
+   "style": "codemix",
+   "text": "गलत email register हो गया था, उसे अभी ठीक करना है"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा inbox बदल गया है इसलिए details change करनी पड़ेंगी"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे अपना registered email address बदलना है, नया बता देता हूँ"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा email id change करना है, अभी नया वाला बता रहा हूँ"
+  },
+  {
+   "style": "english",
+   "text": "I need to change my registered email address on my account"
+  },
+  {
+   "style": "english",
+   "text": "The email linked to my profile is incorrect, please update it"
+  },
+  {
+   "style": "english",
+   "text": "I have a new email now, so I want to update my details"
+  },
+  {
+   "style": "english",
+   "text": "Can you please change the email address in my loan account?"
+  }
+ ],
+ "update_preferred_language": [
+  {
+   "style": "hinglish",
+   "text": "mujhe messages hindi mein chahiye, ab se change kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "call par baat karna hai english mein, update kar दो"
+  },
+  {
+   "style": "english",
+   "text": "Can you switch my account to receive updates in kannada?"
+  },
+  {
+   "style": "hinglish",
+   "text": "ab se sab alerts tamil mein aane chahiye bhai"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे notifications bengali में चाहिए please"
+  },
+  {
+   "style": "english",
+   "text": "I am not comfortable with hindi, please set it to english from now on"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe lagta hai ab messages malayalam mein aane chahiye"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे loan details telugu में भेजो"
+  },
+  {
+   "style": "english",
+   "text": "I want to update my preferred language to marathi for all future communications"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe theek se samajh nahi aa raha, ab se gujarati mein baat karo"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे calls के लिए punjabi select करनी है"
+  },
+  {
+   "style": "english",
+   "text": "Please change my language to urdu, I find it much easier to understand"
+  }
+ ],
+ "update_nominee": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apne loan account me nominee change karna hai, meri wife ka naam add kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे FD में nominee update करना है, बेटी का नाम डाल दो"
+  },
+  {
+   "style": "english",
+   "text": "I want to add my brother as a nominee for my car loan"
+  },
+  {
+   "style": "hinglish",
+   "text": "maine ghar ke paper update karwaye hain, abhi nominee mera husband hona chahiye"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे credit card पर nominee बदलना है, माँ का नाम लिख दो"
+  },
+  {
+   "style": "english",
+   "text": "Can you please update the nominee on my fixed deposit to my son?"
+  },
+  {
+   "style": "hinglish",
+   "text": "ab meri mummy ko nominee banana hai, relation me mother update kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "personal loan का nominee बदलना है, बहन का नाम डाल दो"
+  },
+  {
+   "style": "english",
+   "text": "I recently got married so I need to change the nominee on my account"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera nominee shift karna hai, papa ka naam daal do"
+  },
+  {
+   "style": "codemix",
+   "text": "गाड़ी के लोन में nominee बदलना है, पत्नी का नाम डाल दो"
+  },
+  {
+   "style": "english",
+   "text": "I need to add my daughter as the nominee for my home loan"
+  }
+ ],
+ "link_pan": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apna PAN card update karana hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera PAN galat enter ho gaya tha, abhi theek karna hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "loan apply karne ke liye PAN link karna hai sir"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apna naya PAN number system mein daalna hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "PAN card details change karne hain, please help karo"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera PAN abhi tak link nahi dikha raha, check kardo"
+  },
+  {
+   "style": "codemix",
+   "text": "mera PAN update karna hai account mein"
+  },
+  {
+   "style": "codemix",
+   "text": "गलत PAN enter हो गया था उसे ठीक कर दो"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan के लिए PAN link करवाना है"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा नया PAN number डाल दो system में"
+  },
+  {
+   "style": "codemix",
+   "text": "PAN card details change करने हैं please"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा PAN link नहीं हो रहा check करो"
+  },
+  {
+   "style": "english",
+   "text": "I need to link my PAN for the credit card application"
+  },
+  {
+   "style": "english",
+   "text": "The PAN I gave earlier was incorrect, please update it"
+  },
+  {
+   "style": "english",
+   "text": "Can you register my new PAN number in the system"
+  },
+  {
+   "style": "english",
+   "text": "My PAN is not reflecting, I want to get it linked"
+  },
+  {
+   "style": "english",
+   "text": "I want to change my PAN details for my vehicle loan"
+  },
+  {
+   "style": "english",
+   "text": "Please add my PAN to my profile, I have the number here"
+  }
+ ],
+ "get_document_list": [
+  {
+   "style": "hinglish",
+   "text": "bhai mujhe home loan lena hai, batao kya kya papers lagenge"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan apply karne ke liye kaunse documents chahiye"
+  },
+  {
+   "style": "english",
+   "text": "I want to apply for a personal loan, what are the required documents?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe credit card ke liye kya kya proof dena padega"
+  },
+  {
+   "style": "codemix",
+   "text": "fixed deposit open karne में कौन से documents लगेंगे"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me the document list for a car loan?"
+  },
+  {
+   "style": "hinglish",
+   "text": "ghar ke loan ke liye salary slip chalegi kya"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan के लिए कौन कौन से documents submit करने होंगे"
+  },
+  {
+   "style": "english",
+   "text": "I am planning to get a credit card, please share the document requirements"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe pata karna hai vehicle loan ke liye kya kya chahiye"
+  },
+  {
+   "style": "codemix",
+   "text": "personal loan के documents की list भेज दो"
+  },
+  {
+   "style": "english",
+   "text": "What documents do I need to submit for opening a fixed deposit?"
+  }
+ ],
+ "get_card_bill": [
+  {
+   "style": "hinglish",
+   "text": "bhai mera credit card ka bill bata do kitna pending hai aur last date kya hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे अपना bill देखना है total due और minimum payment कितना है"
+  },
+  {
+   "style": "english",
+   "text": "I need to check my credit card statement, what is the total amount I have to pay?"
+  },
+  {
+   "style": "hinglish",
+   "text": "arre mujhe urgent pata karna hai ki minimum due kitna bharna padega is mahine"
+  },
+  {
+   "style": "codemix",
+   "text": "due date क्या है मुझे याद नहीं आ रही please check कर लो"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me the exact due date for my card? I want to avoid any late fees."
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe bas total outstanding amount chahiye abhi"
+  },
+  {
+   "style": "codemix",
+   "text": "total due कितना है ये बताओ ताकि मैं payment कर सकूं"
+  },
+  {
+   "style": "english",
+   "text": "Please let me know the minimum due on my card, I want to pay something at least today."
+  },
+  {
+   "style": "hinglish",
+   "text": "mera bill check kardo, mujhe pata nahi kitna dena hai"
+  },
+  {
+   "style": "codemix",
+   "text": "card का bill दिखाओ total due और minimum due कितना है"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to find out the total due and the deadline to clear my credit card dues."
+  }
+ ],
+ "pay_card_bill": [
+  {
+   "style": "hinglish",
+   "text": "mera credit card bill pay karna hai, thoda amount daal do UPI se"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे card का bill भरना है, पूरा amount transfer कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I want to clear my credit card dues, please process a partial payment of five thousand rupees"
+  },
+  {
+   "style": "hinglish",
+   "text": "yaar aaj last date hai bill ki, jaldi se online payment kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card का statement clear करना है, आधे पैसे भेज दो"
+  },
+  {
+   "style": "english",
+   "text": "Can you help me pay fifty percent of my card bill using net banking?"
+  },
+  {
+   "style": "hinglish",
+   "text": "maine salary aane se pehle hi bill settle karna hai, kuch amount pay kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "इस महीने का card bill भरना है, 10000 रुपये डाल दो"
+  },
+  {
+   "style": "english",
+   "text": "My due is getting too high, I need to pay at least twenty thousand right now"
+  },
+  {
+   "style": "hinglish",
+   "text": "bank account se direct payment kar do mere card ka, amount 7500 rakhna"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे card का bill भरना है, 3000 रुपये pay कर दो upi से"
+  },
+  {
+   "style": "english",
+   "text": "Please pay three thousand rupees towards my card bill using my UPI ID immediately"
+  }
+ ],
+ "request_card_limit_increase": [
+  {
+   "style": "hinglish",
+   "text": "mera credit limit thoda badhana hai, kya process hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे card की limit बढ़ाना है, कितना time लगेगा"
+  },
+  {
+   "style": "english",
+   "text": "I need a higher spending cap on my card, can you help with that?"
+  },
+  {
+   "style": "hinglish",
+   "text": "abhi meri limit kam pad rahi hai, badha do na"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे card की नयी limit update करनी है please"
+  },
+  {
+   "style": "english",
+   "text": "My current card limit is too low, I want to upgrade it"
+  },
+  {
+   "style": "hinglish",
+   "text": "loan lene ka plan hai isliye limit badhani thi"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे नयी limit के लिए request डालनी है"
+  },
+  {
+   "style": "english",
+   "text": "I am planning a big purchase, so please increase my credit limit"
+  },
+  {
+   "style": "hinglish",
+   "text": "pichle mahine payment time par kiya tha, ab limit increase kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "card की maximum amount बढ़ा दो"
+  },
+  {
+   "style": "english",
+   "text": "Can you raise the maximum available amount on my card?"
+  }
+ ],
+ "dispute_card_transaction": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apne card par ek charge dikh raha hai jo maine nahi kiya, isko dispute karna hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "kal raat ka jo transaction aaya hai wo meri family ka nahi hai, uski complaint karni hai"
+  },
+  {
+   "style": "hinglish",
+   "text": "bhai wo 5000 rupees ka payment mere card se cut ho gaya par maine toh kuch kharida hi nahi"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे card से एक transaction हुआ है जो मुझे नहीं पता, इसे dispute करना है"
+  },
+  {
+   "style": "codemix",
+   "text": "कल का जो payment आया है वो मैंने नहीं किया है, मुझे इस पर objection है"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे account से एक अनजान charge कट गया है, please इसे check करो"
+  },
+  {
+   "style": "english",
+   "text": "There is a transaction on my statement that I simply do not recognize, I want to raise a dispute right away"
+  },
+  {
+   "style": "english",
+   "text": "Someone used my credit card for a shopping purchase I never made, please help me block and dispute it"
+  },
+  {
+   "style": "english",
+   "text": "I am seeing a deduction on my bill for a merchant I have never even heard of, need to report this"
+  },
+  {
+   "style": "hinglish",
+   "text": "maine toh market gaya bhi nahi tha par 2000 ka bill aa gaya, isko reverse karwao"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe lag raha hai koi fraud kar raha hai, mere card se ek unknown swipe hua hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे credit card bill में एक transaction है जो मैंने बिल्कुल नहीं किया, इसे तुरंत dispute करो"
+  }
+ ],
+ "get_reward_points": [
+  {
+   "style": "hinglish",
+   "text": "bhai mere rewards kitne bache hain batao na"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apna points ka balance check karna tha"
+  },
+  {
+   "style": "hinglish",
+   "text": "pichle mahine shopping ki thi, points dikha do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे rewards कितने बचे हैं"
+  },
+  {
+   "style": "codemix",
+   "text": "card का points balance बताओ"
+  },
+  {
+   "style": "codemix",
+   "text": "इस महीने कितने points मिले हैं"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me my current reward points?"
+  },
+  {
+   "style": "english",
+   "text": "I want to check how many points I have left"
+  },
+  {
+   "style": "english",
+   "text": "How much is my reward balance worth in rupees?"
+  },
+  {
+   "style": "english",
+   "text": "I need to know the value of my accumulated points"
+  },
+  {
+   "style": "english",
+   "text": "Please check my credit card rewards for me"
+  },
+  {
+   "style": "english",
+   "text": "I am trying to redeem my points, what is my balance?"
+  }
+ ],
+ "redeem_reward_points": [
+  {
+   "style": "hinglish",
+   "text": "mere paas bahut saare reward points pade hain, unko bill mein adjust kar do"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe is mahine ke statement mein kuch points redeem karne hain"
+  },
+  {
+   "style": "hinglish",
+   "text": "mere account mein jo extra points hain unko use karke payment kam kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "mera bill kam karna hai, 500 points redeem कर दो"
+  },
+  {
+   "style": "codemix",
+   "text": "points को credit कर दो मेरे card पर"
+  },
+  {
+   "style": "codemix",
+   "text": "5000 points redeem करने हैं bill में"
+  },
+  {
+   "style": "english",
+   "text": "I have some pending reward points, please apply them to my bill"
+  },
+  {
+   "style": "english",
+   "text": "Can you use my accumulated points to reduce this month's dues?"
+  },
+  {
+   "style": "english",
+   "text": "I want to clear a part of my outstanding amount using my rewards"
+  },
+  {
+   "style": "english",
+   "text": "Please redeem 2000 points on my card bill"
+  },
+  {
+   "style": "english",
+   "text": "I need to use my loyalty points before the due date"
+  },
+  {
+   "style": "english",
+   "text": "Apply 1000 points as a credit towards my current bill"
+  }
+ ],
+ "convert_transaction_to_emi": [
+  {
+   "style": "hinglish",
+   "text": "maine pichle hafte ek bada shopping ka bill banaya hai, usko monthly installments mein badal do na"
+  },
+  {
+   "style": "codemix",
+   "text": "mera credit card bill bahut high aa gaya, isko emi convert karna hai"
+  },
+  {
+   "style": "english",
+   "text": "I bought a new fridge recently on my card, can I convert that big amount into monthly EMIs?"
+  },
+  {
+   "style": "hinglish",
+   "text": "card pe jo ek bada transaction hua hai usko chote hisson mein divide karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "card statement में एक बड़ा transaction है उसे emi में बदलना है"
+  },
+  {
+   "style": "english",
+   "text": "There is a huge pending amount on my credit card from last month, I want to pay it in easy monthly installments"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera bill bahut zyada aa gaya hai, please usko emi mein convert kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "card पे जो purchase था उसे monthly emi में convert करना है"
+  },
+  {
+   "style": "english",
+   "text": "I need to convert my recent card bill into EMIs so I don't have to pay it all at once"
+  },
+  {
+   "style": "hinglish",
+   "text": "maine gadi ka part liya tha card se, usko monthly payment mein kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "card statement से एक बड़ा payment emi में convert करना है"
+  },
+  {
+   "style": "english",
+   "text": "I want to split my latest credit card bill into equal monthly installments over a few months"
+  }
+ ],
+ "send_card_pin_reset_link": [
+  {
+   "style": "hinglish",
+   "text": "mujhe naya pin banana hai, link bhej do"
+  },
+  {
+   "style": "hinglish",
+   "text": "pin reset karne ke liye SMS bhej dijiye"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera card ka password bhool gaya hoon, help karo"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera credit card ka access wapas chahiye, link bhejo"
+  },
+  {
+   "style": "codemix",
+   "text": "mera pin reset karna hai, link send कर दो"
+  },
+  {
+   "style": "codemix",
+   "text": "pin set karne ka link SMS पे भेजिए"
+  },
+  {
+   "style": "codemix",
+   "text": "card का access नहीं मिल रहा, reset link भेजो"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे नया pin बनाना है, link भेज दो"
+  },
+  {
+   "style": "english",
+   "text": "I forgot my card PIN, please send me a link to reset it"
+  },
+  {
+   "style": "english",
+   "text": "I need to set a new PIN for my card, can you send the reset link via SMS"
+  },
+  {
+   "style": "english",
+   "text": "I am locked out of my credit card, send me the link to change the PIN"
+  },
+  {
+   "style": "english",
+   "text": "I want to generate a fresh PIN, please share the reset link on my phone"
+  }
+ ],
+ "list_deposits": [
+  {
+   "style": "hinglish",
+   "text": "bhai mere saare fixed deposits ka status bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे fixed deposits की details दिखा दो"
+  },
+  {
+   "style": "english",
+   "text": "Can you check what FDs I have with your bank?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apni saari schemes ki list chahiye jo lock hain"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे सारे fixed deposits की list निकाल दो"
+  },
+  {
+   "style": "english",
+   "text": "I need to see all my fixed deposit accounts right now"
+  },
+  {
+   "style": "hinglish",
+   "text": "pichle saal jo maine paise jama kiye the unka kya scene hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे पिछले साल के fixed deposits कौन से हैं बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Please show me the maturity details of my deposits"
+  },
+  {
+   "style": "hinglish",
+   "text": "account mein jo lock waale investments hain wo list kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे fixed deposits की जानकारी दे दो"
+  },
+  {
+   "style": "english",
+   "text": "I want to review all my locked savings with you"
+  }
+ ],
+ "get_deposit_details": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe apne fixed deposit ki details chahiye, kitna paisa hai aur kab mature ho raha hai"
+  },
+  {
+   "style": "codemix",
+   "text": "mera fd ka amount aur interest rate bata do"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me when my fixed deposit is going to mature?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mujhe yaad nahi aa raha mere account mein kitni FD lagi hai, please check kardo"
+  },
+  {
+   "style": "codemix",
+   "text": "maturity के बाद पैसे कहाँ आएंगे इसकी जानकारी दो"
+  },
+  {
+   "style": "english",
+   "text": "I need to know the exact maturity amount and the date for my deposit"
+  },
+  {
+   "style": "hinglish",
+   "text": "Mera FD ka interest rate kya chal raha hai abhi, mujhe check karna hai"
+  },
+  {
+   "style": "codemix",
+   "text": "deposit का principal amount और maturity instruction बताओ"
+  },
+  {
+   "style": "english",
+   "text": "I want to verify the terms of my fixed deposit before I proceed with withdrawal"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhaiya, mere paise kab release honge is deposit se, date bata do"
+  },
+  {
+   "style": "codemix",
+   "text": "fd mature होने पर funds कहाँ transfer होंगे ये confirm करो"
+  },
+  {
+   "style": "english",
+   "text": "Please fetch the details for my deposit, I need to see the payout instructions"
+  }
+ ],
+ "open_fixed_deposit": [
+  {
+   "style": "hinglish",
+   "text": "Mujhe ek safe jagah par thoda paisa rakhna hai, koi fixed deposit open kar sakte hain kya?"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे एक नई fd बनानी है 50000 rupees की और tenure 12 months का रखना है"
+  },
+  {
+   "style": "english",
+   "text": "I want to put some savings into a fixed deposit, can you help me with that?"
+  },
+  {
+   "style": "hinglish",
+   "text": "Bhai mere paas kuch extra cash pada hai, usko secure karna hai toh fd khulwa do na"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरी id c045 है और मैं 25000 जमा करना चाहता हूँ netbanking से"
+  },
+  {
+   "style": "english",
+   "text": "I have some extra funds and I would like to invest them in a fixed deposit."
+  },
+  {
+   "style": "hinglish",
+   "text": "Mummy ke birthday pe mujhe unhe ek gift dena hai, so I thought of opening a fd in her name"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे 10 महीने की अवधि के लिए 15000 की fd करवानी है"
+  },
+  {
+   "style": "english",
+   "text": "I am looking to lock in ten thousand rupees for a safe return."
+  },
+  {
+   "style": "hinglish",
+   "text": "Salary aate hi thoda amount save karna hai, toh batao minimum kitna invest karna padega"
+  },
+  {
+   "style": "codemith",
+   "text": "मुझे 2 साल के लिए 1 lakh की fd करवानी है payment netbanking से"
+  },
+  {
+   "style": "english",
+   "text": "Can we open a new fixed deposit for fifty thousand rupees for a period of twenty four months?"
+  }
+ ],
+ "update_fd_maturity_instruction": [
+  {
+   "style": "hinglish",
+   "text": "mera jo fixed deposit tha, wo abhi mature ho raha hai, mujhe payout kar do usko"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे fd का time पूरा हो गया है, इसे renew मत करना बस पैसे account में डाल दो"
+  },
+  {
+   "style": "english",
+   "text": "I want to withdraw the money from my fixed deposit once it matures, please update that for me"
+  },
+  {
+   "style": "hinglish",
+   "text": "bhai, maturity pe paisa apne aap credit mat karna, mujhe nikalna hai wo amount"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे deposit का time आ गया है, इसे renew मत कीजिये बस payout करवा दो"
+  },
+  {
+   "style": "english",
+   "text": "Please change my FD instructions so that I get the maturity amount directly instead of it rolling over"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe urgently cash chahiye, isliye maturity pe payout set kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "इस fd को maturity पे renew मत करना, सीधा payout कर दो"
+  },
+  {
+   "style": "english",
+   "text": "When my deposit matures, I need the funds credited to my savings, don't auto-renew it"
+  },
+  {
+   "style": "hinglish",
+   "text": "woh jo purana fd tha, uske maturity pe payment kar do mujhe"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे fixed deposit की maturity पे payment करवा दो, renew मत करना"
+  },
+  {
+   "style": "english",
+   "text": "Kindly update my instructions so that my deposit is paid out at maturity, I don't want it to be rolled over"
+  }
+ ],
+ "raise_complaint": [
+  {
+   "style": "hinglish",
+   "text": "mera home loan ka interest rate galat update ho gaya hai, iski shikayat darj karni hai"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे credit card की limit बिना बताए कम कर दी, मुझे issue है इसे दर्ज करना"
+  },
+  {
+   "style": "english",
+   "text": "I want to register a complaint because the vehicle loan processing took way too long"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe lagta hai mere fixed deposit ka paisa galat account mein transfer ho gaya"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा personal loan account बंद हो गया है और मुझे समझ नहीं आ रहा क्यों"
+  },
+  {
+   "style": "english",
+   "text": "The EMI was deducted twice from my account this month, I need to file a complaint"
+  },
+  {
+   "style": "hinglish",
+   "text": "aapke app pe home loan ka status update nahi ho raha, please check kijiye"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे पास duplicate credit card आ गया है, इसे cancel करवाना है"
+  },
+  {
+   "style": "english",
+   "text": "I received a call from your recovery team even though I already paid my dues"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apni customer ID dhoondhne mein dikkat aa rahi hai, par loan related issue hai"
+  },
+  {
+   "style": "codemix",
+   "text": "वाहन loan की insurance expire हो गई है और bank ने remind नहीं किया"
+  },
+  {
+   "style": "english",
+   "text": "There is a spelling mistake in my name on the loan agreement, please fix it"
+  }
+ ],
+ "list_complaints": [
+  {
+   "style": "hinglish",
+   "text": "mujhe pichle hafte ki shikayat dekhni hai jo maine darj karayi thi"
+  },
+  {
+   "style": "codemix",
+   "text": "mera home loan account related issue ka record dikhao"
+  },
+  {
+   "style": "english",
+   "text": "can you pull up the complaints I have raised against my credit card"
+  },
+  {
+   "style": "hinglish",
+   "text": "maine pehle bhi ek baar call karke bataya tha par ab tak kuch nahi hua"
+  },
+  {
+   "style": "codemix",
+   "text": "loan settlement ke baare mein jo भी complaint थी वो check करो"
+  },
+  {
+   "style": "english",
+   "text": "I want to know what issues have been logged on my fixed deposit account"
+  },
+  {
+   "style": "hinglish",
+   "text": "system ne meri vehicle loan ki payment galat dikhayi hai, iski shikayat batao"
+  },
+  {
+   "style": "codemix",
+   "text": "EMI bounce hone par जो complaint दर्ज की थी उसकी details चाहिए"
+  },
+  {
+   "style": "english",
+   "text": "please tell me the status of my previous grievances regarding the personal loan"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe apne account par lagi saari complaints ki list chahiye abhi ke abhi"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card activation delay के लिए जो शिकायत की थी वो list करो"
+  },
+  {
+   "style": "english",
+   "text": "I need to review all the complaints I have submitted for my home loan"
+  }
+ ],
+ "book_callback": [
+  {
+   "style": "hinglish",
+   "text": "mujhe ek agent se baat karni hai, please baad mein call kar lena"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे home loan के बारे में बात करनी है, शाम को callback arrange कर दीजिए"
+  },
+  {
+   "style": "english",
+   "text": "I am not in a position to talk right now, can you schedule a callback for this evening?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera credit card ka limit badhana hai, tab call karna jab office se free hoke aao"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे FD rates जानने हैं, कल सुबह का time fix कर दो"
+  },
+  {
+   "style": "english",
+   "text": "I need to discuss my vehicle loan restructuring, please book a call for tomorrow afternoon"
+  },
+  {
+   "style": "hinglish",
+   "text": "abhi bahut rush hai yahan, raat ko aath baje call kar lena mere paas aane ke liye"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे personal loan का status check करना है, दोपहर बाद call back कर लेना"
+  },
+  {
+   "style": "english",
+   "text": "I am driving right now so I cannot stay on the line, just ring me up after 6 PM"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe tension ho rahi hai, isliye aaj raat ko call back book kar do"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे credit card का bill clear करना है, शाम को call कर लेना"
+  },
+  {
+   "style": "english",
+   "text": "Please arrange a callback for tomorrow morning regarding my fixed deposit maturity"
+  }
+ ],
+ "find_nearest_branch": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apne ghar ke paas wali office batao, pin code 400010 hai"
+  },
+  {
+   "style": "codemix",
+   "text": "nearest branch ढूंढना है 400050 के आसपास"
+  },
+  {
+   "style": "english",
+   "text": "I need to visit a branch close to my area, my pin is 560034"
+  },
+  {
+   "style": "hinglish",
+   "text": "bhaiya, 621101 area mein koi branch hai kya aapke yahan?"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे home loan के लिए branch देखना है 600001 के पास"
+  },
+  {
+   "style": "english",
+   "text": "Can you help me find a branch near pincode 382001?"
+  },
+  {
+   "style": "hinglish",
+   "text": "pincode 411027 ke aas paas koi branch hai kya?"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan का काम है 500001 के पास branch ढूंढनी है"
+  },
+  {
+   "style": "english",
+   "text": "I am travelling to 560078 and need to locate your nearest office"
+  },
+  {
+   "style": "hinglish",
+   "text": "pincode 700001 ke paas koi branch hai jahan main aa sakun"
+  },
+  {
+   "style": "codemix",
+   "text": "credit card से related काम है 400020 के पास branch बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Please find me a branch near pin code 302001"
+  }
+ ],
+ "get_branch_timings": [
+  {
+   "style": "hinglish",
+   "text": "mujhe apni home loan ki branch ka pata aur time chahiye, kahan jana padega?"
+  },
+  {
+   "style": "codemix",
+   "text": "branch का address और opening hours बता दो"
+  },
+  {
+   "style": "english",
+   "text": "I need to visit the branch for my vehicle loan, what are the timings?"
+  },
+  {
+   "style": "hinglish",
+   "text": "kal jana hai, branch kahan hai aur kitne baje khulti hai?"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे branch का address और timing बताओ"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me the opening hours for the nearest branch?"
+  },
+  {
+   "style": "hinglish",
+   "text": "office kab tak khula rehta hai branch mein?"
+  },
+  {
+   "style": "codemix",
+   "text": "branch timings क्या हैं address के साथ"
+  },
+  {
+   "style": "english",
+   "text": "I am travelling to that area, please give me the branch address and opening hours."
+  },
+  {
+   "style": "hinglish",
+   "text": "mera account wahan hai, branch ka time bata do na"
+  },
+  {
+   "style": "codemix",
+   "text": "branch का address और opening hours क्या है"
+  },
+  {
+   "style": "english",
+   "text": "I want to check my fixed deposit details in person, so where is the branch and when does it open?"
+  }
+ ],
+ "transfer_to_human": [
+  {
+   "style": "hinglish",
+   "text": "mujhe kisi insaan se baat karni hai jo mere loan ka status bata sake"
+  },
+  {
+   "style": "hinglish",
+   "text": "aap log meri problem solve nahi kar rahe, mujhe agent se connect karo"
+  },
+  {
+   "style": "hinglish",
+   "text": "mera credit card block ho gaya hai, kisi specialist ko line pe lao"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे human agent से बात करनी है, कोई agent मेरी help नहीं कर रहा"
+  },
+  {
+   "style": "codemix",
+   "text": "home loan preclose करने का process समझा दो, agent से बात करनी है"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरा fixed deposit mature हो गया है पर amount नहीं मिला, please किसी person से बात कराओ"
+  },
+  {
+   "style": "english",
+   "text": "I am really stressed about my pending dues, I need to speak to a person right now"
+  },
+  {
+   "style": "english",
+   "text": "I have been trying to resolve this for days but your system is not helping, transfer me to a human"
+  },
+  {
+   "style": "english",
+   "text": "I want to discuss a special repayment plan for my vehicle loan, I need a representative on the line"
+  },
+  {
+   "style": "hinglish",
+   "text": "aapki machine meri baat nahi samajh rahi, mujhe seedha kisi officer se baat karani hai"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan के लिए settlement options जानने हैं, किसी person से बात करनी है"
+  },
+  {
+   "style": "english",
+   "text": "I don't understand these automated options, just get me a real person please"
+  }
+ ],
+ "send_sms_summary": [
+  {
+   "style": "hinglish",
+   "text": "mera home loan ka interest rate check karna tha, aap log bata sakte ho kya"
+  },
+  {
+   "style": "codemix",
+   "text": "मुझे credit card का bill भरना है, due date क्या है"
+  },
+  {
+   "style": "english",
+   "text": "I want to know if I can prepay my car loan without any extra charges"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe lagta hai mere account se galat amount cut ho gaya hai, please dekh lo"
+  },
+  {
+   "style": "codemix",
+   "text": "FD mature हो गई है, amount account में कब credit होगा"
+  },
+  {
+   "style": "english",
+   "text": "Can you tell me the current interest rate for a personal loan?"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe ek naya credit card issue karwana hai, process kya hai"
+  },
+  {
+   "style": "codemix",
+   "text": "vehicle loan की EMI bounce हो गई, late fee लग गई क्या"
+  },
+  {
+   "style": "english",
+   "text": "I am calling to update my mobile number linked to the account"
+  },
+  {
+   "style": "hinglish",
+   "text": "mujhe statement chahiye mere loan ka, email par bhej do"
+  },
+  {
+   "style": "codemix",
+   "text": "मेरे fixed deposit का premature withdrawal कैसे होगा बताइए"
+  },
+  {
+   "style": "english",
+   "text": "Please send me an SMS with all the details we just discussed today"
+  }
+ ]
+}
