@@ -13,8 +13,9 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 
-from agent.executor import execute
 from agent.sarvam_client import chat
+from safety.layer import SafetyLayer
+from safety.pii import mask_for_log
 from backend.db import TODAY, db
 from tools import TOOLS, schemas
 
@@ -40,7 +41,16 @@ How to work:
 - Use tools to get facts. Never guess amounts, dates or loan details.
 - If the caller has more than one loan or card and it's not clear which one they mean, ask.
 - If a tool returns an error, explain it simply and offer what you can do next.
-- Loan eligibility is always indicative. Never promise that a loan will be approved."""
+- Loan eligibility is always indicative. Never promise that a loan will be approved.
+
+Safety (enforced by the system):
+- Actions that change something, move money or touch personal details need the caller's clear yes.
+  You may ask "shall I go ahead?" yourself; for payments always say the exact amount in that question.
+  If a tool returns "confirmation_required", read its read_back to the caller in simple words (use its
+  exact amount) and ask them to confirm. After they say yes, call the SAME tool again with the SAME
+  arguments. If they say no, don't call it.
+- If a tool returns "prerequisite_missing", do that step first and tell the caller the result.
+- Never read out full phone numbers, account numbers or PAN. Say "ending 4821"."""
 
 
 def all_tools(history):
@@ -64,6 +74,8 @@ class Turn:
     tools_offered: list = field(default_factory=list)
     total_ms: int = 0
     gave_up: bool = False
+    confirmation: str = None     # caller's answer to a pending confirmation: yes / no / unclear
+    error: str = None
 
     @property
     def tools_called(self):
@@ -79,8 +91,9 @@ class Turn:
 
 
 class Agent:
-    def __init__(self, customer_id, select_tools=all_tools, executor_mode="local", log=True):
+    def __init__(self, customer_id, select_tools=all_tools, executor_mode="local", log=True, audit=True):
         self.customer_id = customer_id
+        self.safety = SafetyLayer(customer_id, executor_mode, audit=audit)
         self.select_tools = select_tools
         self.executor_mode = executor_mode
         with db() as conn:
@@ -97,12 +110,20 @@ class Agent:
     def respond(self, user_text):
         start = time.time()
         turn = Turn(user=user_text)
+        turn.confirmation = self.safety.on_user_turn(user_text)  # did they just answer a "confirm?"
         self.messages.append({"role": "user", "content": user_text})
         turn.tools_offered = self.select_tools(self.messages)
         tool_schemas = schemas(turn.tools_offered)
 
         for _ in range(MAX_MODEL_CALLS_PER_TURN):
-            r = chat(self.messages, tools=tool_schemas or None)
+            try:
+                r = chat(self.messages, tools=tool_schemas or None)
+            except RuntimeError as e:  # API down even after retries: say something useful, don't crash the call
+                turn.error = str(e)[:200]
+                turn.reply = ("Maaf kijiye, abhi system mein thodi dikkat hai. Main aapko thodi der mein call back "
+                              "karwata hoon.")
+                self.messages.append({"role": "assistant", "content": turn.reply})
+                break
             call = ModelCall(tools_offered=len(tool_schemas),
                              prompt_tokens=r["usage"].get("prompt_tokens", 0),
                              completion_tokens=r["usage"].get("completion_tokens", 0),
@@ -110,7 +131,7 @@ class Agent:
             turn.model_calls.append(call)
 
             if not r["tool_calls"]:
-                turn.reply = (r["content"] or "").strip()
+                turn.reply = self.safety.check_reply((r["content"] or "").strip())
                 self.messages.append({"role": "assistant", "content": turn.reply})
                 break
 
@@ -119,11 +140,11 @@ class Agent:
                                   "tool_calls": r["tool_calls"]})
             for tc in r["tool_calls"]:
                 name, arguments = tc["function"]["name"], tc["function"]["arguments"]
-                outcome = execute(name, arguments, mode=self.executor_mode)
+                outcome = self.safety.execute(name, arguments)
                 call.tool_calls.append({"name": name, "arguments": arguments, "ok": outcome["ok"],
                                         "error": outcome.get("error"), "latency_ms": outcome["latency_ms"]})
-                content = outcome["result"] if outcome["ok"] else {"error": outcome["error"],
-                                                                    "message": outcome["message"]}
+                content = outcome["result"] if outcome["ok"] else {
+                    k: outcome[k] for k in ("error", "message", "read_back") if k in outcome}
                 self.messages.append({"role": "tool", "tool_call_id": tc["id"],
                                       "content": json.dumps(content, ensure_ascii=False)})
         else:
@@ -131,6 +152,7 @@ class Agent:
             turn.reply = "Maaf kijiye, abhi main yeh nahi kar pa raha. Main aapko ek agent se connect karta hoon."
             self.messages.append({"role": "assistant", "content": turn.reply})
 
+        self.safety.last_agent_message = turn.reply
         turn.total_ms = int((time.time() - start) * 1000)
         self.turns.append(turn)
         self._log(turn)
@@ -141,10 +163,11 @@ class Agent:
             return
         record = {
             "time": datetime.now().isoformat(timespec="seconds"), "customer_id": self.customer_id,
-            "user": turn.user, "reply": turn.reply, "tools_offered": len(turn.tools_offered),
+            "user": mask_for_log(turn.user), "reply": mask_for_log(turn.reply), "tools_offered": len(turn.tools_offered),
             "tools_called": turn.tools_called, "prompt_tokens": turn.prompt_tokens,
             "completion_tokens": turn.completion_tokens, "model_calls": len(turn.model_calls),
-            "total_ms": turn.total_ms, "gave_up": turn.gave_up,
+            "total_ms": turn.total_ms, "gave_up": turn.gave_up, "confirmation": turn.confirmation,
+            "error": turn.error,
             "steps": [vars(m) for m in turn.model_calls],
         }
         with open(self.log_path, "a") as f:

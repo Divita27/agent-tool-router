@@ -20,3 +20,4 @@ eval/data/speakers.csv
 # Embedding cache (rebuilt automatically)
 router/cache/
 router/models/
+results/audit.jsonl

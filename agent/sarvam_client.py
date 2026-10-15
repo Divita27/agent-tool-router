@@ -19,7 +19,7 @@ if not API_KEY:
     raise SystemExit("SARVAM_API_KEY is missing. Copy .env.example to .env and add your key.")
 
 
-def chat(messages, tools=None, model=DEFAULT_MODEL, tool_choice="auto", timeout=120):
+def chat(messages, tools=None, model=DEFAULT_MODEL, tool_choice="auto", timeout=120, retries=3):
     """Send one request. Returns a dict with the reply, tool calls, usage and latency."""
     body = {"model": model, "messages": messages}
     if tools:
@@ -28,11 +28,21 @@ def chat(messages, tools=None, model=DEFAULT_MODEL, tool_choice="auto", timeout=
 
     headers = {"api-subscription-key": API_KEY, "Content-Type": "application/json"}
     start = time.time()
-    r = requests.post(URL, headers=headers, json=body, timeout=timeout)
-    latency_ms = int((time.time() - start) * 1000)
-
-    if r.status_code != 200:
+    for attempt in range(retries + 1):
+        try:
+            r = requests.post(URL, headers=headers, json=body, timeout=timeout)
+        except requests.RequestException as e:  # timeout or connection problem
+            if attempt == retries:
+                raise RuntimeError(f"Sarvam API unreachable: {e}")
+            time.sleep(2 ** attempt)
+            continue
+        if r.status_code == 200:
+            break
+        if (r.status_code == 429 or r.status_code >= 500) and attempt < retries:
+            time.sleep(2 ** attempt)  # rate limit or server error: wait 1, 2, 4 s and retry
+            continue
         raise RuntimeError(f"Sarvam API error {r.status_code}: {r.text}")
+    latency_ms = int((time.time() - start) * 1000)
 
     data = r.json()
     message = data["choices"][0]["message"]
