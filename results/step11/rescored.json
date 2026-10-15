@@ -1,0 +1,50 @@
+{
+ "all_tools": {
+  "strict": 74.2,
+  "reasonable": 96.8,
+  "asked_id": 3,
+  "wrong_action": 1,
+  "args_ok": 93.8,
+  "tokens": 31442,
+  "calls": 2.52,
+  "p50": 1381.0,
+  "p95": 2547,
+  "inr_1k": 477.0
+ },
+ "states": {
+  "strict": 64.5,
+  "reasonable": 83.9,
+  "asked_id": 9,
+  "wrong_action": 2,
+  "args_ok": 88.5,
+  "tokens": 12730,
+  "calls": 2.69,
+  "p50": 1272.0,
+  "p95": 2578,
+  "inr_1k": 196.2
+ },
+ "router_k5": {
+  "strict": 64.5,
+  "reasonable": 88.7,
+  "asked_id": 9,
+  "wrong_action": 0,
+  "args_ok": 91.7,
+  "tokens": 3484,
+  "calls": 2.31,
+  "p50": 1263.0,
+  "p95": 2294,
+  "inr_1k": 57.3
+ },
+ "router_k8": {
+  "strict": 67.7,
+  "reasonable": 93.5,
+  "asked_id": 5,
+  "wrong_action": 0,
+  "args_ok": 96.0,
+  "tokens": 4328,
+  "calls": 2.29,
+  "p50": 979.0,
+  "p95": 2233,
+  "inr_1k": 69.9
+ }
+}

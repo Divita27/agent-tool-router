@@ -1,0 +1,1059 @@
+{
+ "all_tools": [
+  {
+   "id": "sarvam-codemix_S04_t1",
+   "text": "मैंने 2 दिन पहले UPI से payment की थी पर status अबhi भी unpaid दिख रहा है",
+   "expected": [
+    [
+     "report_payment_not_reflected",
+     "get_payment_history",
+     "get_last_payment"
+    ]
+   ],
+   "called": [
+    "find_customer_by_phone",
+    "list_loans"
+   ],
+   "reply": "Ravi, आपके दो loans हैं — personal loan और home loan. आपने कौन से loan की payment की थी? Personal वाला या home loan?"
+  },
+  {
+   "id": "sarvam-codemix_S09_t1",
+   "text": "मेरा credit card कल खो गया, please block कर दीजिए",
+   "expected": [
+    [
+     "block_card"
+    ]
+   ],
+   "called": [
+    "get_customer_profile",
+    "list_customer_products"
+   ],
+   "reply": "आपका एक Platinum credit card है जिसके last four digits 0520 हैं. इसे block करने के लिए reason select करना होगा — खो गया, चोरी हो गया, fraud या damaged. आपका card कल खो गया है, तो मैं इसे lost mark करके block कर दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S12_t1",
+   "text": "मैं hospital में था इसलिए late fee हटा दो",
+   "expected": [
+    [
+     "request_late_fee_waiver"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो loans हैं — personal loan और home loan। किस वाले की late fee हटवानी है?"
+  },
+  {
+   "id": "sarvam-codemix_S13_t1",
+   "text": "mujhe पिछले साल का home loan certificate चाहिए tax return के लिए",
+   "expected": [
+    [
+     "get_home_loan_tax_certificate",
+     "get_interest_certificate"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, मैं check कर लेता हूँ। आपको कौन सा financial year का home loan certificate चाहिए? जैसे 2024-25 या 2025-26?"
+  },
+  {
+   "id": "sarvam-codemix_S14_t1",
+   "text": "मेरा personal loan का pending amount अभी clear करना है",
+   "expected": [
+    [
+     "pay_overdue",
+     "send_payment_link"
+    ]
+   ],
+   "called": [
+    "list_loans",
+    "get_outstanding_amount"
+   ],
+   "reply": "देखिए, आपके personal loan में principal outstanding 3,80,741 rupees है और 27,076 rupees overdue है, मतलब total लगभग 4,07,817 rupees भरना पड़ेगा इसे पूरी तरह close करने के लिए। क्या मैं foreclosure quote निकाल लूँ exact amount के लिए? या directly payment link भेज दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S24_t1",
+   "text": "मेरा nominee update करना है, मेरे पापा अनिल शर्मा को add कर दो.",
+   "expected": [
+    [
+     "update_nominee"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, मैं अभी nominee update कर देता हूँ। बस confirm कर दीजिये, relation में father डाल दूँ ना?"
+  },
+  {
+   "id": "sarvam-codemix_S25_t1",
+   "text": "मेरा bonus आया है, अगर मैं 50,000 extra दे दूँ तो क्या होगा?",
+   "expected": [
+    [
+     "get_personal_loan_part_payment_quote"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो active loans हैं — एक personal loan 3,00,000 rupees का और एक vehicle loan 8,00,000 rupees का। आप किस loan में 50,000 rupees extra देना चाहते हैं? Personal वाले में या vehicle वाले में?"
+  },
+  {
+   "id": "sarvam-codemix_S28_t1",
+   "text": "mera personal loan का EMI date 10th कर दो please",
+   "expected": [
+    [
+     "change_emi_date"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो active personal loans हैं — L1003 और L1004 में से कौन सा वाला है? L1003 का EMI 9964 rupees है और L1004 closed है। तो कौन सा loan change करना है?"
+  },
+  {
+   "id": "sarvam-codemix_S42_t1",
+   "text": "आप confirm करो मुझे 5 lakh का personal loan definitely मिल जाएगा",
+   "expected": [
+    [
+     "check_personal_loan_eligibility",
+     "get_preapproved_offers"
+    ]
+   ],
+   "called": [],
+   "reply": "देखिए, loan eligibility सिर्फ indicative होती है, definitely approval की guarantee नहीं दे सकते। मैं check कर लेता हूँ कि आप कितने eligible हैं। बस आपकी monthly income बता दीजिए। Yeh sirf andaza hai; final approval documents aur credit check par depend karta hai."
+  },
+  {
+   "id": "sarvam-codemix_S43_t1",
+   "text": "mera next EMI kab hai aur card का bill कितना है",
+   "expected": [
+    [
+     "get_next_emi"
+    ],
+    [
+     "get_card_bill"
+    ]
+   ],
+   "called": [
+    "list_loans",
+    "list_customer_products"
+   ],
+   "reply": "aapke do loans hain — personal loan aur home loan. aur ek Platinum card hai ending 0520. next EMI aur card bill dono check kar leta hoon. konsa loan pehle bataun? Personal ya home? aur card bill bhi dekh loon?"
+  },
+  {
+   "id": "sarvam-codemix_M01_t3",
+   "text": "मैं अभी इसको pay करना चाहता हूँ",
+   "expected": [
+    [
+     "pay_emi",
+     "pay_overdue",
+     "send_payment_link"
+    ]
+   ],
+   "called": [
+    "get_next_emi"
+   ],
+   "reply": "Aapki agli EMI 13,538 rupees hai, jo 5 November ko due hai. Main payment link bhej doon?"
+  },
+  {
+   "id": "sarvam-codemix_M02_t2",
+   "text": "abhi sirf minimum due ही pay करूंगा",
+   "expected": [
+    [
+     "pay_card_bill"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, minimum due 2,115 rupees है। Payment UPI से कर दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_M04_t2",
+   "text": "तो please अभी NOC की request डाल दो",
+   "expected": [
+    [
+     "request_noc"
+    ]
+   ],
+   "called": [
+    "list_customer_products",
+    "get_noc_status"
+   ],
+   "reply": "NOC abhi request nahi hua hai. Kya main abhi request daal doon?"
+  },
+  {
+   "id": "sarvam-codemix_M07_t1",
+   "text": "मेरा loan एक साथ settle कर सकते हैं क्या",
+   "expected": [
+    [
+     "get_settlement_offer"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "देखिए आपके पास एक personal loan है, L1007, 2,50,000 rupees का। ये active है। इसका settlement amount check कर लूँ?"
+  },
+  {
+   "id": "sarvam-codemix_M07_t2",
+   "text": "हाँ, मैं offer accept करता हूँ.",
+   "expected": [
+    [
+     "accept_settlement_offer"
+    ]
+   ],
+   "called": [
+    "get_settlement_offer",
+    "get_overdue_emis"
+   ],
+   "reply": "Sir, aapke is loan par koi overdue EMI nahi hai. Settlement offer sirf tab milta hai jab 3 ya usse zyada EMIs miss hui hon. Toh abhi settlement possible nahi hai. Koi aur help chahiye?"
+  },
+  {
+   "id": "sarvam-codemix_M08_t1",
+   "text": "मेरे credit card के recent transactions सुना दो",
+   "expected": [
+    [
+     "get_card_transactions"
+    ]
+   ],
+   "called": [
+    "get_registered_contact_details"
+   ],
+   "reply": "Sir, आपके registered details check करने के लिए मुझे आपकी permission चाहिए। क्या मैं proceed करूँ?"
+  }
+ ],
+ "states": [
+  {
+   "id": "sarvam-codemix_S04_t1",
+   "text": "मैंने 2 दिन पहले UPI से payment की थी पर status अबhi भी unpaid दिख रहा है",
+   "expected": [
+    [
+     "report_payment_not_reflected",
+     "get_payment_history",
+     "get_last_payment"
+    ]
+   ],
+   "called": [],
+   "reply": "आपकी payment history check करने के लिए loan ID बता दीजिए। कौन सा loan है आपका?"
+  },
+  {
+   "id": "sarvam-codemix_S06_t1",
+   "text": "builder ने slab complete कर दिया है, 5 lakh release कर दो.",
+   "expected": [
+    [
+     "request_home_loan_disbursement"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "Sir, आपके पास दो loans हैं — एक personal और एक home loan. Slab completion के लिए home loan disbursement request डालनी होगी. Home loan का ID L1002 है. तो 5 lakh rupees की request डाल दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S09_t1",
+   "text": "मेरा credit card कल खो गया, please block कर दीजिए",
+   "expected": [
+    [
+     "block_card"
+    ]
+   ],
+   "called": [],
+   "reply": "समझ गया, कल आपका card खो गया था। आगे बढ़ने से पहले मुझे आपकी identity verify करनी होगी। आप अपनी date of birth बता दीजिए।"
+  },
+  {
+   "id": "sarvam-codemix_S12_t1",
+   "text": "मैं hospital में था इसलिए late fee हटा दो",
+   "expected": [
+    [
+     "request_late_fee_waiver"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "देखिए, आपके दो loans हैं — personal loan और home loan। late fee हटाने के लिए मुझे जानना होगा कि कौनसे वाले loan की बात कर रहे हैं। Personal loan या home loan?"
+  },
+  {
+   "id": "sarvam-codemix_S13_t1",
+   "text": "mujhe पिछले साल का home loan certificate चाहिए tax return के लिए",
+   "expected": [
+    [
+     "get_home_loan_tax_certificate",
+     "get_interest_certificate"
+    ]
+   ],
+   "called": [],
+   "reply": "समझ गया। पिछले साल का home loan certificate निकालने के लिए ना, मुझे आपका loan ID लगेगा। क्या आप loan ID बता सकते हैं? या फिर मैं आपकी profile से check कर लूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S14_t1",
+   "text": "मेरा personal loan का pending amount अभी clear करना है",
+   "expected": [
+    [
+     "pay_overdue",
+     "send_payment_link"
+    ]
+   ],
+   "called": [
+    "list_loans",
+    "get_outstanding_amount"
+   ],
+   "reply": "देखिए, आपका total pending amount लगभग 4,07,817 rupees है। इसमें 3,80,741 rupees principal है और 27,076 rupees overdue है, क्योंकि आपकी दो EMIs miss हुई हैं। क्या मैं full foreclosure quote निकाल दूँ ताकि exact amount पता चल जाए?"
+  },
+  {
+   "id": "sarvam-codemix_S19_t1",
+   "text": "मेरी car insurance renew हो गई है, नया policy number VI778899 है.",
+   "expected": [
+    [
+     "update_vehicle_insurance"
+    ]
+   ],
+   "called": [
+    "verify_customer"
+   ],
+   "reply": "details update करने से पहले verification के लिए अपनी date of birth बता दीजिए."
+  },
+  {
+   "id": "sarvam-codemix_S24_t1",
+   "text": "मेरा nominee update करना है, मेरे पापा अनिल शर्मा को add कर दो.",
+   "expected": [
+    [
+     "update_nominee"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, nominee update करने से पहले मुझे आपकी identity verify करनी होगी। आपकी date of birth क्या है?"
+  },
+  {
+   "id": "sarvam-codemix_S25_t1",
+   "text": "मेरा bonus आया है, अगर मैं 50,000 extra दे दूँ तो क्या होगा?",
+   "expected": [
+    [
+     "get_personal_loan_part_payment_quote"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो active loans हैं — personal loan 3,00,000 rupees का और vehicle loan 8,00,000 rupees का। आप किस loan में 50,000 rupees extra pay करना चाहते हैं?"
+  },
+  {
+   "id": "sarvam-codemix_S26_t1",
+   "text": "मेरे personal loan में 1 lakh और add हो सकता है क्या",
+   "expected": [
+    [
+     "request_personal_loan_top_up",
+     "get_preapproved_offers"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "देखिए, आपके नाम पर एक active personal loan है, L1003, जिसमें अभी 3 lakh का principal बाकी है। मैं इस loan पर 1 lakh का top-up request डाल देता हूँ। कर दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S28_t1",
+   "text": "mera personal loan का EMI date 10th कर दो please",
+   "expected": [
+    [
+     "change_emi_date"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो personal loans दिख रहे हैं — L1003 और L1004. L1004 closed है तो शायद वो L1003 वाला हो. मैं इसी का EMI date 10th कर दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S32_t1",
+   "text": "मेरा personal loan एक बार में settle हो सकता है क्या",
+   "expected": [
+    [
+     "get_settlement_offer"
+    ]
+   ],
+   "called": [
+    "list_loans",
+    "get_personal_loan_foreclosure_quote"
+   ],
+   "reply": "देखिए, आपके personal loan L1007 को एक साथ close करने का total amount 2,27,342 rupees है। इसमें principal, interest, overdue EMIs, late fees और foreclosure charges सब include हैं। ये quote 20 October तक valid रहेगा। तो क्या मैं इसे process कर दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S37_t1",
+   "text": "सुबह बार बार call आता है शाम 5 से 7 के बीच ही call करो",
+   "expected": [
+    [
+     "update_collection_call_preferences"
+    ]
+   ],
+   "called": [
+    "get_customer_profile",
+    "book_callback"
+   ],
+   "reply": "Done, callback schedule हो गया है between 5 PM and 7 PM. Request ID RCEE59DF0 है, एक दिन में resolve हो जाएगा. और कुछ help चाहिए?"
+  },
+  {
+   "id": "sarvam-codemix_S39_t1",
+   "text": "मेरा application number A4001 का status क्या है और 500034 के पास कौन सा branch है",
+   "expected": [
+    [
+     "find_nearest_branch"
+    ]
+   ],
+   "called": [
+    "faq_search"
+   ],
+   "reply": "देखिए, मेरे पास इस application number की details नहीं आ रही हैं। मैं आपको human agent से connect करवा देता हूँ, वो आपको सही जानकारी दे देंगे। कर दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S40_t1",
+   "text": "कल recovery agent बहुत rude था, उसकी शिकायत करनी है.",
+   "expected": [
+    [
+     "raise_complaint"
+    ]
+   ],
+   "called": [
+    "list_complaints"
+   ],
+   "reply": "मैंने check कर लिया है, आपके नाम पर already एक complaint open है, जो इसी rude agent के issue के लिए आज ही register हुई है। इसका status check करूँ, या मैं इसे escalate कर दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S43_t1",
+   "text": "mera next EMI kab hai aur card का bill कितना है",
+   "expected": [
+    [
+     "get_next_emi"
+    ],
+    [
+     "get_card_bill"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो loans हैं — personal loan 13,538 rupees और home loan 39,767 rupees. दोनों active हैं. next EMI की exact date के लिए मैं आपको human agent से connect कर देता हूँ, या फिर आप अपना card ID बता दें तो मैं उसका bill check कर लेता हूँ. कौन सा सही रहेगा?"
+  },
+  {
+   "id": "sarvam-codemix_S45_t1",
+   "text": "मेरा KYC complete हुआ क्या और A4001 का क्या update है",
+   "expected": [
+    [
+     "get_kyc_status",
+     "start_video_kyc"
+    ],
+    [
+     "get_application_status"
+    ]
+   ],
+   "called": [
+    "get_customer_profile",
+    "get_loan_details"
+   ],
+   "reply": "Arjun, आपका KYC अभी pending है। और A4001 नाम का कोई loan हमारे system में नहीं दिखा रहा है। आप loan ID एक बार check करके बता देंगे? या मैं आपकी सारी loans की list निकाल दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_M01_t3",
+   "text": "मैं अभी इसको pay करना चाहता हूँ",
+   "expected": [
+    [
+     "pay_emi",
+     "pay_overdue",
+     "send_payment_link"
+    ]
+   ],
+   "called": [],
+   "reply": "Ji, payment ke liye aap teen tareeke use kar sakte hain — UPI, net banking ya debit card. Aap kaunsa prefer karenge? Amount 13,538 rupees rahega."
+  },
+  {
+   "id": "sarvam-codemix_M02_t2",
+   "text": "abhi sirf minimum due ही pay करूंगा",
+   "expected": [
+    [
+     "pay_card_bill"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, minimum due 2,115 rupees pay कर देता हूँ. UPI से करूँ?"
+  },
+  {
+   "id": "sarvam-codemix_M05_t2",
+   "text": "theek hai, मुझे 1 lakh की 2 साल की FD खुलवानी है.",
+   "expected": [
+    [
+     "open_fixed_deposit"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है. 2 साल के लिए 1,00,000 rupees की FD open कर देता हूँ. Payment netbanking से करूँ या UPI से?"
+  },
+  {
+   "id": "sarvam-codemix_M07_t1",
+   "text": "मेरा loan एक साथ settle कर सकते हैं क्या",
+   "expected": [
+    [
+     "get_settlement_offer"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो loans हैं — एक personal loan है 2,50,000 rupees का जो अभी active है, और एक vehicle loan जो already closed है। आप कौन सा loan settle करना चाहते हैं? Active वाला personal loan?"
+  },
+  {
+   "id": "sarvam-codemix_M07_t2",
+   "text": "हाँ, मैं offer accept करता हूँ.",
+   "expected": [
+    [
+     "accept_settlement_offer"
+    ]
+   ],
+   "called": [
+    "get_settlement_offer",
+    "get_overdue_emis"
+   ],
+   "reply": "Dekhiye, aapka loan L1003 abhi overdue nahi hai. Isme 3 ya usse zyada missed EMIs hone chahiye settlement offer ke liye. Toh abhi settlement possible nahi hai. Agar aap chahein toh main aapki next EMI check kar leta hoon."
+  }
+ ],
+ "router_k5": [
+  {
+   "id": "sarvam-codemix_S04_t1",
+   "text": "मैंने 2 दिन पहले UPI से payment की थी पर status अबhi भी unpaid दिख रहा है",
+   "expected": [
+    [
+     "report_payment_not_reflected",
+     "get_payment_history",
+     "get_last_payment"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो loans हैं — personal loan और home loan. आपने payment किस loan के लिए की थी, personal वाले के लिए या home वाले के लिए?"
+  },
+  {
+   "id": "sarvam-codemix_S06_t1",
+   "text": "builder ने slab complete कर दिया है, 5 lakh release कर दो.",
+   "expected": [
+    [
+     "request_home_loan_disbursement"
+    ]
+   ],
+   "called": [
+    "list_loans",
+    "get_home_loan_disbursement_status"
+   ],
+   "reply": "देखिये, आपके home loan में अभी 18 lakh rupees बाकी हैं disbursement के लिए। Slab stage पे 5 lakh rupees release करने के लिए मैं request डाल दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S09_t1",
+   "text": "मेरा credit card कल खो गया, please block कर दीजिए",
+   "expected": [
+    [
+     "block_card"
+    ]
+   ],
+   "called": [],
+   "reply": "समझ गया, card कल खो गया है। मैं अभी block कर देता हूँ। आपके कौन से card की बात कर रहे हैं, उसके last four digits बता दीजिए?"
+  },
+  {
+   "id": "sarvam-codemix_S12_t1",
+   "text": "मैं hospital में था इसलिए late fee हटा दो",
+   "expected": [
+    [
+     "request_late_fee_waiver"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "देखिए, आपके दो loans हैं — personal loan और home loan। आपको किस वाले की late fee हटवानी है? Personal loan की या home loan की?"
+  },
+  {
+   "id": "sarvam-codemix_S13_t1",
+   "text": "mujhe पिछले साल का home loan certificate चाहिए tax return के लिए",
+   "expected": [
+    [
+     "get_home_loan_tax_certificate",
+     "get_interest_certificate"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "देखिए आपके दो loans दिख रहे हैं, एक home loan है L1002। आपको 2025-26 का certificate चाहिए, सही है?"
+  },
+  {
+   "id": "sarvam-codemix_S14_t1",
+   "text": "मेरा personal loan का pending amount अभी clear करना है",
+   "expected": [
+    [
+     "pay_overdue",
+     "send_payment_link"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो active loans हैं। Personal loan ID L1001 में कोई overdue pending नहीं है। Home loan L1002 में भी कोई overdue नहीं दिख रहा। आप कौन सा loan clear करना चाहते हैं? अगर personal loan L1001 को पूरा close करना है, तो मैं foreclosure quote निकाल लेता हूँ।"
+  },
+  {
+   "id": "sarvam-codemix_S19_t1",
+   "text": "मेरी car insurance renew हो गई है, नया policy number VI778899 है.",
+   "expected": [
+    [
+     "update_vehicle_insurance"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "देखिए आपके पास एक vehicle loan है, L one zero zero five. इसी के लिए insurance update करना है ना? और नया policy number VI double seven double eight double nine है. इसकी expiry date क्या है?"
+  },
+  {
+   "id": "sarvam-codemix_S23_t1",
+   "text": "मेरा FD mature हो गया है, पैसे payout कर दो renewal मत करना",
+   "expected": [
+    [
+     "update_fd_maturity_instruction"
+    ]
+   ],
+   "called": [
+    "list_deposits",
+    "get_deposit_details"
+   ],
+   "reply": "देखिए, आपकी 2,00,000 rupees की FD पहले से ही payout पर set है। तो maturity पे पैसे सीधे आपके account में आ जाएंगे, renewal नहीं होगा। इसके अलावा कुछ और जानना है आपको?"
+  },
+  {
+   "id": "sarvam-codemix_S24_t1",
+   "text": "मेरा nominee update करना है, मेरे पापा अनिल शर्मा को add कर दो.",
+   "expected": [
+    [
+     "update_nominee"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, मैं आपके account में nominee update कर देता हूँ। बस एक बार confirm कर दीजिए, nominee आपके पिता अनिल शर्मा हैं ना? मैं अभी process कर देता हूँ।"
+  },
+  {
+   "id": "sarvam-codemix_S25_t1",
+   "text": "मेरा bonus आया है, अगर मैं 50,000 extra दे दूँ तो क्या होगा?",
+   "expected": [
+    [
+     "get_personal_loan_part_payment_quote"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके पास दो active loans हैं — एक personal loan 3,00,000 rupees का और एक vehicle loan 8,00,000 rupees का। आप किस loan में 50,000 rupees extra pay करना चाहते हैं?"
+  },
+  {
+   "id": "sarvam-codemix_S26_t1",
+   "text": "मेरे personal loan में 1 lakh और add हो सकता है क्या",
+   "expected": [
+    [
+     "request_personal_loan_top_up",
+     "get_preapproved_offers"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपका एक active personal loan है, loan ID L1003, जिसपे आप 1,00,000 rupees का top-up ले सकते हैं। आगे बढ़ने से पहले, क्या मैं eligibility check कर लूँ? बस आपकी monthly income बता दीजिए।"
+  },
+  {
+   "id": "sarvam-codemix_S28_t1",
+   "text": "mera personal loan का EMI date 10th कर दो please",
+   "expected": [
+    [
+     "change_emi_date"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके पास एक active personal loan है, loan ID L1003, जिसका EMI 9,964 rupees है. क्या इसी loan का EMI date 10th करना है?"
+  },
+  {
+   "id": "sarvam-codemix_S39_t1",
+   "text": "मेरा application number A4001 का status क्या है और 500034 के पास कौन सा branch है",
+   "expected": [
+    [
+     "find_nearest_branch"
+    ]
+   ],
+   "called": [
+    "get_application_status",
+    "get_branch_timings"
+   ],
+   "reply": "आपका application A4001 अभी documents pending है, मतलब आपके documents upload होना बाकी हैं। और 500034 ID वाली branch नहीं मिल रही है। आप चाहें तो मैं documents upload करने का link भेज दूँ? और branch ढूँढने में और help करूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S41_t1",
+   "text": "मेरे personal loan का total amount कितना बचा है?",
+   "expected": [
+    [
+     "get_outstanding_amount"
+    ]
+   ],
+   "called": [
+    "list_loans",
+    "get_personal_loan_foreclosure_quote"
+   ],
+   "reply": "आपके personal loan L1007 में total outstanding 2,27,342 rupees है। इसमें principal, interest, overdue EMIs, late fees और foreclosure charges सब शामिल हैं। ये quote 20 October तक valid रहेगा। क्या आप loan close करना चाहते हैं?"
+  },
+  {
+   "id": "sarvam-codemix_S42_t1",
+   "text": "आप confirm करो मुझे 5 lakh का personal loan definitely मिल जाएगा",
+   "expected": [
+    [
+     "check_personal_loan_eligibility",
+     "get_preapproved_offers"
+    ]
+   ],
+   "called": [],
+   "reply": "मैं आपकी eligibility check कर लेता हूँ, लेकिन ये सिर्फ indicative होता है, approval की कोई guarantee नहीं है। आप अपनी monthly income बता दीजिए। Yeh sirf andaza hai; final approval documents aur credit check par depend karta hai."
+  },
+  {
+   "id": "sarvam-codemix_M01_t2",
+   "text": "personal loan के बारे में पूछ रहा हूँ.",
+   "expected": [
+    [
+     "get_next_emi"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "Sir, aapka personal loan L1001 active hai aur iski EMI 13,538 rupees hai. Due date check karne ke liye mujhe thoda system se verify karna padega, kya main check karun?"
+  },
+  {
+   "id": "sarvam-codemix_M01_t3",
+   "text": "मैं अभी इसको pay करना चाहता हूँ",
+   "expected": [
+    [
+     "pay_emi",
+     "pay_overdue",
+     "send_payment_link"
+    ]
+   ],
+   "called": [],
+   "reply": "Ji, main help kar deta hoon. Aap abhi next EMI pay karna chahte hain ya overdue wali bhi clear karni hai? Agar sirf next EMI deni hai to exact amount 13,538 rupees hoga. Payment method kya use karna hai — UPI, netbanking, ya debit card?"
+  },
+  {
+   "id": "sarvam-codemix_M02_t2",
+   "text": "abhi sirf minimum due ही pay करूंगा",
+   "expected": [
+    [
+     "pay_card_bill"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, minimum due 2,115 rupees है. क्या मैं अभी payment कर दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_M05_t2",
+   "text": "theek hai, मुझे 1 lakh की 2 साल की FD खुलवानी है.",
+   "expected": [
+    [
+     "open_fixed_deposit"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, 2 साल के लिए 1 lakh rupees की FD open कर देता हूँ। Payment netbanking से करूँ या UPI और debit card से?"
+  },
+  {
+   "id": "sarvam-codemix_M07_t1",
+   "text": "मेरा loan एक साथ settle कर सकते हैं क्या",
+   "expected": [
+    [
+     "get_settlement_offer"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके पास एक active personal loan है, L1007, जिसका amount 2,50,000 rupees है। इसका settlement हो सकता है, लेकिन उसके लिए कम से कम 3 EMIs overdue होनी चाहिए। अभी आपकी loan status active दिख रही है, तो पहले check कर लेता हूँ कि settlement offer available है या नहीं। एक minute."
+  },
+  {
+   "id": "sarvam-codemix_M07_t2",
+   "text": "हाँ, मैं offer accept करता हूँ.",
+   "expected": [
+    [
+     "accept_settlement_offer"
+    ]
+   ],
+   "called": [
+    "get_settlement_offer",
+    "get_overdue_emis"
+   ],
+   "reply": "Dekhiye, is loan mein sirf do EMIs overdue hain, 13,538 rupees ki. Settlement offer tabhi milta hai jab 3 ya usse zyada EMIs miss hue hon. Isliye abhi settlement possible nahi hai. Aap chahein toh in overdue EMIs ko pay kar sakte hain, ya main aapko human agent se connect kar deta hoon. Kya karna hai?"
+  },
+  {
+   "id": "sarvam-codemix_M08_t2",
+   "text": "वो electronics hub वाला transaction मेरा नहीं है",
+   "expected": [
+    [
+     "dispute_card_transaction"
+    ]
+   ],
+   "called": [],
+   "reply": "समझ गया। मैं इस transaction पर dispute raise कर देता हूँ। Reason में क्या डालूँ? आप अपने शब्दों में बता दीजिए।"
+  }
+ ],
+ "router_k8": [
+  {
+   "id": "sarvam-codemix_S04_t1",
+   "text": "मैंने 2 दिन पहले UPI से payment की थी पर status अबhi भी unpaid दिख रहा है",
+   "expected": [
+    [
+     "report_payment_not_reflected",
+     "get_payment_history",
+     "get_last_payment"
+    ]
+   ],
+   "called": [],
+   "reply": "समझ गया। मैं check कर लेता हूँ। आप payment ID बता सकते हैं? या फिर loan ID और payment amount बता दीजिए, मैं loan details से पता कर लेता हूँ।"
+  },
+  {
+   "id": "sarvam-codemix_S06_t1",
+   "text": "builder ने slab complete कर दिया है, 5 lakh release कर दो.",
+   "expected": [
+    [
+     "request_home_loan_disbursement"
+    ]
+   ],
+   "called": [
+    "get_home_loan_disbursement_status",
+    "list_loans"
+   ],
+   "reply": "आपका home loan L1002 है। Slab stage के लिए 5,00,000 rupees की disbursement request डाल दूँ? आगे बढ़ूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S09_t1",
+   "text": "मेरा credit card कल खो गया, please block कर दीजिए",
+   "expected": [
+    [
+     "block_card"
+    ]
+   ],
+   "called": [],
+   "reply": "समझ गया, card कल खो गया है। मैं अभी block कर देता हूँ। बस एक बार confirm कर दीजिये, कौन सा card block करना है? आपके पास card ID है क्या, या मैं आपके account से check कर लूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S12_t1",
+   "text": "मैं hospital में था इसलिए late fee हटा दो",
+   "expected": [
+    [
+     "request_late_fee_waiver"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो loans हैं — personal loan और home loan। किस loan की late fee हटवानी है? Personal वाला या home वाला?"
+  },
+  {
+   "id": "sarvam-codemix_S13_t1",
+   "text": "mujhe पिछले साल का home loan certificate चाहिए tax return के लिए",
+   "expected": [
+    [
+     "get_home_loan_tax_certificate",
+     "get_interest_certificate"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, मैं help कर देता हूँ। बस आपको अपना loan ID बता दीजिए, और कौन से financial year का certificate चाहिए? जैसे 2024-25?"
+  },
+  {
+   "id": "sarvam-codemix_S14_t1",
+   "text": "मेरा personal loan का pending amount अभी clear करना है",
+   "expected": [
+    [
+     "pay_overdue",
+     "send_payment_link"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो loans दिख रहे हैं — personal loan L1001 और home loan L1002। कौन सा clear करना है? Personal वाला?"
+  },
+  {
+   "id": "sarvam-codemix_S19_t1",
+   "text": "मेरी car insurance renew हो गई है, नया policy number VI778899 है.",
+   "expected": [
+    [
+     "update_vehicle_insurance"
+    ]
+   ],
+   "called": [
+    "list_loans",
+    "get_vehicle_insurance_status"
+   ],
+   "reply": "देखिए, आपकी vehicle loan वाली policy VI496922 अभी 6 February 2027 तक valid है। आपने जो नया number VI778899 बताया है, उसका expiry date क्या है? वो date बता दीजिए तो मैं update कर दूँ।"
+  },
+  {
+   "id": "sarvam-codemix_S23_t1",
+   "text": "मेरा FD mature हो गया है, पैसे payout कर दो renewal मत करना",
+   "expected": [
+    [
+     "update_fd_maturity_instruction"
+    ]
+   ],
+   "called": [
+    "list_deposits",
+    "get_deposit_details"
+   ],
+   "reply": "देखिए, आपकी FD पहले से ही payout पर set है, तो कोई renewal नहीं होगा। 2,00,000 rupees आपके account में आ जाएंगे। तो क्या मैं इसे confirm कर दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S24_t1",
+   "text": "मेरा nominee update करना है, मेरे पापा अनिल शर्मा को add कर दो.",
+   "expected": [
+    [
+     "update_nominee"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, मैं कर देता हूँ। बस confirm कर दीजिए, nominee आपके पापा अनिल शर्मा हैं ना, relation father रहेगा? तो आगे बढ़ा दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S25_t1",
+   "text": "मेरा bonus आया है, अगर मैं 50,000 extra दे दूँ तो क्या होगा?",
+   "expected": [
+    [
+     "get_personal_loan_part_payment_quote"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके दो active loans हैं — personal loan तीन लाख का और vehicle loan आठ लाख का। आप पचास हज़ार किस loan में prepay करना चाहते हैं?"
+  },
+  {
+   "id": "sarvam-codemix_S26_t1",
+   "text": "मेरे personal loan में 1 lakh और add हो सकता है क्या",
+   "expected": [
+    [
+     "request_personal_loan_top_up",
+     "get_preapproved_offers"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपका एक active personal loan है 3 lakh rupees का, loan ID L1003. इसमें 1 lakh rupees का top-up check करने के लिए ना, मुझे आपकी monthly income जाननी होगी. आपकी monthly income कितनी है?"
+  },
+  {
+   "id": "sarvam-codemix_S28_t1",
+   "text": "mera personal loan का EMI date 10th कर दो please",
+   "expected": [
+    [
+     "change_emi_date"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके पास एक active personal loan है, L1003, जिसकी EMI 9964 rupees है। तो क्या मैं इसकी EMI date 10th कर दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_S41_t1",
+   "text": "मेरे personal loan का total amount कितना बचा है?",
+   "expected": [
+    [
+     "get_outstanding_amount"
+    ]
+   ],
+   "called": [
+    "list_loans",
+    "get_personal_loan_foreclosure_quote"
+   ],
+   "reply": "देखिए, आपका total outstanding 1,79,511 rupees है। लेकिन अगर आप loan आज ही close करना चाहते हैं, तो total amount 2,27,342 rupees लगेगा, जिसमें interest, late fees और foreclosure charges सब included हैं। ये quote 20 October तक valid है। क्या आप loan close करना चाहेंगे?"
+  },
+  {
+   "id": "sarvam-codemix_M01_t3",
+   "text": "मैं अभी इसको pay करना चाहता हूँ",
+   "expected": [
+    [
+     "pay_emi",
+     "pay_overdue",
+     "send_payment_link"
+    ]
+   ],
+   "called": [],
+   "reply": "Bilkul, main help kar deta hoon. Kya aap pending EMIs aur late fees ek saath clear karna chahte hain, ya sirf agli EMI 13,538 rupees pay karna chahenge?"
+  },
+  {
+   "id": "sarvam-codemix_M02_t2",
+   "text": "abhi sirf minimum due ही pay करूंगा",
+   "expected": [
+    [
+     "pay_card_bill"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, मैं 2,115 rupees का minimum due UPI से pay कर देता हूँ। आगे बढ़ूँ?"
+  },
+  {
+   "id": "sarvam-codemix_M04_t2",
+   "text": "तो please अभी NOC की request डाल दो",
+   "expected": [
+    [
+     "request_noc"
+    ]
+   ],
+   "called": [
+    "list_loans",
+    "get_noc_status"
+   ],
+   "reply": "NOC abhi tak request nahi hui hai. Main abhi request daal deta hoon, theek है?"
+  },
+  {
+   "id": "sarvam-codemix_M05_t2",
+   "text": "theek hai, मुझे 1 lakh की 2 साल की FD खुलवानी है.",
+   "expected": [
+    [
+     "open_fixed_deposit"
+    ]
+   ],
+   "called": [],
+   "reply": "ठीक है, 2 साल के लिए 1,00,000 rupees की FD 7.25 percent interest पर open कर देता हूँ. Payment netbanking से करूँ या UPI और debit card से?"
+  },
+  {
+   "id": "sarvam-codemix_M07_t1",
+   "text": "मेरा loan एक साथ settle कर सकते हैं क्या",
+   "expected": [
+    [
+     "get_settlement_offer"
+    ]
+   ],
+   "called": [
+    "list_loans"
+   ],
+   "reply": "आपके पास एक active personal loan है, L1007, 2,50,000 rupees का। इसकी 3 या उससे ज्यादा EMIs overdue हैं, तो मैं settlement offer check कर सकता हूँ। बता दूँ?"
+  },
+  {
+   "id": "sarvam-codemix_M07_t2",
+   "text": "हाँ, मैं offer accept करता हूँ.",
+   "expected": [
+    [
+     "accept_settlement_offer"
+    ]
+   ],
+   "called": [
+    "list_loans",
+    "get_settlement_offer"
+   ],
+   "reply": "Aapka settlement offer 1 lakh 30 hazaar rupees ka hai. Ye offer 28 October tak valid hai. Ek baar confirm kar loon?"
+  },
+  {
+   "id": "sarvam-codemix_M08_t2",
+   "text": "वो electronics hub वाला transaction मेरा नहीं है",
+   "expected": [
+    [
+     "dispute_card_transaction"
+    ]
+   ],
+   "called": [],
+   "reply": "समझ गया, मैं इसके लिए dispute raise कर देता हूँ। Reason में क्या डालूँ? आप अपने शब्दों में बता दीजिए।"
+  }
+ ]
+}

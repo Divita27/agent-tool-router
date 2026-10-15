@@ -91,8 +91,12 @@ class Turn:
 
 
 class Agent:
-    def __init__(self, customer_id, select_tools=all_tools, executor_mode="local", log=True, audit=True):
+    def __init__(self, customer_id, select_tools=all_tools, executor_mode="local", log=True, audit=True,
+                 states=None):
         self.customer_id = customer_id
+        self.states = states  # optional LiveStates: hand-built states with LLM-driven transitions
+        if states:
+            select_tools = states.select_tools
         self.safety = SafetyLayer(customer_id, executor_mode, audit=audit)
         self.select_tools = select_tools
         self.executor_mode = executor_mode
@@ -113,7 +117,7 @@ class Agent:
         turn.confirmation = self.safety.on_user_turn(user_text)  # did they just answer a "confirm?"
         self.messages.append({"role": "user", "content": user_text})
         turn.tools_offered = self.select_tools(self.messages)
-        tool_schemas = schemas(turn.tools_offered)
+        tool_schemas = schemas(turn.tools_offered) + (self.states.transition_schemas() if self.states else [])
 
         for _ in range(MAX_MODEL_CALLS_PER_TURN):
             try:
@@ -140,6 +144,14 @@ class Agent:
                                   "tool_calls": r["tool_calls"]})
             for tc in r["tool_calls"]:
                 name, arguments = tc["function"]["name"], tc["function"]["arguments"]
+                if self.states and self.states.handles(name):  # state switch: new tools for the next model call
+                    result = self.states.switch(name)
+                    call.tool_calls.append({"name": name, "arguments": arguments, "ok": True, "error": None,
+                                            "latency_ms": 0})
+                    self.messages.append({"role": "tool", "tool_call_id": tc["id"], "content": json.dumps(result)})
+                    turn.tools_offered = self.select_tools(self.messages)
+                    tool_schemas = schemas(turn.tools_offered) + self.states.transition_schemas()
+                    continue
                 outcome = self.safety.execute(name, arguments)
                 call.tool_calls.append({"name": name, "arguments": arguments, "ok": outcome["ok"],
                                         "error": outcome.get("error"), "latency_ms": outcome["latency_ms"]})

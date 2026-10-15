@@ -154,3 +154,50 @@ def summary():
 
 if __name__ == "__main__":
     summary()
+
+
+# ---------- live states: the LLM switches state itself, like Sarvam's platform ----------
+
+STATE_DESCRIPTIONS = {
+    "coarse": {
+        "loan_servicing": "loan details, EMIs and schedules, statements, NOC, foreclosure, home, vehicle and "
+                          "personal loan servicing",
+        "payments_collections": "paying EMIs, payment problems, autopay, refunds, late fees, overdue EMIs, "
+                                "settlement, EMI holiday, reminder calls",
+        "new_loans_profile": "new loans, eligibility, interest rates, applications, KYC, address, phone, email, "
+                             "nominee or PAN changes",
+        "cards": "credit card bill and payments, limits, transactions, disputes, rewards, blocking a card",
+        "deposits": "fixed deposits: rates, opening, maturity, breaking, certificates",
+        "support": "complaints, branches, callbacks",
+    },
+}
+
+
+class LiveStates:
+    """State machine for the live agent: per-state tools + globals + one go_to_<state> function per
+    other state. When the model calls go_to_X, the agent switches and gets X's tools."""
+
+    def __init__(self, design="coarse", start=None):
+        self.design = design
+        self.states = DESIGNS[design]
+        self.current = start or DEFAULT_STATE[design]
+        self.transitions = 0
+
+    def select_tools(self, messages):
+        return list(dict.fromkeys(self.states[self.current] + GLOBAL))
+
+    def transition_schemas(self):
+        return [{"type": "function", "function": {
+            "name": f"go_to_{s}",
+            "description": f"Switch the conversation to the '{s}' topic: {STATE_DESCRIPTIONS[self.design][s]}. "
+                           f"Use when the caller needs something from that topic; you then get its tools.",
+            "parameters": {"type": "object", "properties": {}, "required": []}}}
+            for s in self.states if s != self.current]
+
+    def handles(self, name):
+        return name.startswith("go_to_") and name[len("go_to_"):] in self.states
+
+    def switch(self, name):
+        self.current = name[len("go_to_"):]
+        self.transitions += 1
+        return {"now_in": self.current, "note": "You now have this topic's tools. Continue with the caller's request."}
