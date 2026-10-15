@@ -1,0 +1,4172 @@
+{
+ "rows": [
+  {
+   "name": "States coarse, keyword rules",
+   "dev": {
+    "all_needed": 86.4,
+    "tools": 33.6,
+    "tokens": 3782,
+    "switch_rate_later_turns": 23.1,
+    "by_tag": {
+     "lookalike": 83.3,
+     "ambiguous": 100.0,
+     "reference": 88.9,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 25.0
+    },
+    "later_turns": 89.7
+   },
+   "llm": {
+    "all_needed": 84.3,
+    "tools": 33.3,
+    "tokens": 3757,
+    "switch_rate_later_turns": 38.5,
+    "by_tag": {
+     "lookalike": 83.3,
+     "ambiguous": 100.0,
+     "reference": 83.3,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 25.0
+    },
+    "later_turns": 84.6
+   }
+  },
+  {
+   "name": "States coarse, perfect switching",
+   "dev": {
+    "all_needed": 95.8,
+    "tools": 34.1,
+    "tokens": 3835,
+    "switch_rate_later_turns": 23.1,
+    "by_tag": {
+     "lookalike": 100.0,
+     "ambiguous": 100.0,
+     "reference": 100.0,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 25.0
+    },
+    "later_turns": 100.0
+   },
+   "llm": {
+    "all_needed": 95.7,
+    "tools": 34.0,
+    "tokens": 3826,
+    "switch_rate_later_turns": 23.1,
+    "by_tag": {
+     "lookalike": 100.0,
+     "ambiguous": 100.0,
+     "reference": 100.0,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 25.0
+    },
+    "later_turns": 100.0
+   }
+  },
+  {
+   "name": "States fine, keyword rules",
+   "dev": {
+    "all_needed": 80.8,
+    "tools": 18.9,
+    "tokens": 2472,
+    "switch_rate_later_turns": 46.2,
+    "by_tag": {
+     "lookalike": 66.7,
+     "ambiguous": 50.0,
+     "reference": 88.9,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 0.0
+    },
+    "later_turns": 89.7
+   },
+   "llm": {
+    "all_needed": 74.8,
+    "tools": 19.1,
+    "tokens": 2502,
+    "switch_rate_later_turns": 53.8,
+    "by_tag": {
+     "lookalike": 66.7,
+     "ambiguous": 50.0,
+     "reference": 69.4,
+     "topic_switch": 50.0,
+     "chain": 100.0,
+     "multi_request": 0.0
+    },
+    "later_turns": 71.8
+   }
+  },
+  {
+   "name": "States fine, perfect switching",
+   "dev": {
+    "all_needed": 94.4,
+    "tools": 19.5,
+    "tokens": 2531,
+    "switch_rate_later_turns": 38.5,
+    "by_tag": {
+     "lookalike": 100.0,
+     "ambiguous": 100.0,
+     "reference": 100.0,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 0.0
+    },
+    "later_turns": 100.0
+   },
+   "llm": {
+    "all_needed": 94.3,
+    "tools": 19.5,
+    "tokens": 2530,
+    "switch_rate_later_turns": 38.5,
+    "by_tag": {
+     "lookalike": 100.0,
+     "ambiguous": 100.0,
+     "reference": 100.0,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 0.0
+    },
+    "later_turns": 100.0
+   }
+  },
+  {
+   "name": "Router K=5",
+   "dev": {
+    "all_needed": 97.2,
+    "tools": 9.1,
+    "tokens": 930,
+    "switch_rate_later_turns": 0.0,
+    "by_tag": {
+     "lookalike": 100.0,
+     "ambiguous": 100.0,
+     "reference": 94.4,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 100.0
+    },
+    "later_turns": 94.9
+   },
+   "llm": {
+    "all_needed": 96.7,
+    "tools": 9.1,
+    "tokens": 930,
+    "switch_rate_later_turns": 0.0,
+    "by_tag": {
+     "lookalike": 100.0,
+     "ambiguous": 100.0,
+     "reference": 91.7,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 100.0
+    },
+    "later_turns": 92.3
+   }
+  },
+  {
+   "name": "Router K=8",
+   "dev": {
+    "all_needed": 97.7,
+    "tools": 12.2,
+    "tokens": 1285,
+    "switch_rate_later_turns": 0.0,
+    "by_tag": {
+     "lookalike": 100.0,
+     "ambiguous": 100.0,
+     "reference": 97.2,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 100.0
+    },
+    "later_turns": 97.4
+   },
+   "llm": {
+    "all_needed": 98.1,
+    "tools": 12.3,
+    "tokens": 1302,
+    "switch_rate_later_turns": 0.0,
+    "by_tag": {
+     "lookalike": 100.0,
+     "ambiguous": 100.0,
+     "reference": 97.2,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 100.0
+    },
+    "later_turns": 97.4
+   }
+  },
+  {
+   "name": "Router K=8 + generated queries",
+   "dev": {
+    "all_needed": 98.6,
+    "tools": 12.4,
+    "tokens": 1295,
+    "switch_rate_later_turns": 0.0,
+    "by_tag": {
+     "lookalike": 100.0,
+     "ambiguous": 100.0,
+     "reference": 100.0,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 100.0
+    },
+    "later_turns": 100.0
+   },
+   "llm": {
+    "all_needed": 98.6,
+    "tools": 12.4,
+    "tokens": 1300,
+    "switch_rate_later_turns": 0.0,
+    "by_tag": {
+     "lookalike": 100.0,
+     "ambiguous": 100.0,
+     "reference": 97.2,
+     "topic_switch": 100.0,
+     "chain": 100.0,
+     "multi_request": 100.0
+    },
+    "later_turns": 97.4
+   }
+  }
+ ],
+ "misses": {
+  "States coarse, keyword rules | dev": [
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 35,
+    "tokens": 4066,
+    "switched": true,
+    "state": "payments_collections",
+    "text": "अभी सिर्फ़ minimum भर देता हूँ",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "मेरा bank account बदल गया है EMI अब नए account से कटनी चाहिए",
+    "expected": [
+     [
+      "update_autopay_bank_account"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "मेरी salary 1.4 लाख है 80 लाख का flat लेना है कितना home loan मिलेगा",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "आजकल car loan पे कितना interest चल रहा है",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "पाँच लाख का loan तीन साल के लिए 12 percent पे EMI कितनी बनेगी",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "मुझे सुबह call मत करो सिर्फ़ शाम पाँच से सात के बीच करना",
+    "expected": [
+     [
+      "update_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "personal loan की अगली EMI कब है और card का bill कितना आया है",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 1879,
+    "switched": false,
+    "state": "deposits",
+    "text": "मेरी FD कब mature होगी और car loan बंद करने में कितना लगेगा",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "तीन चीज़ें बताओ home loan का कितना पैसा release हुआ card पे कितने reward points हैं और 560001 के पास branch कहाँ है",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "english",
+    "all_needed": false,
+    "tools": 35,
+    "tokens": 4066,
+    "switched": true,
+    "state": "payments_collections",
+    "text": "I'll just pay the minimum for now.",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "What interest do you give on FDs?",
+    "expected": [
+     [
+      "get_fd_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "Make one for one lakh for two years.",
+    "expected": [
+     [
+      "open_fixed_deposit"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "I've switched banks, the EMI should be debited from my new account now.",
+    "expected": [
+     [
+      "update_autopay_bank_account"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "I earn 1.4 lakh a month and want to buy an 80 lakh flat. How much home loan can I get?",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "What interest rate are you charging on car loans these days?",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "What would the EMI be on a 5 lakh loan for 3 years at 12 percent?",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "Stop calling me in the morning, only call between 5 and 7 in the evening.",
+    "expected": [
+     [
+      "update_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "I'll definitely get a 5 lakh personal loan, right? Just say yes.",
+    "expected": [
+     [
+      "check_personal_loan_eligibility",
+      "get_preapproved_offers"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "When's my next personal loan EMI, and how much is my card bill?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 1879,
+    "switched": false,
+    "state": "deposits",
+    "text": "When does my FD mature, and how much to close my car loan?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "Three things: how much of my home loan is released, how many reward points are on my card, and where's the branch near 560001?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 35,
+    "tokens": 4066,
+    "switched": true,
+    "state": "payments_collections",
+    "text": "Abhi sirf minimum bhar deta hoon",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "Mera bank account badal gaya hai, EMI ab naye account se katni chahiye",
+    "expected": [
+     [
+      "update_autopay_bank_account"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "Meri salary 1.4 lakh hai, 80 lakh ka flat lena hai, kitna home loan milega?",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "Aajkal car loan pe kitna interest chal raha hai?",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "5 lakh ka loan 3 saal ke liye 12 percent pe, EMI kitni banegi?",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "Personal loan ki agli EMI kab hai aur card ka bill kitna aaya hai?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 1879,
+    "switched": false,
+    "state": "deposits",
+    "text": "Meri FD kab mature hogi, aur car loan band karne mein kitna lagega?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "Teen cheezein batao: home loan ka kitna paisa release hua, card pe kitne reward points hain, aur 560001 ke paas branch kahan hai?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   }
+  ],
+  "States coarse, keyword rules | llm": [
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 35,
+    "tokens": 4066,
+    "switched": true,
+    "state": "payments_collections",
+    "text": "abhi sirf minimum due ही pay करूंगा",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "irreversible",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 30,
+    "tokens": 3515,
+    "switched": true,
+    "state": "new_loans_profile",
+    "text": "हाँ, मैं offer accept करता हूँ.",
+    "expected": [
+     [
+      "accept_settlement_offer"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "मेरा monthly salary 1.4 lakh है, 80 lakh का flat लेना है, कितना home loan मिलेगा?",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "second car लेने का सोच रही हूँ, आज कल car loan पर क्या interest rate चल रहा है?",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "5 lakh loan 3 साल के लिए 12 percent पर EMI क्या होगी?",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "सुबह बार बार call आता है शाम 5 से 7 के बीच ही call करो",
+    "expected": [
+     [
+      "update_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 30,
+    "tokens": 3515,
+    "switched": false,
+    "state": "new_loans_profile",
+    "text": "मेरा application number A4001 का status क्या है और 500034 के पास कौन सा branch है",
+    "expected": [
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "आप confirm करो मुझे 5 lakh का personal loan definitely मिल जाएगा",
+    "expected": [
+     [
+      "check_personal_loan_eligibility",
+      "get_preapproved_offers"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "mera next EMI kab hai aur card का bill कितना है",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 1879,
+    "switched": false,
+    "state": "deposits",
+    "text": "मेरा FD कब mature होगा और car loan close करने का कितना charge लगेगा?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "home loan का कितना amount release हुआ, card पे कितने reward points हैं और 560001 के पास का branch कहाँ है",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "english",
+    "all_needed": false,
+    "tools": 35,
+    "tokens": 4066,
+    "switched": true,
+    "state": "payments_collections",
+    "text": "I will pay only the minimum amount right now",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "irreversible",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "english",
+    "all_needed": false,
+    "tools": 30,
+    "tokens": 3515,
+    "switched": true,
+    "state": "new_loans_profile",
+    "text": "Yes, I accept the offer.",
+    "expected": [
+     [
+      "accept_settlement_offer"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 35,
+    "tokens": 4066,
+    "switched": false,
+    "state": "payments_collections",
+    "text": "I got a bonus, what happens if I pay 50,000 extra towards my loan?",
+    "expected": [
+     [
+      "get_personal_loan_part_payment_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "My monthly salary is 1.4 lakh, I want to buy an 80 lakh flat, how much home loan can I get?",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "I am thinking of buying a second car, what interest rate do you charge on car loans these days?",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "What will be the EMI for a 5 lakh loan over 3 years at 12 percent?",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "I am getting calls in the morning, please call me only between 5 to 7 in the evening",
+    "expected": [
+     [
+      "update_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "rules"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "please call me only between 8 and 10 at night",
+    "expected": [
+     [
+      "update_collection_call_preferences",
+      "get_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "Just confirm, I will definitely get the 5 lakh personal loan, right?",
+    "expected": [
+     [
+      "check_personal_loan_eligibility",
+      "get_preapproved_offers"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "When is my next EMI and what is my credit card bill?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 1879,
+    "switched": false,
+    "state": "deposits",
+    "text": "When does my fixed deposit mature and what is the charge to close my car loan?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "How much home loan is released, how many reward points are on my card, and the nearest branch to 560001?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 35,
+    "tokens": 4066,
+    "switched": true,
+    "state": "payments_collections",
+    "text": "abhi sirf minimum due hi pay karunga",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "irreversible",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 30,
+    "tokens": 3515,
+    "switched": true,
+    "state": "new_loans_profile",
+    "text": "haan, main offer accept karta hoon.",
+    "expected": [
+     [
+      "accept_settlement_offer"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "mera monthly salary 1.4 lakh hai, 80 lakh ka flat lena hai, kitna home loan milega?",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "second car lene ka soch rahi hoon, aaj kal car loan par kya interest rate chal raha hai?",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "5 lakh loan 3 saal ke liye 12 percent par EMI kitni hogi?",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "subah baar baar call aata hai, shaam 5 se 7 ke beech hi call karo",
+    "expected": [
+     [
+      "update_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "mujhe confirm karo, mujhe definitely 5 lakh ka personal loan mil jayega",
+    "expected": [
+     [
+      "check_personal_loan_eligibility",
+      "get_preapproved_offers"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "mera next EMI kab hai aur card ka bill kitna hai",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 1879,
+    "switched": false,
+    "state": "deposits",
+    "text": "mera FD kab mature hoga aur car loan close karne ka kitna charge lagega?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2436,
+    "switched": false,
+    "state": "cards",
+    "text": "home loan ka kitna amount release hua, card pe kitne reward points hain aur 560001 ke paas ka branch kahan hai",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   }
+  ],
+  "States coarse, perfect switching | dev": [
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "personal loan की अगली EMI कब है और card का bill कितना आया है",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "मेरी FD कब mature होगी और car loan बंद करने में कितना लगेगा",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "तीन चीज़ें बताओ home loan का कितना पैसा release हुआ card पे कितने reward points हैं और 560001 के पास branch कहाँ है",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "When's my next personal loan EMI, and how much is my card bill?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "When does my FD mature, and how much to close my car loan?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "Three things: how much of my home loan is released, how many reward points are on my card, and where's the branch near 560001?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "Personal loan ki agli EMI kab hai aur card ka bill kitna aaya hai?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "Meri FD kab mature hogi, aur car loan band karne mein kitna lagega?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "Teen cheezein batao: home loan ka kitna paisa release hua, card pe kitne reward points hain, aur 560001 ke paas branch kahan hai?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   }
+  ],
+  "States coarse, perfect switching | llm": [
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "mera next EMI kab hai aur card का bill कितना है",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "मेरा FD कब mature होगा और car loan close करने का कितना charge लगेगा?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "home loan का कितना amount release हुआ, card पे कितने reward points हैं और 560001 के पास का branch कहाँ है",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "When is my next EMI and what is my credit card bill?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "When does my fixed deposit mature and what is the charge to close my car loan?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "How much home loan is released, how many reward points are on my card, and the nearest branch to 560001?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "mera next EMI kab hai aur card ka bill kitna hai",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "mera FD kab mature hoga aur car loan close karne ka kitna charge lagega?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 41,
+    "tokens": 4441,
+    "switched": false,
+    "state": "loan_servicing",
+    "text": "home loan ka kitna amount release hua, card pe kitne reward points hain aur 560001 ke paas ka branch kahan hai",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   }
+  ],
+  "States fine, keyword rules | dev": [
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": true,
+    "state": "payments",
+    "text": "अभी सिर्फ़ minimum भर देता हूँ",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "मेरा bank account बदल गया है EMI अब नए account से कटनी चाहिए",
+    "expected": [
+     [
+      "update_autopay_bank_account"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "two_personal_loans"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "मेरा पुराना personal loan बंद हो गया है उसका NOC चाहिए",
+    "expected": [
+     [
+      "request_noc",
+      "get_noc_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "ambiguous",
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "loan बंद करने में कितना पैसा लगेगा",
+    "expected": [
+     [
+      "get_personal_loan_foreclosure_quote",
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "मेरी salary 1.4 लाख है 80 लाख का flat लेना है कितना home loan मिलेगा",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "personal loan की EMI date दस तारीख कर दो",
+    "expected": [
+     [
+      "change_emi_date"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "आजकल car loan पे कितना interest चल रहा है",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "पाँच लाख का loan तीन साल के लिए 12 percent पे EMI कितनी बनेगी",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "मुझे सुबह call मत करो सिर्फ़ शाम पाँच से सात के बीच करना",
+    "expected": [
+     [
+      "update_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "personal loan की अगली EMI कब है और card का bill कितना आया है",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2104,
+    "switched": false,
+    "state": "deposits",
+    "text": "मेरी FD कब mature होगी और car loan बंद करने में कितना लगेगा",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "मेरा KYC हो गया क्या और application A4001 का क्या हुआ",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "तीन चीज़ें बताओ home loan का कितना पैसा release हुआ card पे कितने reward points हैं और 560001 के पास branch कहाँ है",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "english",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": true,
+    "state": "payments",
+    "text": "I'll just pay the minimum for now.",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "What interest do you give on FDs?",
+    "expected": [
+     [
+      "get_fd_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "Make one for one lakh for two years.",
+    "expected": [
+     [
+      "open_fixed_deposit"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "I've switched banks, the EMI should be debited from my new account now.",
+    "expected": [
+     [
+      "update_autopay_bank_account"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "two_personal_loans"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "My old personal loan is fully paid, I need the NOC for it.",
+    "expected": [
+     [
+      "request_noc",
+      "get_noc_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "ambiguous",
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "How much would it cost to close my loan?",
+    "expected": [
+     [
+      "get_personal_loan_foreclosure_quote",
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "I earn 1.4 lakh a month and want to buy an 80 lakh flat. How much home loan can I get?",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "Please move my personal loan EMI date to the 10th.",
+    "expected": [
+     [
+      "change_emi_date"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "What interest rate are you charging on car loans these days?",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "What would the EMI be on a 5 lakh loan for 3 years at 12 percent?",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "Stop calling me in the morning, only call between 5 and 7 in the evening.",
+    "expected": [
+     [
+      "update_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "I'll definitely get a 5 lakh personal loan, right? Just say yes.",
+    "expected": [
+     [
+      "check_personal_loan_eligibility",
+      "get_preapproved_offers"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "When's my next personal loan EMI, and how much is my card bill?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2104,
+    "switched": false,
+    "state": "deposits",
+    "text": "When does my FD mature, and how much to close my car loan?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "Is my KYC done, and what's happening with application A4001?",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "Three things: how much of my home loan is released, how many reward points are on my card, and where's the branch near 560001?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": true,
+    "state": "payments",
+    "text": "Abhi sirf minimum bhar deta hoon",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "Mera bank account badal gaya hai, EMI ab naye account se katni chahiye",
+    "expected": [
+     [
+      "update_autopay_bank_account"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "two_personal_loans"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "Mera purana personal loan band ho gaya hai, uska NOC chahiye",
+    "expected": [
+     [
+      "request_noc",
+      "get_noc_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "ambiguous",
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "Loan band karne mein kitna paisa lagega?",
+    "expected": [
+     [
+      "get_personal_loan_foreclosure_quote",
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "Meri salary 1.4 lakh hai, 80 lakh ka flat lena hai, kitna home loan milega?",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "Personal loan ki EMI date 10 tareekh kar do",
+    "expected": [
+     [
+      "change_emi_date"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "Aajkal car loan pe kitna interest chal raha hai?",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "5 lakh ka loan 3 saal ke liye 12 percent pe, EMI kitni banegi?",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "Personal loan ki agli EMI kab hai aur card ka bill kitna aaya hai?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2104,
+    "switched": false,
+    "state": "deposits",
+    "text": "Meri FD kab mature hogi, aur car loan band karne mein kitna lagega?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "Mera KYC ho gaya kya, aur application A4001 ka kya hua?",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "Teen cheezein batao: home loan ka kitna paisa release hua, card pe kitne reward points hain, aur 560001 ke paas branch kahan hai?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   }
+  ],
+  "States fine, keyword rules | llm": [
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": true,
+    "state": "payments",
+    "text": "abhi sirf minimum due ही pay करूंगा",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "मेरा पुराना personal loan last year close हो गया था, क्या NOC भेज दिया है?",
+    "expected": [
+     [
+      "get_noc_status",
+      "request_noc"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "reference"
+    ],
+    "turn": 2,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": false,
+    "state": "payments",
+    "text": "अभी payment नहीं कर सकता, 25 तक कर दूँगा",
+    "expected": [
+     [
+      "record_promise_to_pay"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "irreversible",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": true,
+    "state": "new_loans",
+    "text": "हाँ, मैं offer accept करता हूँ.",
+    "expected": [
+     [
+      "accept_settlement_offer"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "reference",
+     "topic_switch"
+    ],
+    "turn": 2,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "theek hai chhod do, bas car loan की EMI date 10th कर दो",
+    "expected": [
+     [
+      "change_emi_date"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": false,
+    "state": "payments",
+    "text": "personal loan का payment आज नहीं हो पाएगा, मैं 20 को दे दूंगा",
+    "expected": [
+     [
+      "record_promise_to_pay"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "ambiguous",
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "मेरा loan close करने का कितना charge लगेगा?",
+    "expected": [
+     [
+      "get_personal_loan_foreclosure_quote",
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "मेरा monthly salary 1.4 lakh है, 80 lakh का flat लेना है, कितना home loan मिलेगा?",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "mera personal loan का EMI date 10th कर दो please",
+    "expected": [
+     [
+      "change_emi_date"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "second car लेने का सोच रही हूँ, आज कल car loan पर क्या interest rate चल रहा है?",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "5 lakh loan 3 साल के लिए 12 percent पर EMI क्या होगी?",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "सुबह बार बार call आता है शाम 5 से 7 के बीच ही call करो",
+    "expected": [
+     [
+      "update_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "मेरा application number A4001 का status क्या है और 500034 के पास कौन सा branch है",
+    "expected": [
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "आप confirm करो मुझे 5 lakh का personal loan definitely मिल जाएगा",
+    "expected": [
+     [
+      "check_personal_loan_eligibility",
+      "get_preapproved_offers"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "mera next EMI kab hai aur card का bill कितना है",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2104,
+    "switched": false,
+    "state": "deposits",
+    "text": "मेरा FD कब mature होगा और car loan close करने का कितना charge लगेगा?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 17,
+    "tokens": 2294,
+    "switched": false,
+    "state": "profile_kyc",
+    "text": "मेरा KYC complete हुआ क्या और A4001 का क्या update है",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "home loan का कितना amount release हुआ, card पे कितने reward points हैं और 560001 के पास का branch कहाँ है",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "english",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": true,
+    "state": "payments",
+    "text": "I will pay only the minimum amount right now",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "My old personal loan got closed last year, has the NOC been sent?",
+    "expected": [
+     [
+      "get_noc_status",
+      "request_noc"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "irreversible",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": true,
+    "state": "new_loans",
+    "text": "Yes, I accept the offer.",
+    "expected": [
+     [
+      "accept_settlement_offer"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "reference",
+     "topic_switch"
+    ],
+    "turn": 2,
+    "style": "english",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "Forget it then, just change my car loan EMI date to the 10th.",
+    "expected": [
+     [
+      "change_emi_date"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": false,
+    "state": "payments",
+    "text": "I cannot pay the personal loan today, I will pay on the 20th",
+    "expected": [
+     [
+      "record_promise_to_pay"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "ambiguous",
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "How much will it cost to close my loan?",
+    "expected": [
+     [
+      "get_personal_loan_foreclosure_quote",
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": false,
+    "state": "payments",
+    "text": "I got a bonus, what happens if I pay 50,000 extra towards my loan?",
+    "expected": [
+     [
+      "get_personal_loan_part_payment_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "My monthly salary is 1.4 lakh, I want to buy an 80 lakh flat, how much home loan can I get?",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "Please change my personal loan EMI date to the 10th.",
+    "expected": [
+     [
+      "change_emi_date"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "I am thinking of buying a second car, what interest rate do you charge on car loans these days?",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "What will be the EMI for a 5 lakh loan over 3 years at 12 percent?",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "I am getting calls in the morning, please call me only between 5 to 7 in the evening",
+    "expected": [
+     [
+      "update_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "rules"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "please call me only between 8 and 10 at night",
+    "expected": [
+     [
+      "update_collection_call_preferences",
+      "get_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "Just confirm, I will definitely get the 5 lakh personal loan, right?",
+    "expected": [
+     [
+      "check_personal_loan_eligibility",
+      "get_preapproved_offers"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "When is my next EMI and what is my credit card bill?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2104,
+    "switched": false,
+    "state": "deposits",
+    "text": "When does my fixed deposit mature and what is the charge to close my car loan?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "Has my KYC been completed and what is the status of application A4001",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "How much home loan is released, how many reward points are on my card, and the nearest branch to 560001?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "payment",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": true,
+    "state": "payments",
+    "text": "abhi sirf minimum due hi pay karunga",
+    "expected": [
+     [
+      "pay_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "Mera purana personal loan last year close ho gaya tha, kya NOC bhej diya hai?",
+    "expected": [
+     [
+      "get_noc_status",
+      "request_noc"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "reference"
+    ],
+    "turn": 2,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": false,
+    "state": "payments",
+    "text": "abhi payment nahi kar sakta, 25 tak kar dunga",
+    "expected": [
+     [
+      "record_promise_to_pay"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "irreversible",
+     "reference"
+    ],
+    "turn": 2,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": true,
+    "state": "new_loans",
+    "text": "haan, main offer accept karta hoon.",
+    "expected": [
+     [
+      "accept_settlement_offer"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "reference",
+     "topic_switch"
+    ],
+    "turn": 2,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "theek hai, chhod do, bas car loan ki EMI date 10th kar do",
+    "expected": [
+     [
+      "change_emi_date"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 25,
+    "tokens": 3098,
+    "switched": false,
+    "state": "payments",
+    "text": "personal loan ka payment aaj nahi ho payega, main 20 ko de dunga",
+    "expected": [
+     [
+      "record_promise_to_pay"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "ambiguous",
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "mera loan close karne ka kitna charge lagega?",
+    "expected": [
+     [
+      "get_personal_loan_foreclosure_quote",
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args",
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "mera monthly salary 1.4 lakh hai, 80 lakh ka flat lena hai, kitna home loan milega?",
+    "expected": [
+     [
+      "check_home_loan_eligibility"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "mera personal loan EMI date 10th ko kar do please",
+    "expected": [
+     [
+      "change_emi_date"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "lookalike"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "second car lene ka soch rahi hoon, aaj kal car loan par kya interest rate chal raha hai?",
+    "expected": [
+     [
+      "get_current_interest_rates"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "args"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "5 lakh loan 3 saal ke liye 12 percent par EMI kitni hogi?",
+    "expected": [
+     [
+      "calculate_emi"
+     ]
+    ]
+   },
+   {
+    "tags": [],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "subah baar baar call aata hai, shaam 5 se 7 ke beech hi call karo",
+    "expected": [
+     [
+      "update_collection_call_preferences"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "no_promise"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2059,
+    "switched": false,
+    "state": "personal_loan",
+    "text": "mujhe confirm karo, mujhe definitely 5 lakh ka personal loan mil jayega",
+    "expected": [
+     [
+      "check_personal_loan_eligibility",
+      "get_preapproved_offers"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "mera next EMI kab hai aur card ka bill kitna hai",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 15,
+    "tokens": 2104,
+    "switched": false,
+    "state": "deposits",
+    "text": "mera FD kab mature hoga aur car loan close karne ka kitna charge lagega?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 17,
+    "tokens": 2294,
+    "switched": false,
+    "state": "profile_kyc",
+    "text": "mera KYC complete hua kya aur A4001 ka kya update hai",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2661,
+    "switched": false,
+    "state": "cards",
+    "text": "home loan ka kitna amount release hua, card pe kitne reward points hain aur 560001 ke paas ka branch kahan hai",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   }
+  ],
+  "States fine, perfect switching | dev": [
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "personal loan की अगली EMI कब है और card का bill कितना आया है",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "मेरी FD कब mature होगी और car loan बंद करने में कितना लगेगा",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "मेरा KYC हो गया क्या और application A4001 का क्या हुआ",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "तीन चीज़ें बताओ home loan का कितना पैसा release हुआ card पे कितने reward points हैं और 560001 के पास branch कहाँ है",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "When's my next personal loan EMI, and how much is my card bill?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "When does my FD mature, and how much to close my car loan?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "Is my KYC done, and what's happening with application A4001?",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "Three things: how much of my home loan is released, how many reward points are on my card, and where's the branch near 560001?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "Personal loan ki agli EMI kab hai aur card ka bill kitna aaya hai?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "Meri FD kab mature hogi, aur car loan band karne mein kitna lagega?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "Mera KYC ho gaya kya, aur application A4001 ka kya hua?",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "Teen cheezein batao: home loan ka kitna paisa release hua, card pe kitne reward points hain, aur 560001 ke paas branch kahan hai?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   }
+  ],
+  "States fine, perfect switching | llm": [
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "mera next EMI kab hai aur card का bill कितना है",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "मेरा FD कब mature होगा और car loan close करने का कितना charge लगेगा?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "मेरा KYC complete हुआ क्या और A4001 का क्या update है",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "codemix",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "home loan का कितना amount release हुआ, card पे कितने reward points हैं और 560001 के पास का branch कहाँ है",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "When is my next EMI and what is my credit card bill?",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "When does my fixed deposit mature and what is the charge to close my car loan?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "Has my KYC been completed and what is the status of application A4001",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "english",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "How much home loan is released, how many reward points are on my card, and the nearest branch to 560001?",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 21,
+    "tokens": 2584,
+    "switched": false,
+    "state": "loan_info",
+    "text": "mera next EMI kab hai aur card ka bill kitna hai",
+    "expected": [
+     [
+      "get_next_emi"
+     ],
+     [
+      "get_card_bill"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 16,
+    "tokens": 2106,
+    "switched": false,
+    "state": "vehicle_loan",
+    "text": "mera FD kab mature hoga aur car loan close karne ka kitna charge lagega?",
+    "expected": [
+     [
+      "get_deposit_details",
+      "list_deposits"
+     ],
+     [
+      "get_vehicle_loan_foreclosure_quote"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2687,
+    "switched": false,
+    "state": "new_loans",
+    "text": "mera KYC complete hua kya aur A4001 ka kya update hai",
+    "expected": [
+     [
+      "get_kyc_status",
+      "start_video_kyc"
+     ],
+     [
+      "get_application_status"
+     ]
+    ]
+   },
+   {
+    "tags": [
+     "multi_request"
+    ],
+    "turn": 1,
+    "style": "hinglish",
+    "all_needed": false,
+    "tools": 20,
+    "tokens": 2539,
+    "switched": false,
+    "state": "home_loan",
+    "text": "home loan ka kitna amount release hua, card pe kitne reward points hain aur 560001 ke paas ka branch kahan hai",
+    "expected": [
+     [
+      "get_home_loan_disbursement_status"
+     ],
+     [
+      "get_reward_points"
+     ],
+     [
+      "find_nearest_branch"
+     ]
+    ]
+   }
+  ]
+ }
+}
