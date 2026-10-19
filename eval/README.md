@@ -6,7 +6,7 @@ The test set is **real people speaking**, run through Sarvam speech-to-text, so 
 
 | File | What it is | In git? |
 |---|---|---|
-| `scenarios.py` | 54 scenarios (42 single requests + 12 conversations, 67 turns) with labels | yes |
+| `scenarios.py` | 58 scenarios (46 single requests + 12 conversations, 71 turns) with labels | yes |
 | `recording_kit/s01.html` … | One card sheet per recorder, grouped by persona | yes |
 | `recording_kit/assignments.json` | Which scenarios each speaker records | yes |
 | `data/audio/` | The recordings | **no** (people's voices) |
@@ -43,4 +43,4 @@ The benchmark uses those same replies as the conversation history: turn 2 is tes
 
 - **Speakers s05 and s10 are the final test set.** Don't read their transcripts while building the router. Run them once, in Step 11.
 - `dev_typed.jsonl` and the tool examples in `tools/catalog.py` were written by Claude. Use them to build, never to report results.
-- Coverage: the scenarios test 61 of the 111 tools. Results say nothing about the other 50; say so in the write-up.
+- Coverage: the scenarios test 62 of the 111 tools. Results say nothing about the other 49; say so in the write-up.
