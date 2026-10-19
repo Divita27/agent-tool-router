@@ -58,17 +58,85 @@ More detail: [flow.md](flow.md) walks through the code, [decisions.md](decisions
 
 ## How the router works
 
-**Once, ahead of time:** each tool gets a short "card" (name, description, three example phrases, parameters). The cards go into a keyword index (BM25) and a meaning index (`multilingual-e5-small` embeddings, running locally). Embeddings are cached by a hash of each card, so adding or editing a tool only re-embeds that one tool.
+The router's job is not to pick *the* tool. It picks a short list, about 12 tools, that almost certainly contains the right one, and the model chooses from that list. Missing the right tool breaks the call; an extra tool only costs ~107 tokens. So the router is built to not leave things out.
 
-**On every caller turn (~14 ms):**
+It has two parts: a setup that runs once, and a routing step that runs on every caller turn.
 
-1. **Score every tool by words and by meaning,** blended 70% meaning and 30% words. Words catch exact terms like EMI, NOC or RC. Meaning catches paraphrases across scripts.
-2. **Add the previous turn's score** at half weight, or 1.5× when the caller said four words or fewer. "Personal wala" means nothing on its own; after "Agli EMI kab hai?" it clearly means the personal-loan EMI.
-3. **Keep the top 8.**
-4. **Add each pick's linked tools.** Disputing a charge needs the transaction list; paying an EMI needs the EMI amount; closing a loan needs the quote. 28 tools have links like these.
-5. **Add three always-on tools:** list loans, list products, transfer to a human.
+### Part 1: Setup (once, ahead of time)
 
-The model sees about 12 tools. The set stays fixed for the turn and is chosen fresh on the next turn.
+**1. Describe every tool.**
+Each of the 111 tools gets a short card: its name, what it does, the inputs it needs, and three example phrases showing how callers ask for it (Hinglish, Hindi and English). The examples matter: meaning search scored 82.6% with them and 74.6% without.
+
+**2. Link tools that go together.**
+Some tools are recorded with:
+- **needs**: tools that must come first. To close a loan, the caller first has to hear the quote; to dispute a charge, the agent first needs the transaction list.
+- **next**: tools usually used right after. After checking an EMI, people often pay it.
+
+28 tools have links like these (`tools/catalog.py`).
+
+**3. Build a word index.**
+Record which words appear on which cards (BM25). Rare words like "hypothecation" count as strong clues; common words like "loan" count as weak ones.
+
+**4. Build a meaning index.**
+A small multilingual model (`multilingual-e5-small`, running locally) turns each card into a list of numbers that captures its meaning. Cards about similar things end up with similar numbers, whatever the language or wording.
+
+**5. Save it.**
+Both indexes are saved. Each card's numbers are stored with a fingerprint of its text, so when a tool is added or edited, only that tool is processed again. Nobody has to redesign a flow when a tool is added.
+
+### Part 2: Routing (every caller turn, ~14 ms)
+
+**1. Take two inputs.**
+- what the caller just said
+- the previous turn: what the caller said before, plus the agent's reply
+
+**2. Word score.**
+Every tool gets a score for how many of the caller's words appear on its card, with rare words counting more. This catches exact terms like EMI, NOC or RC.
+
+**3. Meaning score.**
+The caller's words are turned into numbers, and every tool gets a score for how close its meaning is. This catches the same request said differently, in any script.
+
+**4. Blend.**
+The two scores are combined for each tool:
+
+> **70% meaning + 30% words**
+
+Each catches what the other misses. In testing, this blend beat both a 50/50 blend and rank fusion (RRF).
+
+**5. Add the previous turn.**
+Steps 2–4 are repeated on the previous turn, and that score is added to each tool:
+- normally at **half weight**
+- at **1.5× weight when the caller said four words or fewer**, because short replies like "personal wala" or "haan wahi" only make sense with what came before
+
+This took follow-up replies from 69% to 94% on the dev set.
+
+**6. Keep the top 8.**
+All 111 tools are sorted by final score and the best **8** are kept. The number came from testing 1, 2, 3, 5, 8, 12 and 20: at 5, some right tools fall just outside the list; above 8, gains are tiny and every extra tool adds ~107 tokens.
+
+**7. Add linked tools.**
+For each of the 8, its **needs** and **next** tools from setup step 2 are added if they aren't already there. Multi-step requests went from 33% to 100% with this.
+
+**8. Add three always-on tools.**
+- list the caller's loans
+- list the caller's products
+- transfer to a human
+
+Callers never say loan IDs, so the agent almost always needs to look them up first, and a human handover should always be possible.
+
+**9. Send the list.**
+Only these ~12 tools go to `sarvam-105b-conversations` for this turn: about 1,300 tokens instead of ~12,000. The model chooses which one to use, and the safety layer (below) decides whether it's allowed to run.
+
+### Two rules around it
+
+- **The list stays the same for the whole turn.** Even if the model calls two or three tools in a row (look up the loans, then get the EMI), they all come from this list. That's why linked tools are added up front.
+- **The next turn starts fresh.** The router runs again from step 1, so if the caller changes topic, the new topic's tools come in.
+
+### What it deliberately doesn't do
+
+- **No extra model call.** Asking the model to rewrite unclear requests reached the same accuracy but added up to 0.6 s on half the turns.
+- **No topic-first step.** Choosing a topic first and then tools inside it did worse, because a wrong topic guess loses every tool.
+- **No sentence splitting.** Two requests in one sentence ("EMI kab hai aur card ka bill kitna?") already worked 100% of the time without it.
+
+**In one line:** score every tool by words + meaning, add the previous turn (more for short replies), keep the top 8, add their linked tools and three always-on tools, and send only those to the model.
 
 ---
 
