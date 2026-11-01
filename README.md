@@ -226,8 +226,6 @@ This is the test that matters most: the whole agent (selection + safety layer + 
 
 \*"Handled well" means the agent called the right tool, **or** asked a sensible question ("which loan?", "shall I go ahead?") without doing anything wrong and without asking the caller for an internal ID. My first scoring only counted "acted this turn", which marked good behaviour like confirming before a payment as failure; I re-scored from the saved runs.
 
-Paired by turn: router K=8 beat all-tools on 2 turns and lost on 4 (a tie); it beat states on 7 turns and lost on 1. With 62 turns the margin of error is roughly ±6 points, so close numbers are ties.
-
 One thing surprised me. In isolation, a single model call barely gets slower with more tools (+70 ms from 5 to 111 tools). But real turns carry history and tool results and need fewer calls with the router, so **whole turns were 29% faster**.
 
 ### 5. Safety
