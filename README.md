@@ -1,8 +1,10 @@
-# Loan Agent Router
+# agent-tool-router
 
-**Letting a Sarvam voice agent use 100+ tools without sending all of them on every turn.**
+**Letting an AI agent use 100+ tools without sending all of them on every turn.**
 
-I built a lending-company voice agent with 111 tools on Sarvam's APIs, then built a small router that shows the model only the ~12 tools each turn actually needs. I tested it against sending everything, and against hand-built "states" (the way tools are scoped on Sarvam's platform today), on Hindi, Hinglish and English conversations.
+I built a lending-company agent with 111 tools on Sarvam's APIs (`sarvam-105b-conversations`), then built a small router that shows the model only the ~12 tools each turn actually needs. I tested it against sending everything, and against hand-built "states" (the way tools are scoped on Sarvam's voice-agent platform today), on Hindi, Hinglish and English conversations.
+
+> **Status:** the agent runs text-in, text-out. Test sentences are written the way speech-to-text output looks (Devanagari + English), but no one has spoken to it yet. A voice loop (Saaras speech-to-text → agent → Bulbul text-to-speech) is the next step.
 
 ![Headline results](docs/charts/headline_end_to_end.png)
 
@@ -51,8 +53,6 @@ Caller's words
 | `safety/` | Confirmations, yes/no in three languages, PII masking, loan-promise filter, audit log |
 | `eval/` | Test scenarios, generated test sets, and every experiment script |
 | `results/`, `docs/charts/` | Saved results and the charts in this README |
-
-More detail: [flow.md](flow.md) walks through the code, [decisions.md](decisions.md) explains every decision and why, [explained.md](explained.md) tells the whole story in short chapters, [costs-and-caching.md](costs-and-caching.md) covers what the savings mean for Sarvam, and [NOTES.md](NOTES.md) is the raw lab notebook. For sharing: [docs/one-pager.md](docs/one-pager.md) and [docs/resume-and-outreach.md](docs/resume-and-outreach.md).
 
 ---
 
@@ -213,23 +213,7 @@ I generated 400 extra tools from 40 neighbouring banking products (gold loans, i
 | Router, K=5 | 96.7% | 92.4% | 91.4% |
 | **Router, K=8 (+ generated queries)** | **98.6%** | **96.7%** | **96.2%** |
 
-### 4. Against hand-built states
-
-![States vs router](docs/charts/states_vs_router.png)
-
-I built states the way a developer would on Sarvam's platform: per-topic tools, eight global tools, and a "go to topic" function for every other state. Two designs (6 big topics, 11 small ones), switched either by keyword rules or perfectly, which is the best states could ever do.
-
-| Approach | Every needed tool available | Tools sent | Tool tokens | State switches on follow-ups | Two requests in one sentence |
-|---|---|---|---|---|---|
-| 11 states, keyword rules | 74.8% | 19.1 | 2,502 | 53.8% | 0% |
-| 6 states, keyword rules | 84.3% | 33.3 | 3,757 | 38.5% | 25% |
-| 11 states, perfect switching | 94.3% | 19.5 | 2,530 | 38.5% | 0% |
-| 6 states, perfect switching | 95.7% | 34.0 | 3,826 | 23.1% | 25% |
-| **Router, K=8** | **98.1%** | **12.3** | **1,302** | **none** | **100%** |
-
-States did win one thing: with perfect switching, follow-up replies were 100% vs the router's 97.2%, because a state naturally remembers the topic. They also took about 110 manual tool-to-topic decisions to set up. The router needs per-tool descriptions only.
-
-### 5. The full agent, end to end
+### 4. The full agent, end to end
 
 This is the test that matters most: the whole agent (selection + safety layer + `sarvam-105b-conversations`) on 62 independent turns in codemix (Devanagari + English, like Saaras speech-to-text output). All four setups ran on exactly the same turns. For states, the model switched topics itself by calling `go_to_<topic>`, as on Sarvam's platform.
 
@@ -246,7 +230,7 @@ Paired by turn: router K=8 beat all-tools on 2 turns and lost on 4 (a tie); it b
 
 One thing surprised me. In isolation, a single model call barely gets slower with more tools (+70 ms from 5 to 111 tools). But real turns carry history and tool results and need fewer calls with the router, so **whole turns were 29% faster**.
 
-### 6. Safety
+### 5. Safety
 
 The router decides what the model can *see*. A separate layer decides, in code, what is allowed to *run*:
 
@@ -286,24 +270,12 @@ I think these are as useful as the wins.
 | Splitting "X aur Y" into parts | 95.8% vs 97.2% without | The hybrid already got 100% on two-part requests |
 | Adaptive K | +0.5 points for +87 tokens | Not worth it |
 | Generated example queries per tool | Small and inconsistent gains | Optional, not core |
-| Fine-tuning the embedding model | Not finished | 8 GB laptop: 20 steps took ~95 minutes, so ~12 hours in total. Future work on a GPU |
-
----
-
-## What this means for Sarvam (and one open question)
-
-Sarvam runs its own model, so it doesn't pay per token. What fewer tokens buy is **GPU capacity**: less memory per active call (so more concurrent calls per GPU), less prompt processing, and faster generation, which matches the 29% faster turns. They also remove the context-window ceiling: at ~107 tokens per tool, ~250 tools would fill about 85% of the 32K window. Developers on the per-token API save real money.
-
-**The open question is prefix caching.** Sarvam lists a cached-input price, which suggests their servers can reuse a prompt that starts the same way each time. Sending all 111 tools always starts the same, so it may cache well; a router that changes the tool list every turn can break that reuse. I never saw cached tokens reported by the API, so I can't measure it from outside. It's the first thing I'd want to test with the team, and I have some ideas for making the router cache-friendly (fixed tool order, grow-only tool sets within a call). Full write-up: [costs-and-caching.md](costs-and-caching.md).
 
 ---
 
 ## Where this falls short
 
-- **No real speech yet.** Every test sentence was typed by me or written by `sarvam-105b`. The recording kit and transcription pipeline are ready (`eval/recording_kit/`, `eval/transcribe.py`), but the results above are not on human voices.
-- **Small end-to-end sample.** 62 turns, about ±6 points. My Sarvam credits ran out at a ₹50 cap.
-- **Generated test data comes from the same model family** that runs the agent.
-- **62 of the 111 tools** appear in the scenarios. Nothing here says anything about the other 49.
+- **No voice yet.** The agent is text-in, text-out; there is no speech-to-text → agent → text-to-speech loop or phone integration yet.
 - **The agent sometimes asks callers for a "card ID" or "loan ID"** instead of looking it up, in every setup. Probably a prompt fix; not re-tested.
 - **One fake company, one industry.** The router was tuned on my own dev sentences; the short-reply boost in particular was designed after looking at failures there.
 
@@ -330,19 +302,6 @@ python -m backend.seed            # build the fake lending company
 | Talk to the agent | `python -m scripts.chat --customer C001` | ~₹0.4/turn (uses all tools) |
 | Full end-to-end benchmark | `python -m eval.e2e_eval --dry-run`, then without `--dry-run` | paid, capped |
 | Re-score saved end-to-end runs | `python -m eval.e2e_rescore` | free |
-
----
-
-## Timeline
-
-| Date | What happened |
-|---|---|
-| 13 Oct 2026 | Checked Sarvam's API (tool calling, ~100 tokens per tool, no visible caching). Built the fake lending company (111 actions), the tool catalog, the agent loop. Measured tokens and latency over 120 calls. Wrote the 54 test scenarios and the recording kit. |
-| 14 Oct 2026 | Built the router and compared 15 configurations offline. Added multi-request scenarios and a three-style dev set. Read the tool-retrieval papers and generated the independent test set, tool queries and 400 distractor tools. |
-| 15 Oct 2026 | Finished the research round (cascade, scaling, stopped fine-tuning). Built and compared hand-built states. Built the safety layer. Ran the end-to-end benchmark (62 turns × 4 setups) and re-scored it. |
-| 19 Oct 2026 | Corrected the cost framing (GPU capacity, not per-token spend), added the caching analysis, wrote this README and the charts. |
-
-Sarvam credits used: about ₹82 of the ₹100 free credit, ₹50 of it on the end-to-end benchmark.
 
 ---
 

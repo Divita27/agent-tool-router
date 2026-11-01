@@ -3,7 +3,7 @@
 What the model sees:   name, description, parameters  (see tools/__init__.py: schema())
 What only we see:      area, risk, examples           (used by the router and the safety layer)
 
-Risk levels (the safety layer in Step 10 decides what each one requires):
+Risk levels:
     read          looks something up, changes nothing
     write         changes something, can be undone or is only a request
     payment       moves money
