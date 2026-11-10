@@ -4,8 +4,6 @@
 
 I built a lending-company agent with 111 tools on Sarvam's APIs (`sarvam-105b-conversations`), then built a small router that shows the model only the ~12 tools each turn actually needs. I tested it against sending everything, and against hand-built "states" (the way tools are scoped on Sarvam's voice-agent platform today), on Hindi, Hinglish and English conversations.
 
-> **Status:** the agent runs text-in, text-out. Test sentences are written the way speech-to-text output looks (Devanagari + English), but no one has spoken to it yet. A voice loop (Saaras speech-to-text → agent → Bulbul text-to-speech) is the next step.
-
 ![Headline results](docs/charts/headline_end_to_end.png)
 
 > ### The short version
