@@ -4,6 +4,8 @@
 
 I built a lending-company agent with 111 tools on Sarvam's APIs (`sarvam-105b-conversations`), then built a small router that shows the model only the ~12 tools each turn actually needs. I tested it against sending everything, and against hand-built "states" (the way tools are scoped on Sarvam's voice-agent platform today), on Hindi, Hinglish and English conversations.
 
+**Reviewing this project?** Start with the [portfolio guide](portfolio/README.md): every result, step-by-step walkthroughs of real runs, lessons learned, and how to rerun the tests.
+
 ![Headline results](docs/charts/headline_end_to_end.png)
 
 > ### The short version
