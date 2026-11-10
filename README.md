@@ -314,17 +314,17 @@ cp .env.example .env              # add your Sarvam API key
 python -m backend.seed            # build the fake lending company
 ```
 
-| What | Command | Cost |
-|---|---|---|
-| Check the backend (129 checks) | `python -m scripts.smoke_backend` | free |
-| Check tools and scenarios | `python -m scripts.check_tools` and `python -m scripts.check_scenarios` | free |
-| Safety checks (41) | `python -m scripts.test_safety` | free |
-| Compare narrowing techniques | `python -m eval.router_eval`, `python -m eval.research_eval` | free |
-| States vs router | `python -m eval.states_eval` | free |
-| Redraw the charts | `python -m eval.make_charts` | free |
-| Talk to the agent | `python -m scripts.chat --customer C001` | ~₹0.4/turn (uses all tools) |
-| Full end-to-end benchmark | `python -m eval.e2e_eval --dry-run`, then without `--dry-run` | paid, capped |
-| Re-score saved end-to-end runs | `python -m eval.e2e_rescore` | free |
+| What | Command |
+|---|---|
+| Check the backend (129 checks) | `python -m scripts.smoke_backend` |
+| Check tools and scenarios | `python -m scripts.check_tools` and `python -m scripts.check_scenarios` |
+| Safety checks (41) | `python -m scripts.test_safety` |
+| Compare narrowing techniques | `python -m eval.router_eval`, `python -m eval.research_eval` |
+| States vs router | `python -m eval.states_eval` |
+| Redraw the charts | `python -m eval.make_charts` |
+| Talk to the agent | `python -m scripts.chat --customer C001` |
+| Full end-to-end benchmark | `python -m eval.e2e_eval --dry-run`, then without `--dry-run` |
+| Re-score saved end-to-end runs | `python -m eval.e2e_rescore` |
 
 ---
 
