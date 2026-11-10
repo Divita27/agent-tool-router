@@ -56,6 +56,19 @@ Caller's words
 
 ---
 
+## Architecture
+
+![Architecture](docs/charts/architecture.png)
+
+The agent side is an MCP client. The router shortlists about 12 tools for each turn, Sarvam's model picks one, and the safety layer decides whether it may run. The MCP client then sends the call to the server that owns that tool.
+
+Two kinds of traffic go between the client and the five MCP servers:
+
+1. **Tool discovery.** The client asks each server for its tools (`tools/list`) and gets back their definitions, with examples, risk level and linked tools in `_meta`. When a server adds or removes a tool, it says so (`tools/list_changed`), and only the changed tools are re-indexed.
+2. **Tool call.** Each time the model uses a tool, the client sends `tools/call` with the name and arguments, and the server sends back the result or an error.
+
+---
+
 ## How the router works
 
 The router's job is not to pick *the* tool. It picks a short list, about 12 tools, that almost certainly contains the right one, and the model chooses from that list. Missing the right tool breaks the call; an extra tool only costs ~107 tokens. So the router is built to not leave things out.
