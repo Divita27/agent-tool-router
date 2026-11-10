@@ -63,10 +63,9 @@ def charge_amount(name, a):
     return None
 
 
-def _readback(name, args):
+def _readback(name, args, tool):
     """A short sentence for the agent to read back before a risky action."""
     a = json.loads(args)
-    tool = TOOLS_BY_NAME[name]
     parts = [tool.description.rstrip(".")]
     amount = charge_amount(name, a)
     if amount is not None:
@@ -79,9 +78,14 @@ def _readback(name, args):
 
 
 class SafetyLayer:
-    def __init__(self, customer_id, executor_mode="local", audit=True):
+    def __init__(self, customer_id, executor_mode="local", audit=True, tools=None, run=None):
+        """tools: name -> object with .risk, .needs, .description (default: the local catalog).
+        run: function(name, arguments) -> outcome dict (default: the local backend executor),
+        e.g. an MCP hub's call()."""
         self.customer_id = customer_id
         self.mode = executor_mode
+        self.tools = tools if tools is not None else TOOLS_BY_NAME
+        self.run = run or (lambda name, arguments: execute(name, arguments, mode=self.mode))
         self.pending = None          # (name, canonical_args) waiting for the caller's answer
         self.approved = None         # (name, canonical_args) the caller said yes to, usable once
         self.called_ok = set()       # tools that ran successfully in this call
@@ -111,10 +115,11 @@ class SafetyLayer:
         return answer
 
     def execute(self, name, arguments):
-        tool = TOOLS_BY_NAME.get(name)
+        tools = self.tools() if callable(self.tools) else self.tools
+        tool = tools.get(name)
         args = _canon(arguments)
         if tool is None or args is None:
-            return execute(name, arguments, mode=self.mode)  # executor reports unknown tool / bad JSON
+            return self.run(name, arguments)  # the runner reports unknown tool / bad JSON
 
         if tool.risk in GATED and name not in NO_CONFIRM:
             if tool.risk == "irreversible" and tool.needs and not (set(tool.needs) & self.called_ok):
@@ -130,11 +135,11 @@ class SafetyLayer:
                 self._log("confirmation_requested", name, args)
                 return {"ok": False, "error": "confirmation_required", "latency_ms": 0,
                         "message": "Not done yet. Read this back to the caller and ask them to confirm with a "
-                                   "clear yes: " + _readback(name, args),
-                        "read_back": _readback(name, args)}
+                                   "clear yes: " + _readback(name, args, tool),
+                        "read_back": _readback(name, args, tool)}
             self.approved = None  # one confirmation = one action
 
-        outcome = execute(name, arguments, mode=self.mode)
+        outcome = self.run(name, arguments)
         if outcome["ok"]:
             self.called_ok.add(name)
             outcome["result"] = mask_for_model(outcome["result"])

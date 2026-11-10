@@ -1,0 +1,19 @@
+{
+ "K=5 dev: identical tool lists": true,
+ "K=5 independent: identical tool lists": true,
+ "K=8 dev: identical tool lists": true,
+ "K=8 independent: identical tool lists": true,
+ "server announced the new tool": true,
+ "hub lists it": true,
+ "routable on the next turn": true,
+ "only the new tool was embedded": true,
+ "callable through MCP": true,
+ "irreversible tool held without a yes": true,
+ "runs on the MCP server after yes": true,
+ "read tool runs straight away": true,
+ "new tool with no risk level needs a yes": true,
+ "private data masked on results from MCP": true,
+ "removed tool disappears": true,
+ "picked get_next_emi through MCP": true,
+ "no errors": true
+}

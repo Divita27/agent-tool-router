@@ -132,6 +132,8 @@ MODELS = {
 class Embedder:
     """Embeds texts with a disk cache keyed by hash, so each text is embedded only once ever."""
     _models = {}
+    newly_embedded = 0  # texts actually sent to the model (cache misses), for checking incremental indexing
+    newly_embedded_docs = 0  # of which tool documents
 
     def __init__(self, model_key):
         import numpy as np
@@ -152,6 +154,9 @@ class Embedder:
         prefix = self.q_prefix if as_query else self.d_prefix
         keys = [hashlib.sha256((prefix + t).encode()).hexdigest()[:20] for t in texts]
         missing = [(k, prefix + t) for k, t in zip(keys, texts) if k not in self.cache]
+        Embedder.newly_embedded += len(missing)
+        if not as_query:
+            Embedder.newly_embedded_docs += len(missing)
         if missing:
             vecs = self.model.encode([t for _, t in missing], normalize_embeddings=True, batch_size=64)
             for (k, _), v in zip(missing, vecs):

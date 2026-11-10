@@ -63,16 +63,19 @@ class RouterConfig:
 class Router:
     _indexes = {}  # share built indexes between routers with the same documents
 
-    def __init__(self, config: RouterConfig, rewrite_fn=None):
+    def __init__(self, config: RouterConfig, rewrite_fn=None, entries=None):
         self.c = config
         self.rewrite_fn = rewrite_fn  # text, context -> list of short intents (used by cascade)
-        self.entries = real_entries() + distractor_entries(config.distractors)
+        # entries: tools from anywhere (e.g. MCP servers). Default: the local catalog (+ distractors).
+        self.entries = list(entries) if entries is not None else real_entries() + distractor_entries(config.distractors)
         self.by_name = {e.name: e for e in self.entries}
         self.names = [e.name for e in self.entries]
         self.rng = random.Random(config.seed)
         with_syn = config.expansion == "append"
         docs = {e.name: document(e, config.doc_examples, with_syn) for e in self.entries}
         key = (config.distractors, config.doc_examples, with_syn)
+        if entries is not None:
+            key = ("custom",) + tuple(docs[n] for n in self.names)
         if key not in Router._indexes:
             Router._indexes[key] = BM25(docs)
         self.bm25 = Router._indexes[key]

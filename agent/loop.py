@@ -92,12 +92,13 @@ class Turn:
 
 class Agent:
     def __init__(self, customer_id, select_tools=all_tools, executor_mode="local", log=True, audit=True,
-                 states=None):
+                 states=None, tool_schemas=schemas, safety_tools=None, run_tool=None):
         self.customer_id = customer_id
         self.states = states  # optional LiveStates: hand-built states with LLM-driven transitions
         if states:
             select_tools = states.select_tools
-        self.safety = SafetyLayer(customer_id, executor_mode, audit=audit)
+        self.safety = SafetyLayer(customer_id, executor_mode, audit=audit, tools=safety_tools, run=run_tool)
+        self.tool_schemas = tool_schemas  # names -> function-calling definitions (catalog by default, or MCP)
         self.select_tools = select_tools
         self.executor_mode = executor_mode
         with db() as conn:
@@ -117,7 +118,7 @@ class Agent:
         turn.confirmation = self.safety.on_user_turn(user_text)  # did they just answer a "confirm?"
         self.messages.append({"role": "user", "content": user_text})
         turn.tools_offered = self.select_tools(self.messages)
-        tool_schemas = schemas(turn.tools_offered) + (self.states.transition_schemas() if self.states else [])
+        tool_schemas = self.tool_schemas(turn.tools_offered) + (self.states.transition_schemas() if self.states else [])
 
         for _ in range(MAX_MODEL_CALLS_PER_TURN):
             try:
@@ -150,7 +151,7 @@ class Agent:
                                             "latency_ms": 0})
                     self.messages.append({"role": "tool", "tool_call_id": tc["id"], "content": json.dumps(result)})
                     turn.tools_offered = self.select_tools(self.messages)
-                    tool_schemas = schemas(turn.tools_offered) + self.states.transition_schemas()
+                    tool_schemas = self.tool_schemas(turn.tools_offered) + self.states.transition_schemas()
                     continue
                 outcome = self.safety.execute(name, arguments)
                 call.tool_calls.append({"name": name, "arguments": arguments, "ok": outcome["ok"],

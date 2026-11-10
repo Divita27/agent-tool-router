@@ -130,6 +130,20 @@ Only these ~12 tools go to `sarvam-105b-conversations` for this turn: about 1,30
 - **The list stays the same for the whole turn.** Even if the model calls two or three tools in a row (look up the loans, then get the EMI), they all come from this list. That's why linked tools are added up front.
 - **The next turn starts fresh.** The router runs again from step 1, so if the caller changes topic, the new topic's tools come in.
 
+### Tools served over MCP
+
+The 111 tools can also run behind MCP servers, which is how large tool sets usually show up in practice. They're split across five servers (loans 37, payments 24, customer 31, cards 12, deposits 7). The router connects as an MCP client, lists every server's tools, indexes them, and sends each tool call to the server that owns it.
+
+- **Same results:** fed by MCP, the router picks identical tool lists to the in-process version on all 423 test turns.
+- **Tools can change while it runs:** a server announces new or removed tools, and the router re-indexes only what changed. In testing, a new tool was announced in about 0.5 s, needed one new embedding, and was routable on the next turn.
+- **Safety still applies:** each tool carries MCP's read-only and destructive hints plus its risk level in `_meta`. Tools with no risk level need the caller's yes by default.
+- **MCP doesn't save tokens by itself:** `tools/list` still returns every definition. The router is what keeps each call to about 12 tools.
+
+```bash
+python -m eval.mcp_check          # 15 checks, free
+python -m eval.mcp_check --live   # adds a short real conversation (a few paise)
+```
+
 ### What it deliberately doesn't do
 
 - **No extra model call.** Asking the model to rewrite unclear requests reached the same accuracy but added up to 0.6 s on half the turns.

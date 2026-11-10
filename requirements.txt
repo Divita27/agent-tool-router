@@ -5,3 +5,4 @@ uvicorn
 faker
 matplotlib
 sentence-transformers
+mcp
